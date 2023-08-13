@@ -14,7 +14,7 @@ func_compile_linux()
 	echo "Current time : : Compilation Start $now"
 	
 	 	
-	make uImage dtbs LOADADDR=0x82000000
+	make uImage -j4 dtbs LOADADDR=0x82000000
 	
 	now=$(date +"%T")
 	echo "Current time : Compilaton Completed : $now"
@@ -35,7 +35,7 @@ func_clean_compile_linux()
 	
 	
 	make clean 
-	make uImage dtbs LOADADDR=0x82000000
+	make uImage -j4 dtbs LOADADDR=0x82000000
 	
 	now=$(date +"%T")
 	echo "Current time : Compilaton Completed : $now"

@@ -4872,8 +4872,20 @@ int __sdhci_add_host(struct sdhci_host *host)
 
 	sdhci_enable_card_detection(host);
 	
+	//
 	
-
+	pr_info("%s: SDHCI controller debug : Chandan Start \n");
+	
+	//sdhci_dumpregs(host);
+	
+	//pr_info("dump_stack myinit\n");
+	//dump_stack();
+	//pr_info("dump_stack after\n");
+	
+	
+	pr_info("%s: SDHCI controller debug : Chandan End \n");
+	
+	
 	return 0;
 
 unled:
@@ -4892,6 +4904,10 @@ EXPORT_SYMBOL_GPL(__sdhci_add_host);
 
 int sdhci_add_host(struct sdhci_host *host)
 {
+	//pr_info("dump_stack myinit\n");
+	//dump_stack();
+	//pr_info("dump_stack after\n");
+		 
 	int ret;
 
 	ret = sdhci_setup_host(host);
@@ -4983,6 +4999,7 @@ static int __init sdhci_drv_init(void)
 	pr_info(DRIVER_NAME
 		": Janvi : Secure Digital Host Controller Interface driver\n");
 	pr_info(DRIVER_NAME ": Copyright(c) Pierre Ossman\n");
+	dump_stack();
 
 	return 0;
 }
