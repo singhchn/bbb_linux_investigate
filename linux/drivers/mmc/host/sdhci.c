@@ -4871,6 +4871,8 @@ int __sdhci_add_host(struct sdhci_host *host)
 		(host->flags & SDHCI_USE_SDMA) ? "DMA" : "PIO");
 
 	sdhci_enable_card_detection(host);
+	
+	
 
 	return 0;
 
@@ -4979,7 +4981,7 @@ EXPORT_SYMBOL_GPL(sdhci_free_host);
 static int __init sdhci_drv_init(void)
 {
 	pr_info(DRIVER_NAME
-		": Chandan : Secure Digital Host Controller Interface driver\n");
+		": Janvi : Secure Digital Host Controller Interface driver\n");
 	pr_info(DRIVER_NAME ": Copyright(c) Pierre Ossman\n");
 
 	return 0;
