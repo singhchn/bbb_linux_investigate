@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-zynq/built-in.a := rm -f arch/arm/mach-zynq/built-in.a;  printf "arch/arm/mach-zynq/%s " common.o slcr.o pm.o headsmp.o platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-zynq/built-in.a

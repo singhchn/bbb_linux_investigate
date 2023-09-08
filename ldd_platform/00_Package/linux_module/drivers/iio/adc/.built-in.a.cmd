@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/built-in.a := rm -f drivers/iio/adc/built-in.a;  printf "drivers/iio/adc/%s " ab8500-gpadc.o bcm_iproc_adc.o xilinx-xadc-core.o xilinx-xadc-events.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/iio/adc/built-in.a

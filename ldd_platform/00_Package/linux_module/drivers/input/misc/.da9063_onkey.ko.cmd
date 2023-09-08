@@ -1,0 +1,1 @@
+cmd_drivers/input/misc/da9063_onkey.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/misc/da9063_onkey.ko drivers/input/misc/da9063_onkey.o drivers/input/misc/da9063_onkey.mod.o;  true

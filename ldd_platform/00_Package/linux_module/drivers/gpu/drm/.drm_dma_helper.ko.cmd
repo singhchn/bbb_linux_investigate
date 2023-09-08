@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/drm_dma_helper.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/drm_dma_helper.ko drivers/gpu/drm/drm_dma_helper.o drivers/gpu/drm/drm_dma_helper.mod.o;  true

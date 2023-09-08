@@ -1,0 +1,1 @@
+cmd_sound/soc/qcom/snd-soc-lpass-apq8016.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/qcom/snd-soc-lpass-apq8016.ko sound/soc/qcom/snd-soc-lpass-apq8016.o sound/soc/qcom/snd-soc-lpass-apq8016.mod.o;  true

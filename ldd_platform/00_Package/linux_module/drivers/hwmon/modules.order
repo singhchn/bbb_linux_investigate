@@ -1,0 +1,6 @@
+drivers/hwmon/aspeed-pwm-tacho.ko
+drivers/hwmon/ina2xx.ko
+drivers/hwmon/lan966x-hwmon.ko
+drivers/hwmon/ntc_thermistor.ko
+drivers/hwmon/pwm-fan.ko
+drivers/hwmon/raspberrypi-hwmon.ko

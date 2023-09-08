@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/freescale/built-in.a := rm -f drivers/net/ethernet/freescale/built-in.a;  printf "drivers/net/ethernet/freescale/%s " fec_main.o fec_ptp.o fsl_pq_mdio.o gianfar.o gianfar_ethtool.o enetc/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/freescale/built-in.a

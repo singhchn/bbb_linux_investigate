@@ -1,0 +1,19 @@
+# 1 "arch/arm/boot/dts/zynq-zturn.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/zynq-zturn.dts"
+
+
+/dts-v1/;
+/include/ "zynq-zturn-common.dtsi"
+
+/ {
+ model = "Zynq Z-Turn MYIR Board";
+ compatible = "myir,zynq-zturn", "xlnx,zynq-7000";
+};
+
+&gem0 {
+ ethernet_phy: ethernet-phy@0 {
+  reg = <0x0>;
+ };
+};

@@ -1,0 +1,54 @@
+!<thin>
+//                                              428       `
+clk.o/
+clk-audio-sync.o/
+clk-device.o/
+clk-dfll.o/
+clk-divider.o/
+clk-periph.o/
+clk-periph-fixed.o/
+clk-periph-gate.o/
+clk-pll.o/
+clk-pll-out.o/
+clk-sdmmc-mux.o/
+clk-super.o/
+clk-tegra-audio.o/
+clk-tegra-periph.o/
+clk-tegra-fixed.o/
+clk-tegra-super-cclk.o/
+clk-tegra-super-gen4.o/
+clk-tegra20.o/
+clk-tegra20-emc.o/
+clk-tegra30.o/
+clk-tegra114.o/
+clk-tegra124.o/
+clk-tegra124-dfll-fcpu.o/
+clk-tegra124-emc.o/
+cvb.o/
+clk-utils.o/
+/0              0           0     0     644     9036      `
+/7              0           0     0     644     2416      `
+/25             0           0     0     644     5992      `
+/39             0           0     0     644     25296     `
+/51             0           0     0     644     3712      `
+/66             0           0     0     644     4496      `
+/80             0           0     0     644     2664      `
+/100            0           0     0     644     3660      `
+/119            0           0     0     644     26092     `
+/130            0           0     0     644     2720      `
+/145            0           0     0     644     4860      `
+/162            0           0     0     644     4592      `
+/175            0           0     0     644     5560      `
+/194            0           0     0     644     55260     `
+/214            0           0     0     644     3100      `
+/233            0           0     0     644     4284      `
+/257            0           0     0     644     5292      `
+/281            0           0     0     644     28728     `
+/296            0           0     0     644     5024      `
+/315            0           0     0     644     30332     `
+/330            0           0     0     644     23948     `
+/346            0           0     0     644     26244     `
+/362            0           0     0     644     20672     `
+/388            0           0     0     644     9352      `
+/408            0           0     0     644     2076      `
+/415            0           0     0     644     1468      `

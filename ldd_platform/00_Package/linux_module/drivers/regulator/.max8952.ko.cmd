@@ -1,0 +1,1 @@
+cmd_drivers/regulator/max8952.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/regulator/max8952.ko drivers/regulator/max8952.o drivers/regulator/max8952.mod.o;  true

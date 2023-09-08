@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-stm32/built-in.a := rm -f arch/arm/mach-stm32/built-in.a;  printf "arch/arm/mach-stm32/%s " board-dt.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-stm32/built-in.a

@@ -1,0 +1,1 @@
+cmd_sound/soc/stm/snd-soc-stm32-sai.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/stm/snd-soc-stm32-sai.o @sound/soc/stm/snd-soc-stm32-sai.mod 

@@ -1,0 +1,1 @@
+cmd_net/ipv6/xfrm6_tunnel.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o net/ipv6/xfrm6_tunnel.ko net/ipv6/xfrm6_tunnel.o net/ipv6/xfrm6_tunnel.mod.o;  true

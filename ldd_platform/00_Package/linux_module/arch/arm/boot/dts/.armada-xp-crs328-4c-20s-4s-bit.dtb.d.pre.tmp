@@ -1,0 +1,5 @@
+armada-xp-crs328-4c-20s-4s-bit.o: \
+ arch/arm/boot/dts/armada-xp-crs328-4c-20s-4s-bit.dts \
+ arch/arm/boot/dts/armada-xp-crs328-4c-20s-4s.dtsi \
+ arch/arm/boot/dts/armada-xp-98dx3236.dtsi \
+ arch/arm/boot/dts/armada-370-xp.dtsi

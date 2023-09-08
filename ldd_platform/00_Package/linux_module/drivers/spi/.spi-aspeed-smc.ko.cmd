@@ -1,0 +1,1 @@
+cmd_drivers/spi/spi-aspeed-smc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/spi/spi-aspeed-smc.ko drivers/spi/spi-aspeed-smc.o drivers/spi/spi-aspeed-smc.mod.o;  true

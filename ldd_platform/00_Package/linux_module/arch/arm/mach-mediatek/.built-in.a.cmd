@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-mediatek/built-in.a := rm -f arch/arm/mach-mediatek/built-in.a;  printf "arch/arm/mach-mediatek/%s " platsmp.o mediatek.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-mediatek/built-in.a

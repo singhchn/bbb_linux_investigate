@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-at91/built-in.a := rm -f arch/arm/mach-at91/built-in.a;  printf "arch/arm/mach-at91/%s " sama5.o sam_secure.o sama7.o pm.o pm_suspend.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-at91/built-in.a

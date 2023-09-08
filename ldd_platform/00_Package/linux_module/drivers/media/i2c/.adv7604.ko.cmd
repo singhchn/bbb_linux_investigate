@@ -1,0 +1,1 @@
+cmd_drivers/media/i2c/adv7604.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/i2c/adv7604.ko drivers/media/i2c/adv7604.o drivers/media/i2c/adv7604.mod.o;  true

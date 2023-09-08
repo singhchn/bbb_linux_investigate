@@ -1,0 +1,7 @@
+uniphier-pxs2-gentil.o: arch/arm/boot/dts/uniphier-pxs2-gentil.dts \
+ arch/arm/boot/dts/uniphier-pxs2.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/uniphier-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ arch/arm/boot/dts/uniphier-pinctrl.dtsi

@@ -1,0 +1,1 @@
+cmd_drivers/memory/tegra/built-in.a := rm -f drivers/memory/tegra/built-in.a;  printf "drivers/memory/tegra/%s " mc.o tegra20.o tegra30.o tegra114.o tegra124.o tegra20-emc.o tegra30-emc.o tegra124-emc.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/memory/tegra/built-in.a

@@ -1,0 +1,5 @@
+armada-388-db.o: arch/arm/boot/dts/armada-388-db.dts \
+ arch/arm/boot/dts/armada-388.dtsi arch/arm/boot/dts/armada-385.dtsi \
+ arch/arm/boot/dts/armada-38x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

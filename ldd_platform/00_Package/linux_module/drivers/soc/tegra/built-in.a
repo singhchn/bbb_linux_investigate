@@ -1,0 +1,28 @@
+!<thin>
+//                                              250       `
+fuse/fuse-tegra.o/
+fuse/fuse-tegra30.o/
+fuse/tegra-apbmisc.o/
+fuse/fuse-tegra20.o/
+fuse/speedo-tegra20.o/
+fuse/speedo-tegra30.o/
+fuse/speedo-tegra114.o/
+fuse/speedo-tegra124.o/
+common.o/
+flowctrl.o/
+pmc.o/
+regulators-tegra20.o/
+regulators-tegra30.o/
+/0              0           0     0     644     13956     `
+/19             0           0     0     644     4832      `
+/40             0           0     0     644     7676      `
+/62             0           0     0     644     5300      `
+/83             0           0     0     644     1896      `
+/106            0           0     0     644     3772      `
+/129            0           0     0     644     2184      `
+/153            0           0     0     644     2584      `
+/177            0           0     0     644     5428      `
+/187            0           0     0     644     6692      `
+/199            0           0     0     644     63992     `
+/206            0           0     0     644     7620      `
+/228            0           0     0     644     7360      `

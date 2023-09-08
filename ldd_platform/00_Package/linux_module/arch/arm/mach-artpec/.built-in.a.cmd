@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-artpec/built-in.a := rm -f arch/arm/mach-artpec/built-in.a;  printf "arch/arm/mach-artpec/%s " board-artpec6.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-artpec/built-in.a

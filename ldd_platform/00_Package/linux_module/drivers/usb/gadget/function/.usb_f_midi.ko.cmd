@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/function/usb_f_midi.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/gadget/function/usb_f_midi.ko drivers/usb/gadget/function/usb_f_midi.o drivers/usb/gadget/function/usb_f_midi.mod.o;  true

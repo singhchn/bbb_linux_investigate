@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/bridge/synopsys/modules.order := {   echo drivers/gpu/drm/bridge/synopsys/dw-hdmi.ko;   echo drivers/gpu/drm/bridge/synopsys/dw-mipi-dsi.ko; :; } > drivers/gpu/drm/bridge/synopsys/modules.order

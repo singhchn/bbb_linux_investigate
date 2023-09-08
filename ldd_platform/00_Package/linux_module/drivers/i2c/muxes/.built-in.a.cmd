@@ -1,0 +1,1 @@
+cmd_drivers/i2c/muxes/built-in.a := rm -f drivers/i2c/muxes/built-in.a;  printf "drivers/i2c/muxes/%s " i2c-demux-pinctrl.o i2c-mux-gpio.o i2c-mux-pca954x.o i2c-mux-pinctrl.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/i2c/muxes/built-in.a

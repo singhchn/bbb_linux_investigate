@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/allwinner/built-in.a := rm -f drivers/net/ethernet/allwinner/built-in.a;  printf "drivers/net/ethernet/allwinner/%s " sun4i-emac.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/allwinner/built-in.a

@@ -1,0 +1,1 @@
+cmd_sound/soc/stm/snd-soc-stm32-sai-sub.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/stm/snd-soc-stm32-sai-sub.ko sound/soc/stm/snd-soc-stm32-sai-sub.o sound/soc/stm/snd-soc-stm32-sai-sub.mod.o;  true

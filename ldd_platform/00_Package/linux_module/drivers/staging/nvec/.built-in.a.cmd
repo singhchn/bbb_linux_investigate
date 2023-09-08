@@ -1,0 +1,1 @@
+cmd_drivers/staging/nvec/built-in.a := rm -f drivers/staging/nvec/built-in.a;  printf "drivers/staging/nvec/%s " nvec_ps2.o nvec.o nvec_power.o nvec_kbd.o nvec_paz00.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/staging/nvec/built-in.a

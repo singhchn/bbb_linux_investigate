@@ -1,0 +1,8 @@
+ls1021a-moxa-uc-8410a.o: arch/arm/boot/dts/ls1021a-moxa-uc-8410a.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ arch/arm/boot/dts/ls1021a.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h

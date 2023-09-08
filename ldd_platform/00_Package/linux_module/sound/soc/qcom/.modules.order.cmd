@@ -1,0 +1,1 @@
+cmd_sound/soc/qcom/modules.order := {   echo sound/soc/qcom/snd-soc-lpass-cpu.ko;   echo sound/soc/qcom/snd-soc-lpass-platform.ko;   echo sound/soc/qcom/snd-soc-lpass-apq8016.ko;   echo sound/soc/qcom/snd-soc-apq8016-sbc.ko;   echo sound/soc/qcom/snd-soc-qcom-common.ko; :; } > sound/soc/qcom/modules.order

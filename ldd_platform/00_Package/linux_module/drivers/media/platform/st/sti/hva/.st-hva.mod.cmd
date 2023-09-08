@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/st/sti/hva/st-hva.mod := printf '%s\n'   hva-v4l2.o hva-hw.o hva-mem.o hva-h264.o | awk '!x[$$0]++ { print("drivers/media/platform/st/sti/hva/"$$0) }' > drivers/media/platform/st/sti/hva/st-hva.mod

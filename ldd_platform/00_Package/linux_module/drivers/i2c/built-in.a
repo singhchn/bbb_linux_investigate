@@ -1,0 +1,90 @@
+!<thin>
+//                                              926       `
+i2c-boardinfo.o/
+i2c-core-base.o/
+i2c-core-smbus.o/
+i2c-core-slave.o/
+i2c-core-of.o/
+i2c-smbus.o/
+i2c-dev.o/
+i2c-mux.o/
+algos/i2c-algo-bit.o/
+busses/i2c-bcm2835.o/
+busses/i2c-bcm-iproc.o/
+busses/i2c-cadence.o/
+busses/i2c-davinci.o/
+busses/i2c-designware-common.o/
+busses/i2c-designware-master.o/
+busses/i2c-designware-platdrv.o/
+busses/i2c-exynos5.o/
+busses/i2c-imx.o/
+busses/i2c-meson.o/
+busses/i2c-mv64xxx.o/
+busses/i2c-nomadik.o/
+busses/i2c-omap.o/
+busses/i2c-owl.o/
+busses/i2c-qup.o/
+busses/i2c-riic.o/
+busses/i2c-rk3x.o/
+busses/i2c-s3c2410.o/
+busses/i2c-sh_mobile.o/
+busses/i2c-st.o/
+busses/i2c-stm32f7.o/
+busses/i2c-stm32.o/
+busses/i2c-sun6i-p2wi.o/
+busses/i2c-tegra.o/
+busses/i2c-uniphier.o/
+busses/i2c-uniphier-f.o/
+busses/i2c-xiic.o/
+busses/i2c-rcar.o/
+busses/i2c-bcm-kona.o/
+busses/i2c-brcmstb.o/
+muxes/i2c-demux-pinctrl.o/
+muxes/i2c-mux-gpio.o/
+muxes/i2c-mux-pca954x.o/
+muxes/i2c-mux-pinctrl.o/
+i2c-slave-eeprom.o/
+/0              0           0     0     644     3060      `
+/17             0           0     0     644     59900     `
+/34             0           0     0     644     29116     `
+/52             0           0     0     644     9936      `
+/70             0           0     0     644     7152      `
+/85             0           0     0     644     9308      `
+/98             0           0     0     644     11616     `
+/109            0           0     0     644     8844      `
+/120            0           0     0     644     9860      `
+/142            0           0     0     644     9752      `
+/164            0           0     0     644     25092     `
+/188            0           0     0     644     13176     `
+/210            0           0     0     644     13136     `
+/232            0           0     0     644     9544      `
+/264            0           0     0     644     11832     `
+/296            0           0     0     644     10044     `
+/329            0           0     0     644     12400     `
+/351            0           0     0     644     24308     `
+/369            0           0     0     644     10364     `
+/389            0           0     0     644     16460     `
+/411            0           0     0     644     12224     `
+/433            0           0     0     644     15640     `
+/452            0           0     0     644     9148      `
+/470            0           0     0     644     21156     `
+/488            0           0     0     644     8884      `
+/507            0           0     0     644     16384     `
+/526            0           0     0     644     14296     `
+/548            0           0     0     644     17508     `
+/572            0           0     0     644     10768     `
+/589            0           0     0     644     25172     `
+/611            0           0     0     644     4348      `
+/631            0           0     0     644     8052      `
+/656            0           0     0     644     23008     `
+/676            0           0     0     644     8444      `
+/699            0           0     0     644     10064     `
+/724            0           0     0     644     12836     `
+/743            0           0     0     644     18208     `
+/762            0           0     0     644     11452     `
+/785            0           0     0     644     9972      `
+/807            0           0     0     644     8320      `
+/834            0           0     0     644     7000      `
+/856            0           0     0     644     12300     `
+/881            0           0     0     644     6672      `
+/906            0           0     0     644     5732      `

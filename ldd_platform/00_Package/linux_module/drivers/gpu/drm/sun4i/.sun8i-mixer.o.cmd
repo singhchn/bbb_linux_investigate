@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/sun4i/sun8i-mixer.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/sun4i/sun8i-mixer.o @drivers/gpu/drm/sun4i/sun8i-mixer.mod 

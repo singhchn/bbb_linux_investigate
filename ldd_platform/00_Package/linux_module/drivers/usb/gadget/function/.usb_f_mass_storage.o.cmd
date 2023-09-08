@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/function/usb_f_mass_storage.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/usb/gadget/function/usb_f_mass_storage.o @drivers/usb/gadget/function/usb_f_mass_storage.mod 

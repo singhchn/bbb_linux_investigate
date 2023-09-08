@@ -1,0 +1,9 @@
+qcom-msm8226-samsung-s3ve3g.o: \
+ arch/arm/boot/dts/qcom-msm8226-samsung-s3ve3g.dts \
+ arch/arm/boot/dts/qcom-msm8226.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-msm8974.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/qcom-rpmpd.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/qcom,gcc-msm8974.h

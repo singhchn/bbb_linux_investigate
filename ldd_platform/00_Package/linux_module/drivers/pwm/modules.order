@@ -1,0 +1,11 @@
+drivers/pwm/pwm-atmel.ko
+drivers/pwm/pwm-atmel-hlcdc.ko
+drivers/pwm/pwm-atmel-tcb.ko
+drivers/pwm/pwm-brcmstb.ko
+drivers/pwm/pwm-fsl-ftm.ko
+drivers/pwm/pwm-meson.ko
+drivers/pwm/pwm-rcar.ko
+drivers/pwm/pwm-rockchip.ko
+drivers/pwm/pwm-samsung.ko
+drivers/pwm/pwm-stm32.ko
+drivers/pwm/pwm-stm32-lp.ko

@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/exynos4-is/s5p-csis.mod := printf '%s\n'   mipi-csis.o | awk '!x[$$0]++ { print("drivers/media/platform/samsung/exynos4-is/"$$0) }' > drivers/media/platform/samsung/exynos4-is/s5p-csis.mod

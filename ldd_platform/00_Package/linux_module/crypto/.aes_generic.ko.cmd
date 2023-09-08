@@ -1,0 +1,1 @@
+cmd_crypto/aes_generic.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o crypto/aes_generic.ko crypto/aes_generic.o crypto/aes_generic.mod.o;  true

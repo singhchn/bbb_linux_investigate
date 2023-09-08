@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/sunplus/built-in.a := rm -f drivers/pinctrl/sunplus/built-in.a;  printf "drivers/pinctrl/sunplus/%s " sppctl.o sppctl_sp7021.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/sunplus/built-in.a

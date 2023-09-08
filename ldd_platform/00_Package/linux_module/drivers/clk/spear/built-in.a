@@ -1,0 +1,16 @@
+!<thin>
+//                                              112       `
+clk.o/
+clk-aux-synth.o/
+clk-frac-synth.o/
+clk-gpt-synth.o/
+clk-vco-pll.o/
+spear1310_clock.o/
+spear1340_clock.o/
+/0              0           0     0     644     1240      `
+/7              0           0     0     644     3564      `
+/24             0           0     0     644     3184      `
+/42             0           0     0     644     3188      `
+/59             0           0     0     644     5536      `
+/74             0           0     0     644     29752     `
+/93             0           0     0     644     24576     `

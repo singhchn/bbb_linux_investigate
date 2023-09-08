@@ -1,0 +1,1 @@
+cmd_drivers/usb/dwc3/built-in.a := rm -f drivers/usb/dwc3/built-in.a;  printf "drivers/usb/dwc3/%s " core.o trace.o host.o gadget.o ep0.o drd.o debugfs.o dwc3-omap.o dwc3-exynos.o dwc3-haps.o dwc3-keystone.o dwc3-meson-g12a.o dwc3-of-simple.o dwc3-st.o dwc3-qcom.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/usb/dwc3/built-in.a

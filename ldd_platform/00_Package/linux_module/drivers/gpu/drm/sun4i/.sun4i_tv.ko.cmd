@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/sun4i/sun4i_tv.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/sun4i/sun4i_tv.ko drivers/gpu/drm/sun4i/sun4i_tv.o drivers/gpu/drm/sun4i/sun4i_tv.mod.o;  true

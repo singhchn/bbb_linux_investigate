@@ -1,0 +1,45 @@
+!<thin>
+//                                              392       `
+cpufreq.o/
+freq_table.o/
+cpufreq_stats.o/
+cpufreq_performance.o/
+cpufreq_ondemand.o/
+cpufreq_governor.o/
+cpufreq_governor_attr_set.o/
+cpufreq-dt.o/
+cpufreq-dt-platdev.o/
+brcmstb-avs-cpufreq.o/
+imx6q-cpufreq.o/
+mvebu-cpufreq.o/
+omap-cpufreq.o/
+qcom-cpufreq-nvmem.o/
+raspberrypi-cpufreq.o/
+scmi-cpufreq.o/
+spear-cpufreq.o/
+tegra20-cpufreq.o/
+tegra124-cpufreq.o/
+ti-cpufreq.o/
+qoriq-cpufreq.o/
+
+/0              0           0     0     644     56888     `
+/11             0           0     0     644     7548      `
+/25             0           0     0     644     5076      `
+/42             0           0     0     644     3328      `
+/65             0           0     0     644     12292     `
+/85             0           0     0     644     10692     `
+/105            0           0     0     644     3612      `
+/134            0           0     0     644     8860      `
+/148            0           0     0     644     25864     `
+/170            0           0     0     644     11680     `
+/193            0           0     0     644     13604     `
+/210            0           0     0     644     3796      `
+/227            0           0     0     644     7280      `
+/243            0           0     0     644     10224     `
+/265            0           0     0     644     4824      `
+/288            0           0     0     644     7740      `
+/304            0           0     0     644     7080      `
+/321            0           0     0     644     5436      `
+/340            0           0     0     644     5740      `
+/360            0           0     0     644     8384      `
+/374            0           0     0     644     8436      `

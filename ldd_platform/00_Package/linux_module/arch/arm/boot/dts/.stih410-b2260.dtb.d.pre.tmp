@@ -1,0 +1,14 @@
+stih410-b2260.o: arch/arm/boot/dts/stih410-b2260.dts \
+ arch/arm/boot/dts/stih410.dtsi arch/arm/boot/dts/stih410-clock.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/stih410-clks.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/stih407-clks.h \
+ arch/arm/boot/dts/stih407-family.dtsi \
+ arch/arm/boot/dts/stih407-pinctrl.dtsi arch/arm/boot/dts/st-pincfg.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/mfd/st-lpc.h \
+ scripts/dtc/include-prefixes/dt-bindings/phy/phy.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/stih407-resets.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq-st.h \
+ arch/arm/boot/dts/stih410-pinctrl.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

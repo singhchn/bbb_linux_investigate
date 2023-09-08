@@ -1,0 +1,1 @@
+zynq-ebaz4205.o: arch/arm/boot/dts/zynq-ebaz4205.dts

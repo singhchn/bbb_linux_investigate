@@ -1,0 +1,1 @@
+cmd_drivers/char/tpm/tpm_i2c_infineon.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/char/tpm/tpm_i2c_infineon.ko drivers/char/tpm/tpm_i2c_infineon.o drivers/char/tpm/tpm_i2c_infineon.mod.o;  true

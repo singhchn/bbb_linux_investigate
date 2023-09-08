@@ -1,0 +1,1 @@
+cmd_drivers/memory/samsung/built-in.a := rm -f drivers/memory/samsung/built-in.a;  printf "drivers/memory/samsung/%s " exynos-srom.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/memory/samsung/built-in.a

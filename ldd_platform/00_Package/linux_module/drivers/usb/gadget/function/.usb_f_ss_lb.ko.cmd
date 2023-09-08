@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/function/usb_f_ss_lb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/gadget/function/usb_f_ss_lb.ko drivers/usb/gadget/function/usb_f_ss_lb.o drivers/usb/gadget/function/usb_f_ss_lb.mod.o;  true

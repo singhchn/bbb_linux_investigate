@@ -1,0 +1,8 @@
+uniphier-sld8-ref.o: arch/arm/boot/dts/uniphier-sld8-ref.dts \
+ arch/arm/boot/dts/uniphier-sld8.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/uniphier-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/uniphier-pinctrl.dtsi \
+ arch/arm/boot/dts/uniphier-ref-daughter.dtsi \
+ arch/arm/boot/dts/uniphier-support-card.dtsi

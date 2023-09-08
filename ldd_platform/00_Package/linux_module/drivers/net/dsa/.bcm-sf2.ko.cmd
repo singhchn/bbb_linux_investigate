@@ -1,0 +1,1 @@
+cmd_drivers/net/dsa/bcm-sf2.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/dsa/bcm-sf2.ko drivers/net/dsa/bcm-sf2.o drivers/net/dsa/bcm-sf2.mod.o;  true

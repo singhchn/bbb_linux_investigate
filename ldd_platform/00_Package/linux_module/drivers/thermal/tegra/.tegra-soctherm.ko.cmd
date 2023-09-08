@@ -1,0 +1,1 @@
+cmd_drivers/thermal/tegra/tegra-soctherm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/thermal/tegra/tegra-soctherm.ko drivers/thermal/tegra/tegra-soctherm.o drivers/thermal/tegra/tegra-soctherm.mod.o;  true

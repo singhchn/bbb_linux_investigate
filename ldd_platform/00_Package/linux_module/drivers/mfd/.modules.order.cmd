@@ -1,0 +1,1 @@
+cmd_drivers/mfd/modules.order := {   echo drivers/mfd/cros_ec_dev.ko;   echo drivers/mfd/wm8994.ko;   echo drivers/mfd/da9063.ko;   echo drivers/mfd/max77693.ko;   echo drivers/mfd/atmel-hlcdc.ko;   echo drivers/mfd/stm32-lptimer.ko;   echo drivers/mfd/stm32-timers.ko;   echo drivers/mfd/acer-ec-a500.ko; :; } > drivers/mfd/modules.order

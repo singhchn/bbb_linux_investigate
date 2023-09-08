@@ -1,0 +1,8 @@
+rv1108-evb.o: arch/arm/boot/dts/rv1108-evb.dts \
+ arch/arm/boot/dts/rv1108.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rv1108-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h

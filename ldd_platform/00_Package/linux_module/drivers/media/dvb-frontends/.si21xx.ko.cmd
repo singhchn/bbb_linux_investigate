@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/si21xx.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/si21xx.ko drivers/media/dvb-frontends/si21xx.o drivers/media/dvb-frontends/si21xx.mod.o;  true

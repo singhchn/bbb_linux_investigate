@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/tegra/built-in.a := rm -f drivers/pinctrl/tegra/built-in.a;  printf "drivers/pinctrl/tegra/%s " pinctrl-tegra.o pinctrl-tegra20.o pinctrl-tegra30.o pinctrl-tegra114.o pinctrl-tegra124.o pinctrl-tegra-xusb.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/tegra/built-in.a

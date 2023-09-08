@@ -1,0 +1,43 @@
+!<thin>
+//                                              334       `
+jedec_ddr_data.o/
+of_memory.o/
+atmel-sdramc.o/
+atmel-ebi.o/
+brcmstb_dpfe.o/
+brcmstb_memc.o/
+ti-aemif.o/
+omap-gpmc.o/
+mvebu-devbus.o/
+pl353-smc.o/
+stm32-fmc2-ebi.o/
+samsung/exynos-srom.o/
+tegra/mc.o/
+tegra/tegra20.o/
+tegra/tegra30.o/
+tegra/tegra114.o/
+tegra/tegra124.o/
+tegra/tegra20-emc.o/
+tegra/tegra30-emc.o/
+tegra/tegra124-emc.o/
+
+/0              0           0     0     644     4552      `
+/18             0           0     0     644     14140     `
+/31             0           0     0     644     3912      `
+/47             0           0     0     644     12680     `
+/60             0           0     0     644     12424     `
+/76             0           0     0     644     9032      `
+/92             0           0     0     644     8796      `
+/104            0           0     0     644     40276     `
+/117            0           0     0     644     6432      `
+/133            0           0     0     644     6276      `
+/146            0           0     0     644     16304     `
+/164            0           0     0     644     4960      `
+/187            0           0     0     644     16512     `
+/199            0           0     0     644     12652     `
+/216            0           0     0     644     9084      `
+/233            0           0     0     644     6792      `
+/251            0           0     0     644     8764      `
+/269            0           0     0     644     18772     `
+/290            0           0     0     644     21928     `
+/311            0           0     0     644     21968     `

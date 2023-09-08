@@ -1,0 +1,1 @@
+cmd_drivers/devfreq/event/exynos-nocp.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/devfreq/event/exynos-nocp.ko drivers/devfreq/event/exynos-nocp.o drivers/devfreq/event/exynos-nocp.mod.o;  true

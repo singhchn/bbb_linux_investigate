@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/i2c-aspeed.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/i2c/busses/i2c-aspeed.ko drivers/i2c/busses/i2c-aspeed.o drivers/i2c/busses/i2c-aspeed.mod.o;  true

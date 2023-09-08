@@ -1,0 +1,13 @@
+!<thin>
+//                                              104       `
+phy-miphy28lp.o/
+phy-spear1310-miphy.o/
+phy-spear1340-miphy.o/
+phy-stih407-usb.o/
+phy-stm32-usbphyc.o/
+
+/0              0           0     0     644     12764     `
+/17             0           0     0     644     5848      `
+/40             0           0     0     644     6472      `
+/63             0           0     0     644     6076      `
+/82             0           0     0     644     14172     `

@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/i2c-digicolor.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/i2c/busses/i2c-digicolor.ko drivers/i2c/busses/i2c-digicolor.o drivers/i2c/busses/i2c-digicolor.mod.o;  true

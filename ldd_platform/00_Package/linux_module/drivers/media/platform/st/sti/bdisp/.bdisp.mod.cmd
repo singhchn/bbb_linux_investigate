@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/st/sti/bdisp/bdisp.mod := printf '%s\n'   bdisp-v4l2.o bdisp-hw.o bdisp-debug.o | awk '!x[$$0]++ { print("drivers/media/platform/st/sti/bdisp/"$$0) }' > drivers/media/platform/st/sti/bdisp/bdisp.mod

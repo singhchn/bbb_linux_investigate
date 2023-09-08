@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-mvebu/built-in.a := rm -f arch/arm/mach-mvebu/built-in.a;  printf "arch/arm/mach-mvebu/%s " system-controller.o mvebu-soc-id.o cpu-reset.o board-v7.o coherency.o coherency_ll.o pmsu.o pmsu_ll.o pm.o pm-board.o platsmp.o headsmp.o platsmp-a9.o headsmp-a9.o dove.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-mvebu/built-in.a

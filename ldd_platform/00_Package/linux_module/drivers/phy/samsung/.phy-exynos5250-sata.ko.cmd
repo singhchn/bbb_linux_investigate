@@ -1,0 +1,1 @@
+cmd_drivers/phy/samsung/phy-exynos5250-sata.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/samsung/phy-exynos5250-sata.ko drivers/phy/samsung/phy-exynos5250-sata.o drivers/phy/samsung/phy-exynos5250-sata.mod.o;  true

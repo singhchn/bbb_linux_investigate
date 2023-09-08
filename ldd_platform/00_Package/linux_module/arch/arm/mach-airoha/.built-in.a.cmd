@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-airoha/built-in.a := rm -f arch/arm/mach-airoha/built-in.a;  printf "arch/arm/mach-airoha/%s " airoha.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-airoha/built-in.a

@@ -1,0 +1,1 @@
+cmd_sound/pci/hda/snd-hda-codec-realtek.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/pci/hda/snd-hda-codec-realtek.ko sound/pci/hda/snd-hda-codec-realtek.o sound/pci/hda/snd-hda-codec-realtek.mod.o;  true

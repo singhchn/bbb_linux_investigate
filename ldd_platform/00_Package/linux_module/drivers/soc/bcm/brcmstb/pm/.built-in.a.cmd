@@ -1,0 +1,1 @@
+cmd_drivers/soc/bcm/brcmstb/pm/built-in.a := rm -f drivers/soc/bcm/brcmstb/pm/built-in.a;  printf "drivers/soc/bcm/brcmstb/pm/%s " s2-arm.o pm-arm.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/bcm/brcmstb/pm/built-in.a

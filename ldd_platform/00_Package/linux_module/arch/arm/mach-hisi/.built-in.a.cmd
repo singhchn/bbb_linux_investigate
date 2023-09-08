@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-hisi/built-in.a := rm -f arch/arm/mach-hisi/built-in.a;  printf "arch/arm/mach-hisi/%s " hisilicon.o platmcpm.o platsmp.o hotplug.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-hisi/built-in.a

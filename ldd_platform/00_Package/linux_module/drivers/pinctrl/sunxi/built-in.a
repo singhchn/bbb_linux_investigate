@@ -1,0 +1,34 @@
+!<thin>
+//                                              338       `
+pinctrl-sunxi.o/
+pinctrl-sun4i-a10.o/
+pinctrl-sun5i.o/
+pinctrl-sun6i-a31.o/
+pinctrl-sun6i-a31-r.o/
+pinctrl-sun8i-a23.o/
+pinctrl-sun8i-a23-r.o/
+pinctrl-sun8i-a33.o/
+pinctrl-sun8i-a83t.o/
+pinctrl-sun8i-a83t-r.o/
+pinctrl-sun8i-h3.o/
+pinctrl-sun8i-h3-r.o/
+pinctrl-sun8i-v3s.o/
+pinctrl-sun20i-d1.o/
+pinctrl-sun9i-a80.o/
+pinctrl-sun9i-a80-r.o/
+/0              0           0     0     644     20732     `
+/17             0           0     0     644     37664     `
+/38             0           0     0     644     24880     `
+/55             0           0     0     644     33280     `
+/76             0           0     0     644     5812      `
+/99             0           0     0     644     21680     `
+/120            0           0     0     644     5168      `
+/143            0           0     0     644     19068     `
+/164            0           0     0     644     21732     `
+/186            0           0     0     644     5356      `
+/210            0           0     0     644     19100     `
+/230            0           0     0     644     5092      `
+/252            0           0     0     644     19476     `
+/273            0           0     0     644     25468     `
+/294            0           0     0     644     26404     `
+/315            0           0     0     644     7308      `

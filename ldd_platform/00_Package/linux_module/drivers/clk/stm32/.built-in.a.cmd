@@ -1,0 +1,1 @@
+cmd_drivers/clk/stm32/built-in.a := rm -f drivers/clk/stm32/built-in.a;  printf "drivers/clk/stm32/%s " clk-stm32mp13.o clk-stm32-core.o reset-stm32.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/stm32/built-in.a

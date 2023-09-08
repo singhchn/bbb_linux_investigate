@@ -1,0 +1,1 @@
+cmd_drivers/input/keyboard/cros_ec_keyb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/keyboard/cros_ec_keyb.ko drivers/input/keyboard/cros_ec_keyb.o drivers/input/keyboard/cros_ec_keyb.mod.o;  true

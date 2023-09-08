@@ -1,0 +1,15 @@
+!<thin>
+//                                              120       `
+phy-bcm-cygnus-pcie.o/
+phy-bcm-ns2-pcie.o/
+phy-bcm-ns2-usbdrd.o/
+phy-brcm-sata.o/
+phy-bcm-sr-pcie.o/
+phy-bcm-sr-usb.o/
+
+/0              0           0     0     644     6468      `
+/23             0           0     0     644     4828      `
+/43             0           0     0     644     9260      `
+/65             0           0     0     644     10896     `
+/82             0           0     0     644     6324      `
+/101            0           0     0     644     6292      `

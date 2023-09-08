@@ -1,0 +1,18 @@
+ste-ux500-samsung-skomer.o: \
+ arch/arm/boot/dts/ste-ux500-samsung-skomer.dts \
+ arch/arm/boot/dts/ste-db8500.dtsi arch/arm/boot/dts/ste-dbx5x0.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/stericsson,db8500-prcc-reset.h \
+ scripts/dtc/include-prefixes/dt-bindings/mfd/dbx500-prcmu.h \
+ scripts/dtc/include-prefixes/dt-bindings/arm/ux500_pm_domains.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ arch/arm/boot/dts/ste-ab8505.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/ste-ab8500.h \
+ arch/arm/boot/dts/ste-dbx5x0-pinctrl.dtsi \
+ arch/arm/boot/dts/ste-nomadik-pinctrl.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/nomadik.h \
+ scripts/dtc/include-prefixes/dt-bindings/leds/common.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h

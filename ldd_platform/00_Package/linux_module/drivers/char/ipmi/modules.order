@@ -1,0 +1,3 @@
+drivers/char/ipmi/kcs_bmc.ko
+drivers/char/ipmi/bt-bmc.ko
+drivers/char/ipmi/kcs_bmc_aspeed.ko

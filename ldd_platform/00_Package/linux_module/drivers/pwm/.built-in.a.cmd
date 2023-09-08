@@ -1,0 +1,1 @@
+cmd_drivers/pwm/built-in.a := rm -f drivers/pwm/built-in.a;  printf "drivers/pwm/%s " core.o sysfs.o pwm-bcm-iproc.o pwm-bcm-kona.o pwm-bcm2835.o pwm-renesas-tpu.o pwm-sti.o pwm-sun4i.o pwm-tegra.o pwm-vt8500.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pwm/built-in.a

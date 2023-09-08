@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-berlin/built-in.a := rm -f arch/arm/mach-berlin/built-in.a;  printf "arch/arm/mach-berlin/%s " berlin.o headsmp.o platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-berlin/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/counter/stm32-timer-cnt.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/counter/stm32-timer-cnt.ko drivers/counter/stm32-timer-cnt.o drivers/counter/stm32-timer-cnt.mod.o;  true

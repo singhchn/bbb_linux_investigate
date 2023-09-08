@@ -1,0 +1,1 @@
+cmd_drivers/dma/xilinx/built-in.a := rm -f drivers/dma/xilinx/built-in.a;  printf "drivers/dma/xilinx/%s " xilinx_dma.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/dma/xilinx/built-in.a

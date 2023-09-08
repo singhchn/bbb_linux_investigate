@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/berlin2-adc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/adc/berlin2-adc.ko drivers/iio/adc/berlin2-adc.o drivers/iio/adc/berlin2-adc.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/rtc/rtc-meson-vrtc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/rtc/rtc-meson-vrtc.ko drivers/rtc/rtc-meson-vrtc.o drivers/rtc/rtc-meson-vrtc.mod.o;  true

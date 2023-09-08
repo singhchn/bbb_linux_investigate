@@ -1,0 +1,1 @@
+cmd_drivers/phy/hisilicon/built-in.a := rm -f drivers/phy/hisilicon/built-in.a;  printf "drivers/phy/hisilicon/%s " phy-hix5hd2-sata.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/hisilicon/built-in.a

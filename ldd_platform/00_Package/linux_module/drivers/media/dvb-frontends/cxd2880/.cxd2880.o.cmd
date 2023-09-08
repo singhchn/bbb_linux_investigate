@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/cxd2880/cxd2880.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/dvb-frontends/cxd2880/cxd2880.o @drivers/media/dvb-frontends/cxd2880/cxd2880.mod 

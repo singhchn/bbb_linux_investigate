@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/ralink/rt2x00/rt2x00usb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/wireless/ralink/rt2x00/rt2x00usb.ko drivers/net/wireless/ralink/rt2x00/rt2x00usb.o drivers/net/wireless/ralink/rt2x00/rt2x00usb.mod.o;  true

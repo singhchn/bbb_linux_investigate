@@ -1,0 +1,1 @@
+cmd_crypto/algif_hash.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o crypto/algif_hash.ko crypto/algif_hash.o crypto/algif_hash.mod.o;  true

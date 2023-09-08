@@ -1,0 +1,1 @@
+cmd_drivers/input/mouse/built-in.a := rm -f drivers/input/mouse/built-in.a;  printf "drivers/input/mouse/%s " elan_i2c_core.o elan_i2c_i2c.o psmouse-base.o synaptics.o focaltech.o alps.o byd.o elantech.o logips2pp.o trackpoint.o cypress_ps2.o psmouse-smbus.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/input/mouse/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/phy/marvell/built-in.a := rm -f drivers/phy/marvell/built-in.a;  printf "drivers/phy/marvell/%s " phy-armada375-usb2.o phy-berlin-sata.o phy-berlin-usb.o phy-mvebu-a3700-comphy.o phy-mvebu-a3700-utmi.o phy-mvebu-sata.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/marvell/built-in.a

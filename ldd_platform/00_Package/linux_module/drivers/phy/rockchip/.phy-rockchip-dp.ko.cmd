@@ -1,0 +1,1 @@
+cmd_drivers/phy/rockchip/phy-rockchip-dp.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/rockchip/phy-rockchip-dp.ko drivers/phy/rockchip/phy-rockchip-dp.o drivers/phy/rockchip/phy-rockchip-dp.mod.o;  true

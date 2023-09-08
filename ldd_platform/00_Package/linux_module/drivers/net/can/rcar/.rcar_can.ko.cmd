@@ -1,0 +1,1 @@
+cmd_drivers/net/can/rcar/rcar_can.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/can/rcar/rcar_can.ko drivers/net/can/rcar/rcar_can.o drivers/net/can/rcar/rcar_can.mod.o;  true

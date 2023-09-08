@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/isl6423.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/isl6423.ko drivers/media/dvb-frontends/isl6423.o drivers/media/dvb-frontends/isl6423.mod.o;  true

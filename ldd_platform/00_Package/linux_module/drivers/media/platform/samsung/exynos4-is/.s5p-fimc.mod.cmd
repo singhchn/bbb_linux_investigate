@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/exynos4-is/s5p-fimc.mod := printf '%s\n'   fimc-core.o fimc-reg.o fimc-m2m.o fimc-capture.o media-dev.o | awk '!x[$$0]++ { print("drivers/media/platform/samsung/exynos4-is/"$$0) }' > drivers/media/platform/samsung/exynos4-is/s5p-fimc.mod

@@ -1,0 +1,7 @@
+socfpga_arria10_socdk_nand.o: \
+ arch/arm/boot/dts/socfpga_arria10_socdk_nand.dts \
+ arch/arm/boot/dts/socfpga_arria10_socdk.dtsi \
+ arch/arm/boot/dts/socfpga_arria10.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/altr,rst-mgr-a10.h

@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/marvell/mwifiex/mwifiex.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/wireless/marvell/mwifiex/mwifiex.o @drivers/net/wireless/marvell/mwifiex/mwifiex.mod 

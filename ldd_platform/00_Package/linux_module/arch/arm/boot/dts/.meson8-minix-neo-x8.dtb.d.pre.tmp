@@ -1,0 +1,14 @@
+meson8-minix-neo-x8.o: arch/arm/boot/dts/meson8-minix-neo-x8.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/meson8.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/meson8-ddr-clkc.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/meson8b-clkc.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/meson8-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/meson8-power.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/amlogic,meson8b-clkc-reset.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/amlogic,meson8b-reset.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ arch/arm/boot/dts/meson.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/sound/meson-aiu.h

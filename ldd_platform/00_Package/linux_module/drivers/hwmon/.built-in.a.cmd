@@ -1,0 +1,1 @@
+cmd_drivers/hwmon/built-in.a := rm -f drivers/hwmon/built-in.a;  printf "drivers/hwmon/%s " hwmon.o scmi-hwmon.o iio_hwmon.o lm90.o lm95245.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/hwmon/built-in.a

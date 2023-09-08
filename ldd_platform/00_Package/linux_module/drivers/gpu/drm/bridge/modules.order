@@ -1,0 +1,13 @@
+drivers/gpu/drm/bridge/analogix/analogix_dp.ko
+drivers/gpu/drm/bridge/synopsys/dw-hdmi.ko
+drivers/gpu/drm/bridge/synopsys/dw-mipi-dsi.ko
+drivers/gpu/drm/bridge/display-connector.ko
+drivers/gpu/drm/bridge/lvds-codec.ko
+drivers/gpu/drm/bridge/nxp-ptn3460.ko
+drivers/gpu/drm/bridge/parade-ps8622.ko
+drivers/gpu/drm/bridge/sii902x.ko
+drivers/gpu/drm/bridge/sii9234.ko
+drivers/gpu/drm/bridge/simple-bridge.ko
+drivers/gpu/drm/bridge/tc358764.ko
+drivers/gpu/drm/bridge/tc358768.ko
+drivers/gpu/drm/bridge/adv7511/adv7511.ko

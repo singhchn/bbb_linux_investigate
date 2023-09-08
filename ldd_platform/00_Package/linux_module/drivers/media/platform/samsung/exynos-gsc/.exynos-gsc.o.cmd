@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/exynos-gsc/exynos-gsc.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/platform/samsung/exynos-gsc/exynos-gsc.o @drivers/media/platform/samsung/exynos-gsc/exynos-gsc.mod 

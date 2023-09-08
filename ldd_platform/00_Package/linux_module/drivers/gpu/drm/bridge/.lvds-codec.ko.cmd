@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/bridge/lvds-codec.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/bridge/lvds-codec.ko drivers/gpu/drm/bridge/lvds-codec.o drivers/gpu/drm/bridge/lvds-codec.mod.o;  true

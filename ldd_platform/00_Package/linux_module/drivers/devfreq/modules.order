@@ -1,0 +1,5 @@
+drivers/devfreq/event/exynos-nocp.ko
+drivers/devfreq/event/exynos-ppmu.ko
+drivers/devfreq/governor_passive.ko
+drivers/devfreq/exynos-bus.ko
+drivers/devfreq/tegra30-devfreq.ko

@@ -1,0 +1,11 @@
+!<thin>
+//                                              70        `
+cmdlinepart.o/
+ofpart_core.o/
+ofpart_bcm4908.o/
+ofpart_linksys_ns.o/
+
+/0              0           0     0     644     6996      `
+/15             0           0     0     644     7492      `
+/30             0           0     0     644     2400      `
+/48             0           0     0     644     2140      `

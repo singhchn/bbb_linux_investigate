@@ -1,0 +1,1 @@
+wm8650-mid.o: arch/arm/boot/dts/wm8650-mid.dts

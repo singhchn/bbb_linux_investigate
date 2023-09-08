@@ -1,0 +1,13 @@
+rk3288-rock-pi-n8.o: arch/arm/boot/dts/rk3288-rock-pi-n8.dts \
+ arch/arm/boot/dts/rk3288.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3288-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/rk3288-power.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/rockchip,boot-mode.h \
+ scripts/dtc/include-prefixes/arm/rockchip-radxa-dalang-carrier.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/pwm/pwm.h \
+ arch/arm/boot/dts/rk3288-vmarc-som.dtsi

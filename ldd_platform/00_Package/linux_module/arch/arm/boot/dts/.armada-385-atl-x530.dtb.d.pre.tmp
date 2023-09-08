@@ -1,0 +1,5 @@
+armada-385-atl-x530.o: arch/arm/boot/dts/armada-385-atl-x530.dts \
+ arch/arm/boot/dts/armada-385.dtsi arch/arm/boot/dts/armada-38x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

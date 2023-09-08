@@ -1,0 +1,1 @@
+cmd_drivers/net/can/built-in.a := rm -f drivers/net/can/built-in.a;  printf "drivers/net/can/%s " dev/built-in.a rcar/built-in.a spi/built-in.a usb/built-in.a softing/built-in.a sun4i_can.o xilinx_can.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/can/built-in.a

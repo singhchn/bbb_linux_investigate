@@ -1,0 +1,6 @@
+uniphier-pro4-ace.o: arch/arm/boot/dts/uniphier-pro4-ace.dts \
+ arch/arm/boot/dts/uniphier-pro4.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/uniphier-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/uniphier-pinctrl.dtsi

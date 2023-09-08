@@ -1,0 +1,6 @@
+bcm958623hr.o: arch/arm/boot/dts/bcm958623hr.dts \
+ arch/arm/boot/dts/bcm-nsp.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/bcm-nsp.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

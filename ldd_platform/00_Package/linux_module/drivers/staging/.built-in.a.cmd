@@ -1,0 +1,1 @@
+cmd_drivers/staging/built-in.a := rm -f drivers/staging/built-in.a;  printf "drivers/staging/%s " media/built-in.a iio/built-in.a nvec/built-in.a board/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/staging/built-in.a

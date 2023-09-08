@@ -1,0 +1,20 @@
+!<thin>
+//                                              166       `
+mtk-eint.o/
+pinctrl-mtk-common.o/
+pinctrl-mtk-common-v2.o/
+pinctrl-moore.o/
+pinctrl-mt2701.o/
+pinctrl-mt8135.o/
+pinctrl-mt8127.o/
+pinctrl-mt7623.o/
+pinctrl-mt7629.o/
+/0              0           0     0     644     10220     `
+/12             0           0     0     644     14136     `
+/34             0           0     0     644     20716     `
+/59             0           0     0     644     9956      `
+/76             0           0     0     644     52528     `
+/94             0           0     0     644     47724     `
+/112            0           0     0     644     31108     `
+/130            0           0     0     644     48828     `
+/148            0           0     0     644     15948     `

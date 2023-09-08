@@ -1,0 +1,7 @@
+keystone-k2l-evm.o: arch/arm/boot/dts/keystone-k2l-evm.dts \
+ arch/arm/boot/dts/keystone.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/keystone-k2l.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/reset/ti-syscon.h

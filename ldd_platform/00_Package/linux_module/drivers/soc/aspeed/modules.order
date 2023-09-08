@@ -1,0 +1,3 @@
+drivers/soc/aspeed/aspeed-lpc-ctrl.ko
+drivers/soc/aspeed/aspeed-lpc-snoop.ko
+drivers/soc/aspeed/aspeed-p2a-ctrl.ko

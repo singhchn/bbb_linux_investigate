@@ -1,0 +1,1 @@
+cmd_drivers/spi/spi-fsl-qspi.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/spi/spi-fsl-qspi.ko drivers/spi/spi-fsl-qspi.o drivers/spi/spi-fsl-qspi.mod.o;  true

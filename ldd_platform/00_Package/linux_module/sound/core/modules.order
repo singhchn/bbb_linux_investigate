@@ -1,0 +1,7 @@
+sound/core/snd.ko
+sound/core/snd-ctl-led.ko
+sound/core/snd-hwdep.ko
+sound/core/snd-timer.ko
+sound/core/snd-pcm.ko
+sound/core/snd-pcm-dmaengine.ko
+sound/core/snd-rawmidi.ko

@@ -1,0 +1,1 @@
+cmd_drivers/nvmem/built-in.a := rm -f drivers/nvmem/built-in.a;  printf "drivers/nvmem/%s " core.o bcm-ocotp.o imx-ocotp.o qfprom.o sunxi_sid.o vf610-ocotp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/nvmem/built-in.a

@@ -1,0 +1,1 @@
+arch/arm/boot/dts/zynq-ebaz4205.dtb: arch/arm/boot/dts/.zynq-ebaz4205.dtb.dts.tmp arch/arm/boot/dts/zynq-7000.dtsi

@@ -1,0 +1,1 @@
+cmd_drivers/cpufreq/highbank-cpufreq.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/cpufreq/highbank-cpufreq.ko drivers/cpufreq/highbank-cpufreq.o drivers/cpufreq/highbank-cpufreq.mod.o;  true

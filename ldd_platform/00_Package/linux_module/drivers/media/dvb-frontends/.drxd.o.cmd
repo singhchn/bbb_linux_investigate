@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/drxd.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/dvb-frontends/drxd.o @drivers/media/dvb-frontends/drxd.mod 

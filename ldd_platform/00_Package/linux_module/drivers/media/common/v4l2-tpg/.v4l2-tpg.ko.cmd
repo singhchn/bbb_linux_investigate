@@ -1,0 +1,1 @@
+cmd_drivers/media/common/v4l2-tpg/v4l2-tpg.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/common/v4l2-tpg/v4l2-tpg.ko drivers/media/common/v4l2-tpg/v4l2-tpg.o drivers/media/common/v4l2-tpg/v4l2-tpg.mod.o;  true

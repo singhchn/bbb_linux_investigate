@@ -1,0 +1,1 @@
+cmd_sound/soc/ti/snd-soc-davinci-mcasp.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/ti/snd-soc-davinci-mcasp.o @sound/soc/ti/snd-soc-davinci-mcasp.mod 

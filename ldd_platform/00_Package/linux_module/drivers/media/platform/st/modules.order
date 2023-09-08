@@ -1,0 +1,4 @@
+drivers/media/platform/st/sti/bdisp/bdisp.ko
+drivers/media/platform/st/sti/delta/st-delta.ko
+drivers/media/platform/st/sti/hva/st-hva.ko
+drivers/media/platform/st/stm32/stm32-dcmi.ko

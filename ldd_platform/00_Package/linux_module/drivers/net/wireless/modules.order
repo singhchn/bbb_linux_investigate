@@ -1,0 +1,9 @@
+drivers/net/wireless/ath/wcn36xx/wcn36xx.ko
+drivers/net/wireless/broadcom/brcm80211/brcmutil/brcmutil.ko
+drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.ko
+drivers/net/wireless/marvell/mwifiex/mwifiex.ko
+drivers/net/wireless/marvell/mwifiex/mwifiex_sdio.ko
+drivers/net/wireless/ralink/rt2x00/rt2x00lib.ko
+drivers/net/wireless/ralink/rt2x00/rt2x00usb.ko
+drivers/net/wireless/ralink/rt2x00/rt2800lib.ko
+drivers/net/wireless/ralink/rt2x00/rt2800usb.ko

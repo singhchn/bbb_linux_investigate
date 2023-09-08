@@ -1,0 +1,1 @@
+cmd_drivers/fsi/fsi-core.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/fsi/fsi-core.ko drivers/fsi/fsi-core.o drivers/fsi/fsi-core.mod.o;  true

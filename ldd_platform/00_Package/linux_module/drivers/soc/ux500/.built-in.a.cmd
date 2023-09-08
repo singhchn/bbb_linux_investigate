@@ -1,0 +1,1 @@
+cmd_drivers/soc/ux500/built-in.a := rm -f drivers/soc/ux500/built-in.a;  printf "drivers/soc/ux500/%s " ux500-soc-id.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/ux500/built-in.a

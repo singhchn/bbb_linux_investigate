@@ -1,0 +1,11 @@
+r8a7744-iwg20d-q7-dbcm-ca.o: \
+ arch/arm/boot/dts/r8a7744-iwg20d-q7-dbcm-ca.dts \
+ arch/arm/boot/dts/r8a7744-iwg20m.dtsi arch/arm/boot/dts/r8a7744.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/r8a7744-cpg-mssr.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/renesas-cpg-mssr.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/r8a7744-sysc.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/iwg20d-q7-common.dtsi \
+ arch/arm/boot/dts/iwg20d-q7-dbcm-ca.dtsi

@@ -1,0 +1,16 @@
+!<thin>
+//                                              142       `
+pinctrl-mvebu.o/
+pinctrl-dove.o/
+pinctrl-armada-370.o/
+pinctrl-armada-375.o/
+pinctrl-armada-38x.o/
+pinctrl-armada-39x.o/
+pinctrl-armada-xp.o/
+/0              0           0     0     644     11032     `
+/17             0           0     0     644     22580     `
+/33             0           0     0     644     17040     `
+/55             0           0     0     644     17676     `
+/77             0           0     0     644     17604     `
+/99             0           0     0     644     17000     `
+/121            0           0     0     644     24200     `

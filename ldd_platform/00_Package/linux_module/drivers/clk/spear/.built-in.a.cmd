@@ -1,0 +1,1 @@
+cmd_drivers/clk/spear/built-in.a := rm -f drivers/clk/spear/built-in.a;  printf "drivers/clk/spear/%s " clk.o clk-aux-synth.o clk-frac-synth.o clk-gpt-synth.o clk-vco-pll.o spear1310_clock.o spear1340_clock.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/spear/built-in.a

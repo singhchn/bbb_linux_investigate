@@ -1,0 +1,1 @@
+cmd_drivers/pwm/pwm-atmel.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/pwm/pwm-atmel.ko drivers/pwm/pwm-atmel.o drivers/pwm/pwm-atmel.mod.o;  true

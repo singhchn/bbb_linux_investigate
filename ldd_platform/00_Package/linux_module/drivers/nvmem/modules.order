@@ -1,0 +1,3 @@
+drivers/nvmem/nvmem_meson_mx_efuse.ko
+drivers/nvmem/nvmem-rmem.ko
+drivers/nvmem/nvmem_rockchip_efuse.ko

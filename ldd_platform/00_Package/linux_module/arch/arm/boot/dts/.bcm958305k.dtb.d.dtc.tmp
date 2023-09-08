@@ -1,0 +1,1 @@
+arch/arm/boot/dts/bcm958305k.dtb: arch/arm/boot/dts/.bcm958305k.dtb.dts.tmp arch/arm/boot/dts/bcm-cygnus-clock.dtsi

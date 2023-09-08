@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-sunxi/built-in.a := rm -f arch/arm/mach-sunxi/built-in.a;  printf "arch/arm/mach-sunxi/%s " sunxi.o mc_smp.o headsmp.o platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-sunxi/built-in.a

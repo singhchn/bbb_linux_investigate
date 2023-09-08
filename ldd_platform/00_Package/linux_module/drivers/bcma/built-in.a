@@ -1,0 +1,30 @@
+!<thin>
+//                                              218       `
+main.o/
+scan.o/
+core.o/
+sprom.o/
+driver_chipcommon.o/
+driver_chipcommon_pmu.o/
+driver_chipcommon_b.o/
+driver_chipcommon_sflash.o/
+driver_pci.o/
+driver_pcie2.o/
+driver_gmac_cmn.o/
+driver_gpio.o/
+host_pci.o/
+host_soc.o/
+/0              0           0     0     644     14384     `
+/8              0           0     0     644     7132      `
+/16             0           0     0     644     5788      `
+/24             0           0     0     644     4884      `
+/33             0           0     0     644     7460      `
+/54             0           0     0     644     10128     `
+/79             0           0     0     644     2504      `
+/102            0           0     0     644     4680      `
+/130            0           0     0     644     3704      `
+/144            0           0     0     644     2624      `
+/160            0           0     0     644     1412      `
+/179            0           0     0     644     4536      `
+/194            0           0     0     644     8484      `
+/206            0           0     0     644     5324      `

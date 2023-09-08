@@ -1,0 +1,16 @@
+drivers/iio/adc/aspeed_adc.ko
+drivers/iio/adc/at91_adc.ko
+drivers/iio/adc/at91-sama5d2_adc.ko
+drivers/iio/adc/berlin2-adc.ko
+drivers/iio/adc/cpcap-adc.ko
+drivers/iio/adc/exynos_adc.ko
+drivers/iio/adc/meson_saradc.ko
+drivers/iio/adc/qcom-vadc-common.ko
+drivers/iio/adc/qcom-spmi-vadc.ko
+drivers/iio/adc/rockchip_saradc.ko
+drivers/iio/adc/stm32-adc-core.ko
+drivers/iio/adc/stm32-adc.ko
+drivers/iio/adc/stm32-dfsdm-core.ko
+drivers/iio/adc/stm32-dfsdm-adc.ko
+drivers/iio/adc/stmpe-adc.ko
+drivers/iio/adc/vf610_adc.ko

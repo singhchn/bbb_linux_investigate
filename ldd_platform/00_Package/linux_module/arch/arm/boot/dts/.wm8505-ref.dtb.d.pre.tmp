@@ -1,0 +1,1 @@
+wm8505-ref.o: arch/arm/boot/dts/wm8505-ref.dts

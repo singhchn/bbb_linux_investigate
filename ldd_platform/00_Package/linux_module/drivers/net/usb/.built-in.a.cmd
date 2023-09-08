@@ -1,0 +1,1 @@
+cmd_drivers/net/usb/built-in.a := rm -f drivers/net/usb/built-in.a;  printf "drivers/net/usb/%s " pegasus.o asix_devices.o asix_common.o ax88172a.o ax88179_178a.o cdc_ether.o smsc75xx.o smsc95xx.o net1080.o cdc_subset.o zaurus.o usbnet.o cdc_ncm.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/usb/built-in.a

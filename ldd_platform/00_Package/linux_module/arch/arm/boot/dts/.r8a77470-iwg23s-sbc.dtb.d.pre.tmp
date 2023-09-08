@@ -1,0 +1,8 @@
+r8a77470-iwg23s-sbc.o: arch/arm/boot/dts/r8a77470-iwg23s-sbc.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/r8a77470.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/r8a77470-cpg-mssr.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/renesas-cpg-mssr.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/r8a77470-sysc.h

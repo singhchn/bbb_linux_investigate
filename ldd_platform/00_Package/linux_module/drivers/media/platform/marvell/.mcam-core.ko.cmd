@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/marvell/mcam-core.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/platform/marvell/mcam-core.ko drivers/media/platform/marvell/mcam-core.o drivers/media/platform/marvell/mcam-core.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-keystone/built-in.a := rm -f arch/arm/mach-keystone/built-in.a;  printf "arch/arm/mach-keystone/%s " keystone.o smc.o platsmp.o pm_domain.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-keystone/built-in.a

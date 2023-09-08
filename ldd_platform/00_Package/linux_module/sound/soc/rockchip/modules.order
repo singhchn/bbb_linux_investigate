@@ -1,0 +1,4 @@
+sound/soc/rockchip/snd-soc-rockchip-i2s.ko
+sound/soc/rockchip/snd-soc-rockchip-spdif.ko
+sound/soc/rockchip/snd-soc-rockchip-max98090.ko
+sound/soc/rockchip/snd-soc-rockchip-rt5645.ko

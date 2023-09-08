@@ -1,0 +1,23 @@
+!<thin>
+//                                              156       `
+edac_mc.o/
+edac_device.o/
+edac_mc_sysfs.o/
+edac_module.o/
+edac_device_sysfs.o/
+wq.o/
+edac_pci.o/
+edac_pci_sysfs.o/
+highbank_mc_edac.o/
+highbank_l2_edac.o/
+
+/0              0           0     0     644     18228     `
+/11             0           0     0     644     9968      `
+/26             0           0     0     644     18364     `
+/43             0           0     0     644     4732      `
+/58             0           0     0     644     8096      `
+/79             0           0     0     644     3044      `
+/85             0           0     0     644     7996      `
+/97             0           0     0     644     11032     `
+/115            0           0     0     644     7100      `
+/135            0           0     0     644     5984      `

@@ -1,0 +1,4 @@
+alpine-db.o: arch/arm/boot/dts/alpine-db.dts \
+ arch/arm/boot/dts/alpine.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

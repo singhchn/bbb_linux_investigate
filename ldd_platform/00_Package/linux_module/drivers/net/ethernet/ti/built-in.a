@@ -1,0 +1,24 @@
+!<thin>
+//                                              146       `
+cpsw-common.o/
+davinci_mdio.o/
+cpts.o/
+cpsw.o/
+davinci_cpdma.o/
+cpsw_ale.o/
+cpsw_priv.o/
+cpsw_sl.o/
+cpsw_ethtool.o/
+cpsw_switchdev.o/
+cpsw_new.o/
+/0              0           0     0     644     3392      `
+/15             0           0     0     644     13676     `
+/31             0           0     0     644     14756     `
+/39             0           0     0     644     33764     `
+/47             0           0     0     644     14200     `
+/64             0           0     0     644     14416     `
+/76             0           0     0     644     21108     `
+/89             0           0     0     644     4708      `
+/100            0           0     0     644     11768     `
+/116            0           0     0     644     5980      `
+/134            0           0     0     644     33404     `

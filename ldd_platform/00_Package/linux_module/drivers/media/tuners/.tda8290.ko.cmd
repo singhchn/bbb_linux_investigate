@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/tda8290.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/tda8290.ko drivers/media/tuners/tda8290.o drivers/media/tuners/tda8290.mod.o;  true

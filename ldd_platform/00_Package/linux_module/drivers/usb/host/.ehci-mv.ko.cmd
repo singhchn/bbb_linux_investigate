@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/ehci-mv.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/host/ehci-mv.ko drivers/usb/host/ehci-mv.o drivers/usb/host/ehci-mv.mod.o;  true

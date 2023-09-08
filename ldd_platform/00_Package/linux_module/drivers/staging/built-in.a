@@ -1,0 +1,18 @@
+!<thin>
+//                                              140       `
+nvec/nvec_ps2.o/
+nvec/nvec.o/
+nvec/nvec_power.o/
+nvec/nvec_kbd.o/
+nvec/nvec_paz00.o/
+board/board.o/
+board/kzm9d.o/
+board/armadillo800eva.o/
+/0              0           0     0     644     6044      `
+/17             0           0     0     644     17712     `
+/30             0           0     0     644     8280      `
+/49             0           0     0     644     6320      `
+/66             0           0     0     644     3888      `
+/85             0           0     0     644     3948      `
+/100            0           0     0     644     2412      `
+/115            0           0     0     644     3408      `

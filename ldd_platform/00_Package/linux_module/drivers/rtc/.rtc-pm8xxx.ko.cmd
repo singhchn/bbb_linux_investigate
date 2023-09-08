@@ -1,0 +1,1 @@
+cmd_drivers/rtc/rtc-pm8xxx.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/rtc/rtc-pm8xxx.ko drivers/rtc/rtc-pm8xxx.o drivers/rtc/rtc-pm8xxx.mod.o;  true

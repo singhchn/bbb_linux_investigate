@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/zl10353.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/zl10353.ko drivers/media/dvb-frontends/zl10353.o drivers/media/dvb-frontends/zl10353.mod.o;  true

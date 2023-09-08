@@ -1,0 +1,14 @@
+qcom-sdx55-t55.o: arch/arm/boot/dts/qcom-sdx55-t55.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/regulator/qcom,rpmh-regulator.h \
+ arch/arm/boot/dts/qcom-sdx55.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-sdx55.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,rpmh.h \
+ scripts/dtc/include-prefixes/dt-bindings/interconnect/qcom,sdx55.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/qcom-rpmpd.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/qcom,rpmh-rsc.h \
+ arch/arm/boot/dts/qcom-pmx55.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/iio/qcom,spmi-vadc.h \
+ scripts/dtc/include-prefixes/dt-bindings/spmi/spmi.h

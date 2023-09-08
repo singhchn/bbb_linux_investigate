@@ -1,0 +1,29 @@
+!<thin>
+//                                              220       `
+clk.o/
+clk-pll.o/
+clk-cpu.o/
+clk-exynos3250.o/
+clk-exynos4.o/
+clk-exynos4412-isp.o/
+clk-exynos5250.o/
+clk-exynos5-subcmu.o/
+clk-exynos5260.o/
+clk-exynos5410.o/
+clk-exynos5420.o/
+clk-exynos-audss.o/
+clk-exynos-clkout.o/
+
+/0              0           0     0     644     8044      `
+/7              0           0     0     644     18028     `
+/18             0           0     0     644     6116      `
+/29             0           0     0     644     24420     `
+/47             0           0     0     644     38216     `
+/62             0           0     0     644     6232      `
+/84             0           0     0     644     23072     `
+/102            0           0     0     644     6080      `
+/124            0           0     0     644     41732     `
+/142            0           0     0     644     8896      `
+/160            0           0     0     644     43292     `
+/178            0           0     0     644     10332     `
+/198            0           0     0     644     7664      `

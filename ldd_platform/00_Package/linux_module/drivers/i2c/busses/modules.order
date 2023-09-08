@@ -1,0 +1,7 @@
+drivers/i2c/busses/i2c-aspeed.ko
+drivers/i2c/busses/i2c-at91.ko
+drivers/i2c/busses/i2c-digicolor.ko
+drivers/i2c/busses/i2c-emev2.ko
+drivers/i2c/busses/i2c-gpio.ko
+drivers/i2c/busses/i2c-qcom-cci.ko
+drivers/i2c/busses/i2c-cros-ec-tunnel.ko

@@ -1,0 +1,1 @@
+cmd_drivers/phy/rockchip/built-in.a := rm -f drivers/phy/rockchip/built-in.a;  printf "drivers/phy/rockchip/%s " phy-rockchip-usb.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/rockchip/built-in.a

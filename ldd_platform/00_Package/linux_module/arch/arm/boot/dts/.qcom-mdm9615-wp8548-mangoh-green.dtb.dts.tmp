@@ -1,0 +1,826 @@
+# 1 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+# 46 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 1
+# 13 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h" 1
+# 14 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 2
+# 47 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts" 2
+
+# 1 "arch/arm/boot/dts/qcom-mdm9615-wp8548.dtsi" 1
+# 46 "arch/arm/boot/dts/qcom-mdm9615-wp8548.dtsi"
+# 1 "arch/arm/boot/dts/qcom-mdm9615.dtsi" 1
+# 46 "arch/arm/boot/dts/qcom-mdm9615.dtsi"
+/dts-v1/;
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 49 "arch/arm/boot/dts/qcom-mdm9615.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-mdm9615.h" 1
+# 50 "arch/arm/boot/dts/qcom-mdm9615.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/reset/qcom,gcc-mdm9615.h" 1
+# 51 "arch/arm/boot/dts/qcom-mdm9615.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/mfd/qcom-rpm.h" 1
+# 52 "arch/arm/boot/dts/qcom-mdm9615.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/soc/qcom,gsbi.h" 1
+# 53 "arch/arm/boot/dts/qcom-mdm9615.dtsi" 2
+
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ model = "Qualcomm MDM9615";
+ compatible = "qcom,mdm9615";
+ interrupt-parent = <&intc>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu0: cpu@0 {
+   compatible = "arm,cortex-a5";
+   device_type = "cpu";
+   next-level-cache = <&L2>;
+  };
+ };
+
+ cpu-pmu {
+  compatible = "arm,cortex-a5-pmu";
+  interrupts = <1 10 ((((1 << (1)) - 1) << 8) | 4)>;
+ };
+
+ clocks {
+  cxo_board {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <19200000>;
+  };
+ };
+
+ regulators {
+  vsdcc_fixed: vsdcc-regulator {
+   compatible = "regulator-fixed";
+   regulator-name = "SDCC Power";
+   regulator-min-microvolt = <2700000>;
+   regulator-max-microvolt = <2700000>;
+   regulator-always-on;
+  };
+ };
+
+ soc: soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+  compatible = "simple-bus";
+
+  L2: cache-controller@2040000 {
+   compatible = "arm,pl310-cache";
+   reg = <0x02040000 0x1000>;
+   arm,data-latency = <2 2 0>;
+   cache-unified;
+   cache-level = <2>;
+  };
+
+  intc: interrupt-controller@2000000 {
+   compatible = "qcom,msm-qgic2";
+   interrupt-controller;
+   #interrupt-cells = <3>;
+   reg = <0x02000000 0x1000>,
+         <0x02002000 0x1000>;
+  };
+
+  timer@200a000 {
+   compatible = "qcom,kpss-timer", "qcom,msm-timer";
+   interrupts = <1 1 ((((1 << (1)) - 1) << 8) | 1)>,
+         <1 2 ((((1 << (1)) - 1) << 8) | 1)>,
+         <1 3 ((((1 << (1)) - 1) << 8) | 1)>;
+   reg = <0x0200a000 0x100>;
+   clock-frequency = <27000000>,
+       <32768>;
+   cpu-offset = <0x80000>;
+  };
+
+  msmgpio: pinctrl@800000 {
+   compatible = "qcom,mdm9615-pinctrl";
+   gpio-controller;
+   gpio-ranges = <&msmgpio 0 0 88>;
+   #gpio-cells = <2>;
+   interrupts = <0 16 4>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+   reg = <0x800000 0x4000>;
+  };
+
+  gcc: clock-controller@900000 {
+   compatible = "qcom,gcc-mdm9615";
+   #clock-cells = <1>;
+   #power-domain-cells = <1>;
+   #reset-cells = <1>;
+   reg = <0x900000 0x4000>;
+  };
+
+  lcc: clock-controller@28000000 {
+   compatible = "qcom,lcc-mdm9615";
+   reg = <0x28000000 0x1000>;
+   #clock-cells = <1>;
+   #reset-cells = <1>;
+  };
+
+  l2cc: clock-controller@2011000 {
+   compatible = "qcom,kpss-gcc", "syscon";
+   reg = <0x02011000 0x1000>;
+  };
+
+  rng@1a500000 {
+   compatible = "qcom,prng";
+   reg = <0x1a500000 0x200>;
+   clocks = <&gcc 264>;
+   clock-names = "core";
+   assigned-clocks = <&gcc 264>;
+   assigned-clock-rates = <32000000>;
+  };
+
+  gsbi2: gsbi@16100000 {
+   compatible = "qcom,gsbi-v1.0.0";
+   cell-index = <2>;
+   reg = <0x16100000 0x100>;
+   clocks = <&gcc 148>;
+   clock-names = "iface";
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+
+   gsbi2_i2c: i2c@16180000 {
+    compatible = "qcom,i2c-qup-v1.1.1";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    reg = <0x16180000 0x1000>;
+    interrupts = <0 149 4>;
+
+    clocks = <&gcc 186>, <&gcc 148>;
+    clock-names = "core", "iface";
+    status = "disabled";
+   };
+  };
+
+  gsbi3: gsbi@16200000 {
+   compatible = "qcom,gsbi-v1.0.0";
+   cell-index = <3>;
+   reg = <0x16200000 0x100>;
+   clocks = <&gcc 149>;
+   clock-names = "iface";
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+
+   gsbi3_spi: spi@16280000 {
+    compatible = "qcom,spi-qup-v1.1.1";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    reg = <0x16280000 0x1000>;
+    interrupts = <0 151 4>;
+    spi-max-frequency = <24000000>;
+
+    clocks = <&gcc 188>, <&gcc 149>;
+    clock-names = "core", "iface";
+    status = "disabled";
+   };
+  };
+
+  gsbi4: gsbi@16300000 {
+   compatible = "qcom,gsbi-v1.0.0";
+   cell-index = <4>;
+   reg = <0x16300000 0x100>;
+   clocks = <&gcc 150>;
+   clock-names = "iface";
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+
+   syscon-tcsr = <&tcsr>;
+
+   gsbi4_serial: serial@16340000 {
+    compatible = "qcom,msm-uartdm-v1.3", "qcom,msm-uartdm";
+    reg = <0x16340000 0x1000>,
+          <0x16300000 0x1000>;
+    interrupts = <0 152 4>;
+    clocks = <&gcc 166>, <&gcc 150>;
+    clock-names = "core", "iface";
+    status = "disabled";
+   };
+  };
+
+  gsbi5: gsbi@16400000 {
+   compatible = "qcom,gsbi-v1.0.0";
+   cell-index = <5>;
+   reg = <0x16400000 0x100>;
+   clocks = <&gcc 151>;
+   clock-names = "iface";
+   status = "disabled";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+
+   syscon-tcsr = <&tcsr>;
+
+   gsbi5_i2c: i2c@16480000 {
+    compatible = "qcom,i2c-qup-v1.1.1";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    reg = <0x16480000 0x1000>;
+    interrupts = <0 155 4>;
+
+
+    assigned-clocks = <&gcc 192>;
+    assigned-clock-rates = <24000000>;
+
+    clocks = <&gcc 192>, <&gcc 151>;
+    clock-names = "core", "iface";
+    status = "disabled";
+   };
+
+   gsbi5_serial: serial@16440000 {
+    compatible = "qcom,msm-uartdm-v1.3", "qcom,msm-uartdm";
+    reg = <0x16440000 0x1000>,
+          <0x16400000 0x1000>;
+    interrupts = <0 154 4>;
+    clocks = <&gcc 168>, <&gcc 151>;
+    clock-names = "core", "iface";
+    status = "disabled";
+   };
+  };
+
+  qcom,ssbi@500000 {
+   compatible = "qcom,ssbi";
+   reg = <0x500000 0x1000>;
+   qcom,controller-type = "pmic-arbiter";
+
+   pmicintc: pmic@0 {
+    compatible = "qcom,pm8018", "qcom,pm8921";
+    interrupts = <1 226 4>;
+    #interrupt-cells = <2>;
+    interrupt-controller;
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    pwrkey@1c {
+     compatible = "qcom,pm8018-pwrkey", "qcom,pm8921-pwrkey";
+     reg = <0x1c>;
+     interrupt-parent = <&pmicintc>;
+     interrupts = <50 1>,
+           <51 1>;
+     debounce = <15625>;
+     pull-up;
+    };
+
+    pmicmpp: mpps@50 {
+     compatible = "qcom,pm8018-mpp", "qcom,ssbi-mpp";
+     interrupt-controller;
+     #interrupt-cells = <2>;
+     reg = <0x50>;
+     gpio-controller;
+     #gpio-cells = <2>;
+     gpio-ranges = <&pmicmpp 0 0 6>;
+    };
+
+    rtc@11d {
+     compatible = "qcom,pm8018-rtc", "qcom,pm8921-rtc";
+     interrupt-parent = <&pmicintc>;
+     interrupts = <39 1>;
+     reg = <0x11d>;
+     allow-set-time;
+    };
+
+    pmicgpio: gpio@150 {
+     compatible = "qcom,pm8018-gpio", "qcom,ssbi-gpio";
+     reg = <0x150>;
+     interrupt-controller;
+     #interrupt-cells = <2>;
+     gpio-controller;
+     gpio-ranges = <&pmicgpio 0 0 6>;
+     #gpio-cells = <2>;
+    };
+   };
+  };
+
+  sdcc1bam: dma-controller@12182000{
+   compatible = "qcom,bam-v1.3.0";
+   reg = <0x12182000 0x8000>;
+   interrupts = <0 98 4>;
+   clocks = <&gcc 110>;
+   clock-names = "bam_clk";
+   #dma-cells = <1>;
+   qcom,ee = <0>;
+  };
+
+  sdcc2bam: dma-controller@12142000{
+   compatible = "qcom,bam-v1.3.0";
+   reg = <0x12142000 0x8000>;
+   interrupts = <0 97 4>;
+   clocks = <&gcc 111>;
+   clock-names = "bam_clk";
+   #dma-cells = <1>;
+   qcom,ee = <0>;
+  };
+
+  amba {
+   compatible = "simple-bus";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+   sdcc1: mmc@12180000 {
+    status = "disabled";
+    compatible = "arm,pl18x", "arm,primecell";
+    arm,primecell-periphid = <0x00051180>;
+    reg = <0x12180000 0x2000>;
+    interrupts = <0 104 4>;
+    interrupt-names = "cmd_irq";
+    clocks = <&gcc 120>, <&gcc 110>;
+    clock-names = "mclk", "apb_pclk";
+    bus-width = <8>;
+    max-frequency = <48000000>;
+    cap-sd-highspeed;
+    cap-mmc-highspeed;
+    vmmc-supply = <&vsdcc_fixed>;
+    dmas = <&sdcc1bam 2>, <&sdcc1bam 1>;
+    dma-names = "tx", "rx";
+    assigned-clocks = <&gcc 120>;
+    assigned-clock-rates = <400000>;
+   };
+
+   sdcc2: mmc@12140000 {
+    compatible = "arm,pl18x", "arm,primecell";
+    arm,primecell-periphid = <0x00051180>;
+    status = "disabled";
+    reg = <0x12140000 0x2000>;
+    interrupts = <0 103 4>;
+    interrupt-names = "cmd_irq";
+    clocks = <&gcc 121>, <&gcc 111>;
+    clock-names = "mclk", "apb_pclk";
+    bus-width = <4>;
+    cap-sd-highspeed;
+    cap-mmc-highspeed;
+    max-frequency = <48000000>;
+    no-1-8-v;
+    vmmc-supply = <&vsdcc_fixed>;
+    dmas = <&sdcc2bam 2>, <&sdcc2bam 1>;
+    dma-names = "tx", "rx";
+    assigned-clocks = <&gcc 121>;
+    assigned-clock-rates = <400000>;
+   };
+  };
+
+  tcsr: syscon@1a400000 {
+   compatible = "qcom,tcsr-mdm9615", "syscon";
+   reg = <0x1a400000 0x100>;
+  };
+
+  rpm: rpm@108000 {
+   compatible = "qcom,rpm-mdm9615";
+   reg = <0x108000 0x1000>;
+
+   qcom,ipc = <&l2cc 0x8 2>;
+
+   interrupts = <0 19 1>,
+         <0 21 1>,
+         <0 22 1>;
+   interrupt-names = "ack", "err", "wakeup";
+
+   regulators {
+    compatible = "qcom,rpm-pm8018-regulators";
+
+    vin_lvs1-supply = <&pm8018_s3>;
+
+    vdd_l7-supply = <&pm8018_s4>;
+    vdd_l8-supply = <&pm8018_s3>;
+    vdd_l9_l10_l11_l12-supply = <&pm8018_s5>;
+
+
+    pm8018_s1: s1 {
+     regulator-min-microvolt = <500000>;
+     regulator-max-microvolt = <1150000>;
+     qcom,switch-mode-frequency = <1600000>;
+     bias-pull-down;
+    };
+
+    pm8018_s2: s2 {
+     regulator-min-microvolt = <1225000>;
+     regulator-max-microvolt = <1300000>;
+     qcom,switch-mode-frequency = <1600000>;
+     bias-pull-down;
+    };
+
+    pm8018_s3: s3 {
+     regulator-always-on;
+     regulator-min-microvolt = <1800000>;
+     regulator-max-microvolt = <1800000>;
+     qcom,switch-mode-frequency = <1600000>;
+     bias-pull-down;
+    };
+
+    pm8018_s4: s4 {
+     regulator-min-microvolt = <2100000>;
+     regulator-max-microvolt = <2200000>;
+     qcom,switch-mode-frequency = <1600000>;
+     bias-pull-down;
+    };
+
+    pm8018_s5: s5 {
+     regulator-always-on;
+     regulator-min-microvolt = <1350000>;
+     regulator-max-microvolt = <1350000>;
+     qcom,switch-mode-frequency = <1600000>;
+     bias-pull-down;
+    };
+
+
+    pm8018_l2: l2 {
+     regulator-always-on;
+     regulator-min-microvolt = <1800000>;
+     regulator-max-microvolt = <1800000>;
+     bias-pull-down;
+    };
+
+    pm8018_l3: l3 {
+     regulator-always-on;
+     regulator-min-microvolt = <1800000>;
+     regulator-max-microvolt = <1800000>;
+     bias-pull-down;
+    };
+
+    pm8018_l4: l4 {
+     regulator-min-microvolt = <3300000>;
+     regulator-max-microvolt = <3300000>;
+     bias-pull-down;
+    };
+
+    pm8018_l5: l5 {
+     regulator-min-microvolt = <2850000>;
+     regulator-max-microvolt = <2850000>;
+     bias-pull-down;
+    };
+
+    pm8018_l6: l6 {
+     regulator-min-microvolt = <1800000>;
+     regulator-max-microvolt = <2850000>;
+     bias-pull-down;
+    };
+
+    pm8018_l7: l7 {
+     regulator-min-microvolt = <1850000>;
+     regulator-max-microvolt = <1900000>;
+     bias-pull-down;
+    };
+
+    pm8018_l8: l8 {
+     regulator-min-microvolt = <1200000>;
+     regulator-max-microvolt = <1200000>;
+     bias-pull-down;
+    };
+
+    pm8018_l9: l9 {
+     regulator-min-microvolt = <750000>;
+     regulator-max-microvolt = <1150000>;
+     bias-pull-down;
+    };
+
+    pm8018_l10: l10 {
+     regulator-min-microvolt = <1050000>;
+     regulator-max-microvolt = <1050000>;
+     bias-pull-down;
+    };
+
+    pm8018_l11: l11 {
+     regulator-min-microvolt = <1050000>;
+     regulator-max-microvolt = <1050000>;
+     bias-pull-down;
+    };
+
+    pm8018_l12: l12 {
+     regulator-min-microvolt = <1050000>;
+     regulator-max-microvolt = <1050000>;
+     bias-pull-down;
+    };
+
+    pm8018_l13: l13 {
+     regulator-min-microvolt = <1850000>;
+     regulator-max-microvolt = <2950000>;
+     bias-pull-down;
+    };
+
+    pm8018_l14: l14 {
+     regulator-min-microvolt = <2850000>;
+     regulator-max-microvolt = <2850000>;
+     bias-pull-down;
+    };
+
+
+    pm8018_lvs1: lvs1 {
+     bias-pull-down;
+    };
+   };
+  };
+ };
+};
+# 47 "arch/arm/boot/dts/qcom-mdm9615-wp8548.dtsi" 2
+
+/ {
+ model = "Sierra Wireless WP8548 Module";
+ compatible = "swir,wp8548", "qcom,mdm9615";
+
+ memory@48000000 {
+  device_type = "memory";
+  reg = <0x48000000 0x7F00000>;
+ };
+};
+
+&msmgpio {
+ pinctrl-0 = <&reset_out_pins>;
+ pinctrl-names = "default";
+
+ gsbi3_pins: gsbi3_pins {
+  mux {
+   pins = "gpio8", "gpio9", "gpio10", "gpio11";
+   function = "gsbi3";
+   drive-strength = <8>;
+   bias-disable;
+  };
+ };
+
+ gsbi4_pins: gsbi4_pins {
+  mux {
+   pins = "gpio12", "gpio13", "gpio14", "gpio15";
+   function = "gsbi4";
+   drive-strength = <8>;
+   bias-disable;
+  };
+ };
+
+ gsbi5_i2c_pins: gsbi5_i2c_pins {
+  pin16 {
+   pins = "gpio16";
+   function = "gsbi5_i2c";
+   drive-strength = <8>;
+   bias-disable;
+  };
+
+  pin17 {
+   pins = "gpio17";
+   function = "gsbi5_i2c";
+   drive-strength = <2>;
+   bias-disable;
+  };
+ };
+
+ gsbi5_uart_pins: gsbi5_uart_pins {
+  mux {
+   pins = "gpio18", "gpio19";
+   function = "gsbi5_uart";
+   drive-strength = <8>;
+   bias-disable;
+  };
+ };
+
+ reset_out_pins: reset_out_pins {
+  pins {
+   pins = "gpio66";
+   function = "gpio";
+   drive-strength = <2>;
+   bias-pull-up;
+   output-high;
+  };
+ };
+};
+
+&pmicgpio {
+ usb_vbus_5v_pins: usb-vbus-5v-state {
+  pins = "gpio4";
+  function = "normal";
+  output-high;
+  bias-disable;
+  qcom,drive-strength = <1>;
+  power-source = <2>;
+ };
+};
+
+&gsbi3 {
+ status = "okay";
+ qcom,mode = <3>;
+};
+
+&gsbi3_spi {
+ status = "okay";
+ pinctrl-0 = <&gsbi3_pins>;
+ pinctrl-names = "default";
+ assigned-clocks = <&gcc 188>;
+ assigned-clock-rates = <24000000>;
+};
+
+&gsbi4 {
+ status = "okay";
+ qcom,mode = <4>;
+};
+
+&gsbi4_serial {
+ status = "okay";
+ pinctrl-0 = <&gsbi4_pins>;
+ pinctrl-names = "default";
+};
+
+&gsbi5 {
+ status = "okay";
+ qcom,mode = <6>;
+};
+
+&gsbi5_i2c {
+ status = "okay";
+ clock-frequency = <200000>;
+ pinctrl-0 = <&gsbi5_i2c_pins>;
+ pinctrl-names = "default";
+};
+
+&gsbi5_serial {
+ status = "okay";
+ pinctrl-0 = <&gsbi5_uart_pins>;
+ pinctrl-names = "default";
+};
+
+&sdcc1 {
+ status = "okay";
+};
+# 49 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts" 2
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 51 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts" 2
+
+/ {
+ model = "MangOH Green with WP8548 Module";
+ compatible = "swir,mangoh-green-wp8548", "swir,wp8548", "qcom,mdm9615";
+
+ aliases {
+  spi0 = &gsbi3_spi;
+  serial0 = &gsbi4_serial;
+  serial1 = &gsbi5_serial;
+  i2c0 = &gsbi5_i2c;
+  mmc0 = &sdcc1;
+ };
+
+ chosen {
+  stdout-path = "serial1:115200n8";
+ };
+};
+
+&msmgpio {
+# 85 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+ gpioext1_pins: gpioext1_pins {
+  pins {
+   pins = "gpio2";
+   function = "gpio";
+   input-enable;
+   bias-disable;
+  };
+ };
+
+ sdc_cd_pins: sdc_cd_pins {
+  pins {
+   pins = "gpio42";
+   function = "gpio";
+   drive-strength = <2>;
+   bias-pull-up;
+  };
+ };
+};
+
+&gsbi3_spi {
+ spi@0 {
+  compatible = "swir,mangoh-iotport-spi";
+  spi-max-frequency = <24000000>;
+  reg = <0>;
+ };
+};
+
+&gsbi5_i2c {
+ mux@71 {
+  compatible = "nxp,pca9548";
+  #address-cells = <1>;
+  #size-cells = <0>;
+  reg = <0x71>;
+
+  i2c_iot0: i2c@0 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0>;
+  };
+
+  i2c_iot1: i2c@1 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <1>;
+  };
+
+  i2c_iot2: i2c@2 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <2>;
+  };
+
+  i2c@3 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <3>;
+
+   usbhub: hub@8 {
+    compatible = "smsc,usb3503a";
+    reg = <0x8>;
+    connect-gpios = <&gpioext2 1 0>;
+    intn-gpios = <&gpioext2 0 0>;
+    initial-mode = <1>;
+   };
+  };
+
+  i2c@4 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <4>;
+
+   gpioext0: gpio@3e {
+# 175 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+    #gpio-cells = <2>;
+    #interrupt-cells = <2>;
+    compatible = "semtech,sx1509q";
+    reg = <0x3e>;
+    interrupt-parent = <&gpioext1>;
+    interrupts = <0 2>;
+
+    probe-reset;
+
+    gpio-controller;
+    interrupt-controller;
+   };
+  };
+
+  i2c@5 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <5>;
+
+   gpioext1: gpio@3f {
+# 213 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+    pinctrl-0 = <&gpioext1_pins>;
+    pinctrl-names = "default";
+
+    #gpio-cells = <2>;
+    #interrupt-cells = <2>;
+    compatible = "semtech,sx1509q";
+    reg = <0x3f>;
+    interrupt-parent = <&msmgpio>;
+    interrupts = <0 2>;
+
+    probe-reset;
+
+    gpio-controller;
+    interrupt-controller;
+   };
+  };
+
+  i2c@6 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <6>;
+
+   gpioext2: gpio@70 {
+# 254 "arch/arm/boot/dts/qcom-mdm9615-wp8548-mangoh-green.dts"
+    #gpio-cells = <2>;
+    #interrupt-cells = <2>;
+    compatible = "semtech,sx1509q";
+    reg = <0x70>;
+    interrupt-parent = <&gpioext1>;
+    interrupts = <14 2>;
+
+    probe-reset;
+
+    gpio-controller;
+    interrupt-controller;
+   };
+  };
+
+  i2c@7 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <7>;
+  };
+ };
+};
+
+&sdcc1 {
+ pinctrl-0 = <&sdc_cd_pins>;
+ pinctrl-names = "default";
+ disable-wp;
+ cd-gpios = <&msmgpio 42 1>;
+};

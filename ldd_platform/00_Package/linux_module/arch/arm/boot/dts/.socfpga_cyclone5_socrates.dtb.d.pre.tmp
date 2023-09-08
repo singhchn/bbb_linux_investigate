@@ -1,0 +1,4 @@
+socfpga_cyclone5_socrates.o: \
+ arch/arm/boot/dts/socfpga_cyclone5_socrates.dts \
+ arch/arm/boot/dts/socfpga_cyclone5.dtsi arch/arm/boot/dts/socfpga.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/reset/altr,rst-mgr.h

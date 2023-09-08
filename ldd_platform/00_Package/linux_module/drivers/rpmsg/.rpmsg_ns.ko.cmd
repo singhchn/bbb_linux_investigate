@@ -1,0 +1,1 @@
+cmd_drivers/rpmsg/rpmsg_ns.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/rpmsg/rpmsg_ns.ko drivers/rpmsg/rpmsg_ns.o drivers/rpmsg/rpmsg_ns.mod.o;  true

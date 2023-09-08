@@ -1,0 +1,19 @@
+!<thin>
+//                                              168       `
+drm_dp_aux_bus.o/
+drm_display_helper_mod.o/
+drm_dp_dual_mode_helper.o/
+drm_dp_helper.o/
+drm_dp_mst_topology.o/
+drm_dsc_helper.o/
+drm_hdmi_helper.o/
+drm_scdc_helper.o/
+
+/0              0           0     0     644     8928      `
+/18             0           0     0     644     2320      `
+/44             0           0     0     644     10240     `
+/71             0           0     0     644     72308     `
+/88             0           0     0     644     80688     `
+/111            0           0     0     644     4460      `
+/129            0           0     0     644     3732      `
+/148            0           0     0     644     5004      `

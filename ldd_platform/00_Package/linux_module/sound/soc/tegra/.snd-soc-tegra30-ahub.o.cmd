@@ -1,0 +1,1 @@
+cmd_sound/soc/tegra/snd-soc-tegra30-ahub.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/tegra/snd-soc-tegra30-ahub.o @sound/soc/tegra/snd-soc-tegra30-ahub.mod 

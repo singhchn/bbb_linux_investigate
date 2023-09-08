@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/broadcom/genet/genet.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/ethernet/broadcom/genet/genet.o @drivers/net/ethernet/broadcom/genet/genet.mod 

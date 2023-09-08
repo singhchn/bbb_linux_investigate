@@ -1,0 +1,11 @@
+!<thin>
+//                                              76        `
+i2c-demux-pinctrl.o/
+i2c-mux-gpio.o/
+i2c-mux-pca954x.o/
+i2c-mux-pinctrl.o/
+
+/0              0           0     0     644     8320      `
+/21             0           0     0     644     7000      `
+/37             0           0     0     644     12300     `
+/56             0           0     0     644     6672      `

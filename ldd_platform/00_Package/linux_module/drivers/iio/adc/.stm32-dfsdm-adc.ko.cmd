@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/stm32-dfsdm-adc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/adc/stm32-dfsdm-adc.ko drivers/iio/adc/stm32-dfsdm-adc.o drivers/iio/adc/stm32-dfsdm-adc.mod.o;  true

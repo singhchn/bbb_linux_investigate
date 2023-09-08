@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/lnbp22.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/lnbp22.ko drivers/media/dvb-frontends/lnbp22.o drivers/media/dvb-frontends/lnbp22.mod.o;  true

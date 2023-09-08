@@ -1,0 +1,1 @@
+cmd_sound/soc/stm/stm32_adfsdm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/stm/stm32_adfsdm.ko sound/soc/stm/stm32_adfsdm.o sound/soc/stm/stm32_adfsdm.mod.o;  true

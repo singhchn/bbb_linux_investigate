@@ -1,0 +1,1 @@
+cmd_sound/soc/tegra/snd-soc-tegra20-spdif.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/tegra/snd-soc-tegra20-spdif.o @sound/soc/tegra/snd-soc-tegra20-spdif.mod 

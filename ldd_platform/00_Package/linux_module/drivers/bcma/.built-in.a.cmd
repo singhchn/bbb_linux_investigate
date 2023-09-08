@@ -1,0 +1,1 @@
+cmd_drivers/bcma/built-in.a := rm -f drivers/bcma/built-in.a;  printf "drivers/bcma/%s " main.o scan.o core.o sprom.o driver_chipcommon.o driver_chipcommon_pmu.o driver_chipcommon_b.o driver_chipcommon_sflash.o driver_pci.o driver_pcie2.o driver_gmac_cmn.o driver_gpio.o host_pci.o host_soc.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/bcma/built-in.a

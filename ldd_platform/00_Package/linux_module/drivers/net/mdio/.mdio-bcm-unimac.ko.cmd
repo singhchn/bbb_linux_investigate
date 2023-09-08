@@ -1,0 +1,1 @@
+cmd_drivers/net/mdio/mdio-bcm-unimac.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/mdio/mdio-bcm-unimac.ko drivers/net/mdio/mdio-bcm-unimac.o drivers/net/mdio/mdio-bcm-unimac.mod.o;  true

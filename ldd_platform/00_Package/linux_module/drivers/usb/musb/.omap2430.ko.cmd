@@ -1,0 +1,1 @@
+cmd_drivers/usb/musb/omap2430.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/musb/omap2430.ko drivers/usb/musb/omap2430.o drivers/usb/musb/omap2430.mod.o;  true

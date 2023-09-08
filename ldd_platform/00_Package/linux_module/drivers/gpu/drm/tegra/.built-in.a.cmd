@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/tegra/built-in.a := rm -f drivers/gpu/drm/tegra/built-in.a;  printf "drivers/gpu/drm/tegra/%s " drm.o uapi.o submit.o firewall.o gem.o fb.o dp.o hub.o plane.o dc.o output.o rgb.o hda.o hdmi.o mipi-phy.o dsi.o sor.o dpaux.o gr2d.o gr3d.o falcon.o vic.o nvdec.o trace.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/gpu/drm/tegra/built-in.a

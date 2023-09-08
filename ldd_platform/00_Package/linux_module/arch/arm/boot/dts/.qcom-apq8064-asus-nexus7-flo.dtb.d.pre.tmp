@@ -1,0 +1,17 @@
+qcom-apq8064-asus-nexus7-flo.o: \
+ arch/arm/boot/dts/qcom-apq8064-asus-nexus7-flo.dts \
+ arch/arm/boot/dts/qcom-apq8064-v2.0.dtsi \
+ arch/arm/boot/dts/qcom-apq8064.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-msm8960.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,lcc-msm8960.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/qcom,gcc-msm8960.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,mmcc-msm8960.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,rpmcc.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/qcom,gsbi.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ arch/arm/boot/dts/qcom-apq8064-pins.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/qcom,pmic-gpio.h

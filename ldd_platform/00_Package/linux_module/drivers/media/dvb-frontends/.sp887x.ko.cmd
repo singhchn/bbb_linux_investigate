@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/sp887x.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/sp887x.ko drivers/media/dvb-frontends/sp887x.o drivers/media/dvb-frontends/sp887x.mod.o;  true

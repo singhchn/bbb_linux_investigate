@@ -1,0 +1,92 @@
+!<thin>
+//                                              1256      `
+phy-core.o/
+phy-core-mipi-dphy.o/
+allwinner/phy-sun4i-usb.o/
+allwinner/phy-sun9i-usb.o/
+amlogic/phy-meson8b-usb2.o/
+amlogic/phy-meson-gxl-usb2.o/
+amlogic/phy-meson-g12a-usb2.o/
+amlogic/phy-meson-g12a-usb3-pcie.o/
+amlogic/phy-meson-g12a-mipi-dphy-analog.o/
+amlogic/phy-meson-axg-pcie.o/
+amlogic/phy-meson-axg-mipi-pcie-analog.o/
+amlogic/phy-meson-axg-mipi-dphy.o/
+broadcom/phy-bcm-cygnus-pcie.o/
+broadcom/phy-bcm-ns2-pcie.o/
+broadcom/phy-bcm-ns2-usbdrd.o/
+broadcom/phy-brcm-sata.o/
+broadcom/phy-bcm-sr-pcie.o/
+broadcom/phy-bcm-sr-usb.o/
+hisilicon/phy-hix5hd2-sata.o/
+marvell/phy-armada375-usb2.o/
+marvell/phy-berlin-sata.o/
+marvell/phy-berlin-usb.o/
+marvell/phy-mvebu-a3700-comphy.o/
+marvell/phy-mvebu-a3700-utmi.o/
+marvell/phy-mvebu-sata.o/
+qualcomm/phy-qcom-usb-hs.o/
+rockchip/phy-rockchip-usb.o/
+samsung/phy-exynos-dp-video.o/
+samsung/phy-exynos-mipi-video.o/
+samsung/phy-exynos5-usbdrd.o/
+socionext/phy-uniphier-usb2.o/
+socionext/phy-uniphier-usb3hs.o/
+socionext/phy-uniphier-usb3ss.o/
+socionext/phy-uniphier-ahci.o/
+st/phy-miphy28lp.o/
+st/phy-spear1310-miphy.o/
+st/phy-spear1340-miphy.o/
+st/phy-stih407-usb.o/
+st/phy-stm32-usbphyc.o/
+tegra/xusb.o/
+tegra/xusb-tegra124.o/
+ti/phy-omap-control.o/
+ti/phy-omap-usb2.o/
+ti/phy-ti-pipe3.o/
+ti/phy-gmii-sel.o/
+/0              0           0     0     644     27632     `
+/12             0           0     0     644     3332      `
+/34             0           0     0     644     18680     `
+/61             0           0     0     644     6224      `
+/88             0           0     0     644     8216      `
+/116            0           0     0     644     6840      `
+/146            0           0     0     644     6472      `
+/177            0           0     0     644     9612      `
+/213            0           0     0     644     5704      `
+/256            0           0     0     644     6216      `
+/286            0           0     0     644     6448      `
+/328            0           0     0     644     7860      `
+/363            0           0     0     644     6468      `
+/395            0           0     0     644     4828      `
+/424            0           0     0     644     9260      `
+/455            0           0     0     644     10896     `
+/481            0           0     0     644     6324      `
+/509            0           0     0     644     6292      `
+/536            0           0     0     644     5592      `
+/566            0           0     0     644     4220      `
+/596            0           0     0     644     7608      `
+/623            0           0     0     644     5368      `
+/649            0           0     0     644     13652     `
+/683            0           0     0     644     7000      `
+/715            0           0     0     644     4080      `
+/741            0           0     0     644     6900      `
+/769            0           0     0     644     11448     `
+/798            0           0     0     644     5388      `
+/829            0           0     0     644     7008      `
+/862            0           0     0     644     13156     `
+/892            0           0     0     644     6816      `
+/923            0           0     0     644     9360      `
+/956            0           0     0     644     8780      `
+/989            0           0     0     644     9816      `
+/1020           0           0     0     644     12764     `
+/1040           0           0     0     644     5848      `
+/1066           0           0     0     644     6472      `
+/1092           0           0     0     644     6076      `
+/1114           0           0     0     644     14172     `
+/1138           0           0     0     644     27520     `
+/1152           0           0     0     644     18148     `
+/1175           0           0     0     644     8852      `
+/1198           0           0     0     644     10648     `
+/1218           0           0     0     644     12824     `
+/1237           0           0     0     644     9896      `

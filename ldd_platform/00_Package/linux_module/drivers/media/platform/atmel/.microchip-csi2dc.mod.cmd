@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/atmel/microchip-csi2dc.mod := printf '%s\n'   microchip-csi2dc.o | awk '!x[$$0]++ { print("drivers/media/platform/atmel/"$$0) }' > drivers/media/platform/atmel/microchip-csi2dc.mod

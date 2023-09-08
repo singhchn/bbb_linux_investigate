@@ -1,0 +1,1 @@
+cmd_drivers/power/supply/cpcap-battery.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/power/supply/cpcap-battery.ko drivers/power/supply/cpcap-battery.o drivers/power/supply/cpcap-battery.mod.o;  true

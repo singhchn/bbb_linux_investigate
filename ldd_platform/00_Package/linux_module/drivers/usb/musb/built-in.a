@@ -1,0 +1,21 @@
+!<thin>
+//                                              132       `
+musb_core.o/
+musb_trace.o/
+musb_gadget_ep0.o/
+musb_gadget.o/
+musb_debugfs.o/
+musbhsdma.o/
+ux500_dma.o/
+musb_cppi41.o/
+musb_dsps.o/
+
+/0              0           0     0     644     44908     `
+/13             0           0     0     644     37704     `
+/27             0           0     0     644     10092     `
+/46             0           0     0     644     25356     `
+/61             0           0     0     644     9572      `
+/77             0           0     0     644     7652      `
+/90             0           0     0     644     6480      `
+/103            0           0     0     644     11136     `
+/118            0           0     0     644     16672     `

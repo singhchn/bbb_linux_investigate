@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/udc/aspeed-vhub/aspeed-vhub.mod := printf '%s\n'   core.o ep0.o epn.o dev.o hub.o | awk '!x[$$0]++ { print("drivers/usb/gadget/udc/aspeed-vhub/"$$0) }' > drivers/usb/gadget/udc/aspeed-vhub/aspeed-vhub.mod

@@ -1,0 +1,34 @@
+!<thin>
+//                                              298       `
+pci-mvebu.o/
+pci-tegra.o/
+pci-rcar-gen2.o/
+pcie-rcar.o/
+pcie-rcar-host.o/
+pci-host-common.o/
+pci-host-generic.o/
+pcie-iproc.o/
+pcie-iproc-msi.o/
+pcie-iproc-platform.o/
+pcie-iproc-bcma.o/
+pcie-brcmstb.o/
+dwc/pcie-designware.o/
+dwc/pcie-designware-host.o/
+dwc/pcie-designware-ep.o/
+dwc/pci-dra7xx.o/
+/0              0           0     0     644     22388     `
+/13             0           0     0     644     37176     `
+/26             0           0     0     644     5472      `
+/43             0           0     0     644     2528      `
+/56             0           0     0     644     20284     `
+/74             0           0     0     644     3544      `
+/93             0           0     0     644     4924      `
+/113            0           0     0     644     15288     `
+/127            0           0     0     644     9280      `
+/145            0           0     0     644     6184      `
+/168            0           0     0     644     4556      `
+/187            0           0     0     644     22316     `
+/203            0           0     0     644     12264     `
+/226            0           0     0     644     13008     `
+/254            0           0     0     644     13368     `
+/280            0           0     0     644     15904     `

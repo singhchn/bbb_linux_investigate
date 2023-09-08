@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/st/sti/delta/st-delta.mod := printf '%s\n'   delta-v4l2.o delta-mem.o delta-ipc.o delta-debug.o delta-mjpeg-hdr.o delta-mjpeg-dec.o | awk '!x[$$0]++ { print("drivers/media/platform/st/sti/delta/"$$0) }' > drivers/media/platform/st/sti/delta/st-delta.mod

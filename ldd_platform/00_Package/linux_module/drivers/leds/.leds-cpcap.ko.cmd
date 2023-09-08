@@ -1,0 +1,1 @@
+cmd_drivers/leds/leds-cpcap.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/leds/leds-cpcap.ko drivers/leds/leds-cpcap.o drivers/leds/leds-cpcap.mod.o;  true

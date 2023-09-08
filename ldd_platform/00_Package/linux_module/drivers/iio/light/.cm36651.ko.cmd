@@ -1,0 +1,1 @@
+cmd_drivers/iio/light/cm36651.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/light/cm36651.ko drivers/iio/light/cm36651.o drivers/iio/light/cm36651.mod.o;  true

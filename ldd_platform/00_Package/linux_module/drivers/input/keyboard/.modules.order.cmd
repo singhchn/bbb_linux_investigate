@@ -1,0 +1,1 @@
+cmd_drivers/input/keyboard/modules.order := {   echo drivers/input/keyboard/cros_ec_keyb.ko;   echo drivers/input/keyboard/pxa27x_keypad.ko;   echo drivers/input/keyboard/qt1070.ko;   echo drivers/input/keyboard/samsung-keypad.ko; :; } > drivers/input/keyboard/modules.order

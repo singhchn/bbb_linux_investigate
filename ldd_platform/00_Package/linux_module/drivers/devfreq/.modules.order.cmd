@@ -1,0 +1,1 @@
+cmd_drivers/devfreq/modules.order := {   cat drivers/devfreq/event/modules.order;   echo drivers/devfreq/governor_passive.ko;   echo drivers/devfreq/exynos-bus.ko;   echo drivers/devfreq/tegra30-devfreq.ko; :; } > drivers/devfreq/modules.order

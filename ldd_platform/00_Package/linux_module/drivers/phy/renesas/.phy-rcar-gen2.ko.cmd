@@ -1,0 +1,1 @@
+cmd_drivers/phy/renesas/phy-rcar-gen2.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/renesas/phy-rcar-gen2.ko drivers/phy/renesas/phy-rcar-gen2.o drivers/phy/renesas/phy-rcar-gen2.mod.o;  true

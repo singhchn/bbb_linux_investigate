@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.o @drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac.mod 

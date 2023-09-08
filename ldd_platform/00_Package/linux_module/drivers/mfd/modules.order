@@ -1,0 +1,8 @@
+drivers/mfd/cros_ec_dev.ko
+drivers/mfd/wm8994.ko
+drivers/mfd/da9063.ko
+drivers/mfd/max77693.ko
+drivers/mfd/atmel-hlcdc.ko
+drivers/mfd/stm32-lptimer.ko
+drivers/mfd/stm32-timers.ko
+drivers/mfd/acer-ec-a500.ko

@@ -1,0 +1,1 @@
+cmd_drivers/phy/broadcom/phy-brcm-usb-dvr.mod := printf '%s\n'   phy-brcm-usb.o phy-brcm-usb-init.o phy-brcm-usb-init-synopsys.o | awk '!x[$$0]++ { print("drivers/phy/broadcom/"$$0) }' > drivers/phy/broadcom/phy-brcm-usb-dvr.mod

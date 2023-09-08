@@ -1,0 +1,1 @@
+cmd_drivers/soc/tegra/fuse/built-in.a := rm -f drivers/soc/tegra/fuse/built-in.a;  printf "drivers/soc/tegra/fuse/%s " fuse-tegra.o fuse-tegra30.o tegra-apbmisc.o fuse-tegra20.o speedo-tegra20.o speedo-tegra30.o speedo-tegra114.o speedo-tegra124.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/tegra/fuse/built-in.a

@@ -1,0 +1,30 @@
+# 1 "arch/arm/boot/dts/hpe-bmc-dl360gen10.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/hpe-bmc-dl360gen10.dts"
+
+
+
+
+
+/include/ "hpe-gxp.dtsi"
+
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ compatible = "hpe,gxp-dl360gen10", "hpe,gxp";
+ model = "Hewlett Packard Enterprise ProLiant dl360 Gen10";
+
+ aliases {
+  serial0 = &uartc;
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ memory@40000000 {
+  device_type = "memory";
+  reg = <0x40000000 0x20000000>;
+ };
+};

@@ -1,0 +1,12 @@
+drivers/phy/allwinner/phy-sun6i-mipi-dphy.ko
+drivers/phy/broadcom/phy-brcm-usb-dvr.ko
+drivers/phy/marvell/phy-mmp3-usb.ko
+drivers/phy/microchip/lan966x_serdes.ko
+drivers/phy/motorola/phy-cpcap-usb.ko
+drivers/phy/qualcomm/phy-qcom-apq8064-sata.ko
+drivers/phy/renesas/phy-rcar-gen2.ko
+drivers/phy/rockchip/phy-rockchip-dp.ko
+drivers/phy/samsung/phy-exynos-usb2.ko
+drivers/phy/samsung/phy-exynos5250-sata.ko
+drivers/phy/ti/phy-dm816x-usb.ko
+drivers/phy/ti/phy-twl4030-usb.ko

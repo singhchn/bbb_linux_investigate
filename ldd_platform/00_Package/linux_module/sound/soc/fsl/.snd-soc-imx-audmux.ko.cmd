@@ -1,0 +1,1 @@
+cmd_sound/soc/fsl/snd-soc-imx-audmux.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/fsl/snd-soc-imx-audmux.ko sound/soc/fsl/snd-soc-imx-audmux.o sound/soc/fsl/snd-soc-imx-audmux.mod.o;  true

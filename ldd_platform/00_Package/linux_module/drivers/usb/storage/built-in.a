@@ -1,0 +1,18 @@
+!<thin>
+//                                              102       `
+scsiglue.o/
+protocol.o/
+transport.o/
+usb.o/
+initializers.o/
+sierra_ms.o/
+option_ms.o/
+usual-tables.o/
+/0              0           0     0     644     11132     `
+/12             0           0     0     644     3680      `
+/24             0           0     0     644     13796     `
+/37             0           0     0     644     37544     `
+/44             0           0     0     644     1844      `
+/60             0           0     0     644     3480      `
+/73             0           0     0     644     2908      `
+/86             0           0     0     644     9768      `

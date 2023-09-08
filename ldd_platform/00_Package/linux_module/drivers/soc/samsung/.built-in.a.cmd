@@ -1,0 +1,1 @@
+cmd_drivers/soc/samsung/built-in.a := rm -f drivers/soc/samsung/built-in.a;  printf "drivers/soc/samsung/%s " exynos5422-asv.o exynos-chipid.o exynos-asv.o exynos-pmu.o exynos3250-pmu.o exynos4-pmu.o exynos5250-pmu.o exynos5420-pmu.o pm_domains.o exynos-regulator-coupler.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/samsung/built-in.a

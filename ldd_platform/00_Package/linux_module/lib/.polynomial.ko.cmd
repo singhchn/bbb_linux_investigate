@@ -1,0 +1,1 @@
+cmd_lib/polynomial.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o lib/polynomial.ko lib/polynomial.o lib/polynomial.mod.o;  true

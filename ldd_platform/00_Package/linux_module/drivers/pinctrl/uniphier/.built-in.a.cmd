@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/uniphier/built-in.a := rm -f drivers/pinctrl/uniphier/built-in.a;  printf "drivers/pinctrl/uniphier/%s " pinctrl-uniphier-core.o pinctrl-uniphier-ld4.o pinctrl-uniphier-pro4.o pinctrl-uniphier-sld8.o pinctrl-uniphier-pro5.o pinctrl-uniphier-pxs2.o pinctrl-uniphier-ld6b.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/uniphier/built-in.a

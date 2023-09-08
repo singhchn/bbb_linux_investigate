@@ -1,0 +1,13 @@
+!<thin>
+//                                              100       `
+pinctrl-abx500.o/
+pinctrl-ab8500.o/
+pinctrl-ab8505.o/
+pinctrl-nomadik.o/
+pinctrl-nomadik-db8500.o/
+
+/0              0           0     0     644     15564     `
+/18             0           0     0     644     10792     `
+/36             0           0     0     644     7404      `
+/54             0           0     0     644     23400     `
+/73             0           0     0     644     25852     `

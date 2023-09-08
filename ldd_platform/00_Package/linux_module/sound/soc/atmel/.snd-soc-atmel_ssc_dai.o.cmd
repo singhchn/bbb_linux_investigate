@@ -1,0 +1,1 @@
+cmd_sound/soc/atmel/snd-soc-atmel_ssc_dai.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/atmel/snd-soc-atmel_ssc_dai.o @sound/soc/atmel/snd-soc-atmel_ssc_dai.mod 

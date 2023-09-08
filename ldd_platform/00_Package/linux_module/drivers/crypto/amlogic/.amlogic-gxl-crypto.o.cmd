@@ -1,0 +1,1 @@
+cmd_drivers/crypto/amlogic/amlogic-gxl-crypto.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/crypto/amlogic/amlogic-gxl-crypto.o @drivers/crypto/amlogic/amlogic-gxl-crypto.mod 

@@ -1,0 +1,4 @@
+armada-xp-db-xc3-24g4xg.o: arch/arm/boot/dts/armada-xp-db-xc3-24g4xg.dts \
+ arch/arm/boot/dts/armada-xp-98dx3336.dtsi \
+ arch/arm/boot/dts/armada-xp-98dx3236.dtsi \
+ arch/arm/boot/dts/armada-370-xp.dtsi

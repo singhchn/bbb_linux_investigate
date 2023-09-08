@@ -1,0 +1,49 @@
+!<thin>
+//                                              350       `
+spi.o/
+spi-mem.o/
+spidev.o/
+spi-bcm2835.o/
+spi-bcm2835aux.o/
+spi-iproc-qspi.o/
+spi-brcmstb-qspi.o/
+spi-bcm-qspi.o/
+spi-bitbang.o/
+spi-cadence.o/
+spi-davinci.o/
+spi-omap2-mcspi.o/
+spi-orion.o/
+spi-pl022.o/
+spi-rspi.o/
+spi-sh-hspi.o/
+spi-stm32-qspi.o/
+spi-sun4i.o/
+spi-sun6i.o/
+spi-tegra114.o/
+spi-tegra20-sflash.o/
+spi-tegra20-slink.o/
+spi-xilinx.o/
+
+/0              0           0     0     644     91052     `
+/7              0           0     0     644     15324     `
+/18             0           0     0     644     14916     `
+/28             0           0     0     644     17548     `
+/43             0           0     0     644     9456      `
+/61             0           0     0     644     5556      `
+/79             0           0     0     644     4168      `
+/99             0           0     0     644     19284     `
+/115            0           0     0     644     6892      `
+/130            0           0     0     644     9508      `
+/145            0           0     0     644     13016     `
+/160            0           0     0     644     19124     `
+/179            0           0     0     644     11156     `
+/192            0           0     0     644     23336     `
+/205            0           0     0     644     19068     `
+/217            0           0     0     644     6108      `
+/232            0           0     0     644     15496     `
+/250            0           0     0     644     9060      `
+/263            0           0     0     644     11608     `
+/276            0           0     0     644     20044     `
+/292            0           0     0     644     10760     `
+/314            0           0     0     644     17524     `
+/335            0           0     0     644     8576      `

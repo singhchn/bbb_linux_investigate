@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/marvell/mwifiex/mwifiex_sdio.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/wireless/marvell/mwifiex/mwifiex_sdio.o @drivers/net/wireless/marvell/mwifiex/mwifiex_sdio.mod 

@@ -1,0 +1,1 @@
+cmd_drivers/usb/musb/am35x.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/musb/am35x.ko drivers/usb/musb/am35x.o drivers/usb/musb/am35x.mod.o;  true

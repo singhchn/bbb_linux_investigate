@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-highbank/built-in.a := rm -f arch/arm/mach-highbank/built-in.a;  printf "arch/arm/mach-highbank/%s " highbank.o system.o smc.o pm.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-highbank/built-in.a

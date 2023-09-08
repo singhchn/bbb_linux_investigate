@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/st/sti/hva/st-hva.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/platform/st/sti/hva/st-hva.o @drivers/media/platform/st/sti/hva/st-hva.mod 

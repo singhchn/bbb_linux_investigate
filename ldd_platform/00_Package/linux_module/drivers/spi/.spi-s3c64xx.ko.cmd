@@ -1,0 +1,1 @@
+cmd_drivers/spi/spi-s3c64xx.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/spi/spi-s3c64xx.ko drivers/spi/spi-s3c64xx.o drivers/spi/spi-s3c64xx.mod.o;  true

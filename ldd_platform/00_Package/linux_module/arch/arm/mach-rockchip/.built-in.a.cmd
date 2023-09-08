@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-rockchip/built-in.a := rm -f arch/arm/mach-rockchip/built-in.a;  printf "arch/arm/mach-rockchip/%s " rockchip.o pm.o sleep.o headsmp.o platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-rockchip/built-in.a

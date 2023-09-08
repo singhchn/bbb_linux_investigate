@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/imx/modules.order := {   echo drivers/gpu/drm/imx/imxdrm.ko;   echo drivers/gpu/drm/imx/parallel-display.ko;   echo drivers/gpu/drm/imx/imx-tve.ko;   echo drivers/gpu/drm/imx/imx-ldb.ko;   echo drivers/gpu/drm/imx/dw_hdmi-imx.ko; :; } > drivers/gpu/drm/imx/modules.order

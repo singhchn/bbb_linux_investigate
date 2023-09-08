@@ -1,0 +1,1 @@
+cmd_drivers/net/pcs/built-in.a := rm -f drivers/net/pcs/built-in.a;  printf "drivers/net/pcs/%s " pcs-xpcs.o pcs-xpcs-nxp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/pcs/built-in.a

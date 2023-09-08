@@ -1,0 +1,4 @@
+socfpga_cyclone5_de0_nano_soc.o: \
+ arch/arm/boot/dts/socfpga_cyclone5_de0_nano_soc.dts \
+ arch/arm/boot/dts/socfpga_cyclone5.dtsi arch/arm/boot/dts/socfpga.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/reset/altr,rst-mgr.h

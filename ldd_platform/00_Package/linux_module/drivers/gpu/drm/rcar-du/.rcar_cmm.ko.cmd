@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/rcar-du/rcar_cmm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/rcar-du/rcar_cmm.ko drivers/gpu/drm/rcar-du/rcar_cmm.o drivers/gpu/drm/rcar-du/rcar_cmm.mod.o;  true

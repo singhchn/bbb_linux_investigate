@@ -1,0 +1,1 @@
+cmd_drivers/watchdog/rza_wdt.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/watchdog/rza_wdt.ko drivers/watchdog/rza_wdt.o drivers/watchdog/rza_wdt.mod.o;  true

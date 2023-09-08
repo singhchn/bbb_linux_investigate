@@ -1,0 +1,1 @@
+cmd_drivers/net/phy/sfp.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/phy/sfp.ko drivers/net/phy/sfp.o drivers/net/phy/sfp.mod.o;  true

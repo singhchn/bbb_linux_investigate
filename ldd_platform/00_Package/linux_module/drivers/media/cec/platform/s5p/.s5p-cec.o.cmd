@@ -1,0 +1,1 @@
+cmd_drivers/media/cec/platform/s5p/s5p-cec.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/cec/platform/s5p/s5p-cec.o @drivers/media/cec/platform/s5p/s5p-cec.mod 

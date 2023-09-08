@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/atmel/atmel-isc-common.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/platform/atmel/atmel-isc-common.ko drivers/media/platform/atmel/atmel-isc-common.o drivers/media/platform/atmel/atmel-isc-common.mod.o;  true

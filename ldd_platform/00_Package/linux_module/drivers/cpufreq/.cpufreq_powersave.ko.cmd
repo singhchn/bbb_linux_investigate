@@ -1,0 +1,1 @@
+cmd_drivers/cpufreq/cpufreq_powersave.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/cpufreq/cpufreq_powersave.ko drivers/cpufreq/cpufreq_powersave.o drivers/cpufreq/cpufreq_powersave.mod.o;  true

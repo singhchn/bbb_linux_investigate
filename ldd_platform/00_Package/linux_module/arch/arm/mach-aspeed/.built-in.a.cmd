@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-aspeed/built-in.a := rm -f arch/arm/mach-aspeed/built-in.a;  printf "arch/arm/mach-aspeed/%s " platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-aspeed/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/remoteproc/qcom_wcnss_pil.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/remoteproc/qcom_wcnss_pil.o @drivers/remoteproc/qcom_wcnss_pil.mod 

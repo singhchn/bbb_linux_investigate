@@ -1,0 +1,3 @@
+drivers/crypto/stm32/stm32-crc32.ko
+drivers/crypto/stm32/stm32-hash.ko
+drivers/crypto/stm32/stm32-cryp.ko

@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/rcar-du/modules.order := {   echo drivers/gpu/drm/rcar-du/rcar_cmm.ko;   echo drivers/gpu/drm/rcar-du/rcar-du-drm.ko;   echo drivers/gpu/drm/rcar-du/rcar_lvds.ko;   echo drivers/gpu/drm/rcar-du/rcar_mipi_dsi.ko; :; } > drivers/gpu/drm/rcar-du/modules.order

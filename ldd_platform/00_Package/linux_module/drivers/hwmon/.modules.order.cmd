@@ -1,0 +1,1 @@
+cmd_drivers/hwmon/modules.order := {   echo drivers/hwmon/aspeed-pwm-tacho.ko;   echo drivers/hwmon/ina2xx.ko;   echo drivers/hwmon/lan966x-hwmon.ko;   echo drivers/hwmon/ntc_thermistor.ko;   echo drivers/hwmon/pwm-fan.ko;   echo drivers/hwmon/raspberrypi-hwmon.ko; :; } > drivers/hwmon/modules.order

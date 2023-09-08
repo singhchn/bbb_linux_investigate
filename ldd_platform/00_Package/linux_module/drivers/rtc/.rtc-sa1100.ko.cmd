@@ -1,0 +1,1 @@
+cmd_drivers/rtc/rtc-sa1100.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/rtc/rtc-sa1100.ko drivers/rtc/rtc-sa1100.o drivers/rtc/rtc-sa1100.mod.o;  true

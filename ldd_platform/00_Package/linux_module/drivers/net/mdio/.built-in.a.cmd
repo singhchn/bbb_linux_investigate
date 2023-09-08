@@ -1,0 +1,1 @@
+cmd_drivers/net/mdio/built-in.a := rm -f drivers/net/mdio/built-in.a;  printf "drivers/net/mdio/%s " fwnode_mdio.o of_mdio.o mdio-bcm-iproc.o mdio-bitbang.o mdio-sun4i.o mdio-mux.o mdio-mux-bcm-iproc.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/mdio/built-in.a

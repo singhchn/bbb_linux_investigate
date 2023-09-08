@@ -1,0 +1,106 @@
+!<thin>
+//                                              804       `
+component.o/
+core.o/
+bus.o/
+dd.o/
+syscore.o/
+driver.o/
+class.o/
+platform.o/
+cpu.o/
+firmware.o/
+init.o/
+map.o/
+devres.o/
+attribute_container.o/
+transport_class.o/
+topology.o/
+container.o/
+property.o/
+cacheinfo.o/
+swnode.o/
+devtmpfs.o/
+power/sysfs.o/
+power/generic_ops.o/
+power/common.o/
+power/qos.o/
+power/runtime.o/
+power/wakeirq.o/
+power/main.o/
+power/wakeup.o/
+power/wakeup_stats.o/
+power/domain.o/
+power/domain_governor.o/
+power/clock_ops.o/
+firmware_loader/main.o/
+firmware_loader/builtin/main.o/
+module.o/
+regmap/regmap.o/
+regmap/regcache.o/
+regmap/regcache-rbtree.o/
+regmap/regcache-flat.o/
+regmap/regmap-debugfs.o/
+regmap/regmap-i2c.o/
+regmap/regmap-spi.o/
+regmap/regmap-spmi.o/
+regmap/regmap-mmio.o/
+regmap/regmap-irq.o/
+soc.o/
+pinctrl.o/
+devcoredump.o/
+platform-msi.o/
+arch_topology.o/
+trace.o/
+/0              0           0     0     644     14560     `
+/13             0           0     0     644     79944     `
+/21             0           0     0     644     23440     `
+/28             0           0     0     644     22472     `
+/34             0           0     0     644     5988      `
+/45             0           0     0     644     6964      `
+/55             0           0     0     644     14016     `
+/64             0           0     0     644     27308     `
+/76             0           0     0     644     12432     `
+/83             0           0     0     644     1908      `
+/95             0           0     0     644     1688      `
+/103            0           0     0     644     2628      `
+/110            0           0     0     644     22404     `
+/120            0           0     0     644     8672      `
+/143            0           0     0     644     6844      `
+/162            0           0     0     644     6908      `
+/174            0           0     0     644     2280      `
+/187            0           0     0     644     30964     `
+/199            0           0     0     644     12612     `
+/212            0           0     0     644     21940     `
+/222            0           0     0     644     9816      `
+/234            0           0     0     644     14264     `
+/249            0           0     0     644     10128     `
+/270            0           0     0     644     5740      `
+/286            0           0     0     644     17820     `
+/299            0           0     0     644     33572     `
+/316            0           0     0     644     6836      `
+/333            0           0     0     644     32164     `
+/347            0           0     0     644     25616     `
+/363            0           0     0     644     6568      `
+/385            0           0     0     644     48900     `
+/401            0           0     0     644     3956      `
+/426            0           0     0     644     12904     `
+/445            0           0     0     644     19268     `
+/469            0           0     0     644     2240      `
+/501            0           0     0     644     2408      `
+/511            0           0     0     644     76672     `
+/528            0           0     0     644     12484     `
+/547            0           0     0     644     6112      `
+/573            0           0     0     644     1864      `
+/597            0           0     0     644     12448     `
+/622            0           0     0     644     6332      `
+/643            0           0     0     644     4412      `
+/664            0           0     0     644     6056      `
+/686            0           0     0     644     9296      `
+/708            0           0     0     644     20520     `
+/729            0           0     0     644     6396      `
+/736            0           0     0     644     1964      `
+/747            0           0     0     644     8860      `
+/762            0           0     0     644     5996      `
+/778            0           0     0     644     17424     `
+/795            0           0     0     644     5044      `

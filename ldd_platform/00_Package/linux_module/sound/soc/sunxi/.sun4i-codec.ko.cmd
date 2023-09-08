@@ -1,0 +1,1 @@
+cmd_sound/soc/sunxi/sun4i-codec.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/sunxi/sun4i-codec.ko sound/soc/sunxi/sun4i-codec.o sound/soc/sunxi/sun4i-codec.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/dma/dw/built-in.a := rm -f drivers/dma/dw/built-in.a;  printf "drivers/dma/dw/%s " core.o dw.o idma32.o platform.o of.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/dma/dw/built-in.a

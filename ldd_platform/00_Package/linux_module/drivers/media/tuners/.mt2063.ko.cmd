@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/mt2063.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/mt2063.ko drivers/media/tuners/mt2063.o drivers/media/tuners/mt2063.mod.o;  true

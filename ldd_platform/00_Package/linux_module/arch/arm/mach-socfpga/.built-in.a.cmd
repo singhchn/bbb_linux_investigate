@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-socfpga/built-in.a := rm -f arch/arm/mach-socfpga/built-in.a;  printf "arch/arm/mach-socfpga/%s " socfpga.o headsmp.o platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-socfpga/built-in.a

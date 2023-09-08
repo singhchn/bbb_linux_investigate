@@ -1,0 +1,1 @@
+cmd_drivers/phy/tegra/built-in.a := rm -f drivers/phy/tegra/built-in.a;  printf "drivers/phy/tegra/%s " xusb.o xusb-tegra124.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/tegra/built-in.a

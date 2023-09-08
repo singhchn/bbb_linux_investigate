@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/built-in.a := rm -f drivers/input/touchscreen/built-in.a;  printf "drivers/input/touchscreen/%s " stmpe-ts.o sun4i-ts.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/input/touchscreen/built-in.a

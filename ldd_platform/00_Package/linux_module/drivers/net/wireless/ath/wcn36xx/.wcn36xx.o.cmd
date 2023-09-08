@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/ath/wcn36xx/wcn36xx.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/wireless/ath/wcn36xx/wcn36xx.o @drivers/net/wireless/ath/wcn36xx/wcn36xx.mod 

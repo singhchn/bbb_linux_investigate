@@ -1,0 +1,1 @@
+cmd_drivers/crypto/stm32/modules.order := {   echo drivers/crypto/stm32/stm32-crc32.ko;   echo drivers/crypto/stm32/stm32-hash.ko;   echo drivers/crypto/stm32/stm32-cryp.ko; :; } > drivers/crypto/stm32/modules.order

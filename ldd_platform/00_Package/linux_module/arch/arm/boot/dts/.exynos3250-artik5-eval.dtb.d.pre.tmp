@@ -1,0 +1,13 @@
+exynos3250-artik5-eval.o: arch/arm/boot/dts/exynos3250-artik5-eval.dts \
+ arch/arm/boot/dts/exynos3250-artik5.dtsi \
+ arch/arm/boot/dts/exynos3250.dtsi \
+ arch/arm/boot/dts/exynos4-cpu-thermal.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos3250.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/exynos3250-pinctrl.dtsi \
+ arch/arm/boot/dts/exynos-pinctrl.h \
+ arch/arm/boot/dts/exynos-syscon-restart.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/samsung,s2mps11.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

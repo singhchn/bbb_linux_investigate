@@ -1,0 +1,1 @@
+cmd_drivers/media/cec/platform/modules.order := {   cat drivers/media/cec/platform/s5p/modules.order;   cat drivers/media/cec/platform/stm32/modules.order; :; } > drivers/media/cec/platform/modules.order

@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/asix/ax88796c.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/ethernet/asix/ax88796c.o @drivers/net/ethernet/asix/ax88796c.mod 

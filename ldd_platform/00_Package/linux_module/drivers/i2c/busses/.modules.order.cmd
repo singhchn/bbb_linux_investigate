@@ -1,0 +1,1 @@
+cmd_drivers/i2c/busses/modules.order := {   echo drivers/i2c/busses/i2c-aspeed.ko;   echo drivers/i2c/busses/i2c-at91.ko;   echo drivers/i2c/busses/i2c-digicolor.ko;   echo drivers/i2c/busses/i2c-emev2.ko;   echo drivers/i2c/busses/i2c-gpio.ko;   echo drivers/i2c/busses/i2c-qcom-cci.ko;   echo drivers/i2c/busses/i2c-cros-ec-tunnel.ko; :; } > drivers/i2c/busses/modules.order

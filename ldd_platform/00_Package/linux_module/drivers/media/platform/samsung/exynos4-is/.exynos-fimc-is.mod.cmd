@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/exynos4-is/exynos-fimc-is.mod := printf '%s\n'   fimc-is.o fimc-isp.o fimc-is-sensor.o fimc-is-regs.o fimc-is-param.o fimc-is-errno.o fimc-is-i2c.o fimc-isp-video.o | awk '!x[$$0]++ { print("drivers/media/platform/samsung/exynos4-is/"$$0) }' > drivers/media/platform/samsung/exynos4-is/exynos-fimc-is.mod

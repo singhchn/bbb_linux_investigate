@@ -1,0 +1,1 @@
+cmd_drivers/clk/mmp/built-in.a := rm -f drivers/clk/mmp/built-in.a;  printf "drivers/clk/mmp/%s " clk-apbc.o clk-apmu.o clk-frac.o clk-mix.o clk-gate.o clk.o reset.o clk-of-mmp2.o clk-pll.o pwr-island.o clk-of-pxa1928.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/mmp/built-in.a

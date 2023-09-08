@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/atmel-hlcdc/atmel-hlcdc-dc.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/atmel-hlcdc/atmel-hlcdc-dc.o @drivers/gpu/drm/atmel-hlcdc/atmel-hlcdc-dc.mod 

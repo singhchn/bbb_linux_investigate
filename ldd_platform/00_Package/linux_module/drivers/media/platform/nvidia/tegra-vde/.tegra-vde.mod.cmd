@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/nvidia/tegra-vde/tegra-vde.mod := printf '%s\n'   vde.o iommu.o dmabuf-cache.o h264.o v4l2.o | awk '!x[$$0]++ { print("drivers/media/platform/nvidia/tegra-vde/"$$0) }' > drivers/media/platform/nvidia/tegra-vde/tegra-vde.mod

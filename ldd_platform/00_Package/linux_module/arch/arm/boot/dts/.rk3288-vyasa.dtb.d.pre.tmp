@@ -1,0 +1,10 @@
+rk3288-vyasa.o: arch/arm/boot/dts/rk3288-vyasa.dts \
+ arch/arm/boot/dts/rk3288.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3288-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/rk3288-power.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/rockchip,boot-mode.h

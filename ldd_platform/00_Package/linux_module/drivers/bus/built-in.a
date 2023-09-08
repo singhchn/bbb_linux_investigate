@@ -1,0 +1,27 @@
+!<thin>
+//                                              184       `
+arm-cci.o/
+brcmstb_gisb.o/
+mvebu-mbus.o/
+omap_l3_smx.o/
+omap_l3_noc.o/
+omap-ocp2scp.o/
+qcom-ebi2.o/
+sunxi-rsb.o/
+simple-pm-bus.o/
+ti-sysc.o/
+uniphier-system-bus.o/
+vexpress-config.o/
+
+/0              0           0     0     644     12008     `
+/11             0           0     0     644     10304     `
+/27             0           0     0     644     22064     `
+/41             0           0     0     644     7352      `
+/56             0           0     0     644     15792     `
+/71             0           0     0     644     5116      `
+/87             0           0     0     644     6860      `
+/100            0           0     0     644     14632     `
+/113            0           0     0     644     5168      `
+/130            0           0     0     644     38652     `
+/141            0           0     0     644     6848      `
+/164            0           0     0     644     9440      `

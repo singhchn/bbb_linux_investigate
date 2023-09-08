@@ -1,0 +1,11 @@
+drivers/spi/spi-aspeed-smc.ko
+drivers/spi/spi-atmel.ko
+drivers/spi/atmel-quadspi.ko
+drivers/spi/spi-fsl-dspi.ko
+drivers/spi/spi-fsl-qspi.ko
+drivers/spi/spi-gpio.ko
+drivers/spi/spi-qup.ko
+drivers/spi/spi-rockchip.ko
+drivers/spi/spi-s3c64xx.ko
+drivers/spi/spi-sh-msiof.ko
+drivers/spi/spi-stm32.ko

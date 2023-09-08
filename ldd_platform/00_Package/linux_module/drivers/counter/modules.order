@@ -1,0 +1,3 @@
+drivers/counter/counter.ko
+drivers/counter/stm32-timer-cnt.ko
+drivers/counter/stm32-lptimer-cnt.ko

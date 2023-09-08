@@ -1,0 +1,1 @@
+cmd_sound/soc/tegra/snd-soc-tegra30-ahub.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/tegra/snd-soc-tegra30-ahub.ko sound/soc/tegra/snd-soc-tegra30-ahub.o sound/soc/tegra/snd-soc-tegra30-ahub.mod.o;  true

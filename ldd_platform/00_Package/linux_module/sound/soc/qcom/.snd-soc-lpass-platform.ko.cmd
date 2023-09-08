@@ -1,0 +1,1 @@
+cmd_sound/soc/qcom/snd-soc-lpass-platform.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/qcom/snd-soc-lpass-platform.ko sound/soc/qcom/snd-soc-lpass-platform.o sound/soc/qcom/snd-soc-lpass-platform.mod.o;  true

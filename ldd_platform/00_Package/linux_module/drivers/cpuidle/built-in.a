@@ -1,0 +1,35 @@
+!<thin>
+//                                              248       `
+cpuidle.o/
+driver.o/
+governor.o/
+sysfs.o/
+governors/menu.o/
+coupled.o/
+dt_idle_states.o/
+dt_idle_genpd.o/
+cpuidle-zynq.o/
+cpuidle-at91.o/
+cpuidle-exynos.o/
+cpuidle-arm.o/
+cpuidle-psci.o/
+cpuidle-psci-domain.o/
+cpuidle-tegra.o/
+cpuidle-qcom-spm.o/
+
+/0              0           0     0     644     15724     `
+/11             0           0     0     644     6020      `
+/21             0           0     0     644     3108      `
+/33             0           0     0     644     12684     `
+/42             0           0     0     644     5348      `
+/60             0           0     0     644     7860      `
+/71             0           0     0     644     4200      `
+/89             0           0     0     644     3680      `
+/106            0           0     0     644     4000      `
+/122            0           0     0     644     3588      `
+/138            0           0     0     644     5688      `
+/156            0           0     0     644     4924      `
+/171            0           0     0     644     9296      `
+/187            0           0     0     644     5224      `
+/210            0           0     0     644     7556      `
+/227            0           0     0     644     6680      `

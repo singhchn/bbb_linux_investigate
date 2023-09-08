@@ -1,0 +1,6 @@
+drivers/net/ethernet/asix/ax88796c.ko
+drivers/net/ethernet/broadcom/genet/genet.ko
+drivers/net/ethernet/broadcom/bcmsysport.ko
+drivers/net/ethernet/faraday/ftgmac100.ko
+drivers/net/ethernet/marvell/pxa168_eth.ko
+drivers/net/ethernet/microchip/lan966x/lan966x-switch.ko

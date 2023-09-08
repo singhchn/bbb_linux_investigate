@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/xhci-tegra.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/host/xhci-tegra.ko drivers/usb/host/xhci-tegra.o drivers/usb/host/xhci-tegra.mod.o;  true

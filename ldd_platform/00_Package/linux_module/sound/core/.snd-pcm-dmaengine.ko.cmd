@@ -1,0 +1,1 @@
+cmd_sound/core/snd-pcm-dmaengine.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/core/snd-pcm-dmaengine.ko sound/core/snd-pcm-dmaengine.o sound/core/snd-pcm-dmaengine.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_sound/soc/rockchip/modules.order := {   echo sound/soc/rockchip/snd-soc-rockchip-i2s.ko;   echo sound/soc/rockchip/snd-soc-rockchip-spdif.ko;   echo sound/soc/rockchip/snd-soc-rockchip-max98090.ko;   echo sound/soc/rockchip/snd-soc-rockchip-rt5645.ko; :; } > sound/soc/rockchip/modules.order

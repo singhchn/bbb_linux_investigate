@@ -1,0 +1,5 @@
+meson6-atv1200.o: arch/arm/boot/dts/meson6-atv1200.dts \
+ arch/arm/boot/dts/meson6.dtsi arch/arm/boot/dts/meson.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/sound/meson-aiu.h

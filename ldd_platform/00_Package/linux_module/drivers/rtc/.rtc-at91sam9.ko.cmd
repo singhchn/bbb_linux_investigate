@@ -1,0 +1,1 @@
+cmd_drivers/rtc/rtc-at91sam9.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/rtc/rtc-at91sam9.ko drivers/rtc/rtc-at91sam9.o drivers/rtc/rtc-at91sam9.mod.o;  true

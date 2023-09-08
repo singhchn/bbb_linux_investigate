@@ -1,0 +1,1 @@
+cmd_drivers/crypto/atmel-aes.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/atmel-aes.ko drivers/crypto/atmel-aes.o drivers/crypto/atmel-aes.mod.o;  true

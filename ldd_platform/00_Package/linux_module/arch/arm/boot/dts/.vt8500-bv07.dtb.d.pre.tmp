@@ -1,0 +1,1 @@
+vt8500-bv07.o: arch/arm/boot/dts/vt8500-bv07.dts

@@ -1,0 +1,1 @@
+cmd_net/nfc/nci/nci_uart.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o net/nfc/nci/nci_uart.ko net/nfc/nci/nci_uart.o net/nfc/nci/nci_uart.mod.o;  true

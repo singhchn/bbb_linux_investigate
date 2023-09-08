@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/ehci-brcm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/host/ehci-brcm.ko drivers/usb/host/ehci-brcm.o drivers/usb/host/ehci-brcm.mod.o;  true

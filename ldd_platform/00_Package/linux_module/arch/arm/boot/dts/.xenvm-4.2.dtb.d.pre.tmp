@@ -1,0 +1,1 @@
+xenvm-4.2.o: arch/arm/boot/dts/xenvm-4.2.dts

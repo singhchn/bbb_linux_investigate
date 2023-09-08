@@ -1,0 +1,40 @@
+!<thin>
+//                                              352       `
+core.o/
+hisilicon/hi6220_reset.o/
+hisilicon/reset-hi3660.o/
+sti/reset-syscfg.o/
+sti/reset-stih407.o/
+reset-brcmstb.o/
+reset-brcmstb-rescal.o/
+reset-imx7.o/
+reset-microchip-sparx5.o/
+reset-meson.o/
+reset-raspberrypi.o/
+reset-scmi.o/
+reset-simple.o/
+reset-socfpga.o/
+reset-sunplus.o/
+reset-sunxi.o/
+reset-uniphier.o/
+reset-uniphier-glue.o/
+reset-zynq.o/
+/0              0           0     0     644     23624     `
+/8              0           0     0     644     4836      `
+/34             0           0     0     644     4224      `
+/60             0           0     0     644     3228      `
+/80             0           0     0     644     5748      `
+/101            0           0     0     644     4704      `
+/118            0           0     0     644     5024      `
+/142            0           0     0     644     7360      `
+/156            0           0     0     644     5564      `
+/182            0           0     0     644     5864      `
+/197            0           0     0     644     4756      `
+/218            0           0     0     644     4272      `
+/232            0           0     0     644     6568      `
+/248            0           0     0     644     4644      `
+/265            0           0     0     644     4200      `
+/282            0           0     0     644     2640      `
+/297            0           0     0     644     14364     `
+/315            0           0     0     644     7504      `
+/338            0           0     0     644     4024      `

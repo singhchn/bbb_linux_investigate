@@ -1,0 +1,1 @@
+cmd_drivers/input/misc/built-in.a := rm -f drivers/input/misc/built-in.a;  printf "drivers/input/misc/%s " pm8941-pwrkey.o stpmic1_onkey.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/input/misc/built-in.a

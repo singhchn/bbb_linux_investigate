@@ -1,0 +1,1 @@
+cmd_drivers/soc/pxa/ssp.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/soc/pxa/ssp.ko drivers/soc/pxa/ssp.o drivers/soc/pxa/ssp.mod.o;  true

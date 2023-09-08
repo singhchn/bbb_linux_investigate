@@ -1,0 +1,1 @@
+cmd_sound/soc/atmel/modules.order := {   echo sound/soc/atmel/snd-soc-atmel-pcm-pdc.ko;   echo sound/soc/atmel/snd-soc-atmel-pcm-dma.ko;   echo sound/soc/atmel/snd-soc-atmel_ssc_dai.ko;   echo sound/soc/atmel/snd-soc-atmel-i2s.ko;   echo sound/soc/atmel/snd-atmel-soc-wm8904.ko;   echo sound/soc/atmel/snd-atmel-soc-pdmic.ko; :; } > sound/soc/atmel/modules.order

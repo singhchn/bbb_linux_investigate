@@ -1,0 +1,1 @@
+cmd_drivers/crypto/allwinner/sun4i-ss/sun4i-ss.mod := printf '%s\n'   sun4i-ss-core.o sun4i-ss-hash.o sun4i-ss-cipher.o | awk '!x[$$0]++ { print("drivers/crypto/allwinner/sun4i-ss/"$$0) }' > drivers/crypto/allwinner/sun4i-ss/sun4i-ss.mod

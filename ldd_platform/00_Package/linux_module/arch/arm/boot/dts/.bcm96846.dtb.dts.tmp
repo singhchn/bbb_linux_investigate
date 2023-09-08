@@ -1,0 +1,142 @@
+# 1 "arch/arm/boot/dts/bcm96846.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/bcm96846.dts"
+
+
+
+
+
+/dts-v1/;
+
+# 1 "arch/arm/boot/dts/bcm6846.dtsi" 1
+
+
+
+
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 7 "arch/arm/boot/dts/bcm6846.dtsi" 2
+
+
+/ {
+ compatible = "brcm,bcm6846", "brcm,bcmbca";
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ interrupt-parent = <&gic>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  CA7_0: cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a7";
+   reg = <0x0>;
+   next-level-cache = <&L2_0>;
+   enable-method = "psci";
+  };
+
+  CA7_1: cpu@1 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a7";
+   reg = <0x1>;
+   next-level-cache = <&L2_0>;
+   enable-method = "psci";
+  };
+
+  L2_0: l2-cache0 {
+   compatible = "cache";
+  };
+ };
+
+ timer {
+  compatible = "arm,armv7-timer";
+  interrupts = <1 13 ((((1 << (2)) - 1) << 8) | 8)>,
+   <1 14 ((((1 << (2)) - 1) << 8) | 8)>,
+   <1 11 ((((1 << (2)) - 1) << 8) | 8)>,
+   <1 10 ((((1 << (2)) - 1) << 8) | 8)>;
+  arm,cpu-registers-not-fw-configured;
+ };
+
+ pmu: pmu {
+  compatible = "arm,cortex-a7-pmu";
+  interrupts = <0 9 4>,
+   <0 10 4>;
+  interrupt-affinity = <&CA7_0>, <&CA7_1>;
+ };
+
+ clocks: clocks {
+  periph_clk: periph-clk {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <200000000>;
+  };
+ };
+
+ psci {
+  compatible = "arm,psci-0.2";
+  method = "smc";
+ };
+
+ axi@81000000 {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0 0x81000000 0x8000>;
+
+  gic: interrupt-controller@1000 {
+   compatible = "arm,cortex-a7-gic";
+   #interrupt-cells = <3>;
+   interrupt-controller;
+   interrupts = <1 9 ((((1 << (2)) - 1) << 8) | 4)>;
+   reg = <0x1000 0x1000>,
+    <0x2000 0x2000>,
+    <0x4000 0x2000>,
+    <0x6000 0x2000>;
+  };
+ };
+
+ bus@ff800000 {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0 0xff800000 0x800000>;
+
+  uart0: serial@640 {
+   compatible = "brcm,bcm6345-uart";
+   reg = <0x640 0x1b>;
+   interrupts = <0 92 4>;
+   clocks = <&periph_clk>;
+   clock-names = "refclk";
+   status = "disabled";
+  };
+ };
+};
+# 9 "arch/arm/boot/dts/bcm96846.dts" 2
+
+/ {
+ model = "Broadcom BCM96846 Reference Board";
+ compatible = "brcm,bcm96846", "brcm,bcm6846", "brcm,bcmbca";
+
+ aliases {
+  serial0 = &uart0;
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ memory@0 {
+  device_type = "memory";
+  reg = <0x0 0x08000000>;
+ };
+};
+
+&uart0 {
+ status = "okay";
+};

@@ -1,0 +1,5 @@
+drivers/net/mdio/mdio-aspeed.ko
+drivers/net/mdio/mdio-bcm-unimac.ko
+drivers/net/mdio/mdio-i2c.ko
+drivers/net/mdio/mdio-mscc-miim.ko
+drivers/net/mdio/mdio-mux-meson-g12a.ko

@@ -1,0 +1,1 @@
+cmd_drivers/thermal/st/built-in.a := rm -f drivers/thermal/st/built-in.a;  printf "drivers/thermal/st/%s " st_thermal.o st_thermal_memmap.o stm_thermal.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/thermal/st/built-in.a

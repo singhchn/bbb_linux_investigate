@@ -1,0 +1,19 @@
+!<thin>
+//                                              134       `
+mailbox.o/
+pl320-ipc.o/
+bcm2835-mailbox.o/
+hi3660-mailbox.o/
+hi6220-mailbox.o/
+qcom-apcs-ipc-mailbox.o/
+sun6i-msgbox.o/
+qcom-ipcc.o/
+
+/0              0           0     0     644     12740     `
+/11             0           0     0     644     5176      `
+/24             0           0     0     644     5828      `
+/43             0           0     0     644     6064      `
+/61             0           0     0     644     7624      `
+/79             0           0     0     644     9356      `
+/104            0           0     0     644     8072      `
+/120            0           0     0     644     7504      `

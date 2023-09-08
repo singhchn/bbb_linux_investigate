@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/freescale/enetc/built-in.a := rm -f drivers/net/ethernet/freescale/enetc/built-in.a;  arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/freescale/enetc/built-in.a

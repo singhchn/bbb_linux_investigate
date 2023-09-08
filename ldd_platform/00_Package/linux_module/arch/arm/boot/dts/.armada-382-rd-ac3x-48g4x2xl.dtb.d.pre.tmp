@@ -1,0 +1,6 @@
+armada-382-rd-ac3x-48g4x2xl.o: \
+ arch/arm/boot/dts/armada-382-rd-ac3x-48g4x2xl.dts \
+ arch/arm/boot/dts/armada-385.dtsi arch/arm/boot/dts/armada-38x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

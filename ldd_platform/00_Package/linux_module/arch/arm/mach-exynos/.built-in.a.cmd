@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-exynos/built-in.a := rm -f arch/arm/mach-exynos/built-in.a;  printf "arch/arm/mach-exynos/%s " exynos.o exynos-smc.o firmware.o pm.o sleep.o suspend.o platsmp.o headsmp.o mcpm-exynos.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-exynos/built-in.a

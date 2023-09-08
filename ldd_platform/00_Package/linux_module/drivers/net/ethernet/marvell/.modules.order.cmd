@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/marvell/modules.order := {   cat drivers/net/ethernet/marvell/octeon_ep/modules.order;   cat drivers/net/ethernet/marvell/octeontx2/modules.order;   cat drivers/net/ethernet/marvell/prestera/modules.order;   echo drivers/net/ethernet/marvell/pxa168_eth.ko; :; } > drivers/net/ethernet/marvell/modules.order

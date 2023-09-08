@@ -1,0 +1,1 @@
+cmd_drivers/phy/allwinner/built-in.a := rm -f drivers/phy/allwinner/built-in.a;  printf "drivers/phy/allwinner/%s " phy-sun4i-usb.o phy-sun9i-usb.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/allwinner/built-in.a

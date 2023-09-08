@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/nvidia/tegra-vde/tegra-vde.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/platform/nvidia/tegra-vde/tegra-vde.ko drivers/media/platform/nvidia/tegra-vde/tegra-vde.o drivers/media/platform/nvidia/tegra-vde/tegra-vde.mod.o;  true

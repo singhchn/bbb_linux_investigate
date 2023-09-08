@@ -1,0 +1,1 @@
+cmd_drivers/clk/berlin/built-in.a := rm -f drivers/clk/berlin/built-in.a;  printf "drivers/clk/berlin/%s " berlin2-avpll.o berlin2-pll.o berlin2-div.o bg2.o bg2q.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/berlin/built-in.a

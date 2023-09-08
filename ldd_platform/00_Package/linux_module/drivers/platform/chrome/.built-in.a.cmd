@@ -1,0 +1,1 @@
+cmd_drivers/platform/chrome/built-in.a := rm -f drivers/platform/chrome/built-in.a;  printf "drivers/platform/chrome/%s " cros_ec_proto.o cros_ec_trace.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/platform/chrome/built-in.a

@@ -1,0 +1,1 @@
+arch/arm/boot/dts/zynq-parallella.dtb: arch/arm/boot/dts/.zynq-parallella.dtb.dts.tmp arch/arm/boot/dts/zynq-7000.dtsi

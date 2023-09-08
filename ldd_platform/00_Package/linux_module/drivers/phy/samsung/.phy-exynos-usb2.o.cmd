@@ -1,0 +1,1 @@
+cmd_drivers/phy/samsung/phy-exynos-usb2.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/phy/samsung/phy-exynos-usb2.o @drivers/phy/samsung/phy-exynos-usb2.mod 

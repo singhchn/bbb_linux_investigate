@@ -1,0 +1,1 @@
+cmd_drivers/net/can/flexcan/flexcan.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/can/flexcan/flexcan.ko drivers/net/can/flexcan/flexcan.o drivers/net/can/flexcan/flexcan.mod.o;  true

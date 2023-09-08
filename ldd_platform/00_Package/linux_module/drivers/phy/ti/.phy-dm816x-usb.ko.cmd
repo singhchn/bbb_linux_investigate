@@ -1,0 +1,1 @@
+cmd_drivers/phy/ti/phy-dm816x-usb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/ti/phy-dm816x-usb.ko drivers/phy/ti/phy-dm816x-usb.o drivers/phy/ti/phy-dm816x-usb.mod.o;  true

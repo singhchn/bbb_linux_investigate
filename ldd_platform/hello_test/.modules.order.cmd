@@ -1,0 +1,1 @@
+cmd_/home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/modules.order := {   echo /home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/hello.ko; :; } > /home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/modules.order

@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/rockchip/rockchipdrm.mod := printf '%s\n'   rockchip_drm_drv.o rockchip_drm_fb.o rockchip_drm_gem.o rockchip_drm_vop.o rockchip_vop_reg.o analogix_dp-rockchip.o dw_hdmi-rockchip.o dw-mipi-dsi-rockchip.o inno_hdmi.o | awk '!x[$$0]++ { print("drivers/gpu/drm/rockchip/"$$0) }' > drivers/gpu/drm/rockchip/rockchipdrm.mod

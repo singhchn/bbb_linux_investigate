@@ -1,0 +1,1 @@
+cmd_drivers/phy/samsung/phy-exynos-usb2.mod := printf '%s\n'   phy-samsung-usb2.o phy-exynos4210-usb2.o phy-exynos4x12-usb2.o phy-exynos5250-usb2.o | awk '!x[$$0]++ { print("drivers/phy/samsung/"$$0) }' > drivers/phy/samsung/phy-exynos-usb2.mod

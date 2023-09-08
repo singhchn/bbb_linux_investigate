@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/dvb-pll.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/dvb-pll.ko drivers/media/dvb-frontends/dvb-pll.o drivers/media/dvb-frontends/dvb-pll.mod.o;  true

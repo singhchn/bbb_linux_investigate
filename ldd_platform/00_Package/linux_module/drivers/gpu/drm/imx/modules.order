@@ -1,0 +1,5 @@
+drivers/gpu/drm/imx/imxdrm.ko
+drivers/gpu/drm/imx/parallel-display.ko
+drivers/gpu/drm/imx/imx-tve.ko
+drivers/gpu/drm/imx/imx-ldb.ko
+drivers/gpu/drm/imx/dw_hdmi-imx.ko

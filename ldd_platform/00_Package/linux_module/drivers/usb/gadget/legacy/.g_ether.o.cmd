@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/legacy/g_ether.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/usb/gadget/legacy/g_ether.o @drivers/usb/gadget/legacy/g_ether.mod 

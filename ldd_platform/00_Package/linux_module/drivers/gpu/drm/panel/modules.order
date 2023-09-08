@@ -1,0 +1,7 @@
+drivers/gpu/drm/panel/panel-lvds.ko
+drivers/gpu/drm/panel/panel-orisetech-otm8009a.ko
+drivers/gpu/drm/panel/panel-raydium-rm68200.ko
+drivers/gpu/drm/panel/panel-samsung-ld9040.ko
+drivers/gpu/drm/panel/panel-samsung-s6e63j0x03.ko
+drivers/gpu/drm/panel/panel-samsung-s6e8aa0.ko
+drivers/gpu/drm/panel/panel-sharp-lq101r1sx01.ko

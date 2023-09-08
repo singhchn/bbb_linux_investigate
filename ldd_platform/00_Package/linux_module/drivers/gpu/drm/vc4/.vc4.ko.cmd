@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/vc4/vc4.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/vc4/vc4.ko drivers/gpu/drm/vc4/vc4.o drivers/gpu/drm/vc4/vc4.mod.o;  true

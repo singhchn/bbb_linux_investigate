@@ -1,0 +1,6 @@
+drivers/usb/host/ehci-exynos.ko
+drivers/usb/host/ehci-brcm.ko
+drivers/usb/host/ohci-exynos.ko
+drivers/usb/host/xhci-tegra.ko
+drivers/usb/host/r8a66597-hcd.ko
+drivers/usb/host/ehci-mv.ko

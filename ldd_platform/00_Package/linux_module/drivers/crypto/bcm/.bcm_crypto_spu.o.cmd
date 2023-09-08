@@ -1,0 +1,1 @@
+cmd_drivers/crypto/bcm/bcm_crypto_spu.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/crypto/bcm/bcm_crypto_spu.o @drivers/crypto/bcm/bcm_crypto_spu.mod 

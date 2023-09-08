@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/renesas/built-in.a := rm -f drivers/net/ethernet/renesas/built-in.a;  printf "drivers/net/ethernet/renesas/%s " sh_eth.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/renesas/built-in.a

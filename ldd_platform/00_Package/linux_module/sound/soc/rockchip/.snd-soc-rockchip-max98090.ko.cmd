@@ -1,0 +1,1 @@
+cmd_sound/soc/rockchip/snd-soc-rockchip-max98090.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/rockchip/snd-soc-rockchip-max98090.ko sound/soc/rockchip/snd-soc-rockchip-max98090.o sound/soc/rockchip/snd-soc-rockchip-max98090.mod.o;  true

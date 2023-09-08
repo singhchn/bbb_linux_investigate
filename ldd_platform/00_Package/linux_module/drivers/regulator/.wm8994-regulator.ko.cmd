@@ -1,0 +1,1 @@
+cmd_drivers/regulator/wm8994-regulator.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/regulator/wm8994-regulator.ko drivers/regulator/wm8994-regulator.o drivers/regulator/wm8994-regulator.mod.o;  true

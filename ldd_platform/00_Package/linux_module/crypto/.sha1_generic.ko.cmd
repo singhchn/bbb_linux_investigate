@@ -1,0 +1,1 @@
+cmd_crypto/sha1_generic.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o crypto/sha1_generic.ko crypto/sha1_generic.o crypto/sha1_generic.mod.o;  true

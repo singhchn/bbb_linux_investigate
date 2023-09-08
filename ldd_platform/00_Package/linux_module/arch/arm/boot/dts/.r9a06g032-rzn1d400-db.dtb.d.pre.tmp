@@ -1,0 +1,7 @@
+r9a06g032-rzn1d400-db.o: arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rzn1-pinctrl.h \
+ scripts/dtc/include-prefixes/dt-bindings/net/pcs-rzn1-miic.h \
+ arch/arm/boot/dts/r9a06g032.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/r9a06g032-sysctrl.h

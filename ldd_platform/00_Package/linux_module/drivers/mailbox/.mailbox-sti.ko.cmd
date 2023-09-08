@@ -1,0 +1,1 @@
+cmd_drivers/mailbox/mailbox-sti.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/mailbox/mailbox-sti.ko drivers/mailbox/mailbox-sti.o drivers/mailbox/mailbox-sti.mod.o;  true

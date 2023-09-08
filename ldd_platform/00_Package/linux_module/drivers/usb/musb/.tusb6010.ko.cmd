@@ -1,0 +1,1 @@
+cmd_drivers/usb/musb/tusb6010.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/musb/tusb6010.ko drivers/usb/musb/tusb6010.o drivers/usb/musb/tusb6010.mod.o;  true

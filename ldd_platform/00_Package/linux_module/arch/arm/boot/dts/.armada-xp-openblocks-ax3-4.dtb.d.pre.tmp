@@ -1,0 +1,7 @@
+armada-xp-openblocks-ax3-4.o: \
+ arch/arm/boot/dts/armada-xp-openblocks-ax3-4.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ arch/arm/boot/dts/armada-xp-mv78260.dtsi \
+ arch/arm/boot/dts/armada-xp.dtsi arch/arm/boot/dts/armada-370-xp.dtsi

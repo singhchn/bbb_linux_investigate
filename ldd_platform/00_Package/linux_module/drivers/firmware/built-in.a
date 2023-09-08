@@ -1,0 +1,91 @@
+!<thin>
+//                                              750       `
+dmi_scan.o/
+dmi-id.o/
+raspberrypi.o/
+qcom_scm.o/
+qcom_scm-smc.o/
+qcom_scm-legacy.o/
+sysfb.o/
+trusted_foundations.o/
+arm_scmi/bus.o/
+arm_scmi/driver.o/
+arm_scmi/notify.o/
+arm_scmi/base.o/
+arm_scmi/clock.o/
+arm_scmi/perf.o/
+arm_scmi/power.o/
+arm_scmi/reset.o/
+arm_scmi/sensors.o/
+arm_scmi/system.o/
+arm_scmi/voltage.o/
+arm_scmi/powercap.o/
+arm_scmi/shmem.o/
+arm_scmi/mailbox.o/
+arm_scmi/smc.o/
+arm_scmi/scmi_pm_domain.o/
+broadcom/bcm47xx_nvram.o/
+broadcom/bcm47xx_sprom.o/
+efi/efi.o/
+efi/vars.o/
+efi/reboot.o/
+efi/memattr.o/
+efi/tpm.o/
+efi/memmap.o/
+efi/capsule.o/
+efi/fdtparams.o/
+efi/esrt.o/
+efi/efi-pstore.o/
+efi/runtime-wrappers.o/
+efi/sysfb_efi.o/
+efi/efi-init.o/
+efi/arm-runtime.o/
+psci/psci.o/
+smccc/smccc.o/
+smccc/kvm_guest.o/
+smccc/soc_id.o/
+
+/0              0           0     0     644     19016     `
+/12             0           0     0     644     7528      `
+/22             0           0     0     644     10596     `
+/37             0           0     0     644     34540     `
+/49             0           0     0     644     3484      `
+/65             0           0     0     644     3872      `
+/84             0           0     0     644     3736      `
+/93             0           0     0     644     3628      `
+/116            0           0     0     644     8700      `
+/132            0           0     0     644     46376     `
+/151            0           0     0     644     13208     `
+/170            0           0     0     644     5068      `
+/187            0           0     0     644     6984      `
+/205            0           0     0     644     9524      `
+/222            0           0     0     644     4496      `
+/240            0           0     0     644     4724      `
+/258            0           0     0     644     8908      `
+/278            0           0     0     644     3204      `
+/297            0           0     0     644     5576      `
+/317            0           0     0     644     8892      `
+/338            0           0     0     644     2640      `
+/356            0           0     0     644     5228      `
+/376            0           0     0     644     4556      `
+/392            0           0     0     644     5256      `
+/419            0           0     0     644     5588      `
+/445            0           0     0     644     30452     `
+/471            0           0     0     644     21196     `
+/482            0           0     0     644     7308      `
+/494            0           0     0     644     3044      `
+/508            0           0     0     644     4448      `
+/523            0           0     0     644     3620      `
+/534            0           0     0     644     5052      `
+/548            0           0     0     644     5452      `
+/563            0           0     0     644     2792      `
+/580            0           0     0     644     9272      `
+/592            0           0     0     644     7260      `
+/610            0           0     0     644     15220     `
+/634            0           0     0     644     21536     `
+/651            0           0     0     644     4180      `
+/667            0           0     0     644     4316      `
+/686            0           0     0     644     15520     `
+/699            0           0     0     644     4464      `
+/714            0           0     0     644     3096      `
+/733            0           0     0     644     3696      `

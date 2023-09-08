@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-versatile/built-in.a := rm -f arch/arm/mach-versatile/built-in.a;  printf "arch/arm/mach-versatile/%s " v2m.o spc.o tc2_pm.o headsmp.o platsmp.o platsmp-vexpress.o hotplug.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-versatile/built-in.a

@@ -1,0 +1,1 @@
+highbank.o: arch/arm/boot/dts/highbank.dts

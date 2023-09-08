@@ -1,0 +1,1 @@
+cmd_drivers/mtd/nand/raw/gpmi-nand/built-in.a := rm -f drivers/mtd/nand/raw/gpmi-nand/built-in.a;  printf "drivers/mtd/nand/raw/gpmi-nand/%s " gpmi-nand.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/mtd/nand/raw/gpmi-nand/built-in.a

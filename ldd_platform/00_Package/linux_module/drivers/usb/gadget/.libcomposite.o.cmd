@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/libcomposite.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/usb/gadget/libcomposite.o @drivers/usb/gadget/libcomposite.mod 

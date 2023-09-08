@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/nouveau/nouveau.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/nouveau/nouveau.ko drivers/gpu/drm/nouveau/nouveau.o drivers/gpu/drm/nouveau/nouveau.mod.o;  true

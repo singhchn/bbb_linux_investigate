@@ -1,0 +1,2 @@
+armada-370-db.o: arch/arm/boot/dts/armada-370-db.dts \
+ arch/arm/boot/dts/armada-370.dtsi arch/arm/boot/dts/armada-370-xp.dtsi

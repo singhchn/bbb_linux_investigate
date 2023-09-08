@@ -1,0 +1,1 @@
+cmd_drivers/tty/serial/8250/8250_aspeed_vuart.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/tty/serial/8250/8250_aspeed_vuart.ko drivers/tty/serial/8250/8250_aspeed_vuart.o drivers/tty/serial/8250/8250_aspeed_vuart.mod.o;  true

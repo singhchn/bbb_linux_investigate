@@ -1,0 +1,1 @@
+cmd_drivers/spi/spi-stm32.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/spi/spi-stm32.ko drivers/spi/spi-stm32.o drivers/spi/spi-stm32.mod.o;  true

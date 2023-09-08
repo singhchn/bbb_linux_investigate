@@ -1,0 +1,11 @@
+bcm4709-netgear-r8000.o: arch/arm/boot/dts/bcm4709-netgear-r8000.dts \
+ arch/arm/boot/dts/bcm4709.dtsi arch/arm/boot/dts/bcm4708.dtsi \
+ arch/arm/boot/dts/bcm5301x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/bcm-nsp.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ arch/arm/boot/dts/bcm5301x-nand-cs0-bch8.dtsi \
+ arch/arm/boot/dts/bcm5301x-nand-cs0.dtsi

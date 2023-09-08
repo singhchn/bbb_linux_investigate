@@ -1,0 +1,1 @@
+cmd_sound/soc/stm/modules.order := {   echo sound/soc/stm/snd-soc-stm32-sai-sub.ko;   echo sound/soc/stm/snd-soc-stm32-sai.ko;   echo sound/soc/stm/snd-soc-stm32-i2s.ko;   echo sound/soc/stm/snd-soc-stm32-spdifrx.ko;   echo sound/soc/stm/stm32_adfsdm.ko; :; } > sound/soc/stm/modules.order

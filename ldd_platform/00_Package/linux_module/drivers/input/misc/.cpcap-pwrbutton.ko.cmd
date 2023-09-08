@@ -1,0 +1,1 @@
+cmd_drivers/input/misc/cpcap-pwrbutton.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/misc/cpcap-pwrbutton.ko drivers/input/misc/cpcap-pwrbutton.o drivers/input/misc/cpcap-pwrbutton.mod.o;  true

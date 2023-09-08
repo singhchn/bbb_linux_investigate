@@ -1,0 +1,9 @@
+aspeed-bmc-asrock-romed8hm3.o: \
+ arch/arm/boot/dts/aspeed-bmc-asrock-romed8hm3.dts \
+ arch/arm/boot/dts/aspeed-g5.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/aspeed-clock.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/aspeed-scu-ic.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/aspeed-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/openbmc-flash-layout-64.dtsi

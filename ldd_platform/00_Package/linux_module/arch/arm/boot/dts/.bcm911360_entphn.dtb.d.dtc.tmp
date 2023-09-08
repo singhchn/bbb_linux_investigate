@@ -1,0 +1,1 @@
+arch/arm/boot/dts/bcm911360_entphn.dtb: arch/arm/boot/dts/.bcm911360_entphn.dtb.dts.tmp arch/arm/boot/dts/bcm-cygnus-clock.dtsi

@@ -1,0 +1,1 @@
+cmd_arch/arm/crypto/aes-arm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o arch/arm/crypto/aes-arm.ko arch/arm/crypto/aes-arm.o arch/arm/crypto/aes-arm.mod.o;  true

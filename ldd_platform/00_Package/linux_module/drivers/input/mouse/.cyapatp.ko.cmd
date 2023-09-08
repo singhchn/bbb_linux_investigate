@@ -1,0 +1,1 @@
+cmd_drivers/input/mouse/cyapatp.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/mouse/cyapatp.ko drivers/input/mouse/cyapatp.o drivers/input/mouse/cyapatp.mod.o;  true

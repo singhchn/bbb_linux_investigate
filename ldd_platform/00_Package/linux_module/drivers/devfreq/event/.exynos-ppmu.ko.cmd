@@ -1,0 +1,1 @@
+cmd_drivers/devfreq/event/exynos-ppmu.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/devfreq/event/exynos-ppmu.ko drivers/devfreq/event/exynos-ppmu.o drivers/devfreq/event/exynos-ppmu.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/ralink/rt2x00/modules.order := {   echo drivers/net/wireless/ralink/rt2x00/rt2x00lib.ko;   echo drivers/net/wireless/ralink/rt2x00/rt2x00usb.ko;   echo drivers/net/wireless/ralink/rt2x00/rt2800lib.ko;   echo drivers/net/wireless/ralink/rt2x00/rt2800usb.ko; :; } > drivers/net/wireless/ralink/rt2x00/modules.order

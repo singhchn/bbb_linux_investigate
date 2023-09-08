@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/m88rs6000t.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/m88rs6000t.ko drivers/media/tuners/m88rs6000t.o drivers/media/tuners/m88rs6000t.mod.o;  true

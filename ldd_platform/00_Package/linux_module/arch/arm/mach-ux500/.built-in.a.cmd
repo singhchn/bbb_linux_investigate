@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-ux500/built-in.a := rm -f arch/arm/mach-ux500/built-in.a;  printf "arch/arm/mach-ux500/%s " pm.o cpu-db8500.o platsmp.o pm_domains.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-ux500/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/leds/led-class-flash.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/leds/led-class-flash.ko drivers/leds/led-class-flash.o drivers/leds/led-class-flash.mod.o;  true

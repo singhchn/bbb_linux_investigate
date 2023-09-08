@@ -1,0 +1,1 @@
+cmd_sound/pci/hda/snd-hda-codec-hdmi.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/pci/hda/snd-hda-codec-hdmi.o @sound/pci/hda/snd-hda-codec-hdmi.mod 

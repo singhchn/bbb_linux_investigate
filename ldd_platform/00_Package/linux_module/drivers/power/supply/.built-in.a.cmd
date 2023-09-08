@@ -1,0 +1,1 @@
+cmd_drivers/power/supply/built-in.a := rm -f drivers/power/supply/built-in.a;  printf "drivers/power/supply/%s " power_supply_core.o power_supply_sysfs.o power_supply_leds.o power_supply_hwmon.o act8945a_charger.o sbs-battery.o tps65090-charger.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/power/supply/built-in.a

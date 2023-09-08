@@ -1,0 +1,85 @@
+!<thin>
+//                                              912       `
+stmmac/stmmac_main.o/
+stmmac/stmmac_ethtool.o/
+stmmac/stmmac_mdio.o/
+stmmac/ring_mode.o/
+stmmac/chain_mode.o/
+stmmac/dwmac_lib.o/
+stmmac/dwmac1000_core.o/
+stmmac/dwmac1000_dma.o/
+stmmac/dwmac100_core.o/
+stmmac/dwmac100_dma.o/
+stmmac/enh_desc.o/
+stmmac/norm_desc.o/
+stmmac/mmc_core.o/
+stmmac/stmmac_hwtstamp.o/
+stmmac/stmmac_ptp.o/
+stmmac/dwmac4_descs.o/
+stmmac/dwmac4_dma.o/
+stmmac/dwmac4_lib.o/
+stmmac/dwmac4_core.o/
+stmmac/dwmac5.o/
+stmmac/hwif.o/
+stmmac/stmmac_tc.o/
+stmmac/dwxgmac2_core.o/
+stmmac/dwxgmac2_dma.o/
+stmmac/dwxgmac2_descs.o/
+stmmac/stmmac_xdp.o/
+stmmac/stmmac_platform.o/
+stmmac/dwmac-ipq806x.o/
+stmmac/dwmac-meson.o/
+stmmac/dwmac-meson8b.o/
+stmmac/dwmac-qcom-ethqos.o/
+stmmac/dwmac-rk.o/
+stmmac/altr_tse_pcs.o/
+stmmac/dwmac-socfpga.o/
+stmmac/dwmac-sti.o/
+stmmac/dwmac-stm32.o/
+stmmac/dwmac-sunxi.o/
+stmmac/dwmac-sun8i.o/
+stmmac/dwmac-dwc-qos-eth.o/
+stmmac/dwmac-generic.o/
+stmmac/dwmac-imx.o/
+
+/0              0           0     0     644     97724     `
+/22             0           0     0     644     19940     `
+/47             0           0     0     644     8028      `
+/69             0           0     0     644     3500      `
+/89             0           0     0     644     3752      `
+/110            0           0     0     644     4140      `
+/130            0           0     0     644     6560      `
+/155            0           0     0     644     4120      `
+/179            0           0     0     644     3640      `
+/203            0           0     0     644     2620      `
+/226            0           0     0     644     5960      `
+/245            0           0     0     644     4604      `
+/265            0           0     0     644     5636      `
+/284            0           0     0     644     3332      `
+/310            0           0     0     644     5652      `
+/331            0           0     0     644     6456      `
+/354            0           0     0     644     6424      `
+/375            0           0     0     644     3596      `
+/396            0           0     0     644     14172     `
+/418            0           0     0     644     12224     `
+/435            0           0     0     644     5776      `
+/450            0           0     0     644     11772     `
+/470            0           0     0     644     20052     `
+/494            0           0     0     644     6868      `
+/517            0           0     0     644     4100      `
+/542            0           0     0     644     1948      `
+/563            0           0     0     644     18824     `
+/589            0           0     0     644     8952      `
+/613            0           0     0     644     4672      `
+/635            0           0     0     644     11532     `
+/659            0           0     0     644     9540      `
+/687            0           0     0     644     28508     `
+/706            0           0     0     644     3004      `
+/729            0           0     0     644     7276      `
+/753            0           0     0     644     8992      `
+/773            0           0     0     644     10732     `
+/795            0           0     0     644     6176      `
+/817            0           0     0     644     20220     `
+/839            0           0     0     644     11048     `
+/867            0           0     0     644     6508      `
+/891            0           0     0     644     7728      `

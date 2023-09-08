@@ -1,0 +1,1 @@
+cmd_drivers/firmware/broadcom/built-in.a := rm -f drivers/firmware/broadcom/built-in.a;  printf "drivers/firmware/broadcom/%s " bcm47xx_nvram.o bcm47xx_sprom.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/firmware/broadcom/built-in.a

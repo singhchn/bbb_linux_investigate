@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-sunplus/built-in.a := rm -f arch/arm/mach-sunplus/built-in.a;  printf "arch/arm/mach-sunplus/%s " sp7021.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-sunplus/built-in.a

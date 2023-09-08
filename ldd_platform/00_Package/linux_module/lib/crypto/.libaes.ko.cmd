@@ -1,0 +1,1 @@
+cmd_lib/crypto/libaes.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o lib/crypto/libaes.ko lib/crypto/libaes.o lib/crypto/libaes.mod.o;  true

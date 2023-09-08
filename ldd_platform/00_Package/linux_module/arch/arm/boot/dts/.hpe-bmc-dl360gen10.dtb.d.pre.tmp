@@ -1,0 +1,1 @@
+hpe-bmc-dl360gen10.o: arch/arm/boot/dts/hpe-bmc-dl360gen10.dts

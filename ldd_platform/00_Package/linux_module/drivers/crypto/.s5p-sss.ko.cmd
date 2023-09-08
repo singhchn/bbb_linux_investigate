@@ -1,0 +1,1 @@
+cmd_drivers/crypto/s5p-sss.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/s5p-sss.ko drivers/crypto/s5p-sss.o drivers/crypto/s5p-sss.mod.o;  true

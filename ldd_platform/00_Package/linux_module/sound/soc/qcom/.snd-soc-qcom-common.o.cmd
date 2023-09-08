@@ -1,0 +1,1 @@
+cmd_sound/soc/qcom/snd-soc-qcom-common.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/qcom/snd-soc-qcom-common.o @sound/soc/qcom/snd-soc-qcom-common.mod 

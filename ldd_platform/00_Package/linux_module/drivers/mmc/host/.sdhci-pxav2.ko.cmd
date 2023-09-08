@@ -1,0 +1,1 @@
+cmd_drivers/mmc/host/sdhci-pxav2.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/mmc/host/sdhci-pxav2.ko drivers/mmc/host/sdhci-pxav2.o drivers/mmc/host/sdhci-pxav2.mod.o;  true

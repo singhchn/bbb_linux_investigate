@@ -1,0 +1,1 @@
+cmd_sound/soc/generic/snd-soc-simple-card.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/generic/snd-soc-simple-card.o @sound/soc/generic/snd-soc-simple-card.mod 

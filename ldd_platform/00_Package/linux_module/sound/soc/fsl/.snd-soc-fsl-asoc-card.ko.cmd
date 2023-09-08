@@ -1,0 +1,1 @@
+cmd_sound/soc/fsl/snd-soc-fsl-asoc-card.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/fsl/snd-soc-fsl-asoc-card.ko sound/soc/fsl/snd-soc-fsl-asoc-card.o sound/soc/fsl/snd-soc-fsl-asoc-card.mod.o;  true

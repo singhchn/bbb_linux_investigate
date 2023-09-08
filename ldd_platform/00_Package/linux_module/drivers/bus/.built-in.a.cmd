@@ -1,0 +1,1 @@
+cmd_drivers/bus/built-in.a := rm -f drivers/bus/built-in.a;  printf "drivers/bus/%s " arm-cci.o brcmstb_gisb.o mvebu-mbus.o omap_l3_smx.o omap_l3_noc.o omap-ocp2scp.o qcom-ebi2.o sunxi-rsb.o simple-pm-bus.o ti-sysc.o uniphier-system-bus.o vexpress-config.o mhi/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/bus/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/video/fbdev/built-in.a := rm -f drivers/video/fbdev/built-in.a;  printf "drivers/video/fbdev/%s " core/built-in.a wm8505fb.o sh_mobile_lcdcfb.o omap/built-in.a omap2/built-in.a efifb.o mx3fb.o simplefb.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/video/fbdev/built-in.a

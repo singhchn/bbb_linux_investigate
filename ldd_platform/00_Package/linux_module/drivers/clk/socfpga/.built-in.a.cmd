@@ -1,0 +1,1 @@
+cmd_drivers/clk/socfpga/built-in.a := rm -f drivers/clk/socfpga/built-in.a;  printf "drivers/clk/socfpga/%s " clk.o clk-gate.o clk-pll.o clk-periph.o clk-pll-a10.o clk-periph-a10.o clk-gate-a10.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/socfpga/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/usb/phy/built-in.a := rm -f drivers/usb/phy/built-in.a;  printf "drivers/usb/phy/%s " phy.o of.o phy-ab8500-usb.o phy-generic.o phy-am335x-control.o phy-am335x.o phy-tegra-usb.o phy-gpio-vbus-usb.o phy-isp1301.o phy-mxs-usb.o phy-ulpi.o phy-ulpi-viewport.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/usb/phy/built-in.a

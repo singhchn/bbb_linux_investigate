@@ -1,0 +1,2 @@
+drivers/iio/dac/stm32-dac-core.ko
+drivers/iio/dac/stm32-dac.ko

@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/broadcom/modules.order := {   cat drivers/net/ethernet/broadcom/genet/modules.order;   echo drivers/net/ethernet/broadcom/bcmsysport.ko; :; } > drivers/net/ethernet/broadcom/modules.order

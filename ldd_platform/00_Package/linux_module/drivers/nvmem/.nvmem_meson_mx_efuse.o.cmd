@@ -1,0 +1,1 @@
+cmd_drivers/nvmem/nvmem_meson_mx_efuse.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/nvmem/nvmem_meson_mx_efuse.o @drivers/nvmem/nvmem_meson_mx_efuse.mod 

@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/atmel/modules.order := {   echo drivers/media/platform/atmel/atmel-isi.ko;   echo drivers/media/platform/atmel/atmel-isc-common.ko;   echo drivers/media/platform/atmel/atmel-isc.ko;   echo drivers/media/platform/atmel/atmel-xisc.ko;   echo drivers/media/platform/atmel/microchip-csi2dc.ko; :; } > drivers/media/platform/atmel/modules.order

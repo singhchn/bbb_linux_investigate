@@ -1,0 +1,1 @@
+cmd_drivers/mfd/stm32-timers.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/mfd/stm32-timers.ko drivers/mfd/stm32-timers.o drivers/mfd/stm32-timers.mod.o;  true

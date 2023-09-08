@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/st1232.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/touchscreen/st1232.ko drivers/input/touchscreen/st1232.o drivers/input/touchscreen/st1232.mod.o;  true

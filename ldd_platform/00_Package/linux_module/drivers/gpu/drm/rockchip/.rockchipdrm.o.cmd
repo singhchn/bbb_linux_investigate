@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/rockchip/rockchipdrm.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/rockchip/rockchipdrm.o @drivers/gpu/drm/rockchip/rockchipdrm.mod 

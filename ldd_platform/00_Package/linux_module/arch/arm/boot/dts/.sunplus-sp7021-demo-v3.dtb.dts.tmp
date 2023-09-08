@@ -1,0 +1,439 @@
+# 1 "arch/arm/boot/dts/sunplus-sp7021-demo-v3.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/sunplus-sp7021-demo-v3.dts"
+
+
+
+
+
+
+
+/dts-v1/;
+
+# 1 "arch/arm/boot/dts/sunplus-sp7021-achip.dtsi" 1
+
+
+
+
+
+
+
+# 1 "arch/arm/boot/dts/sunplus-sp7021.dtsi" 1
+
+
+
+
+
+
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/sunplus,sp7021-clkc.h" 1
+# 9 "arch/arm/boot/dts/sunplus-sp7021.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "arch/arm/boot/dts/sunplus-sp7021.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/reset/sunplus,sp7021-reset.h" 1
+# 11 "arch/arm/boot/dts/sunplus-sp7021.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/sppctl-sp7021.h" 1
+# 11 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/sppctl-sp7021.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/sppctl.h" 1
+# 12 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/sppctl-sp7021.h" 2
+# 12 "arch/arm/boot/dts/sunplus-sp7021.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 13 "arch/arm/boot/dts/sunplus-sp7021.dtsi" 2
+
+
+
+/ {
+ compatible = "sunplus,sp7021";
+ model = "Sunplus SP7021";
+
+ clocks {
+  extclk: osc0 {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <27000000>;
+   clock-output-names = "extclk";
+  };
+ };
+
+ soc@9c000000 {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0 0x9c000000 0x400000>;
+  interrupt-parent = <&intc>;
+
+  clkc: clock-controller@4 {
+   compatible = "sunplus,sp7021-clkc";
+   reg = <0x4 0x28>,
+         <0x200 0x44>,
+         <0x268 0x04>;
+   clocks = <&extclk>;
+   #clock-cells = <1>;
+  };
+
+  intc: interrupt-controller@780 {
+   compatible = "sunplus,sp7021-intc";
+   reg = <0x780 0x80>, <0xa80 0x80>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+  };
+
+  otp: otp@af00 {
+   compatible = "sunplus,sp7021-ocotp";
+   reg = <0xaf00 0x34>, <0xaf80 0x58>;
+   reg-names = "hb_gpio", "otprx";
+   clocks = <&clkc 1>;
+   resets = <&rstc 4>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   therm_calib: thermal-calibration@14 {
+    reg = <0x14 0x3>;
+   };
+   disc_vol: disconnect-voltage@18 {
+    reg = <0x18 0x2>;
+   };
+   mac_addr0: mac-address0@34 {
+    reg = <0x34 0x6>;
+   };
+   mac_addr1: mac-address1@3a {
+    reg = <0x3a 0x6>;
+   };
+  };
+
+  pctl: pinctrl@100 {
+   compatible = "sunplus,sp7021-pctl";
+   reg = <0x100 0x100>,
+         <0x300 0x100>,
+         <0x32e4 0x1C>,
+         <0x80 0x20>;
+   reg-names = "moon2", "gpioxt", "first", "moon1";
+   gpio-controller;
+   #gpio-cells = <2>;
+   clocks = <&clkc 49>;
+   resets = <&rstc 60>;
+
+   emac_pins: pinmux-emac-pins {
+    sunplus,pins = <
+     (((49) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((2) << 8) | (0))
+     (((44) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((3) << 8) | (0))
+     (((43) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((8) << 8) | (0))
+     (((52) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((9) << 8) | (0))
+     (((50) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((10) << 8) | (0))
+     (((51) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((11) << 8) | (0))
+     (((46) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((12) << 8) | (0))
+     (((47) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((13) << 8) | (0))
+     (((48) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((14) << 8) | (0))
+     (((45) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((15) << 8) | (0))
+     (((59) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((16) << 8) | (0))
+     (((57) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((17) << 8) | (0))
+     (((58) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((18) << 8) | (0))
+     (((54) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((19) << 8) | (0))
+     (((55) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((20) << 8) | (0))
+     (((56) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((21) << 8) | (0))
+     (((53) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((22) << 8) | (0))
+    >;
+    sunplus,zerofunc = <
+     4
+     5
+     6
+     7
+     23
+    >;
+   };
+
+   emmc_pins: pinmux-emmc-pins {
+    function = "CARD0_EMMC";
+    groups = "CARD0_EMMC";
+   };
+
+   leds_pins: pinmux-leds-pins {
+    sunplus,pins = < (((0) << 24) | ((((0x01 << 1) | (0x01 << 0))) << 16) | ((0) << 8) | ((0x01 << 0))) >;
+   };
+
+   sdcard_pins: pinmux-sdcard-pins {
+    function = "SD_CARD";
+    groups = "SD_CARD";
+    sunplus,pins = < (((91) << 24) | ((((0x01 << 1) | (0x01 << 0))) << 16) | ((0) << 8) | (0)) >;
+   };
+
+   spi0_pins: pinmux-spi0-pins {
+    sunplus,pins = <
+     (((26) << 24) | ((((0x01 << 1) | (0x01 << 0))) << 16) | ((0) << 8) | (0))
+     (((28) << 24) | ((((0x01 << 1) | (0x01 << 0))) << 16) | ((0) << 8) | (0))
+     (((23) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((69) << 8) | (0))
+     (((25) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((70) << 8) | (0))
+     (((27) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((67) << 8) | (0))
+    >;
+   };
+
+   uart0_pins: pinmux-uart0-pins {
+    function = "UA0";
+    groups = "UA0";
+   };
+
+   uart1_pins: pinmux-uart1-pins {
+    sunplus,pins = <
+     (((14) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((106) << 8) | (0))
+     (((16) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((107) << 8) | (0))
+    >;
+   };
+
+   uart2_pins: pinmux-uart2-pins {
+    sunplus,pins = <
+     (((16) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((98) << 8) | (0))
+     (((17) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((99) << 8) | (0))
+     (((18) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((101) << 8) | (0))
+     (((19) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((100) << 8) | (0))
+    >;
+   };
+
+   uart4_pins: pinmux-uart4-pins {
+    sunplus,pins = <
+     (((22) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((106) << 8) | (0))
+     (((20) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((107) << 8) | (0))
+     (((23) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((109) << 8) | (0))
+     (((21) << 24) | (((0x00 | (0x01 << 0))) << 16) | ((108) << 8) | (0))
+    >;
+   };
+  };
+
+  rstc: reset@54 {
+   compatible = "sunplus,sp7021-reset";
+   reg = <0x54 0x28>;
+   #reset-cells = <1>;
+  };
+
+  rtc: rtc@3a00 {
+   compatible = "sunplus,sp7021-rtc";
+   reg = <0x3a00 0x80>;
+   reg-names = "rtc";
+   clocks = <&clkc 0>;
+   resets = <&rstc 1>;
+   interrupts = <163 1>;
+  };
+
+  spi_controller0: spi@2d80 {
+   compatible = "sunplus,sp7021-spi";
+   reg = <0x2d80 0x80>, <0x2e00 0x80>;
+   reg-names = "master", "slave";
+   interrupts = <144 4>,
+         <146 4>,
+         <145 4>;
+   interrupt-names = "dma_w", "master_risc", "slave_risc";
+   clocks = <&clkc 21>;
+   resets = <&rstc 30>;
+
+   pinctrl-names = "default";
+   pinctrl-0 = <&spi0_pins>;
+   cs-gpios = <&pctl 26 1>,
+       <&pctl 28 1>;
+  };
+
+  spi_controller1: spi@f480 {
+   compatible = "sunplus,sp7021-spi";
+   reg = <0xf480 0x80>, <0xf500 0x80>;
+   reg-names = "master", "slave";
+   interrupts = <67 4>,
+         <69 4>,
+         <68 4>;
+   interrupt-names = "dma_w", "master_risc", "slave_risc";
+   clocks = <&clkc 22>;
+   resets = <&rstc 31>;
+   spi-max-frequency = <25000000>;
+   status = "disabled";
+  };
+
+  spi_controller2: spi@f600 {
+   compatible = "sunplus,sp7021-spi";
+   reg = <0xf600 0x80>, <0xf680 0x80>;
+   reg-names = "master", "slave";
+   interrupts = <70 4>,
+         <72 4>,
+         <71 4>;
+   interrupt-names = "dma_w", "master_risc", "slave_risc";
+   clocks = <&clkc 23>;
+   resets = <&rstc 32>;
+   spi-max-frequency = <25000000>;
+   status = "disabled";
+  };
+
+  spi_controller3: spi@f780 {
+   compatible = "sunplus,sp7021-spi";
+   reg = <0xf780 0x80>, <0xf800 0x80>;
+   reg-names = "master", "slave";
+   interrupts = <73 4>,
+         <75 4>,
+         <74 4>;
+   interrupt-names = "dma_w", "master_risc", "slave_risc";
+   clocks = <&clkc 24>;
+   resets = <&rstc 33>;
+   spi-max-frequency = <25000000>;
+   status = "disabled";
+  };
+
+  uart0: serial@900 {
+   compatible = "sunplus,sp7021-uart";
+   reg = <0x900 0x80>;
+   interrupts = <53 4>;
+   clocks = <&clkc 11>;
+   resets = <&rstc 20>;
+   pinctrl-names = "default";
+   pinctrl-0 = <&uart0_pins>;
+  };
+
+  uart1: serial@980 {
+   compatible = "sunplus,sp7021-uart";
+   reg = <0x980 0x80>;
+   interrupts = <54 4>;
+   clocks = <&clkc 12>;
+   resets = <&rstc 21>;
+   pinctrl-names = "default";
+   pinctrl-0 = <&uart1_pins>;
+   status = "disabled";
+  };
+
+  uart2: serial@800 {
+   compatible = "sunplus,sp7021-uart";
+   reg = <0x800 0x80>;
+   interrupts = <55 4>;
+   clocks = <&clkc 13>;
+   resets = <&rstc 22>;
+   pinctrl-names = "default";
+   pinctrl-0 = <&uart2_pins>;
+   status = "disabled";
+  };
+
+  uart3: serial@880 {
+   compatible = "sunplus,sp7021-uart";
+   reg = <0x880 0x80>;
+   interrupts = <56 4>;
+   clocks = <&clkc 14>;
+   resets = <&rstc 23>;
+   status = "disabled";
+  };
+
+  uart4: serial@8780 {
+   compatible = "sunplus,sp7021-uart";
+   reg = <0x8780 0x80>;
+   interrupts = <134 4>;
+   clocks = <&clkc 15>;
+   resets = <&rstc 24>;
+   pinctrl-names = "default";
+   pinctrl-0 = <&uart4_pins>;
+   status = "disabled";
+  };
+ };
+
+ leds {
+  compatible = "gpio-leds";
+  pinctrl-names = "default";
+  pinctrl-0 = <&leds_pins>;
+  system-led {
+   label = "system-led";
+   gpios = <&pctl 0 0>;
+   default-state = "off";
+   linux,default-trigger = "heartbeat";
+  };
+ };
+};
+# 9 "arch/arm/boot/dts/sunplus-sp7021-achip.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 10 "arch/arm/boot/dts/sunplus-sp7021-achip.dtsi" 2
+
+/ {
+ compatible = "sunplus,sp7021-achip", "sunplus,sp7021";
+ model = "Sunplus SP7021 (CA7)";
+ #address-cells = <1>;
+ #size-cells = <1>;
+ interrupt-parent = <&gic>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu0: cpu@0 {
+   compatible = "arm,cortex-a7";
+   device_type = "cpu";
+   reg = <0>;
+   clock-frequency = <931000000>;
+  };
+  cpu1: cpu@1 {
+   compatible = "arm,cortex-a7";
+   device_type = "cpu";
+   reg = <1>;
+   clock-frequency = <931000000>;
+  };
+  cpu2: cpu@2 {
+   compatible = "arm,cortex-a7";
+   device_type = "cpu";
+   reg = <2>;
+   clock-frequency = <931000000>;
+  };
+  cpu3: cpu@3 {
+   compatible = "arm,cortex-a7";
+   device_type = "cpu";
+   reg = <3>;
+   clock-frequency = <931000000>;
+  };
+ };
+
+ gic: interrupt-controller@9f101000 {
+  compatible = "arm,cortex-a7-gic";
+  interrupt-controller;
+  #interrupt-cells = <3>;
+  reg = <0x9f101000 0x1000>,
+        <0x9f102000 0x2000>,
+        <0x9f104000 0x2000>,
+        <0x9f106000 0x2000>;
+ };
+
+ timer {
+  compatible = "arm,armv7-timer";
+  interrupts = <1 13 ((((1 << (4)) - 1) << 8) | 8)>,
+        <1 14 ((((1 << (4)) - 1) << 8) | 8)>,
+        <1 11 ((((1 << (4)) - 1) << 8) | 8)>,
+        <1 10 ((((1 << (4)) - 1) << 8) | 8)>;
+  clock-frequency = <27000000>;
+  arm,cpu-registers-not-fw-configured;
+ };
+
+ arm-pmu {
+  compatible = "arm,cortex-a7-pmu";
+  interrupts = <0 219 4>,
+        <0 220 4>,
+        <0 221 4>,
+        <0 222 4>;
+  interrupt-affinity = <&cpu0>, <&cpu1>, <&cpu2>, <&cpu3>;
+ };
+
+ soc@9c000000 {
+  intc: interrupt-controller@780 {
+   interrupt-parent = <&gic>;
+   interrupts = <0 5 4>,
+         <0 6 4>;
+  };
+ };
+};
+# 11 "arch/arm/boot/dts/sunplus-sp7021-demo-v3.dts" 2
+
+/ {
+ compatible = "sunplus,sp7021-demo-v3", "sunplus,sp7021";
+ model = "Sunplus SP7021/CA7/Demo_V3";
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ aliases {
+  serial0 = &uart0;
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ memory@0 {
+  device_type = "memory";
+  reg = <0x00000000 0x20000000>;
+ };
+};

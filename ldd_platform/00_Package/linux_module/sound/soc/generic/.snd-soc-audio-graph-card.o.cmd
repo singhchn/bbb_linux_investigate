@@ -1,0 +1,1 @@
+cmd_sound/soc/generic/snd-soc-audio-graph-card.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/generic/snd-soc-audio-graph-card.o @sound/soc/generic/snd-soc-audio-graph-card.mod 

@@ -1,0 +1,8 @@
+aspeed-bmc-tyan-s8036.o: arch/arm/boot/dts/aspeed-bmc-tyan-s8036.dts \
+ arch/arm/boot/dts/aspeed-g5.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/aspeed-clock.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/aspeed-scu-ic.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/aspeed-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/openbmc-flash-layout.dtsi

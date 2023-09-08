@@ -1,0 +1,39 @@
+!<thin>
+//                                              308       `
+as3722-poweroff.o/
+at91-poweroff.o/
+at91-reset.o/
+at91-sama5d2_shdwc.o/
+brcm-kona-reset.o/
+brcmstb-reboot.o/
+gpio-poweroff.o/
+gpio-restart.o/
+hisi-reboot.o/
+msm-poweroff.o/
+qcom-pon.o/
+st-poweroff.o/
+vexpress-poweroff.o/
+keystone-reset.o/
+syscon-reboot.o/
+syscon-poweroff.o/
+rmobile-reset.o/
+reboot-mode.o/
+
+/0              0           0     0     644     4480      `
+/19             0           0     0     644     7120      `
+/36             0           0     0     644     8748      `
+/50             0           0     0     644     9292      `
+/72             0           0     0     644     3260      `
+/91             0           0     0     644     5128      `
+/109            0           0     0     644     5996      `
+/126            0           0     0     644     6052      `
+/142            0           0     0     644     4568      `
+/157            0           0     0     644     3552      `
+/173            0           0     0     644     5264      `
+/185            0           0     0     644     4084      `
+/200            0           0     0     644     5628      `
+/221            0           0     0     644     5952      `
+/239            0           0     0     644     4080      `
+/256            0           0     0     644     4408      `
+/275            0           0     0     644     4640      `
+/292            0           0     0     644     5400      `

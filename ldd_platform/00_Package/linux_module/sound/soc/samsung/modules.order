@@ -1,0 +1,10 @@
+sound/soc/samsung/snd-soc-s3c-dma.ko
+sound/soc/samsung/snd-soc-pcm.ko
+sound/soc/samsung/snd-soc-i2s.ko
+sound/soc/samsung/snd-soc-idma.ko
+sound/soc/samsung/snd-soc-smdk-wm8994.ko
+sound/soc/samsung/snd-soc-snow.ko
+sound/soc/samsung/snd-soc-smdk-wm8994pcm.ko
+sound/soc/samsung/snd-soc-odroid.ko
+sound/soc/samsung/snd-soc-arndale.ko
+sound/soc/samsung/snd-soc-midas-wm1811.ko

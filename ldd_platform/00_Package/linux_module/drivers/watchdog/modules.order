@@ -1,0 +1,9 @@
+drivers/watchdog/s3c2410_wdt.ko
+drivers/watchdog/davinci_wdt.ko
+drivers/watchdog/qcom-wdt.ko
+drivers/watchdog/tegra_wdt.ko
+drivers/watchdog/bcm7038_wdt.ko
+drivers/watchdog/renesas_wdt.ko
+drivers/watchdog/rza_wdt.ko
+drivers/watchdog/pm8916_wdt.ko
+drivers/watchdog/da9063_wdt.ko

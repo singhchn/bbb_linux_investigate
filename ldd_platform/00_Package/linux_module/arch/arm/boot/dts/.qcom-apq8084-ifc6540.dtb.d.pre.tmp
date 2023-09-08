@@ -1,0 +1,9 @@
+qcom-apq8084-ifc6540.o: arch/arm/boot/dts/qcom-apq8084-ifc6540.dts \
+ arch/arm/boot/dts/qcom-apq8084.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/qcom,gcc-apq8084.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/qcom-pma8084.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/iio/qcom,spmi-vadc.h \
+ scripts/dtc/include-prefixes/dt-bindings/spmi/spmi.h

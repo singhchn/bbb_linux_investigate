@@ -1,0 +1,3 @@
+hi3620-hi4511.o: arch/arm/boot/dts/hi3620-hi4511.dts \
+ arch/arm/boot/dts/hi3620.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/hi3620-clock.h

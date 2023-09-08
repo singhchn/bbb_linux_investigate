@@ -1,0 +1,1 @@
+arch/arm/boot/dts/keystone-k2l-evm.dtb: arch/arm/boot/dts/.keystone-k2l-evm.dtb.dts.tmp arch/arm/boot/dts/keystone-clocks.dtsi arch/arm/boot/dts/keystone-k2l-clocks.dtsi arch/arm/boot/dts/keystone-k2l-netcp.dtsi

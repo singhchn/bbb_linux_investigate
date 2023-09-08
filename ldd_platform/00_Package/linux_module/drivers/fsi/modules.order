@@ -1,0 +1,7 @@
+drivers/fsi/fsi-core.ko
+drivers/fsi/fsi-master-hub.ko
+drivers/fsi/fsi-master-aspeed.ko
+drivers/fsi/fsi-master-gpio.ko
+drivers/fsi/fsi-scom.ko
+drivers/fsi/fsi-sbefifo.ko
+drivers/fsi/fsi-occ.ko

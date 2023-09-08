@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/microchip/lan966x/lan966x-switch.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/net/ethernet/microchip/lan966x/lan966x-switch.o @drivers/net/ethernet/microchip/lan966x/lan966x-switch.mod 

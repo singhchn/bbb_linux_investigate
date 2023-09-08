@@ -1,0 +1,1 @@
+cmd_drivers/phy/marvell/phy-mmp3-usb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/marvell/phy-mmp3-usb.ko drivers/phy/marvell/phy-mmp3-usb.o drivers/phy/marvell/phy-mmp3-usb.mod.o;  true

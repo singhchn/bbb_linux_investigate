@@ -1,0 +1,1 @@
+cmd_sound/soc/atmel/snd-soc-atmel_ssc_dai.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/atmel/snd-soc-atmel_ssc_dai.ko sound/soc/atmel/snd-soc-atmel_ssc_dai.o sound/soc/atmel/snd-soc-atmel_ssc_dai.mod.o;  true

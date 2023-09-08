@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/actions/built-in.a := rm -f drivers/pinctrl/actions/built-in.a;  printf "drivers/pinctrl/actions/%s " pinctrl-owl.o pinctrl-s500.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/actions/built-in.a

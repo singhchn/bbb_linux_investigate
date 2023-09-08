@@ -1,0 +1,16 @@
+exynos5410-odroidxu.o: arch/arm/boot/dts/exynos5410-odroidxu.dts \
+ arch/arm/boot/dts/exynos5410.dtsi arch/arm/boot/dts/exynos54xx.dtsi \
+ arch/arm/boot/dts/exynos5.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos5410.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos-audss-clk.h \
+ arch/arm/boot/dts/exynos5420-trip-points.dtsi \
+ arch/arm/boot/dts/exynos5410-pinctrl.dtsi \
+ arch/arm/boot/dts/exynos-pinctrl.h \
+ arch/arm/boot/dts/exynos-syscon-restart.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/maxim,max77802.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/sound/samsung-i2s.h \
+ arch/arm/boot/dts/exynos54xx-odroidxu-leds.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/leds/common.h

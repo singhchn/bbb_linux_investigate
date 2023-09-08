@@ -1,0 +1,1 @@
+cmd_drivers/soc/imx/built-in.a := rm -f drivers/soc/imx/built-in.a;  printf "drivers/soc/imx/%s " soc-imx.o gpc.o gpcv2.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/imx/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/clk/ux500/built-in.a := rm -f drivers/clk/ux500/built-in.a;  printf "drivers/clk/ux500/%s " clk-prcc.o clk-prcmu.o clk-sysctrl.o reset-prcc.o u8500_of_clk.o abx500-clk.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/ux500/built-in.a

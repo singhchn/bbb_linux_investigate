@@ -1,0 +1,1 @@
+cmd_drivers/soc/aspeed/built-in.a := rm -f drivers/soc/aspeed/built-in.a;  printf "drivers/soc/aspeed/%s " aspeed-uart-routing.o aspeed-socinfo.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/aspeed/built-in.a

@@ -1,0 +1,5 @@
+sound/soc/stm/snd-soc-stm32-sai-sub.ko
+sound/soc/stm/snd-soc-stm32-sai.ko
+sound/soc/stm/snd-soc-stm32-i2s.ko
+sound/soc/stm/snd-soc-stm32-spdifrx.ko
+sound/soc/stm/stm32_adfsdm.ko

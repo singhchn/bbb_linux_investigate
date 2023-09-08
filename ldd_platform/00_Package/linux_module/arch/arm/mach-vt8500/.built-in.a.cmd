@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-vt8500/built-in.a := rm -f arch/arm/mach-vt8500/built-in.a;  printf "arch/arm/mach-vt8500/%s " vt8500.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-vt8500/built-in.a

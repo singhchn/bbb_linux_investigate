@@ -1,0 +1,13 @@
+at91-sama7g5ek.o: arch/arm/boot/dts/at91-sama7g5ek.dts \
+ arch/arm/boot/dts/sama7g5-pinfunc.h arch/arm/boot/dts/sama7g5.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/at91.h \
+ scripts/dtc/include-prefixes/dt-bindings/dma/at91.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/mfd/at91-usart.h \
+ scripts/dtc/include-prefixes/dt-bindings/mfd/atmel-flexcom.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/at91.h \
+ scripts/dtc/include-prefixes/dt-bindings/sound/microchip,pdmc.h

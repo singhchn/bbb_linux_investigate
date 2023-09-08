@@ -1,0 +1,2 @@
+drivers/media/cec/platform/s5p/s5p-cec.ko
+drivers/media/cec/platform/stm32/stm32-cec.ko

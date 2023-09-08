@@ -1,0 +1,1 @@
+cmd_drivers/media/v4l2-core/videodev.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/v4l2-core/videodev.o @drivers/media/v4l2-core/videodev.mod 

@@ -1,0 +1,1 @@
+cmd_drivers/power/supply/bq27xxx_battery.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/power/supply/bq27xxx_battery.ko drivers/power/supply/bq27xxx_battery.o drivers/power/supply/bq27xxx_battery.mod.o;  true

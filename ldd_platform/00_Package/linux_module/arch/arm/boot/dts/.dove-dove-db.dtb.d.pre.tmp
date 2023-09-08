@@ -1,0 +1,4 @@
+dove-dove-db.o: arch/arm/boot/dts/dove-dove-db.dts \
+ arch/arm/boot/dts/dove.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

@@ -1,0 +1,1 @@
+cmd_drivers/soc/qcom/rpmhpd.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/soc/qcom/rpmhpd.ko drivers/soc/qcom/rpmhpd.o drivers/soc/qcom/rpmhpd.mod.o;  true

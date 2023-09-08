@@ -1,0 +1,5 @@
+hi3519-demb.o: arch/arm/boot/dts/hi3519-demb.dts \
+ arch/arm/boot/dts/hi3519.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/hi3519-clock.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

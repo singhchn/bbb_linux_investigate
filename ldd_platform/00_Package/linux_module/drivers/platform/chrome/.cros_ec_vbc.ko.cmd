@@ -1,0 +1,1 @@
+cmd_drivers/platform/chrome/cros_ec_vbc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/platform/chrome/cros_ec_vbc.ko drivers/platform/chrome/cros_ec_vbc.o drivers/platform/chrome/cros_ec_vbc.mod.o;  true

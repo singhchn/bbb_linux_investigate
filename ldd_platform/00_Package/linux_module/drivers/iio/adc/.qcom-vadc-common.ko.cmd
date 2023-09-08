@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/qcom-vadc-common.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/adc/qcom-vadc-common.ko drivers/iio/adc/qcom-vadc-common.o drivers/iio/adc/qcom-vadc-common.mod.o;  true

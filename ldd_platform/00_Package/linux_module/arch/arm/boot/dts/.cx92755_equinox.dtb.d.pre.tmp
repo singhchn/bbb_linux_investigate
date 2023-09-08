@@ -1,0 +1,2 @@
+cx92755_equinox.o: arch/arm/boot/dts/cx92755_equinox.dts \
+ arch/arm/boot/dts/cx92755.dtsi

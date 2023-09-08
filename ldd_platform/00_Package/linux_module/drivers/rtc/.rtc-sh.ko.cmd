@@ -1,0 +1,1 @@
+cmd_drivers/rtc/rtc-sh.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/rtc/rtc-sh.ko drivers/rtc/rtc-sh.o drivers/rtc/rtc-sh.mod.o;  true

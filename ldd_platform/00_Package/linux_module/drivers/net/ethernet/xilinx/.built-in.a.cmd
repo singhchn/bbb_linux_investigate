@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/xilinx/built-in.a := rm -f drivers/net/ethernet/xilinx/built-in.a;  printf "drivers/net/ethernet/xilinx/%s " xilinx_emaclite.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/xilinx/built-in.a

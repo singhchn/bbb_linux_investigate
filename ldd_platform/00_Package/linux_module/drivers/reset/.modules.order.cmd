@@ -1,0 +1,1 @@
+cmd_drivers/reset/modules.order := {   cat drivers/reset/hisilicon/modules.order;   cat drivers/reset/sti/modules.order;   cat drivers/reset/tegra/modules.order;   echo drivers/reset/reset-berlin.ko; :; } > drivers/reset/modules.order

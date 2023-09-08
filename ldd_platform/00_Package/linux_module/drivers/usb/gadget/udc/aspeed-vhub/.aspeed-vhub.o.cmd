@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/udc/aspeed-vhub/aspeed-vhub.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/usb/gadget/udc/aspeed-vhub/aspeed-vhub.o @drivers/usb/gadget/udc/aspeed-vhub/aspeed-vhub.mod 

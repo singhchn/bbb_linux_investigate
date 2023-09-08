@@ -1,0 +1,1 @@
+cmd_drivers/iio/light/built-in.a := rm -f drivers/iio/light/built-in.a;  printf "drivers/iio/light/%s " isl29018.o isl29028.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/iio/light/built-in.a

@@ -1,0 +1,5 @@
+ls1021a-tsn.o: arch/arm/boot/dts/ls1021a-tsn.dts \
+ arch/arm/boot/dts/ls1021a.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h

@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/rcar-du/rcar-du-drm.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/rcar-du/rcar-du-drm.o @drivers/gpu/drm/rcar-du/rcar-du-drm.mod 

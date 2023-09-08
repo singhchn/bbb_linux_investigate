@@ -1,0 +1,8 @@
+armada-370-seagate-nas-4bay.o: \
+ arch/arm/boot/dts/armada-370-seagate-nas-4bay.dts \
+ arch/arm/boot/dts/armada-370-seagate-nas-xbay.dtsi \
+ arch/arm/boot/dts/armada-370.dtsi arch/arm/boot/dts/armada-370-xp.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/leds/leds-ns2.h

@@ -1,0 +1,1 @@
+cmd_drivers/media/cec/platform/s5p/s5p-cec.mod := printf '%s\n'   s5p_cec.o exynos_hdmi_cecctrl.o | awk '!x[$$0]++ { print("drivers/media/cec/platform/s5p/"$$0) }' > drivers/media/cec/platform/s5p/s5p-cec.mod

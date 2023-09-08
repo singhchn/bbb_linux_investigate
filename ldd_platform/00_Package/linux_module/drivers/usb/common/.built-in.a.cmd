@@ -1,0 +1,1 @@
+cmd_drivers/usb/common/built-in.a := rm -f drivers/usb/common/built-in.a;  printf "drivers/usb/common/%s " common.o debug.o usb-conn-gpio.o ulpi.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/usb/common/built-in.a

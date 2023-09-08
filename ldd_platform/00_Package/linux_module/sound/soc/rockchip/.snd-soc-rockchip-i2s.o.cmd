@@ -1,0 +1,1 @@
+cmd_sound/soc/rockchip/snd-soc-rockchip-i2s.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/rockchip/snd-soc-rockchip-i2s.o @sound/soc/rockchip/snd-soc-rockchip-i2s.mod 

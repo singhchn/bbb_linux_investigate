@@ -1,0 +1,1 @@
+cmd_drivers/media/test-drivers/vivid/vivid.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/test-drivers/vivid/vivid.ko drivers/media/test-drivers/vivid/vivid.o drivers/media/test-drivers/vivid/vivid.mod.o;  true

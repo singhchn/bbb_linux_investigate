@@ -1,0 +1,1 @@
+cmd_sound/soc/pxa/snd-soc-mmp-sspa.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/pxa/snd-soc-mmp-sspa.ko sound/soc/pxa/snd-soc-mmp-sspa.o sound/soc/pxa/snd-soc-mmp-sspa.mod.o;  true

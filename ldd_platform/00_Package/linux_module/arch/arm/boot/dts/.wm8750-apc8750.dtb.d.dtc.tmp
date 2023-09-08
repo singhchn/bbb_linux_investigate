@@ -1,0 +1,1 @@
+arch/arm/boot/dts/wm8750-apc8750.dtb: arch/arm/boot/dts/.wm8750-apc8750.dtb.dts.tmp arch/arm/boot/dts/wm8750.dtsi

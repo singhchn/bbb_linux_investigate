@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/aspeed_adc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/adc/aspeed_adc.ko drivers/iio/adc/aspeed_adc.o drivers/iio/adc/aspeed_adc.mod.o;  true

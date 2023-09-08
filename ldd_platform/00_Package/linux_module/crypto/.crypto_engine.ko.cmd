@@ -1,0 +1,1 @@
+cmd_crypto/crypto_engine.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o crypto/crypto_engine.ko crypto/crypto_engine.o crypto/crypto_engine.mod.o;  true

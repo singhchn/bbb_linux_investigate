@@ -1,0 +1,1 @@
+cmd_drivers/usb/misc/brcmstb-usb-pinmap.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/misc/brcmstb-usb-pinmap.ko drivers/usb/misc/brcmstb-usb-pinmap.o drivers/usb/misc/brcmstb-usb-pinmap.mod.o;  true

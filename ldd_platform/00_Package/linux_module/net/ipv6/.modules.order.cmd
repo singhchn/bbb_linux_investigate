@@ -1,0 +1,1 @@
+cmd_net/ipv6/modules.order := {   echo net/ipv6/ah6.ko;   echo net/ipv6/esp6.ko;   echo net/ipv6/ipcomp6.ko;   echo net/ipv6/xfrm6_tunnel.ko;   echo net/ipv6/tunnel6.ko;   echo net/ipv6/mip6.ko;   echo net/ipv6/ip6_tunnel.ko; :; } > net/ipv6/modules.order

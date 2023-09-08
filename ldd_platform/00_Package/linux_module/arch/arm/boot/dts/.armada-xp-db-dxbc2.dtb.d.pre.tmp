@@ -1,0 +1,4 @@
+armada-xp-db-dxbc2.o: arch/arm/boot/dts/armada-xp-db-dxbc2.dts \
+ arch/arm/boot/dts/armada-xp-98dx4251.dtsi \
+ arch/arm/boot/dts/armada-xp-98dx3236.dtsi \
+ arch/arm/boot/dts/armada-370-xp.dtsi

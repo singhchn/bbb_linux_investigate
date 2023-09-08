@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/marvell/mmp_camera.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/platform/marvell/mmp_camera.o @drivers/media/platform/marvell/mmp_camera.mod 

@@ -1,0 +1,1 @@
+cmd_drivers/phy/motorola/phy-cpcap-usb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/motorola/phy-cpcap-usb.ko drivers/phy/motorola/phy-cpcap-usb.o drivers/phy/motorola/phy-cpcap-usb.mod.o;  true

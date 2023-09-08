@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/bridge/tc358764.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/bridge/tc358764.ko drivers/gpu/drm/bridge/tc358764.o drivers/gpu/drm/bridge/tc358764.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_net/dsa/dsa_core.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o net/dsa/dsa_core.ko net/dsa/dsa_core.o net/dsa/dsa_core.mod.o;  true

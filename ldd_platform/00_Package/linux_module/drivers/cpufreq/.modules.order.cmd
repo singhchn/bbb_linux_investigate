@@ -1,0 +1,1 @@
+cmd_drivers/cpufreq/modules.order := {   echo drivers/cpufreq/cpufreq_powersave.ko;   echo drivers/cpufreq/cpufreq_userspace.ko;   echo drivers/cpufreq/cpufreq_conservative.ko;   echo drivers/cpufreq/highbank-cpufreq.ko;   echo drivers/cpufreq/mediatek-cpufreq-hw.ko; :; } > drivers/cpufreq/modules.order

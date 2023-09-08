@@ -1,0 +1,3 @@
+drivers/net/usb/r8152.ko
+drivers/net/usb/lan78xx.ko
+drivers/net/usb/r8153_ecm.ko

@@ -1,0 +1,1 @@
+cmd_drivers/devfreq/tegra30-devfreq.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/devfreq/tegra30-devfreq.ko drivers/devfreq/tegra30-devfreq.o drivers/devfreq/tegra30-devfreq.mod.o;  true

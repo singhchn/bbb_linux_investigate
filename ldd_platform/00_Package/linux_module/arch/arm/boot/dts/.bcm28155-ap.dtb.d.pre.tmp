@@ -1,0 +1,7 @@
+bcm28155-ap.o: arch/arm/boot/dts/bcm28155-ap.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/bcm11351.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/bcm281xx.h \
+ arch/arm/boot/dts/bcm59056.dtsi

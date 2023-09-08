@@ -1,0 +1,1 @@
+cmd_sound/soc/qcom/snd-soc-apq8016-sbc.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/qcom/snd-soc-apq8016-sbc.o @sound/soc/qcom/snd-soc-apq8016-sbc.mod 

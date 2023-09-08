@@ -1,0 +1,9 @@
+rk3036-kylin.o: arch/arm/boot/dts/rk3036-kylin.dts \
+ arch/arm/boot/dts/rk3036.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3036-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/rockchip,boot-mode.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/rk3036-power.h

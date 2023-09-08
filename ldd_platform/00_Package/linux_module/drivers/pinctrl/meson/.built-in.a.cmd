@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/meson/built-in.a := rm -f drivers/pinctrl/meson/built-in.a;  printf "drivers/pinctrl/meson/%s " pinctrl-meson.o pinctrl-meson8-pmx.o pinctrl-meson8.o pinctrl-meson8b.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/meson/built-in.a

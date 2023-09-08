@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-smdk-wm8994.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/samsung/snd-soc-smdk-wm8994.o @sound/soc/samsung/snd-soc-smdk-wm8994.mod 

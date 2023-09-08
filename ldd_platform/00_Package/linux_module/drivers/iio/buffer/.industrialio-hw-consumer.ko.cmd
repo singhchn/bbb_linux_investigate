@@ -1,0 +1,1 @@
+cmd_drivers/iio/buffer/industrialio-hw-consumer.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/buffer/industrialio-hw-consumer.ko drivers/iio/buffer/industrialio-hw-consumer.o drivers/iio/buffer/industrialio-hw-consumer.mod.o;  true

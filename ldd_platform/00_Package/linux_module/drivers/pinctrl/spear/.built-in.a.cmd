@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/spear/built-in.a := rm -f drivers/pinctrl/spear/built-in.a;  printf "drivers/pinctrl/spear/%s " pinctrl-plgpio.o pinctrl-spear.o pinctrl-spear1310.o pinctrl-spear1340.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/spear/built-in.a

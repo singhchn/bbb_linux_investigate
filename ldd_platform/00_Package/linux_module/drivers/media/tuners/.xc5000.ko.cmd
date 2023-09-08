@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/xc5000.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/xc5000.ko drivers/media/tuners/xc5000.o drivers/media/tuners/xc5000.mod.o;  true

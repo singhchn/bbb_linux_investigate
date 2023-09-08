@@ -1,0 +1,5 @@
+drivers/usb/musb/omap2430.ko
+drivers/usb/musb/am35x.ko
+drivers/usb/musb/tusb6010.ko
+drivers/usb/musb/ux500.ko
+drivers/usb/musb/sunxi.ko

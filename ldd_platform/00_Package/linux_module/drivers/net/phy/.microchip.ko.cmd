@@ -1,0 +1,1 @@
+cmd_drivers/net/phy/microchip.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/phy/microchip.ko drivers/net/phy/microchip.o drivers/net/phy/microchip.mod.o;  true

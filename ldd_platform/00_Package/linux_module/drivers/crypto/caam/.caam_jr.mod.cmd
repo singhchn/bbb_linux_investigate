@@ -1,0 +1,1 @@
+cmd_drivers/crypto/caam/caam_jr.mod := printf '%s\n'   jr.o key_gen.o caamalg.o caamhash.o caamrng.o caamprng.o caampkc.o pkc_desc.o | awk '!x[$$0]++ { print("drivers/crypto/caam/"$$0) }' > drivers/crypto/caam/caam_jr.mod

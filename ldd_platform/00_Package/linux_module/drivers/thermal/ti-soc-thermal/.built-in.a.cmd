@@ -1,0 +1,1 @@
+cmd_drivers/thermal/ti-soc-thermal/built-in.a := rm -f drivers/thermal/ti-soc-thermal/built-in.a;  printf "drivers/thermal/ti-soc-thermal/%s " ti-bandgap.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/thermal/ti-soc-thermal/built-in.a

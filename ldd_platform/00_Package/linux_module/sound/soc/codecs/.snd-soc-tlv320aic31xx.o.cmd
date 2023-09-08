@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-tlv320aic31xx.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/codecs/snd-soc-tlv320aic31xx.o @sound/soc/codecs/snd-soc-tlv320aic31xx.mod 

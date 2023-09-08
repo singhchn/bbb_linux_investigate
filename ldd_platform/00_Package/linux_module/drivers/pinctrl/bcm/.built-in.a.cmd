@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/bcm/built-in.a := rm -f drivers/pinctrl/bcm/built-in.a;  printf "drivers/pinctrl/bcm/%s " pinctrl-bcm281xx.o pinctrl-bcm2835.o pinctrl-bcm4908.o pinctrl-iproc-gpio.o pinctrl-cygnus-mux.o pinctrl-ns.o pinctrl-nsp-gpio.o pinctrl-nsp-mux.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/bcm/built-in.a

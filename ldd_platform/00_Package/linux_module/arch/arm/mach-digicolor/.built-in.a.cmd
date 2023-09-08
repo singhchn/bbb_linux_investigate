@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-digicolor/built-in.a := rm -f arch/arm/mach-digicolor/built-in.a;  printf "arch/arm/mach-digicolor/%s " digicolor.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-digicolor/built-in.a

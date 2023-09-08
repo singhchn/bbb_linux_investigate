@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/aspeed/built-in.a := rm -f drivers/pinctrl/aspeed/built-in.a;  printf "drivers/pinctrl/aspeed/%s " pinctrl-aspeed.o pinmux-aspeed.o pinctrl-aspeed-g6.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/aspeed/built-in.a

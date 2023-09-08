@@ -1,0 +1,1 @@
+cmd_drivers/reset/sti/built-in.a := rm -f drivers/reset/sti/built-in.a;  printf "drivers/reset/sti/%s " reset-syscfg.o reset-stih407.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/reset/sti/built-in.a

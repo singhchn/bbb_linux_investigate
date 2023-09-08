@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/asix/ax88796c.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/ethernet/asix/ax88796c.ko drivers/net/ethernet/asix/ax88796c.o drivers/net/ethernet/asix/ax88796c.mod.o;  true

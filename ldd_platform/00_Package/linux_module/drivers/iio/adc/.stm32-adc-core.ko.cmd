@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/stm32-adc-core.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/adc/stm32-adc-core.ko drivers/iio/adc/stm32-adc-core.o drivers/iio/adc/stm32-adc-core.mod.o;  true

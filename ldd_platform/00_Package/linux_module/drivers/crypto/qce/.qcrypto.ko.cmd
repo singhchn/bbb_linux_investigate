@@ -1,0 +1,1 @@
+cmd_drivers/crypto/qce/qcrypto.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/qce/qcrypto.ko drivers/crypto/qce/qcrypto.o drivers/crypto/qce/qcrypto.mod.o;  true

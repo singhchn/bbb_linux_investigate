@@ -1,0 +1,1 @@
+cmd_drivers/thermal/broadcom/brcmstb_thermal.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/thermal/broadcom/brcmstb_thermal.ko drivers/thermal/broadcom/brcmstb_thermal.o drivers/thermal/broadcom/brcmstb_thermal.mod.o;  true

@@ -1,0 +1,643 @@
+# 1 "arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts"
+# 9 "arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts"
+/dts-v1/;
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/rzn1-pinctrl.h" 1
+# 12 "arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/net/pcs-rzn1-miic.h" 1
+# 13 "arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts" 2
+
+# 1 "arch/arm/boot/dts/r9a06g032.dtsi" 1
+# 9 "arch/arm/boot/dts/r9a06g032.dtsi"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 10 "arch/arm/boot/dts/r9a06g032.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/r9a06g032-sysctrl.h" 1
+# 11 "arch/arm/boot/dts/r9a06g032.dtsi" 2
+
+/ {
+ compatible = "renesas,r9a06g032";
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a7";
+   reg = <0>;
+   clocks = <&sysctrl 84>;
+  };
+
+  cpu@1 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a7";
+   reg = <1>;
+   clocks = <&sysctrl 84>;
+   enable-method = "renesas,r9a06g032-smp";
+   cpu-release-addr = <0 0x4000c204>;
+  };
+ };
+
+ ext_jtag_clk: extjtagclk {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+  clock-frequency = <0>;
+ };
+
+ ext_mclk: extmclk {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+  clock-frequency = <40000000>;
+ };
+
+ ext_rgmii_ref: extrgmiiref {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+  clock-frequency = <0>;
+ };
+
+ ext_rtc_clk: extrtcclk {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+  clock-frequency = <0>;
+ };
+
+ soc {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  interrupt-parent = <&gic>;
+  ranges;
+
+  rtc0: rtc@40006000 {
+   compatible = "renesas,r9a06g032-rtc", "renesas,rzn1-rtc";
+   reg = <0x40006000 0x1000>;
+   interrupts = <0 66 1>,
+         <0 67 1>,
+         <0 68 1>;
+   interrupt-names = "alarm", "timer", "pps";
+   clocks = <&sysctrl 126>;
+   clock-names = "hclk";
+   power-domains = <&sysctrl>;
+   status = "disabled";
+  };
+
+  wdt0: watchdog@40008000 {
+   compatible = "renesas,r9a06g032-wdt", "renesas,rzn1-wdt";
+   reg = <0x40008000 0x1000>;
+   interrupts = <0 73 1>;
+   clocks = <&sysctrl 82>;
+   status = "disabled";
+  };
+
+  wdt1: watchdog@40009000 {
+   compatible = "renesas,r9a06g032-wdt", "renesas,rzn1-wdt";
+   reg = <0x40009000 0x1000>;
+   interrupts = <0 74 1>;
+   clocks = <&sysctrl 82>;
+   status = "disabled";
+  };
+
+  sysctrl: system-controller@4000c000 {
+   compatible = "renesas,r9a06g032-sysctrl";
+   reg = <0x4000c000 0x1000>;
+   status = "okay";
+   #clock-cells = <1>;
+   #power-domain-cells = <0>;
+
+   clocks = <&ext_mclk>, <&ext_rtc_clk>,
+     <&ext_jtag_clk>, <&ext_rgmii_ref>;
+   clock-names = "mclk", "rtc", "jtag", "rgmii_ref_ext";
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   dmamux: dma-router@a0 {
+    compatible = "renesas,rzn1-dmamux";
+    reg = <0xa0 4>;
+    #dma-cells = <6>;
+    dma-requests = <32>;
+    dma-masters = <&dma0 &dma1>;
+   };
+  };
+
+  pci_usb: pci@40030000 {
+   compatible = "renesas,pci-r9a06g032", "renesas,pci-rzn1";
+   device_type = "pci";
+   clocks = <&sysctrl 74>,
+     <&sysctrl 75>,
+     <&sysctrl 48>;
+   clock-names = "hclkh", "hclkpm", "pciclk";
+   power-domains = <&sysctrl>;
+   reg = <0x40030000 0xc00>,
+         <0x40020000 0x1100>;
+   interrupts = <0 79 4>;
+   status = "disabled";
+
+   bus-range = <0 0>;
+   #address-cells = <3>;
+   #size-cells = <2>;
+   #interrupt-cells = <1>;
+   ranges = <0x02000000 0 0x40020000 0x40020000 0 0x00010000>;
+
+
+
+
+   dma-ranges = <0x42000000 0 0x80000000 0x80000000 0 0x40000000>;
+   interrupt-map-mask = <0xf800 0 0 0x7>;
+   interrupt-map = <0x0000 0 0 1 &gic 0 79 4
+      0x0800 0 0 1 &gic 0 79 4
+      0x1000 0 0 2 &gic 0 79 4>;
+
+   usb@1,0 {
+    reg = <0x800 0 0 0 0>;
+    phys = <&usbphy>;
+    phy-names = "usb";
+   };
+
+   usb@2,0 {
+    reg = <0x1000 0 0 0 0>;
+    phys = <&usbphy>;
+    phy-names = "usb";
+   };
+  };
+
+  uart0: serial@40060000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart", "snps,dw-apb-uart";
+   reg = <0x40060000 0x400>;
+   interrupts = <0 6 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 146>, <&sysctrl 138>;
+   clock-names = "baudclk", "apb_pclk";
+   status = "disabled";
+  };
+
+  uart1: serial@40061000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart", "snps,dw-apb-uart";
+   reg = <0x40061000 0x400>;
+   interrupts = <0 7 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 147>, <&sysctrl 139>;
+   clock-names = "baudclk", "apb_pclk";
+   status = "disabled";
+  };
+
+  uart2: serial@40062000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart", "snps,dw-apb-uart";
+   reg = <0x40062000 0x400>;
+   interrupts = <0 8 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 148>, <&sysctrl 140>;
+   clock-names = "baudclk", "apb_pclk";
+   status = "disabled";
+  };
+
+  uart3: serial@50000000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart";
+   reg = <0x50000000 0x400>;
+   interrupts = <0 86 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 149>, <&sysctrl 141>;
+   clock-names = "baudclk", "apb_pclk";
+   dmas = <&dmamux 0 0 0 0 0 1>, <&dmamux 1 0 0 0 1 1>;
+   dma-names = "rx", "tx";
+   status = "disabled";
+  };
+
+  uart4: serial@50001000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart";
+   reg = <0x50001000 0x400>;
+   interrupts = <0 87 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 150>, <&sysctrl 142>;
+   clock-names = "baudclk", "apb_pclk";
+   dmas = <&dmamux 2 0 0 0 2 1>, <&dmamux 3 0 0 0 3 1>;
+   dma-names = "rx", "tx";
+   status = "disabled";
+  };
+
+  uart5: serial@50002000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart";
+   reg = <0x50002000 0x400>;
+   interrupts = <0 88 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 151>, <&sysctrl 143>;
+   clock-names = "baudclk", "apb_pclk";
+   dmas = <&dmamux 4 0 0 0 4 1>, <&dmamux 5 0 0 0 5 1>;
+   dma-names = "rx", "tx";
+   status = "disabled";
+  };
+
+  uart6: serial@50003000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart";
+   reg = <0x50003000 0x400>;
+   interrupts = <0 89 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 152>, <&sysctrl 144>;
+   clock-names = "baudclk", "apb_pclk";
+   dmas = <&dmamux 6 0 0 0 6 1>, <&dmamux 7 0 0 0 7 1>;
+   dma-names = "rx", "tx";
+   status = "disabled";
+  };
+
+  uart7: serial@50004000 {
+   compatible = "renesas,r9a06g032-uart", "renesas,rzn1-uart";
+   reg = <0x50004000 0x400>;
+   interrupts = <0 90 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+   clocks = <&sysctrl 153>, <&sysctrl 145>;
+   clock-names = "baudclk", "apb_pclk";
+   dmas = <&dmamux 4 0 0 0 20 1>, <&dmamux 5 0 0 0 21 1>;
+   dma-names = "rx", "tx";
+   status = "disabled";
+  };
+
+  pinctrl: pinctrl@40067000 {
+   compatible = "renesas,r9a06g032-pinctrl", "renesas,rzn1-pinctrl";
+   reg = <0x40067000 0x1000>, <0x51000000 0x480>;
+   clocks = <&sysctrl 66>;
+   clock-names = "bus";
+   status = "okay";
+  };
+
+  nand_controller: nand-controller@40102000 {
+   compatible = "renesas,r9a06g032-nandc", "renesas,rzn1-nandc";
+   reg = <0x40102000 0x2000>;
+   interrupts = <0 58 4>;
+   clocks = <&sysctrl 117>, <&sysctrl 37>;
+   clock-names = "hclk", "eclk";
+   power-domains = <&sysctrl>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  dma0: dma-controller@40104000 {
+   compatible = "renesas,r9a06g032-dma", "renesas,rzn1-dma";
+   reg = <0x40104000 0x1000>;
+   interrupts = <0 56 4>;
+   clock-names = "hclk";
+   clocks = <&sysctrl 104>;
+   dma-channels = <8>;
+   dma-requests = <16>;
+   dma-masters = <1>;
+   #dma-cells = <3>;
+   block_size = <0xfff>;
+   data-width = <8>;
+  };
+
+  dma1: dma-controller@40105000 {
+   compatible = "renesas,r9a06g032-dma", "renesas,rzn1-dma";
+   reg = <0x40105000 0x1000>;
+   interrupts = <0 57 4>;
+   clock-names = "hclk";
+   clocks = <&sysctrl 105>;
+   dma-channels = <8>;
+   dma-requests = <16>;
+   dma-masters = <1>;
+   #dma-cells = <3>;
+   block_size = <0xfff>;
+   data-width = <8>;
+  };
+
+  gmac2: ethernet@44002000 {
+   compatible = "renesas,r9a06g032-gmac", "renesas,rzn1-gmac", "snps,dwmac";
+   reg = <0x44002000 0x2000>;
+   interrupt-parent = <&gic>;
+   interrupts = <0 37 4>,
+         <0 39 4>,
+         <0 38 4>;
+   interrupt-names = "macirq", "eth_wake_irq", "eth_lpi";
+   clocks = <&sysctrl 107>;
+   clock-names = "stmmaceth";
+   power-domains = <&sysctrl>;
+   snps,multicast-filter-bins = <256>;
+   snps,perfect-filter-entries = <128>;
+   tx-fifo-depth = <2048>;
+   rx-fifo-depth = <4096>;
+   status = "disabled";
+  };
+
+  eth_miic: eth-miic@44030000 {
+   compatible = "renesas,r9a06g032-miic", "renesas,rzn1-miic";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0x44030000 0x10000>;
+   clocks = <&sysctrl 36>,
+     <&sysctrl 51>,
+     <&sysctrl 52>,
+     <&sysctrl 137>;
+   clock-names = "mii_ref", "rgmii_ref", "rmii_ref", "hclk";
+   power-domains = <&sysctrl>;
+   status = "disabled";
+
+   mii_conv1: mii-conv@1 {
+    reg = <1>;
+    status = "disabled";
+   };
+
+   mii_conv2: mii-conv@2 {
+    reg = <2>;
+    status = "disabled";
+   };
+
+   mii_conv3: mii-conv@3 {
+    reg = <3>;
+    status = "disabled";
+   };
+
+   mii_conv4: mii-conv@4 {
+    reg = <4>;
+    status = "disabled";
+   };
+
+   mii_conv5: mii-conv@5 {
+    reg = <5>;
+    status = "disabled";
+   };
+  };
+
+  switch: switch@44050000 {
+   compatible = "renesas,r9a06g032-a5psw", "renesas,rzn1-a5psw";
+   reg = <0x44050000 0x10000>;
+   clocks = <&sysctrl 136>,
+     <&sysctrl 63>;
+   clock-names = "hclk", "clk";
+   power-domains = <&sysctrl>;
+   status = "disabled";
+
+   ethernet-ports {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    switch_port0: port@0 {
+     reg = <0>;
+     pcs-handle = <&mii_conv5>;
+     status = "disabled";
+    };
+
+    switch_port1: port@1 {
+     reg = <1>;
+     pcs-handle = <&mii_conv4>;
+     status = "disabled";
+    };
+
+    switch_port2: port@2 {
+     reg = <2>;
+     pcs-handle = <&mii_conv3>;
+     status = "disabled";
+    };
+
+    switch_port3: port@3 {
+     reg = <3>;
+     pcs-handle = <&mii_conv2>;
+     status = "disabled";
+    };
+
+    switch_port4: port@4 {
+     reg = <4>;
+     ethernet = <&gmac2>;
+     label = "cpu";
+     phy-mode = "internal";
+     status = "disabled";
+     fixed-link {
+      speed = <1000>;
+      full-duplex;
+     };
+    };
+   };
+  };
+
+  gic: interrupt-controller@44101000 {
+   compatible = "arm,gic-400", "arm,cortex-a7-gic";
+   interrupt-controller;
+   #interrupt-cells = <3>;
+   reg = <0x44101000 0x1000>,
+         <0x44102000 0x2000>,
+         <0x44104000 0x2000>,
+         <0x44106000 0x2000>;
+   interrupts =
+    <1 9 ((((1 << (2)) - 1) << 8) | 4)>;
+  };
+
+  can0: can@52104000 {
+   compatible = "renesas,r9a06g032-sja1000","renesas,rzn1-sja1000";
+   reg = <0x52104000 0x800>;
+   reg-io-width = <4>;
+   interrupts = <0 95 4>;
+   clocks = <&sysctrl 85>;
+   power-domains = <&sysctrl>;
+   status = "disabled";
+  };
+
+  can1: can@52105000 {
+   compatible = "renesas,r9a06g032-sja1000", "renesas,rzn1-sja1000";
+   reg = <0x52105000 0x800>;
+   reg-io-width = <4>;
+   interrupts = <0 96 4>;
+   clocks = <&sysctrl 86>;
+   power-domains = <&sysctrl>;
+   status = "disabled";
+  };
+ };
+
+ timer {
+  compatible = "arm,armv7-timer";
+  interrupt-parent = <&gic>;
+  arm,cpu-registers-not-fw-configured;
+  always-on;
+  interrupts =
+   <1 13 ((((1 << (2)) - 1) << 8) | 8)>,
+   <1 14 ((((1 << (2)) - 1) << 8) | 8)>,
+   <1 11 ((((1 << (2)) - 1) << 8) | 8)>,
+   <1 10 ((((1 << (2)) - 1) << 8) | 8)>;
+ };
+
+ usbphy: usb-phy {
+  #phy-cells = <0>;
+  compatible = "usb-nop-xceiv";
+  status = "disabled";
+ };
+};
+# 15 "arch/arm/boot/dts/r9a06g032-rzn1d400-db.dts" 2
+
+/ {
+ model = "RZN1D-DB Board";
+ compatible = "renesas,rzn1d400-db", "renesas,r9a06g032";
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ aliases {
+  serial0 = &uart0;
+ };
+};
+
+&can0 {
+ pinctrl-0 = <&pins_can0>;
+ pinctrl-names = "default";
+
+
+ status = "okay";
+};
+
+&can1 {
+ pinctrl-0 = <&pins_can1>;
+ pinctrl-names = "default";
+
+
+
+};
+
+&eth_miic {
+ status = "okay";
+ renesas,miic-switch-portin = <1>;
+};
+
+&gmac2 {
+ status = "okay";
+ phy-mode = "gmii";
+
+ fixed-link {
+  speed = <1000>;
+  full-duplex;
+ };
+};
+
+&mii_conv4 {
+ renesas,miic-input = <9>;
+ status = "okay";
+};
+
+&mii_conv5 {
+ renesas,miic-input = <8>;
+ status = "okay";
+};
+
+&pinctrl{
+ pins_can0: pins_can0 {
+  pinmux = <((((10 + 49)) << 8) | (162))>,
+    <((((10 + 49)) << 8) | (163))>;
+  drive-strength = <6>;
+ };
+
+ pins_can1: pins_can1 {
+  pinmux = <((((10 + 49)) << 8) | (109))>,
+    <((((10 + 49)) << 8) | (110))>;
+  drive-strength = <6>;
+ };
+
+ pins_eth3: pins_eth3 {
+  pinmux = <(((2) << 8) | (36))>,
+    <(((2) << 8) | (37))>,
+    <(((2) << 8) | (38))>,
+    <(((2) << 8) | (39))>,
+    <(((2) << 8) | (40))>,
+    <(((2) << 8) | (41))>,
+    <(((2) << 8) | (42))>,
+    <(((2) << 8) | (43))>,
+    <(((2) << 8) | (44))>,
+    <(((2) << 8) | (45))>,
+    <(((2) << 8) | (46))>,
+    <(((2) << 8) | (47))>;
+  drive-strength = <6>;
+  bias-disable;
+ };
+
+ pins_eth4: pins_eth4 {
+  pinmux = <(((2) << 8) | (48))>,
+    <(((2) << 8) | (49))>,
+    <(((2) << 8) | (50))>,
+    <(((2) << 8) | (51))>,
+    <(((2) << 8) | (52))>,
+    <(((2) << 8) | (53))>,
+    <(((2) << 8) | (54))>,
+    <(((2) << 8) | (55))>,
+    <(((2) << 8) | (56))>,
+    <(((2) << 8) | (57))>,
+    <(((2) << 8) | (58))>,
+    <(((2) << 8) | (59))>;
+  drive-strength = <6>;
+  bias-disable;
+ };
+
+ pins_mdio1: pins_mdio1 {
+  pinmux = <(((((10 + 62) + 23)) << 8) | (152))>,
+    <(((((10 + 62) + 23)) << 8) | (153))>;
+ };
+};
+
+&rtc0 {
+ status = "okay";
+};
+
+&switch {
+ status = "okay";
+ #address-cells = <1>;
+ #size-cells = <0>;
+
+ pinctrl-names = "default";
+ pinctrl-0 = <&pins_eth3>, <&pins_eth4>, <&pins_mdio1>;
+
+ dsa,member = <0 0>;
+
+ mdio {
+  clock-frequency = <2500000>;
+
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  switch0phy4: ethernet-phy@4 {
+   reg = <4>;
+   micrel,led-mode = <1>;
+  };
+
+  switch0phy5: ethernet-phy@5 {
+   reg = <5>;
+   micrel,led-mode = <1>;
+  };
+ };
+};
+
+&switch_port0 {
+ label = "lan0";
+ phy-mode = "mii";
+ phy-handle = <&switch0phy5>;
+ status = "okay";
+};
+
+&switch_port1 {
+ label = "lan1";
+ phy-mode = "mii";
+ phy-handle = <&switch0phy4>;
+ status = "okay";
+};
+
+&switch_port4 {
+ status = "okay";
+};
+
+&uart0 {
+ status = "okay";
+};
+
+&wdt0 {
+ timeout-sec = <60>;
+ status = "okay";
+};

@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/bridge/parade-ps8622.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/bridge/parade-ps8622.ko drivers/gpu/drm/bridge/parade-ps8622.o drivers/gpu/drm/bridge/parade-ps8622.mod.o;  true

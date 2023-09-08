@@ -1,0 +1,1 @@
+cmd_sound/soc/ti/modules.order := {   echo sound/soc/ti/snd-soc-ti-edma.ko;   echo sound/soc/ti/snd-soc-ti-sdma.ko;   echo sound/soc/ti/snd-soc-ti-udma.ko;   echo sound/soc/ti/snd-soc-davinci-mcasp.ko; :; } > sound/soc/ti/modules.order

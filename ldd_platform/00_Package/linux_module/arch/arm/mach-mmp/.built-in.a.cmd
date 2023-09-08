@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-mmp/built-in.a := rm -f arch/arm/mach-mmp/built-in.a;  printf "arch/arm/mach-mmp/%s " common.o devices.o time.o platsmp.o mmp2-dt.o mmp3.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-mmp/built-in.a

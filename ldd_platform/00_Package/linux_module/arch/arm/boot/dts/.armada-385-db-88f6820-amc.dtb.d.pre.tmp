@@ -1,0 +1,6 @@
+armada-385-db-88f6820-amc.o: \
+ arch/arm/boot/dts/armada-385-db-88f6820-amc.dts \
+ arch/arm/boot/dts/armada-385.dtsi arch/arm/boot/dts/armada-38x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

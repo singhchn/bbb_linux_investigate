@@ -1,0 +1,2 @@
+drivers/usb/misc/brcmstb-usb-pinmap.ko
+drivers/usb/misc/onboard_usb_hub.ko

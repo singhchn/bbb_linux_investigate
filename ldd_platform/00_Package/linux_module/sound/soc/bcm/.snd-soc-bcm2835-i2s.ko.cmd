@@ -1,0 +1,1 @@
+cmd_sound/soc/bcm/snd-soc-bcm2835-i2s.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/bcm/snd-soc-bcm2835-i2s.ko sound/soc/bcm/snd-soc-bcm2835-i2s.o sound/soc/bcm/snd-soc-bcm2835-i2s.mod.o;  true

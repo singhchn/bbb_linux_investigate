@@ -1,0 +1,375 @@
+# 1 "arch/arm/boot/dts/bcm47189-tenda-ac9.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/bcm47189-tenda-ac9.dts"
+
+
+
+
+
+/dts-v1/;
+
+# 1 "arch/arm/boot/dts/bcm53573.dtsi" 1
+
+
+
+
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 7 "arch/arm/boot/dts/bcm53573.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 1
+# 13 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h" 1
+# 14 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 2
+# 8 "arch/arm/boot/dts/bcm53573.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 9 "arch/arm/boot/dts/bcm53573.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 10 "arch/arm/boot/dts/bcm53573.dtsi" 2
+
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ interrupt-parent = <&gic>;
+
+ aliases {
+  serial0 = &uart0;
+ };
+
+ chosen {
+  stdout-path = "serial0:115200n8";
+ };
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a7";
+   reg = <0x0>;
+  };
+ };
+
+ mpcore@18310000 {
+  compatible = "simple-bus";
+  ranges = <0x00000000 0x18310000 0x00008000>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+
+  gic: interrupt-controller@1000 {
+   compatible = "arm,cortex-a7-gic";
+   #interrupt-cells = <3>;
+   #address-cells = <0>;
+   interrupt-controller;
+   reg = <0x1000 0x1000>,
+         <0x2000 0x0100>;
+  };
+ };
+
+ timer {
+  compatible = "arm,armv7-timer";
+  interrupts = <1 13 8>,
+        <1 14 8>,
+        <1 11 8>,
+        <1 10 8>;
+ };
+
+ clocks {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+  alp: oscillator {
+   #clock-cells = <0>;
+   compatible = "fixed-clock";
+   clock-frequency = <40000000>;
+  };
+ };
+
+ axi@18000000 {
+  compatible = "brcm,bus-axi";
+  reg = <0x18000000 0x1000>;
+  ranges = <0x00000000 0x18000000 0x00100000>;
+  #address-cells = <1>;
+  #size-cells = <1>;
+
+  #interrupt-cells = <1>;
+  interrupt-map-mask = <0x000fffff 0xffff>;
+  interrupt-map =
+
+   <0x00000000 0 &gic 0 0 4>,
+
+
+   <0x00001000 0 &gic 0 1 4>,
+
+
+   <0x00002000 0 &gic 0 2 4>,
+   <0x00002000 1 &gic 0 2 4>,
+   <0x00002000 2 &gic 0 2 4>,
+   <0x00002000 3 &gic 0 2 4>,
+   <0x00002000 4 &gic 0 2 4>,
+   <0x00002000 5 &gic 0 2 4>,
+
+
+   <0x00004000 0 &gic 0 4 4>,
+
+
+   <0x00005000 0 &gic 0 5 4>,
+
+
+   <0x0000a000 0 &gic 0 7 4>,
+
+
+   <0x0000b000 0 &gic 0 6 4>;
+
+  chipcommon: chipcommon@0 {
+   compatible = "simple-bus";
+   reg = <0x00000000 0x1000>;
+   ranges;
+
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   gpio-controller;
+   #gpio-cells = <2>;
+
+   uart0: serial@300 {
+    compatible = "ns16550a";
+    reg = <0x0300 0x100>;
+    interrupt-parent = <&gic>;
+    interrupts = <1 16 4>;
+    clocks = <&alp>;
+    status = "okay";
+   };
+  };
+
+  pcie0: pcie@2000 {
+   reg = <0x00002000 0x1000>;
+  };
+
+  usb2: usb2@4000 {
+   reg = <0x4000 0x1000>;
+   ranges;
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   ehci: usb@4000 {
+    compatible = "generic-ehci";
+    reg = <0x4000 0x1000>;
+    interrupt-parent = <&gic>;
+    interrupts = <0 4 4>;
+
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    ehci_port1: port@1 {
+     reg = <1>;
+     #trigger-source-cells = <0>;
+    };
+
+    ehci_port2: port@2 {
+     reg = <2>;
+     #trigger-source-cells = <0>;
+    };
+   };
+
+   ohci: usb@d000 {
+    #usb-cells = <0>;
+
+    compatible = "generic-ohci";
+    reg = <0xd000 0x1000>;
+    interrupt-parent = <&gic>;
+    interrupts = <0 4 4>;
+
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    ohci_port1: port@1 {
+     reg = <1>;
+     #trigger-source-cells = <0>;
+    };
+
+    ohci_port2: port@2 {
+     reg = <2>;
+     #trigger-source-cells = <0>;
+    };
+   };
+  };
+
+  gmac0: ethernet@5000 {
+   reg = <0x5000 0x1000>;
+
+   mdio {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    switch: switch@1e {
+     compatible = "brcm,bcm53125";
+     reg = <0x1e>;
+
+     status = "disabled";
+
+
+     ports {
+      #address-cells = <1>;
+      #size-cells = <0>;
+     };
+    };
+   };
+  };
+
+  gmac1: ethernet@b000 {
+   reg = <0xb000 0x1000>;
+  };
+
+  pmu@12000 {
+   compatible = "simple-mfd", "syscon";
+   reg = <0x00012000 0x00001000>;
+
+   ilp: ilp {
+    compatible = "brcm,bcm53573-ilp";
+    clocks = <&alp>;
+    #clock-cells = <0>;
+    clock-output-names = "ilp";
+   };
+  };
+ };
+};
+# 9 "arch/arm/boot/dts/bcm47189-tenda-ac9.dts" 2
+
+/ {
+ compatible = "tenda,ac9", "brcm,bcm47189", "brcm,bcm53573";
+ model = "Tenda AC9";
+
+ chosen {
+  bootargs = "console=ttyS0,115200 earlycon";
+ };
+
+ memory@0 {
+  device_type = "memory";
+  reg = <0x00000000 0x08000000>;
+ };
+
+ leds {
+  compatible = "gpio-leds";
+
+  usb {
+   label = "bcm53xx:blue:usb";
+   gpios = <&chipcommon 1 0>;
+   trigger-sources = <&ohci_port1>, <&ehci_port1>;
+   linux,default-trigger = "usbport";
+  };
+
+  wps {
+   label = "bcm53xx:blue:wps";
+   gpios = <&chipcommon 10 0>;
+  };
+
+  5ghz {
+   label = "bcm53xx:blue:5ghz";
+   gpios = <&chipcommon 11 0>;
+  };
+
+  system {
+   label = "bcm53xx:blue:system";
+   gpios = <&chipcommon 15 0>;
+   linux,default-trigger = "timer";
+  };
+ };
+
+ pcie0_leds {
+  compatible = "gpio-leds";
+
+  2ghz {
+   label = "bcm53xx:blue:2ghz";
+   gpios = <&pcie0_chipcommon 3 0>;
+  };
+ };
+
+ gpio-keys {
+  compatible = "gpio-keys";
+
+  button-rfkill {
+   label = "WiFi";
+   linux,code = <247>;
+   gpios = <&chipcommon 3 1>;
+  };
+
+  button-restart {
+   label = "Reset";
+   linux,code = <0x198>;
+   gpios = <&chipcommon 7 1>;
+  };
+
+  button-wps {
+   label = "WPS";
+   linux,code = <0x211>;
+   gpios = <&chipcommon 9 1>;
+  };
+ };
+};
+
+&pcie0 {
+ ranges = <0x00000000 0 0 0 0 0x00100000>;
+ #address-cells = <3>;
+ #size-cells = <2>;
+
+ bridge@0,0,0 {
+  reg = <0x0000 0 0 0 0>;
+  ranges = <0x00000000 0 0 0 0 0 0 0x00100000>;
+  #address-cells = <3>;
+  #size-cells = <2>;
+
+  wifi@0,1,0 {
+   reg = <0x0000 0 0 0 0>;
+   ranges = <0x00000000 0 0 0 0x00100000>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   pcie0_chipcommon: chipcommon@0 {
+    reg = <0 0x1000>;
+
+    gpio-controller;
+    #gpio-cells = <2>;
+   };
+  };
+ };
+};
+
+&switch {
+ status = "okay";
+
+ ports {
+  port@0 {
+   reg = <0>;
+   label = "wan";
+  };
+
+  port@1 {
+   reg = <1>;
+   label = "lan1";
+  };
+
+  port@2 {
+   reg = <2>;
+   label = "lan2";
+  };
+
+  port@3 {
+   reg = <3>;
+   label = "lan3";
+  };
+
+  port@4 {
+   reg = <4>;
+   label = "lan4";
+  };
+
+  port@5 {
+   reg = <5>;
+   label = "cpu";
+   ethernet = <&gmac0>;
+  };
+ };
+};

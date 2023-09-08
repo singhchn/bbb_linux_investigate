@@ -1,0 +1,1 @@
+cmd_drivers/crypto/exynos-rng.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/exynos-rng.ko drivers/crypto/exynos-rng.o drivers/crypto/exynos-rng.mod.o;  true

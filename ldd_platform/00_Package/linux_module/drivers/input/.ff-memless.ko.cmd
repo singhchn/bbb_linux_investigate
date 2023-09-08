@@ -1,0 +1,1 @@
+cmd_drivers/input/ff-memless.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/ff-memless.ko drivers/input/ff-memless.o drivers/input/ff-memless.mod.o;  true

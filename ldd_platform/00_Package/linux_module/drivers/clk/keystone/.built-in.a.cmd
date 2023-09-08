@@ -1,0 +1,1 @@
+cmd_drivers/clk/keystone/built-in.a := rm -f drivers/clk/keystone/built-in.a;  printf "drivers/clk/keystone/%s " pll.o gate.o syscon-clk.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/keystone/built-in.a

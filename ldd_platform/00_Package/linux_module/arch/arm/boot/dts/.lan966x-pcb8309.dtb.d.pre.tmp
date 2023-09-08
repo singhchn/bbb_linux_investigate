@@ -1,0 +1,9 @@
+lan966x-pcb8309.o: arch/arm/boot/dts/lan966x-pcb8309.dts \
+ arch/arm/boot/dts/lan966x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/mfd/atmel-flexcom.h \
+ scripts/dtc/include-prefixes/dt-bindings/dma/at91.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/microchip,lan966x.h \
+ scripts/dtc/include-prefixes/dt-bindings/phy/phy-lan966x-serdes.h

@@ -1,0 +1,1731 @@
+# 1 "arch/arm/boot/dts/at91-sama7g5ek.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/at91-sama7g5ek.dts"
+# 11 "arch/arm/boot/dts/at91-sama7g5ek.dts"
+/dts-v1/;
+# 1 "arch/arm/boot/dts/sama7g5-pinfunc.h" 1
+# 13 "arch/arm/boot/dts/at91-sama7g5ek.dts" 2
+# 1 "arch/arm/boot/dts/sama7g5.dtsi" 1
+# 12 "arch/arm/boot/dts/sama7g5.dtsi"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 13 "arch/arm/boot/dts/sama7g5.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 14 "arch/arm/boot/dts/sama7g5.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/at91.h" 1
+# 15 "arch/arm/boot/dts/sama7g5.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/dma/at91.h" 1
+# 16 "arch/arm/boot/dts/sama7g5.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 17 "arch/arm/boot/dts/sama7g5.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/mfd/at91-usart.h" 1
+# 18 "arch/arm/boot/dts/sama7g5.dtsi" 2
+
+/ {
+ model = "Microchip SAMA7G5 family SoC";
+ compatible = "microchip,sama7g5";
+ #address-cells = <1>;
+ #size-cells = <1>;
+ interrupt-parent = <&gic>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu0: cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a7";
+   reg = <0x0>;
+   clocks = <&pmc 0 (3 + 1)>;
+   clock-names = "cpu";
+   operating-points-v2 = <&cpu_opp_table>;
+  };
+ };
+
+ cpu_opp_table: opp-table {
+  compatible = "operating-points-v2";
+
+  opp-90000000 {
+   opp-hz = /bits/ 64 <90000000>;
+   opp-microvolt = <1050000 1050000 1225000>;
+   clock-latency-ns = <320000>;
+  };
+
+  opp-250000000 {
+   opp-hz = /bits/ 64 <250000000>;
+   opp-microvolt = <1050000 1050000 1225000>;
+   clock-latency-ns = <320000>;
+  };
+
+  opp-600000000 {
+   opp-hz = /bits/ 64 <600000000>;
+   opp-microvolt = <1050000 1050000 1225000>;
+   clock-latency-ns = <320000>;
+   opp-suspend;
+  };
+
+  opp-800000000 {
+   opp-hz = /bits/ 64 <800000000>;
+   opp-microvolt = <1150000 1125000 1225000>;
+   clock-latency-ns = <320000>;
+  };
+
+  opp-1000000002 {
+   opp-hz = /bits/ 64 <1000000002>;
+   opp-microvolt = <1250000 1225000 1300000>;
+   clock-latency-ns = <320000>;
+  };
+ };
+
+ clocks {
+  slow_xtal: slow_xtal {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+  };
+
+  main_xtal: main_xtal {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+  };
+
+  usb_clk: usb_clk {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <48000000>;
+  };
+ };
+
+ vddout25: fixed-regulator-vddout25 {
+  compatible = "regulator-fixed";
+
+  regulator-name = "VDDOUT25";
+  regulator-min-microvolt = <2500000>;
+  regulator-max-microvolt = <2500000>;
+  regulator-boot-on;
+  status = "disabled";
+ };
+
+ ns_sram: sram@100000 {
+  compatible = "mmio-sram";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  reg = <0x100000 0x20000>;
+  ranges;
+ };
+
+ soc {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+  nfc_sram: sram@600000 {
+   compatible = "mmio-sram";
+   no-memory-wc;
+   reg = <0x00600000 0x2400>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0 0x00600000 0x2400>;
+  };
+
+  nfc_io: nfc-io@10000000 {
+   compatible = "atmel,sama5d3-nfc-io", "syscon";
+   reg = <0x10000000 0x8000000>;
+  };
+
+  ebi: ebi@40000000 {
+   compatible = "atmel,sama5d3-ebi";
+   #address-cells = <2>;
+   #size-cells = <1>;
+   atmel,smc = <&hsmc>;
+   reg = <0x40000000 0x20000000>;
+   ranges = <0x0 0x0 0x40000000 0x8000000
+      0x1 0x0 0x48000000 0x8000000
+      0x2 0x0 0x50000000 0x8000000
+      0x3 0x0 0x58000000 0x8000000>;
+   clocks = <&pmc 0 (3 + 10)>;
+   status = "disabled";
+
+   nand_controller: nand-controller {
+    compatible = "atmel,sama5d3-nand-controller";
+    atmel,nfc-sram = <&nfc_sram>;
+    atmel,nfc-io = <&nfc_io>;
+    ecc-engine = <&pmecc>;
+    #address-cells = <2>;
+    #size-cells = <1>;
+    ranges;
+    status = "disabled";
+   };
+  };
+
+  securam: securam@e0000000 {
+   compatible = "microchip,sama7g5-securam", "atmel,sama5d2-securam", "mmio-sram";
+   reg = <0xe0000000 0x4000>;
+   clocks = <&pmc 2 18>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0 0xe0000000 0x4000>;
+   no-memory-wc;
+  };
+
+  secumod: secumod@e0004000 {
+   compatible = "microchip,sama7g5-secumod", "atmel,sama5d2-secumod", "syscon";
+   reg = <0xe0004000 0x4000>;
+   gpio-controller;
+   #gpio-cells = <2>;
+  };
+
+  sfrbu: sfr@e0008000 {
+   compatible = "microchip,sama7g5-sfrbu", "atmel,sama5d2-sfrbu", "syscon";
+   reg = <0xe0008000 0x20>;
+  };
+
+  pioA: pinctrl@e0014000 {
+   compatible = "microchip,sama7g5-pinctrl";
+   reg = <0xe0014000 0x800>;
+   interrupts = <0 11 4>,
+    <0 12 4>,
+    <0 13 4>,
+    <0 14 4>,
+    <0 15 4>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+   gpio-controller;
+   #gpio-cells = <2>;
+   clocks = <&pmc 2 11>;
+  };
+
+  pmc: pmc@e0018000 {
+   compatible = "microchip,sama7g5-pmc", "syscon";
+   reg = <0xe0018000 0x200>;
+   interrupts = <0 10 4>;
+   #clock-cells = <2>;
+   clocks = <&clk32k 1>, <&clk32k 0>, <&main_xtal>;
+   clock-names = "td_slck", "md_slck", "main_xtal";
+  };
+
+  reset_controller: reset-controller@e001d000 {
+   compatible = "microchip,sama7g5-rstc";
+   reg = <0xe001d000 0xc>, <0xe001d0e4 0x4>;
+   #reset-cells = <1>;
+   clocks = <&clk32k 0>;
+  };
+
+  shdwc: shdwc@e001d010 {
+   compatible = "microchip,sama7g5-shdwc", "syscon";
+   reg = <0xe001d010 0x10>;
+   clocks = <&clk32k 0>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   atmel,wakeup-rtc-timer;
+   atmel,wakeup-rtt-timer;
+   status = "disabled";
+  };
+
+  rtt: rtc@e001d020 {
+   compatible = "microchip,sama7g5-rtt", "microchip,sam9x60-rtt", "atmel,at91sam9260-rtt";
+   reg = <0xe001d020 0x30>;
+   interrupts = <0 8 4>;
+   clocks = <&clk32k 0>;
+  };
+
+  clk32k: clock-controller@e001d050 {
+   compatible = "microchip,sama7g5-sckc", "microchip,sam9x60-sckc";
+   reg = <0xe001d050 0x4>;
+   clocks = <&slow_xtal>;
+   #clock-cells = <1>;
+  };
+
+  gpbr: gpbr@e001d060 {
+   compatible = "microchip,sama7g5-gpbr", "syscon";
+   reg = <0xe001d060 0x48>;
+  };
+
+  rtc: rtc@e001d0a8 {
+   compatible = "microchip,sama7g5-rtc", "microchip,sam9x60-rtc";
+   reg = <0xe001d0a8 0x30>;
+   interrupts = <0 7 4>;
+   clocks = <&clk32k 1>;
+  };
+
+  ps_wdt: watchdog@e001d180 {
+   compatible = "microchip,sama7g5-wdt";
+   reg = <0xe001d180 0x24>;
+   interrupts = <0 2 4>;
+   clocks = <&clk32k 0>;
+  };
+
+  chipid@e0020000 {
+   compatible = "microchip,sama7g5-chipid";
+   reg = <0xe0020000 0x8>;
+  };
+
+  tcb1: timer@e0800000 {
+   compatible = "atmel,sama5d2-tcb", "simple-mfd", "syscon";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0xe0800000 0x100>;
+   interrupts = <0 91 4>, <0 92 4>, <0 93 4>;
+   clocks = <&pmc 2 91>, <&pmc 2 92>, <&pmc 2 93>, <&clk32k 1>;
+   clock-names = "t0_clk", "t1_clk", "t2_clk", "slow_clk";
+  };
+
+  hsmc: hsmc@e0808000 {
+   compatible = "atmel,sama5d2-smc", "syscon", "simple-mfd";
+   reg = <0xe0808000 0x1000>;
+   interrupts = <0 21 4>;
+   clocks = <&pmc 2 21>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges;
+
+   pmecc: ecc-engine@e0808070 {
+    compatible = "atmel,sama5d2-pmecc";
+    reg = <0xe0808070 0x490>,
+          <0xe0808500 0x200>;
+   };
+  };
+
+  qspi0: spi@e080c000 {
+   compatible = "microchip,sama7g5-ospi";
+   reg = <0xe080c000 0x400>, <0x20000000 0x10000000>;
+   reg-names = "qspi_base", "qspi_mmap";
+   interrupts = <0 78 4>;
+   dmas = <&dma0 (((41) & (0x7f)) << (24))>,
+          <&dma0 (((40) & (0x7f)) << (24))>;
+   dma-names = "tx", "rx";
+   clocks = <&pmc 2 78>, <&pmc 3 78>;
+   clock-names = "pclk", "gclk";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  qspi1: spi@e0810000 {
+   compatible = "microchip,sama7g5-qspi";
+   reg = <0xe0810000 0x400>, <0x30000000 0x10000000>;
+   reg-names = "qspi_base", "qspi_mmap";
+   interrupts = <0 79 4>;
+   dmas = <&dma0 (((43) & (0x7f)) << (24))>,
+          <&dma0 (((42) & (0x7f)) << (24))>;
+   dma-names = "tx", "rx";
+   clocks = <&pmc 2 79>, <&pmc 3 79>;
+   clock-names = "pclk", "gclk";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  can0: can@e0828000 {
+   compatible = "bosch,m_can";
+   reg = <0xe0828000 0x100>, <0x100000 0x7800>;
+   reg-names = "m_can", "message_ram";
+   interrupts = <0 61 4
+          0 123 4>;
+   interrupt-names = "int0", "int1";
+   clocks = <&pmc 2 61>, <&pmc 3 61>;
+   clock-names = "hclk", "cclk";
+   assigned-clocks = <&pmc 3 61>;
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clock-rates = <40000000>;
+   bosch,mram-cfg = <0x3400 0 0 64 0 0 32 32>;
+   status = "disabled";
+  };
+
+  can1: can@e082c000 {
+   compatible = "bosch,m_can";
+   reg = <0xe082c000 0x100>, <0x100000 0xbc00>;
+   reg-names = "m_can", "message_ram";
+   interrupts = <0 62 4
+          0 124 4>;
+   interrupt-names = "int0", "int1";
+   clocks = <&pmc 2 62>, <&pmc 3 62>;
+   clock-names = "hclk", "cclk";
+   assigned-clocks = <&pmc 3 62>;
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clock-rates = <40000000>;
+   bosch,mram-cfg = <0x7800 0 0 64 0 0 32 32>;
+   status = "disabled";
+  };
+
+  can2: can@e0830000 {
+   compatible = "bosch,m_can";
+   reg = <0xe0830000 0x100>, <0x100000 0x10000>;
+   reg-names = "m_can", "message_ram";
+   interrupts = <0 63 4
+          0 125 4>;
+   interrupt-names = "int0", "int1";
+   clocks = <&pmc 2 63>, <&pmc 3 63>;
+   clock-names = "hclk", "cclk";
+   assigned-clocks = <&pmc 3 63>;
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clock-rates = <40000000>;
+   bosch,mram-cfg = <0xbc00 0 0 64 0 0 32 32>;
+   status = "disabled";
+  };
+
+  can3: can@e0834000 {
+   compatible = "bosch,m_can";
+   reg = <0xe0834000 0x100>, <0x110000 0x4400>;
+   reg-names = "m_can", "message_ram";
+   interrupts = <0 64 4
+          0 126 4>;
+   interrupt-names = "int0", "int1";
+   clocks = <&pmc 2 64>, <&pmc 3 64>;
+   clock-names = "hclk", "cclk";
+   assigned-clocks = <&pmc 3 64>;
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clock-rates = <40000000>;
+   bosch,mram-cfg = <0x0 0 0 64 0 0 32 32>;
+   status = "disabled";
+  };
+
+  can4: can@e0838000 {
+   compatible = "bosch,m_can";
+   reg = <0xe0838000 0x100>, <0x110000 0x8800>;
+   reg-names = "m_can", "message_ram";
+   interrupts = <0 65 4
+          0 127 4>;
+   interrupt-names = "int0", "int1";
+   clocks = <&pmc 2 65>, <&pmc 3 65>;
+   clock-names = "hclk", "cclk";
+   assigned-clocks = <&pmc 3 65>;
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clock-rates = <40000000>;
+   bosch,mram-cfg = <0x4400 0 0 64 0 0 32 32>;
+   status = "disabled";
+  };
+
+  can5: can@e083c000 {
+   compatible = "bosch,m_can";
+   reg = <0xe083c000 0x100>, <0x110000 0xcc00>;
+   reg-names = "m_can", "message_ram";
+   interrupts = <0 66 4
+          0 128 4>;
+   interrupt-names = "int0", "int1";
+   clocks = <&pmc 2 66>, <&pmc 3 66>;
+   clock-names = "hclk", "cclk";
+   assigned-clocks = <&pmc 3 66>;
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clock-rates = <40000000>;
+   bosch,mram-cfg = <0x8800 0 0 64 0 0 32 32>;
+   status = "disabled";
+  };
+
+  adc: adc@e1000000 {
+   compatible = "microchip,sama7g5-adc";
+   reg = <0xe1000000 0x200>;
+   interrupts = <0 26 4>;
+   clocks = <&pmc 3 26>;
+   assigned-clocks = <&pmc 3 26>;
+   assigned-clock-rates = <100000000>;
+   clock-names = "adc_clk";
+   dmas = <&dma0 (((0) & (0x7f)) << (24))>;
+   dma-names = "rx";
+   atmel,min-sample-rate-hz = <200000>;
+   atmel,max-sample-rate-hz = <20000000>;
+   atmel,startup-time-ms = <4>;
+   status = "disabled";
+  };
+
+  sdmmc0: mmc@e1204000 {
+   compatible = "microchip,sama7g5-sdhci", "microchip,sam9x60-sdhci";
+   reg = <0xe1204000 0x4000>;
+   interrupts = <0 80 4>;
+   clocks = <&pmc 2 80>, <&pmc 3 80>;
+   clock-names = "hclock", "multclk";
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clocks = <&pmc 3 80>;
+   assigned-clock-rates = <200000000>;
+   microchip,sdcal-inverted;
+   status = "disabled";
+  };
+
+  sdmmc1: mmc@e1208000 {
+   compatible = "microchip,sama7g5-sdhci", "microchip,sam9x60-sdhci";
+   reg = <0xe1208000 0x4000>;
+   interrupts = <0 81 4>;
+   clocks = <&pmc 2 81>, <&pmc 3 81>;
+   clock-names = "hclock", "multclk";
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clocks = <&pmc 3 81>;
+   assigned-clock-rates = <200000000>;
+   microchip,sdcal-inverted;
+   status = "disabled";
+  };
+
+  sdmmc2: mmc@e120c000 {
+   compatible = "microchip,sama7g5-sdhci", "microchip,sam9x60-sdhci";
+   reg = <0xe120c000 0x4000>;
+   interrupts = <0 82 4>;
+   clocks = <&pmc 2 82>, <&pmc 3 82>;
+   clock-names = "hclock", "multclk";
+   assigned-clock-parents = <&pmc 0 (3 + 2)>;
+   assigned-clocks = <&pmc 3 82>;
+   assigned-clock-rates = <200000000>;
+   microchip,sdcal-inverted;
+   status = "disabled";
+  };
+
+  pwm: pwm@e1604000 {
+   compatible = "microchip,sama7g5-pwm", "atmel,sama5d2-pwm";
+   reg = <0xe1604000 0x4000>;
+   interrupts = <0 77 4>;
+   #pwm-cells = <3>;
+   clocks = <&pmc 2 77>;
+   status = "disabled";
+  };
+
+  pdmc0: sound@e1608000 {
+   compatible = "microchip,sama7g5-pdmc";
+   reg = <0xe1608000 0x1000>;
+   interrupts = <0 68 4>;
+   #sound-dai-cells = <0>;
+   dmas = <&dma0 (((37) & (0x7f)) << (24))>;
+   dma-names = "rx";
+   clocks = <&pmc 2 68>, <&pmc 3 68>;
+   clock-names = "pclk", "gclk";
+   status = "disabled";
+  };
+
+  pdmc1: sound@e160c000 {
+   compatible = "microchip,sama7g5-pdmc";
+   reg = <0xe160c000 0x1000>;
+   interrupts = <0 69 4>;
+   #sound-dai-cells = <0>;
+   dmas = <&dma0 (((38) & (0x7f)) << (24))>;
+   dma-names = "rx";
+   clocks = <&pmc 2 69>, <&pmc 3 69>;
+   clock-names = "pclk", "gclk";
+   status = "disabled";
+  };
+
+  spdifrx: spdifrx@e1614000 {
+   #sound-dai-cells = <0>;
+   compatible = "microchip,sama7g5-spdifrx";
+   reg = <0xe1614000 0x4000>;
+   interrupts = <0 84 4>;
+   dmas = <&dma0 (((49) & (0x7f)) << (24))>;
+   dma-names = "rx";
+   clocks = <&pmc 2 84>, <&pmc 3 84>;
+   clock-names = "pclk", "gclk";
+   status = "disabled";
+  };
+
+  spdiftx: spdiftx@e1618000 {
+   #sound-dai-cells = <0>;
+   compatible = "microchip,sama7g5-spdiftx";
+   reg = <0xe1618000 0x4000>;
+   interrupts = <0 85 4>;
+   dmas = <&dma0 (((50) & (0x7f)) << (24))>;
+   dma-names = "tx";
+   clocks = <&pmc 2 85>, <&pmc 3 85>;
+   clock-names = "pclk", "gclk";
+  };
+
+  i2s0: i2s@e161c000 {
+   compatible = "microchip,sama7g5-i2smcc";
+   #sound-dai-cells = <0>;
+   reg = <0xe161c000 0x4000>;
+   interrupts = <0 57 4>;
+   dmas = <&dma0 (((34) & (0x7f)) << (24))>, <&dma0 (((33) & (0x7f)) << (24))>;
+   dma-names = "tx", "rx";
+   clocks = <&pmc 2 57>, <&pmc 3 57>;
+   clock-names = "pclk", "gclk";
+   status = "disabled";
+  };
+
+  i2s1: i2s@e1620000 {
+   compatible = "microchip,sama7g5-i2smcc";
+   #sound-dai-cells = <0>;
+   reg = <0xe1620000 0x4000>;
+   interrupts = <0 58 4>;
+   dmas = <&dma0 (((36) & (0x7f)) << (24))>, <&dma0 (((35) & (0x7f)) << (24))>;
+   dma-names = "tx", "rx";
+   clocks = <&pmc 2 58>, <&pmc 3 58>;
+   clock-names = "pclk", "gclk";
+   status = "disabled";
+  };
+
+  eic: interrupt-controller@e1628000 {
+   compatible = "microchip,sama7g5-eic";
+   reg = <0xe1628000 0xec>;
+   interrupt-parent = <&gic>;
+   interrupt-controller;
+   #interrupt-cells = <2>;
+   interrupts = <0 153 4>,
+         <0 154 4>;
+   clocks = <&pmc 2 37>;
+   clock-names = "pclk";
+   status = "disabled";
+  };
+
+  pit64b0: timer@e1800000 {
+   compatible = "microchip,sama7g5-pit64b", "microchip,sam9x60-pit64b";
+   reg = <0xe1800000 0x4000>;
+   interrupts = <0 70 4>;
+   clocks = <&pmc 2 70>, <&pmc 3 70>;
+   clock-names = "pclk", "gclk";
+  };
+
+  pit64b1: timer@e1804000 {
+   compatible = "microchip,sama7g5-pit64b", "microchip,sam9x60-pit64b";
+   reg = <0xe1804000 0x4000>;
+   interrupts = <0 71 4>;
+   clocks = <&pmc 2 71>, <&pmc 3 71>;
+   clock-names = "pclk", "gclk";
+  };
+
+  aes: crypto@e1810000 {
+   compatible = "atmel,at91sam9g46-aes";
+   reg = <0xe1810000 0x100>;
+   interrupts = <0 27 4>;
+   clocks = <&pmc 2 27>;
+   clock-names = "aes_clk";
+   dmas = <&dma0 (((1) & (0x7f)) << (24))>,
+          <&dma0 (((2) & (0x7f)) << (24))>;
+   dma-names = "tx", "rx";
+  };
+
+  sha: crypto@e1814000 {
+   compatible = "atmel,at91sam9g46-sha";
+   reg = <0xe1814000 0x100>;
+   interrupts = <0 83 4>;
+   clocks = <&pmc 2 83>;
+   clock-names = "sha_clk";
+   dmas = <&dma0 (((48) & (0x7f)) << (24))>;
+   dma-names = "tx";
+  };
+
+  flx0: flexcom@e1818000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe1818000 0x200>;
+   clocks = <&pmc 2 38>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe1818000 0x800>;
+   status = "disabled";
+
+   uart0: serial@200 {
+    compatible = "atmel,at91sam9260-usart";
+    reg = <0x200 0x200>;
+    atmel,usart-mode = <0>;
+    interrupts = <0 38 4>;
+    clocks = <&pmc 2 38>;
+    clock-names = "usart";
+    dmas = <&dma1 (((6) & (0x7f)) << (24))>,
+     <&dma1 (((5) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    atmel,use-dma-rx;
+    atmel,use-dma-tx;
+    status = "disabled";
+   };
+  };
+
+  flx1: flexcom@e181c000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe181c000 0x200>;
+   clocks = <&pmc 2 39>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe181c000 0x800>;
+   status = "disabled";
+
+   i2c1: i2c@600 {
+    compatible = "microchip,sama7g5-i2c", "microchip,sam9x60-i2c";
+    reg = <0x600 0x200>;
+    interrupts = <0 39 4>;
+    #address-cells = <1>;
+    #size-cells = <0>;
+    clocks = <&pmc 2 39>;
+    atmel,fifo-size = <32>;
+    dmas = <&dma0 (((8) & (0x7f)) << (24))>,
+     <&dma0 (((7) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    status = "disabled";
+   };
+  };
+
+  flx3: flexcom@e1824000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe1824000 0x200>;
+   clocks = <&pmc 2 41>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe1824000 0x800>;
+   status = "disabled";
+
+   uart3: serial@200 {
+    compatible = "atmel,at91sam9260-usart";
+    reg = <0x200 0x200>;
+    atmel,usart-mode = <0>;
+    interrupts = <0 41 4>;
+    clocks = <&pmc 2 41>;
+    clock-names = "usart";
+    dmas = <&dma1 (((12) & (0x7f)) << (24))>,
+     <&dma1 (((11) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    atmel,use-dma-rx;
+    atmel,use-dma-tx;
+    status = "disabled";
+   };
+  };
+
+  trng: rng@e2010000 {
+   compatible = "microchip,sama7g5-trng", "atmel,at91sam9g45-trng";
+   reg = <0xe2010000 0x100>;
+   interrupts = <0 97 4>;
+   clocks = <&pmc 2 97>;
+   status = "disabled";
+  };
+
+  tdes: crypto@e2014000 {
+   compatible = "atmel,at91sam9g46-tdes";
+   reg = <0xe2014000 0x100>;
+   interrupts = <0 96 4>;
+   clocks = <&pmc 2 96>;
+   clock-names = "tdes_clk";
+   dmas = <&dma0 (((54) & (0x7f)) << (24))>,
+          <&dma0 (((53) & (0x7f)) << (24))>;
+   dma-names = "tx", "rx";
+  };
+
+  flx4: flexcom@e2018000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe2018000 0x200>;
+   clocks = <&pmc 2 42>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe2018000 0x800>;
+   status = "disabled";
+
+   uart4: serial@200 {
+    compatible = "atmel,at91sam9260-usart";
+    reg = <0x200 0x200>;
+    atmel,usart-mode = <0>;
+    interrupts = <0 42 4>;
+    clocks = <&pmc 2 42>;
+    clock-names = "usart";
+    dmas = <&dma1 (((14) & (0x7f)) << (24))>,
+     <&dma1 (((13) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    atmel,use-dma-rx;
+    atmel,use-dma-tx;
+    atmel,fifo-size = <16>;
+    status = "disabled";
+   };
+  };
+
+  flx7: flexcom@e2024000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe2024000 0x200>;
+   clocks = <&pmc 2 45>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe2024000 0x800>;
+   status = "disabled";
+
+   uart7: serial@200 {
+    compatible = "atmel,at91sam9260-usart";
+    reg = <0x200 0x200>;
+    atmel,usart-mode = <0>;
+    interrupts = <0 45 4>;
+    clocks = <&pmc 2 45>;
+    clock-names = "usart";
+    dmas = <&dma1 (((20) & (0x7f)) << (24))>,
+     <&dma1 (((19) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    atmel,use-dma-rx;
+    atmel,use-dma-tx;
+    atmel,fifo-size = <16>;
+    status = "disabled";
+   };
+  };
+
+  gmac0: ethernet@e2800000 {
+   compatible = "microchip,sama7g5-gem";
+   reg = <0xe2800000 0x1000>;
+   interrupts = <0 51 4
+          0 116 4
+          0 117 4
+          0 118 4
+          0 119 4
+          0 120 4>;
+   clocks = <&pmc 2 51>, <&pmc 2 51>, <&pmc 3 51>, <&pmc 3 53>;
+   clock-names = "pclk", "hclk", "tx_clk", "tsu_clk";
+   assigned-clocks = <&pmc 3 51>;
+   assigned-clock-rates = <125000000>;
+   status = "disabled";
+  };
+
+  gmac1: ethernet@e2804000 {
+   compatible = "microchip,sama7g5-emac";
+   reg = <0xe2804000 0x1000>;
+   interrupts = <0 52 4
+          0 121 4>;
+   clocks = <&pmc 2 52>, <&pmc 2 52>;
+   clock-names = "pclk", "hclk";
+   status = "disabled";
+  };
+
+  dma0: dma-controller@e2808000 {
+   compatible = "microchip,sama7g5-dma";
+   reg = <0xe2808000 0x1000>;
+   interrupts = <0 112 4>;
+   #dma-cells = <1>;
+   clocks = <&pmc 2 22>;
+   clock-names = "dma_clk";
+   status = "disabled";
+  };
+
+  dma1: dma-controller@e280c000 {
+   compatible = "microchip,sama7g5-dma";
+   reg = <0xe280c000 0x1000>;
+   interrupts = <0 113 4>;
+   #dma-cells = <1>;
+   clocks = <&pmc 2 23>;
+   clock-names = "dma_clk";
+   status = "disabled";
+  };
+
+
+  dma2: dma-controller@e1200000 {
+   compatible = "microchip,sama7g5-dma";
+   reg = <0xe1200000 0x1000>;
+   interrupts = <0 114 4>;
+   #dma-cells = <1>;
+   clocks = <&pmc 2 24>;
+   clock-names = "dma_clk";
+   dma-requests = <0>;
+   status = "disabled";
+  };
+
+  tcb0: timer@e2814000 {
+   compatible = "atmel,sama5d2-tcb", "simple-mfd", "syscon";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0xe2814000 0x100>;
+   interrupts = <0 88 4>, <0 89 4>, <0 90 4>;
+   clocks = <&pmc 2 88>, <&pmc 2 89>, <&pmc 2 90>, <&clk32k 1>;
+   clock-names = "t0_clk", "t1_clk", "t2_clk", "slow_clk";
+  };
+
+  flx8: flexcom@e2818000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe2818000 0x200>;
+   clocks = <&pmc 2 46>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe2818000 0x800>;
+   status = "disabled";
+
+   i2c8: i2c@600 {
+    compatible = "microchip,sama7g5-i2c", "microchip,sam9x60-i2c";
+    reg = <0x600 0x200>;
+    interrupts = <0 46 4>;
+    #address-cells = <1>;
+    #size-cells = <0>;
+    clocks = <&pmc 2 46>;
+    atmel,fifo-size = <32>;
+    dmas = <&dma0 (((22) & (0x7f)) << (24))>,
+     <&dma0 (((21) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    status = "disabled";
+   };
+  };
+
+  flx9: flexcom@e281c000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe281c000 0x200>;
+   clocks = <&pmc 2 47>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe281c000 0x800>;
+   status = "disabled";
+
+   i2c9: i2c@600 {
+    compatible = "microchip,sama7g5-i2c", "microchip,sam9x60-i2c";
+    reg = <0x600 0x200>;
+    interrupts = <0 47 4>;
+    #address-cells = <1>;
+    #size-cells = <0>;
+    clocks = <&pmc 2 47>;
+    atmel,fifo-size = <32>;
+    dmas = <&dma0 (((24) & (0x7f)) << (24))>,
+     <&dma0 (((23) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    status = "disabled";
+   };
+  };
+
+  flx11: flexcom@e2824000 {
+   compatible = "atmel,sama5d2-flexcom";
+   reg = <0xe2824000 0x200>;
+   clocks = <&pmc 2 49>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   ranges = <0x0 0xe2824000 0x800>;
+   status = "disabled";
+
+   spi11: spi@400 {
+    compatible = "atmel,at91rm9200-spi";
+    reg = <0x400 0x200>;
+    interrupts = <0 49 4>;
+    clocks = <&pmc 2 49>;
+    clock-names = "spi_clk";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    atmel,fifo-size = <32>;
+    dmas = <&dma0 (((28) & (0x7f)) << (24))>,
+         <&dma0 (((27) & (0x7f)) << (24))>;
+    dma-names = "tx", "rx";
+    status = "disabled";
+   };
+  };
+
+  uddrc: uddrc@e3800000 {
+   compatible = "microchip,sama7g5-uddrc";
+   reg = <0xe3800000 0x4000>;
+  };
+
+  ddr3phy: ddr3phy@e3804000 {
+   compatible = "microchip,sama7g5-ddr3phy";
+   reg = <0xe3804000 0x1000>;
+  };
+
+  gic: interrupt-controller@e8c11000 {
+   compatible = "arm,cortex-a7-gic";
+   #interrupt-cells = <3>;
+   #address-cells = <0>;
+   interrupt-controller;
+   reg = <0xe8c11000 0x1000>,
+    <0xe8c12000 0x2000>;
+  };
+ };
+};
+# 14 "arch/arm/boot/dts/at91-sama7g5ek.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/mfd/atmel-flexcom.h" 1
+# 15 "arch/arm/boot/dts/at91-sama7g5ek.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 1
+# 13 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h" 1
+# 14 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 2
+# 16 "arch/arm/boot/dts/at91-sama7g5ek.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/at91.h" 1
+# 17 "arch/arm/boot/dts/at91-sama7g5ek.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/sound/microchip,pdmc.h" 1
+# 18 "arch/arm/boot/dts/at91-sama7g5ek.dts" 2
+
+/ {
+ model = "Microchip SAMA7G5-EK";
+ compatible = "microchip,sama7g5ek", "microchip,sama7g5", "microchip,sama7";
+
+ chosen {
+  bootargs = "rw root=/dev/mmcblk1p2 rootfstype=ext4 rootwait";
+  stdout-path = "serial0:115200n8";
+ };
+
+ aliases {
+  serial0 = &uart3;
+  serial1 = &uart4;
+  serial2 = &uart7;
+  serial3 = &uart0;
+  i2c0 = &i2c1;
+  i2c1 = &i2c8;
+  i2c2 = &i2c9;
+ };
+
+ clocks {
+  slow_xtal {
+   clock-frequency = <32768>;
+  };
+
+  main_xtal {
+   clock-frequency = <24000000>;
+  };
+ };
+
+ gpio-keys {
+  compatible = "gpio-keys";
+
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_key_gpio_default>;
+
+  button {
+   label = "PB_USER";
+   gpios = <&pioA 12 1>;
+   linux,code = <148>;
+   wakeup-source;
+  };
+ };
+
+ leds {
+  compatible = "gpio-leds";
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_led_gpio_default>;
+  status = "okay";
+
+  red_led {
+   label = "red";
+   gpios = <&pioA 40 0>;
+  };
+
+  green_led {
+   label = "green";
+   gpios = <&pioA 13 0>;
+  };
+
+  blue_led {
+   label = "blue";
+   gpios = <&pioA 116 0>;
+   linux,default-trigger = "heartbeat";
+  };
+ };
+
+
+ memory@60000000 {
+  device_type = "memory";
+  reg = <0x60000000 0x20000000>;
+ };
+
+ sound: sound {
+  compatible = "simple-audio-card";
+  simple-audio-card,name = "sama7g5ek audio";
+  #address-cells = <1>;
+  #size-cells = <0>;
+  simple-audio-card,dai-link@0 {
+   reg = <0>;
+   cpu {
+    sound-dai = <&spdiftx>;
+   };
+   codec {
+    sound-dai = <&spdif_out>;
+   };
+  };
+  simple-audio-card,dai-link@1 {
+   reg = <1>;
+   cpu {
+    sound-dai = <&spdifrx>;
+   };
+   codec {
+    sound-dai = <&spdif_in>;
+   };
+  };
+ };
+
+ spdif_in: spdif-in {
+  #sound-dai-cells = <0>;
+  compatible = "linux,spdif-dir";
+ };
+
+ spdif_out: spdif-out {
+  #sound-dai-cells = <0>;
+  compatible = "linux,spdif-dit";
+ };
+};
+
+&adc {
+ vddana-supply = <&vddout25>;
+ vref-supply = <&vddout25>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_mikrobus1_an_default &pinctrl_mikrobus2_an_default>;
+ status = "okay";
+};
+
+&can0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_can0_default>;
+ status = "okay";
+};
+
+&can1 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_can1_default>;
+ status = "okay";
+};
+
+&cpu0 {
+ cpu-supply = <&vddcpu>;
+};
+
+&qspi0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_qspi>;
+ status = "okay";
+
+ flash@0 {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "jedec,spi-nor";
+  reg = <0>;
+  spi-max-frequency = <133000000>;
+  spi-tx-bus-width = <8>;
+  spi-rx-bus-width = <8>;
+  m25p,fast-read;
+
+  at91bootstrap@0 {
+   label = "ospi: at91bootstrap";
+   reg = <0x0 0x40000>;
+  };
+
+  bootloader@40000 {
+   label = "ospi: bootloader";
+   reg = <0x40000 0xc0000>;
+  };
+
+  bootloaderenvred@100000 {
+   label = "ospi: bootloader env redundant";
+   reg = <0x100000 0x40000>;
+  };
+
+  bootloaderenv@140000 {
+   label = "ospi: bootloader env";
+   reg = <0x140000 0x40000>;
+  };
+
+  dtb@180000 {
+   label = "ospi: device tree";
+   reg = <0x180000 0x80000>;
+  };
+
+  kernel@200000 {
+   label = "ospi: kernel";
+   reg = <0x200000 0x600000>;
+  };
+
+  rootfs@800000 {
+   label = "ospi: rootfs";
+   reg = <0x800000 0x7800000>;
+  };
+
+ };
+};
+
+&dma0 {
+ status = "okay";
+};
+
+&dma1 {
+ status = "okay";
+};
+
+&dma2 {
+ status = "okay";
+};
+
+&flx0 {
+ atmel,flexcom-mode = <1>;
+ status = "disabled";
+
+ uart0: serial@200 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_flx0_default>;
+  status = "disabled";
+ };
+};
+
+&flx1 {
+ atmel,flexcom-mode = <3>;
+ status = "okay";
+
+ i2c1: i2c@600 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_i2c1_default>;
+  i2c-analog-filter;
+  i2c-digital-filter;
+  i2c-digital-filter-width-ns = <35>;
+  status = "okay";
+
+  mcp16502@5b {
+   compatible = "microchip,mcp16502";
+   reg = <0x5b>;
+   status = "okay";
+
+   regulators {
+    vdd_3v3: VDD_IO {
+     regulator-name = "VDD_IO";
+     regulator-min-microvolt = <3300000>;
+     regulator-max-microvolt = <3300000>;
+     regulator-initial-mode = <2>;
+     regulator-allowed-modes = <2>, <4>;
+     regulator-always-on;
+
+     regulator-state-standby {
+      regulator-on-in-suspend;
+      regulator-suspend-microvolt = <3300000>;
+      regulator-mode = <4>;
+     };
+
+     regulator-state-mem {
+      regulator-off-in-suspend;
+      regulator-mode = <4>;
+     };
+    };
+
+    vddioddr: VDD_DDR {
+     regulator-name = "VDD_DDR";
+     regulator-min-microvolt = <1350000>;
+     regulator-max-microvolt = <1350000>;
+     regulator-initial-mode = <2>;
+     regulator-allowed-modes = <2>, <4>;
+     regulator-always-on;
+
+     regulator-state-standby {
+      regulator-on-in-suspend;
+      regulator-suspend-microvolt = <1350000>;
+      regulator-mode = <4>;
+     };
+
+     regulator-state-mem {
+      regulator-on-in-suspend;
+      regulator-suspend-microvolt = <1350000>;
+      regulator-mode = <4>;
+     };
+    };
+
+    vddcore: VDD_CORE {
+     regulator-name = "VDD_CORE";
+     regulator-min-microvolt = <1150000>;
+     regulator-max-microvolt = <1150000>;
+     regulator-initial-mode = <2>;
+     regulator-allowed-modes = <2>, <4>;
+     regulator-always-on;
+
+     regulator-state-standby {
+      regulator-on-in-suspend;
+      regulator-suspend-voltage = <1150000>;
+      regulator-mode = <4>;
+     };
+
+     regulator-state-mem {
+      regulator-off-in-suspend;
+      regulator-mode = <4>;
+     };
+    };
+
+    vddcpu: VDD_OTHER {
+     regulator-name = "VDD_OTHER";
+     regulator-min-microvolt = <1050000>;
+     regulator-max-microvolt = <1250000>;
+     regulator-initial-mode = <2>;
+     regulator-allowed-modes = <2>, <4>;
+     regulator-ramp-delay = <3125>;
+     regulator-always-on;
+
+     regulator-state-standby {
+      regulator-on-in-suspend;
+      regulator-suspend-voltage = <1050000>;
+      regulator-mode = <4>;
+     };
+
+     regulator-state-mem {
+      regulator-off-in-suspend;
+      regulator-mode = <4>;
+     };
+    };
+
+    vldo1: LDO1 {
+     regulator-name = "LDO1";
+     regulator-min-microvolt = <1800000>;
+     regulator-max-microvolt = <1800000>;
+     regulator-always-on;
+
+     regulator-state-standby {
+      regulator-suspend-voltage = <1800000>;
+      regulator-on-in-suspend;
+     };
+
+     regulator-state-mem {
+      regulator-off-in-suspend;
+     };
+    };
+
+    vldo2: LDO2 {
+     regulator-name = "LDO2";
+     regulator-min-microvolt = <1200000>;
+     regulator-max-microvolt = <3700000>;
+
+     regulator-state-standby {
+      regulator-suspend-voltage = <1800000>;
+      regulator-on-in-suspend;
+     };
+
+     regulator-state-mem {
+      regulator-off-in-suspend;
+     };
+    };
+   };
+  };
+ };
+};
+
+&flx3 {
+ atmel,flexcom-mode = <1>;
+ status = "okay";
+
+ uart3: serial@200 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_flx3_default>;
+  status = "okay";
+ };
+};
+
+&flx4 {
+ atmel,flexcom-mode = <1>;
+ status = "okay";
+
+ uart4: serial@200 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_flx4_default>;
+  status = "okay";
+ };
+};
+
+&flx7 {
+ atmel,flexcom-mode = <1>;
+ status = "okay";
+
+ uart7: serial@200 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_flx7_default>;
+  status = "okay";
+ };
+};
+
+&flx8 {
+ atmel,flexcom-mode = <3>;
+ status = "okay";
+
+ i2c8: i2c@600 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_i2c8_default>;
+  i2c-analog-filter;
+  i2c-digital-filter;
+  i2c-digital-filter-width-ns = <35>;
+  status = "okay";
+ };
+};
+
+&flx9 {
+ atmel,flexcom-mode = <3>;
+ status = "okay";
+
+ i2c9: i2c@600 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_i2c9_default>;
+  i2c-analog-filter;
+  i2c-digital-filter;
+  i2c-digital-filter-width-ns = <35>;
+  status = "okay";
+ };
+};
+
+&flx11 {
+ atmel,flexcom-mode = <2>;
+ status = "okay";
+
+ spi11: spi@400 {
+  pinctrl-names = "default";
+  pinctrl-0 = <&pinctrl_mikrobus1_spi &pinctrl_mikrobus1_spi_cs>;
+  status = "okay";
+ };
+};
+
+&gmac0 {
+ #address-cells = <1>;
+ #size-cells = <0>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_gmac0_default
+       &pinctrl_gmac0_mdio_default
+       &pinctrl_gmac0_txck_default
+       &pinctrl_gmac0_phy_irq>;
+ phy-mode = "rgmii-id";
+ status = "okay";
+
+ ethernet-phy@7 {
+  reg = <0x7>;
+  interrupt-parent = <&pioA>;
+  interrupts = <31 8>;
+ };
+};
+
+&gmac1 {
+ #address-cells = <1>;
+ #size-cells = <0>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_gmac1_default
+       &pinctrl_gmac1_mdio_default
+       &pinctrl_gmac1_phy_irq>;
+ phy-mode = "rmii";
+ status = "okay";
+
+ ethernet-phy@0 {
+  reg = <0x0>;
+  interrupt-parent = <&pioA>;
+  interrupts = <21 8>;
+ };
+};
+
+&i2s0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_i2s0_default>;
+};
+
+&pdmc0 {
+ #sound-dai-cells = <0>;
+ microchip,mic-pos = <0 1>,
+       <1 1>,
+       <0 0>,
+       <1 0>;
+ status = "disabled";
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_pdmc0_default>;
+};
+
+&pioA {
+
+ pinctrl_can0_default: can0_default {
+  pinmux = <(((108) & 0xffff) | (((4) & 0xf) << 16) | (((2) & 0xff) << 20))>,
+    <(((109) & 0xffff) | (((4) & 0xf) << 16) | (((2) & 0xff) << 20)) >;
+  bias-disable;
+ };
+
+ pinctrl_can1_default: can1_default {
+  pinmux = <(((110) & 0xffff) | (((4) & 0xf) << 16) | (((2) & 0xff) << 20))>,
+    <(((111) & 0xffff) | (((4) & 0xf) << 16) | (((2) & 0xff) << 20)) >;
+  bias-disable;
+ };
+
+ pinctrl_flx0_default: flx0_default {
+  pinmux = <(((131) & 0xffff) | (((2) & 0xf) << 16) | (((4) & 0xff) << 20))>,
+    <(((132) & 0xffff) | (((2) & 0xf) << 16) | (((4) & 0xff) << 20))>,
+    <(((134) & 0xffff) | (((2) & 0xf) << 16) | (((4) & 0xff) << 20))>,
+    <(((135) & 0xffff) | (((2) & 0xf) << 16) | (((4) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_flx3_default: flx3_default {
+  pinmux = <(((112) & 0xffff) | (((6) & 0xf) << 16) | (((5) & 0xff) << 20))>,
+    <(((113) & 0xffff) | (((6) & 0xf) << 16) | (((5) & 0xff) << 20))>;
+  bias-pull-up;
+ };
+
+ pinctrl_flx4_default: flx4_default {
+  pinmux = <(((114) & 0xffff) | (((6) & 0xf) << 16) | (((5) & 0xff) << 20))>,
+    <(((115) & 0xffff) | (((6) & 0xf) << 16) | (((5) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_flx7_default: flx7_default {
+  pinmux = <(((87) & 0xffff) | (((6) & 0xf) << 16) | (((5) & 0xff) << 20))>,
+    <(((88) & 0xffff) | (((6) & 0xf) << 16) | (((5) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_gmac0_default: gmac0_default {
+  pinmux = <(((16) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((17) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((26) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((27) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((19) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((20) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((28) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((29) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((15) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((30) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((18) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((25) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  slew-rate = <0>;
+  bias-disable;
+ };
+
+ pinctrl_gmac0_mdio_default: gmac0_mdio_default {
+  pinmux = <(((22) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((23) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_gmac0_txck_default: gmac0_txck_default {
+  pinmux = <(((24) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  slew-rate = <0>;
+  bias-pull-up;
+ };
+
+ pinctrl_gmac0_phy_irq: gmac0_phy_irq {
+  pinmux = <(((31) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_gmac1_default: gmac1_default {
+  pinmux = <(((126) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((118) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((119) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((117) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((121) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((122) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((123) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((120) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  slew-rate = <0>;
+  bias-disable;
+ };
+
+ pinctrl_gmac1_mdio_default: gmac1_mdio_default {
+  pinmux = <(((124) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((125) & 0xffff) | (((7) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_gmac1_phy_irq: gmac1_phy_irq {
+  pinmux = <(((21) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_i2c1_default: i2c1_default {
+  pinmux = <(((73) & 0xffff) | (((6) & 0xf) << 16) | (((4) & 0xff) << 20))>,
+    <(((74) & 0xffff) | (((6) & 0xf) << 16) | (((4) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_i2c8_default: i2c8_default {
+  pinmux = <(((78) & 0xffff) | (((2) & 0xf) << 16) | (((2) & 0xff) << 20))>,
+    <(((77) & 0xffff) | (((2) & 0xf) << 16) | (((2) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_i2c9_default: i2c9_default {
+  pinmux = <(((82) & 0xffff) | (((2) & 0xf) << 16) | (((2) & 0xff) << 20))>,
+    <(((83) & 0xffff) | (((2) & 0xf) << 16) | (((2) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_i2s0_default: i2s0_default {
+  pinmux = <(((55) & 0xffff) | (((3) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((56) & 0xffff) | (((3) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((57) & 0xffff) | (((3) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((58) & 0xffff) | (((3) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((59) & 0xffff) | (((3) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_key_gpio_default: key_gpio_default {
+  pinmux = <(((12) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>;
+  bias-pull-up;
+ };
+
+ pinctrl_led_gpio_default: led_gpio_default {
+  pinmux = <(((13) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>,
+    <(((40) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>,
+    <(((116) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>;
+  bias-pull-up;
+ };
+
+ pinctrl_mikrobus1_an_default: mikrobus1_an_default {
+  pinmux = <(((96) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_mikrobus2_an_default: mikrobus2_an_default {
+  pinmux = <(((97) & 0xffff) | (((0) & 0xf) << 16) | (((0) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_mikrobus1_pwm2_default: mikrobus1_pwm2_default {
+  pinmux = <(((13) & 0xffff) | (((5) & 0xf) << 16) | (((3) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_mikrobus2_pwm3_default: mikrobus2_pwm3_default {
+  pinmux = <(((116) & 0xffff) | (((3) & 0xf) << 16) | (((4) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_mikrobus1_spi_cs: mikrobus1_spi_cs {
+  pinmux = <(((38) & 0xffff) | (((2) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_mikrobus1_spi: mikrobus1_spi {
+  pinmux = <(((35) & 0xffff) | (((2) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((36) & 0xffff) | (((2) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((37) & 0xffff) | (((2) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_pdmc0_default: pdmc0_default {
+  pinmux = <(((119) & 0xffff) | (((1) & 0xf) << 16) | (((2) & 0xff) << 20))>,
+    <(((120) & 0xffff) | (((1) & 0xf) << 16) | (((2) & 0xff) << 20))>,
+    <(((118) & 0xffff) | (((1) & 0xf) << 16) | (((2) & 0xff) << 20))>;
+  bias_disable;
+ };
+
+ pinctrl_qspi: qspi {
+  pinmux = <(((44) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((43) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((42) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((41) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((48) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((49) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((50) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((51) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((45) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((46) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((47) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((52) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+    <(((53) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+  bias-disable;
+  slew-rate = <0>;
+  atmel,drive-strength = <2>;
+ };
+
+ pinctrl_sdmmc0_default: sdmmc0_default {
+  cmd_data {
+   pinmux = <(((1) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((3) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((4) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((5) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((6) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((7) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((8) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((9) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((10) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+   slew-rate = <0>;
+   bias-pull-up;
+  };
+
+  ck_cd_rstn_vddsel {
+   pinmux = <(((0) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((2) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((11) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+   slew-rate = <0>;
+   bias-pull-up;
+  };
+ };
+
+ pinctrl_sdmmc1_default: sdmmc1_default {
+  cmd_data {
+   pinmux = <(((61) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((63) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((64) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((65) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((66) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+   slew-rate = <0>;
+   bias-pull-up;
+  };
+
+  ck_cd_rstn_vddsel {
+   pinmux = <(((62) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((60) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((69) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((68) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+   slew-rate = <0>;
+   bias-pull-up;
+  };
+ };
+
+ pinctrl_sdmmc2_default: sdmmc2_default {
+  cmd_data {
+   pinmux = <(((99) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((101) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((102) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((103) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>,
+     <(((104) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+   slew-rate = <0>;
+   bias-pull-up;
+  };
+
+  ck {
+   pinmux = <(((100) & 0xffff) | (((1) & 0xf) << 16) | (((1) & 0xff) << 20))>;
+   slew-rate = <0>;
+   bias-pull-up;
+  };
+ };
+
+ pinctrl_spdifrx_default: spdifrx_default {
+  pinmux = <(((32) & 0xffff) | (((5) & 0xf) << 16) | (((2) & 0xff) << 20))>;
+  bias-disable;
+ };
+
+ pinctrl_spdiftx_default: spdiftx_default {
+  pinmux = <(((33) & 0xffff) | (((5) & 0xf) << 16) | (((2) & 0xff) << 20))>;
+  bias-disable;
+ };
+};
+
+&pwm {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_mikrobus1_pwm2_default &pinctrl_mikrobus2_pwm3_default>;
+ status = "disabled";
+};
+
+&rtt {
+ atmel,rtt-rtc-time-reg = <&gpbr 0x0>;
+};
+
+&sdmmc0 {
+ bus-width = <8>;
+ non-removable;
+ no-1-8-v;
+ sdhci-caps-mask = <0x0 0x00200000>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_sdmmc0_default>;
+ status = "okay";
+};
+
+&sdmmc1 {
+ bus-width = <4>;
+ no-1-8-v;
+ sdhci-caps-mask = <0x0 0x00200000>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_sdmmc1_default>;
+ status = "okay";
+};
+
+&sdmmc2 {
+ bus-width = <4>;
+ no-1-8-v;
+ sdhci-caps-mask = <0x0 0x00200000>;
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_sdmmc2_default>;
+};
+
+&shdwc {
+ debounce-delay-us = <976>;
+ status = "okay";
+
+ input@0 {
+  reg = <0>;
+ };
+};
+
+&spdifrx {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_spdifrx_default>;
+ status = "okay";
+};
+
+&spdiftx {
+ pinctrl-names = "default";
+ pinctrl-0 = <&pinctrl_spdiftx_default>;
+ status = "okay";
+};
+
+&tcb0 {
+ timer0: timer@0 {
+  compatible = "atmel,tcb-timer";
+  reg = <0>;
+ };
+
+ timer1: timer@1 {
+  compatible = "atmel,tcb-timer";
+  reg = <1>;
+ };
+};
+
+&trng {
+ status = "okay";
+};
+
+&vddout25 {
+ vin-supply = <&vdd_3v3>;
+ status = "okay";
+};

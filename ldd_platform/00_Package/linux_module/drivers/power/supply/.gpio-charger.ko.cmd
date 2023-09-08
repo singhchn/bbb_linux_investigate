@@ -1,0 +1,1 @@
+cmd_drivers/power/supply/gpio-charger.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/power/supply/gpio-charger.ko drivers/power/supply/gpio-charger.o drivers/power/supply/gpio-charger.mod.o;  true

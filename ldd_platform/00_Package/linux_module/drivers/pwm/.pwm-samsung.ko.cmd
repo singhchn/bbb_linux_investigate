@@ -1,0 +1,1 @@
+cmd_drivers/pwm/pwm-samsung.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/pwm/pwm-samsung.ko drivers/pwm/pwm-samsung.o drivers/pwm/pwm-samsung.mod.o;  true

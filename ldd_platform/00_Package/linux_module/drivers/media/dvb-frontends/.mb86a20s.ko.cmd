@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/mb86a20s.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/mb86a20s.ko drivers/media/dvb-frontends/mb86a20s.o drivers/media/dvb-frontends/mb86a20s.mod.o;  true

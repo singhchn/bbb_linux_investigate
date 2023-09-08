@@ -1,0 +1,4 @@
+bcm7445-bcm97445svmb.o: arch/arm/boot/dts/bcm7445-bcm97445svmb.dts \
+ arch/arm/boot/dts/bcm7445.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

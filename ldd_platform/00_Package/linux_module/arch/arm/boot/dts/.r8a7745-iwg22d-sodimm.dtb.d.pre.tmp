@@ -1,0 +1,9 @@
+r8a7745-iwg22d-sodimm.o: arch/arm/boot/dts/r8a7745-iwg22d-sodimm.dts \
+ arch/arm/boot/dts/r8a7745-iwg22m.dtsi arch/arm/boot/dts/r8a7745.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/r8a7745-cpg-mssr.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/renesas-cpg-mssr.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/r8a7745-sysc.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/pwm/pwm.h

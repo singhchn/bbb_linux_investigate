@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-midas-wm1811.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/samsung/snd-soc-midas-wm1811.ko sound/soc/samsung/snd-soc-midas-wm1811.o sound/soc/samsung/snd-soc-midas-wm1811.mod.o;  true

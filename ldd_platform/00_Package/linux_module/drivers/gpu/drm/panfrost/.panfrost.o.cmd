@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/panfrost/panfrost.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/panfrost/panfrost.o @drivers/gpu/drm/panfrost/panfrost.mod 

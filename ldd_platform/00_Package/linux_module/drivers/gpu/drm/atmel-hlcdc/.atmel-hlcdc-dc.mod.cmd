@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/atmel-hlcdc/atmel-hlcdc-dc.mod := printf '%s\n'   atmel_hlcdc_crtc.o atmel_hlcdc_dc.o atmel_hlcdc_output.o atmel_hlcdc_plane.o | awk '!x[$$0]++ { print("drivers/gpu/drm/atmel-hlcdc/"$$0) }' > drivers/gpu/drm/atmel-hlcdc/atmel-hlcdc-dc.mod

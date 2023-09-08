@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/mxsfb/mxsfb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/mxsfb/mxsfb.ko drivers/gpu/drm/mxsfb/mxsfb.o drivers/gpu/drm/mxsfb/mxsfb.mod.o;  true

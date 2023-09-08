@@ -1,0 +1,1 @@
+cmd_drivers/remoteproc/qcom_common.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/remoteproc/qcom_common.ko drivers/remoteproc/qcom_common.o drivers/remoteproc/qcom_common.mod.o;  true

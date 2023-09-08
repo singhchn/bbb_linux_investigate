@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/aspeed/aspeed-video.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/platform/aspeed/aspeed-video.ko drivers/media/platform/aspeed/aspeed-video.o drivers/media/platform/aspeed/aspeed-video.mod.o;  true

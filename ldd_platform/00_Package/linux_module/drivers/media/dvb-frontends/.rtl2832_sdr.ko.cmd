@@ -1,0 +1,1 @@
+cmd_drivers/media/dvb-frontends/rtl2832_sdr.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/dvb-frontends/rtl2832_sdr.ko drivers/media/dvb-frontends/rtl2832_sdr.o drivers/media/dvb-frontends/rtl2832_sdr.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-rt5640.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/codecs/snd-soc-rt5640.o @sound/soc/codecs/snd-soc-rt5640.mod 

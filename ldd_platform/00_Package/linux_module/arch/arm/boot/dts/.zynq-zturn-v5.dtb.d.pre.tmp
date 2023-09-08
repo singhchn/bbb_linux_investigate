@@ -1,0 +1,1 @@
+zynq-zturn-v5.o: arch/arm/boot/dts/zynq-zturn-v5.dts

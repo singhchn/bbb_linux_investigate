@@ -1,0 +1,1 @@
+cmd_drivers/phy/broadcom/built-in.a := rm -f drivers/phy/broadcom/built-in.a;  printf "drivers/phy/broadcom/%s " phy-bcm-cygnus-pcie.o phy-bcm-ns2-pcie.o phy-bcm-ns2-usbdrd.o phy-brcm-sata.o phy-bcm-sr-pcie.o phy-bcm-sr-usb.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/broadcom/built-in.a

@@ -1,0 +1,69 @@
+!<thin>
+//                                              606       `
+input.o/
+input-compat.o/
+input-mt.o/
+input-poller.o/
+ff-core.o/
+touchscreen.o/
+matrix-keymap.o/
+vivaldi-fmap.o/
+input-leds.o/
+joydev.o/
+evdev.o/
+keyboard/atkbd.o/
+keyboard/bcm-keypad.o/
+keyboard/gpio_keys.o/
+keyboard/spear-keyboard.o/
+keyboard/st-keyscan.o/
+keyboard/tegra-kbc.o/
+mouse/elan_i2c_core.o/
+mouse/elan_i2c_i2c.o/
+mouse/psmouse-base.o/
+mouse/synaptics.o/
+mouse/focaltech.o/
+mouse/alps.o/
+mouse/byd.o/
+mouse/elantech.o/
+mouse/logips2pp.o/
+mouse/trackpoint.o/
+mouse/cypress_ps2.o/
+mouse/psmouse-smbus.o/
+touchscreen/stmpe-ts.o/
+touchscreen/sun4i-ts.o/
+misc/pm8941-pwrkey.o/
+misc/stpmic1_onkey.o/
+
+/0              0           0     0     644     48832     `
+/9              0           0     0     644     2808      `
+/25             0           0     0     644     8432      `
+/37             0           0     0     644     6256      `
+/53             0           0     0     644     5980      `
+/64             0           0     0     644     5308      `
+/79             0           0     0     644     4504      `
+/96             0           0     0     644     2296      `
+/112            0           0     0     644     5964      `
+/126            0           0     0     644     17220     `
+/136            0           0     0     644     18888     `
+/145            0           0     0     644     33992     `
+/163            0           0     0     644     8292      `
+/186            0           0     0     644     16656     `
+/208            0           0     0     644     7988      `
+/235            0           0     0     644     7416      `
+/258            0           0     0     644     13900     `
+/280            0           0     0     644     21196     `
+/303            0           0     0     644     12244     `
+/325            0           0     0     644     31196     `
+/347            0           0     0     644     25980     `
+/366            0           0     0     644     5344      `
+/385            0           0     0     644     32796     `
+/399            0           0     0     644     4832      `
+/412            0           0     0     644     27556     `
+/430            0           0     0     644     6016      `
+/449            0           0     0     644     10212     `
+/469            0           0     0     644     7416      `
+/490            0           0     0     644     5856      `
+/513            0           0     0     644     7928      `
+/537            0           0     0     644     8044      `
+/561            0           0     0     644     9716      `
+/583            0           0     0     644     7056      `

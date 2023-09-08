@@ -1,0 +1,19 @@
+!<thin>
+//                                              144       `
+udc/core.o/
+udc/trace.o/
+udc/snps_udc_core.o/
+udc/snps_udc_plat.o/
+udc/bdc/bdc_core.o/
+udc/bdc/bdc_cmd.o/
+udc/bdc/bdc_ep.o/
+udc/bdc/bdc_udc.o/
+
+/0              0           0     0     644     39732     `
+/12             0           0     0     644     28400     `
+/25             0           0     0     644     33416     `
+/46             0           0     0     644     10908     `
+/67             0           0     0     644     10876     `
+/87             0           0     0     644     4244      `
+/106            0           0     0     644     16552     `
+/124            0           0     0     644     7484      `

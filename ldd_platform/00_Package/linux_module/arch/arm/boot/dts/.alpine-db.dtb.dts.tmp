@@ -1,0 +1,169 @@
+# 1 "arch/arm/boot/dts/alpine-db.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/alpine-db.dts"
+# 27 "arch/arm/boot/dts/alpine-db.dts"
+/dts-v1/;
+
+# 1 "arch/arm/boot/dts/alpine.dtsi" 1
+# 27 "arch/arm/boot/dts/alpine.dtsi"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 28 "arch/arm/boot/dts/alpine.dtsi" 2
+
+/ {
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ compatible = "al,alpine";
+
+ memory {
+  device_type = "memory";
+  reg = <0 0 0 0>;
+ };
+
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  enable-method = "al,alpine-smp";
+
+  cpu@0 {
+   compatible = "arm,cortex-a15";
+   device_type = "cpu";
+   reg = <0>;
+   clock-frequency = <1700000000>;
+  };
+
+  cpu@1 {
+   compatible = "arm,cortex-a15";
+   device_type = "cpu";
+   reg = <1>;
+   clock-frequency = <1700000000>;
+  };
+
+  cpu@2 {
+   compatible = "arm,cortex-a15";
+   device_type = "cpu";
+   reg = <2>;
+   clock-frequency = <1700000000>;
+  };
+
+  cpu@3 {
+   compatible = "arm,cortex-a15";
+   device_type = "cpu";
+   reg = <3>;
+   clock-frequency = <1700000000>;
+  };
+ };
+
+ soc {
+  #address-cells = <2>;
+  #size-cells = <2>;
+  compatible = "simple-bus";
+  interrupt-parent = <&gic>;
+  ranges;
+
+  arch-timer {
+   compatible = "arm,cortex-a15-timer",
+         "arm,armv7-timer";
+   interrupts =
+    <1 13 ((((1 << (4)) - 1) << 8) | 8)>,
+    <1 14 ((((1 << (4)) - 1) << 8) | 8)>,
+    <1 11 ((((1 << (4)) - 1) << 8) | 8)>,
+    <1 10 ((((1 << (4)) - 1) << 8) | 8)>;
+   clock-frequency = <50000000>;
+  };
+
+
+  gic: interrupt-controller@fb001000 {
+   compatible = "arm,cortex-a15-gic";
+   #interrupt-cells = <3>;
+   #size-cells = <0>;
+   #address-cells = <0>;
+   interrupt-controller;
+   reg = <0x0 0xfb001000 0x0 0x1000>,
+         <0x0 0xfb002000 0x0 0x2000>,
+         <0x0 0xfb004000 0x0 0x2000>,
+         <0x0 0xfb006000 0x0 0x2000>;
+   interrupts =
+    <1 9 ((((1 << (4)) - 1) << 8) | 4)>;
+  };
+
+
+  cpu-resume@fbff5ec0 {
+   compatible = "al,alpine-cpu-resume";
+   reg = <0x0 0xfbff5ec0 0x0 0x30>;
+  };
+
+
+  sysfabric-service@fb070000 {
+   compatible = "al,alpine-sysfabric-service", "syscon";
+   reg = <0x0 0xfb070000 0x0 0x10000>;
+  };
+
+
+  pmu {
+   compatible = "arm,cortex-a15-pmu";
+   interrupts = <0 68 4>,
+         <0 69 4>,
+         <0 70 4>,
+         <0 71 4>;
+  };
+
+  uart0: uart@fd883000 {
+   compatible = "ns16550a";
+   reg = <0x0 0xfd883000 0x0 0x1000>;
+   clock-frequency = <375000000>;
+   interrupts = <0 17 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+  };
+
+  uart1: uart@fd884000 {
+   compatible = "ns16550a";
+   reg = <0x0 0xfd884000 0x0 0x1000>;
+   clock-frequency = <375000000>;
+   interrupts = <0 18 4>;
+   reg-shift = <2>;
+   reg-io-width = <4>;
+  };
+
+
+  pcie@fbc00000 {
+   compatible = "pci-host-ecam-generic";
+   device_type = "pci";
+   #size-cells = <2>;
+   #address-cells = <3>;
+   #interrupt-cells = <1>;
+   reg = <0x0 0xfbc00000 0x0 0x100000>;
+   interrupt-map-mask = <0xf800 0 0 7>;
+
+   interrupt-map = <0x4000 0 0 1 &gic 0 43 4>,
+     <0x4800 0 0 1 &gic 0 44 4>;
+
+
+   ranges = <0x02000000 0x0 0xfe000000 0x0 0xfe000000 0x0 0x1000000>;
+
+   bus-range = <0x00 0x00>;
+   msi-parent = <&msix>;
+  };
+
+  msix: msix@fbe00000 {
+   compatible = "al,alpine-msix";
+   reg = <0x0 0xfbe00000 0x0 0x100000>;
+   interrupt-controller;
+   msi-controller;
+   al,msi-base-spi = <96>;
+   al,msi-num-spis = <64>;
+  };
+ };
+};
+# 30 "arch/arm/boot/dts/alpine-db.dts" 2
+
+/ {
+ model = "Annapurna Labs Alpine Dev Board";
+
+};

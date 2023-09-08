@@ -1,0 +1,5 @@
+drivers/media/platform/atmel/atmel-isi.ko
+drivers/media/platform/atmel/atmel-isc-common.ko
+drivers/media/platform/atmel/atmel-isc.ko
+drivers/media/platform/atmel/atmel-xisc.ko
+drivers/media/platform/atmel/microchip-csi2dc.ko

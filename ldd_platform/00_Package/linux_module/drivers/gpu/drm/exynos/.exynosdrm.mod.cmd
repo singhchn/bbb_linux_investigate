@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/exynos/exynosdrm.mod := printf '%s\n'   exynos_drm_drv.o exynos_drm_crtc.o exynos_drm_fb.o exynos_drm_gem.o exynos_drm_plane.o exynos_drm_dma.o exynos_drm_fbdev.o exynos_drm_fimd.o exynos_drm_dpi.o exynos_drm_dsi.o exynos_dp.o exynos_mixer.o exynos_hdmi.o | awk '!x[$$0]++ { print("drivers/gpu/drm/exynos/"$$0) }' > drivers/gpu/drm/exynos/exynosdrm.mod

@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/atmel/atmel-isc-common.mod := printf '%s\n'   atmel-isc-base.o atmel-isc-clk.o | awk '!x[$$0]++ { print("drivers/media/platform/atmel/"$$0) }' > drivers/media/platform/atmel/atmel-isc-common.mod

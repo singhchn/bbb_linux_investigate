@@ -1,0 +1,1 @@
+cmd_drivers/net/dsa/b53/b53_mmap.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/dsa/b53/b53_mmap.ko drivers/net/dsa/b53/b53_mmap.o drivers/net/dsa/b53/b53_mmap.mod.o;  true

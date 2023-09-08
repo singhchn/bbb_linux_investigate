@@ -1,0 +1,1 @@
+cmd_drivers/hwspinlock/built-in.a := rm -f drivers/hwspinlock/built-in.a;  printf "drivers/hwspinlock/%s " hwspinlock_core.o qcom_hwspinlock.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/hwspinlock/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/memory/built-in.a := rm -f drivers/memory/built-in.a;  printf "drivers/memory/%s " jedec_ddr_data.o of_memory.o atmel-sdramc.o atmel-ebi.o brcmstb_dpfe.o brcmstb_memc.o ti-aemif.o omap-gpmc.o mvebu-devbus.o pl353-smc.o stm32-fmc2-ebi.o samsung/built-in.a tegra/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/memory/built-in.a

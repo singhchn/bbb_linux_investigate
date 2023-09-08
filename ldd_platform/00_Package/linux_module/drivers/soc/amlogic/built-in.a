@@ -1,0 +1,11 @@
+!<thin>
+//                                              80        `
+meson-clk-measure.o/
+meson-gx-pwrc-vpu.o/
+meson-mx-socinfo.o/
+meson-ee-pwrc.o/
+
+/0              0           0     0     644     22644     `
+/21             0           0     0     644     10536     `
+/42             0           0     0     644     4416      `
+/62             0           0     0     644     12992     `

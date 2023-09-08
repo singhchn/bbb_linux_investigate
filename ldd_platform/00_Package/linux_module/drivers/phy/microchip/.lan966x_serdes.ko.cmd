@@ -1,0 +1,1 @@
+cmd_drivers/phy/microchip/lan966x_serdes.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/phy/microchip/lan966x_serdes.ko drivers/phy/microchip/lan966x_serdes.o drivers/phy/microchip/lan966x_serdes.mod.o;  true

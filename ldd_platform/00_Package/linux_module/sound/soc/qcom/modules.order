@@ -1,0 +1,5 @@
+sound/soc/qcom/snd-soc-lpass-cpu.ko
+sound/soc/qcom/snd-soc-lpass-platform.ko
+sound/soc/qcom/snd-soc-lpass-apq8016.ko
+sound/soc/qcom/snd-soc-apq8016-sbc.ko
+sound/soc/qcom/snd-soc-qcom-common.ko

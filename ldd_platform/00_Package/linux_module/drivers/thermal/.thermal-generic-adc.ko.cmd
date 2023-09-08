@@ -1,0 +1,1 @@
+cmd_drivers/thermal/thermal-generic-adc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/thermal/thermal-generic-adc.ko drivers/thermal/thermal-generic-adc.o drivers/thermal/thermal-generic-adc.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/fsi/fsi-master-hub.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/fsi/fsi-master-hub.ko drivers/fsi/fsi-master-hub.o drivers/fsi/fsi-master-hub.mod.o;  true

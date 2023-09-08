@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/modules.order := {   echo drivers/usb/host/ehci-exynos.ko;   echo drivers/usb/host/ehci-brcm.ko;   echo drivers/usb/host/ohci-exynos.ko;   echo drivers/usb/host/xhci-tegra.ko;   echo drivers/usb/host/r8a66597-hcd.ko;   echo drivers/usb/host/ehci-mv.ko; :; } > drivers/usb/host/modules.order

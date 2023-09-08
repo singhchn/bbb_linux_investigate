@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-wm-hubs.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/codecs/snd-soc-wm-hubs.o @sound/soc/codecs/snd-soc-wm-hubs.mod 

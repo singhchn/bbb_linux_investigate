@@ -1,0 +1,1 @@
+cmd_drivers/char/ipmi/bt-bmc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/char/ipmi/bt-bmc.ko drivers/char/ipmi/bt-bmc.o drivers/char/ipmi/bt-bmc.mod.o;  true

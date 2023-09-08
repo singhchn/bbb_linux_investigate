@@ -1,0 +1,1 @@
+spear1310-evb.o: arch/arm/boot/dts/spear1310-evb.dts

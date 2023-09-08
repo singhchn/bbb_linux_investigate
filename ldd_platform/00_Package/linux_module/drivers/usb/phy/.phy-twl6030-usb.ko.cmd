@@ -1,0 +1,1 @@
+cmd_drivers/usb/phy/phy-twl6030-usb.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/phy/phy-twl6030-usb.ko drivers/usb/phy/phy-twl6030-usb.o drivers/usb/phy/phy-twl6030-usb.mod.o;  true

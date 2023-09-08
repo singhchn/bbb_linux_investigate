@@ -1,0 +1,1 @@
+cmd_drivers/clk/meson/built-in.a := rm -f drivers/clk/meson/built-in.a;  printf "drivers/clk/meson/%s " clk-mpll.o clk-pll.o clk-regmap.o meson8b.o meson8-ddr.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/meson/built-in.a

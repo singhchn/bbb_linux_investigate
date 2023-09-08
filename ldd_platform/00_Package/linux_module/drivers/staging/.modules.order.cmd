@@ -1,0 +1,1 @@
+cmd_drivers/staging/modules.order := {   cat drivers/staging/media/modules.order;   cat drivers/staging/iio/modules.order;   cat drivers/staging/nvec/modules.order;   cat drivers/staging/board/modules.order; :; } > drivers/staging/modules.order

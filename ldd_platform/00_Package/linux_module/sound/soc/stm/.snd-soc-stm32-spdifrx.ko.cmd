@@ -1,0 +1,1 @@
+cmd_sound/soc/stm/snd-soc-stm32-spdifrx.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/stm/snd-soc-stm32-spdifrx.ko sound/soc/stm/snd-soc-stm32-spdifrx.o sound/soc/stm/snd-soc-stm32-spdifrx.mod.o;  true

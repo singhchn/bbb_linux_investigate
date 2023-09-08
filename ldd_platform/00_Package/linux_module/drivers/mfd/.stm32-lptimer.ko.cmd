@@ -1,0 +1,1 @@
+cmd_drivers/mfd/stm32-lptimer.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/mfd/stm32-lptimer.ko drivers/mfd/stm32-lptimer.o drivers/mfd/stm32-lptimer.mod.o;  true

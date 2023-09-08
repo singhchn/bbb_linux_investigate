@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-spear/built-in.a := rm -f arch/arm/mach-spear/built-in.a;  printf "arch/arm/mach-spear/%s " restart.o time.o spear13xx.o headsmp.o platsmp.o hotplug.o spear1310.o spear1340.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-spear/built-in.a

@@ -1,0 +1,15 @@
+!<thin>
+//                                              82        `
+atkbd.o/
+bcm-keypad.o/
+gpio_keys.o/
+spear-keyboard.o/
+st-keyscan.o/
+tegra-kbc.o/
+
+/0              0           0     0     644     33992     `
+/9              0           0     0     644     8292      `
+/23             0           0     0     644     16656     `
+/36             0           0     0     644     7988      `
+/54             0           0     0     644     7416      `
+/68             0           0     0     644     13900     `

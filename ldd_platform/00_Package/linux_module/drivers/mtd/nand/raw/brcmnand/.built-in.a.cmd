@@ -1,0 +1,1 @@
+cmd_drivers/mtd/nand/raw/brcmnand/built-in.a := rm -f drivers/mtd/nand/raw/brcmnand/built-in.a;  printf "drivers/mtd/nand/raw/brcmnand/%s " iproc_nand.o bcm63138_nand.o brcmstb_nand.o brcmnand.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/mtd/nand/raw/brcmnand/built-in.a

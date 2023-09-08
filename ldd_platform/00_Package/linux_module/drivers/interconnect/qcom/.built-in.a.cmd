@@ -1,0 +1,1 @@
+cmd_drivers/interconnect/qcom/built-in.a := rm -f drivers/interconnect/qcom/built-in.a;  printf "drivers/interconnect/qcom/%s " icc-common.o msm8916.o smd-rpm.o icc-rpm.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/interconnect/qcom/built-in.a

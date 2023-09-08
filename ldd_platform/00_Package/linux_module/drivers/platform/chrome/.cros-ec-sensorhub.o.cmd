@@ -1,0 +1,1 @@
+cmd_drivers/platform/chrome/cros-ec-sensorhub.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/platform/chrome/cros-ec-sensorhub.o @drivers/platform/chrome/cros-ec-sensorhub.mod 

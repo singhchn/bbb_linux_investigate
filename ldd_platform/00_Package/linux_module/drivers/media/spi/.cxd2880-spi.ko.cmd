@@ -1,0 +1,1 @@
+cmd_drivers/media/spi/cxd2880-spi.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/spi/cxd2880-spi.ko drivers/media/spi/cxd2880-spi.o drivers/media/spi/cxd2880-spi.mod.o;  true

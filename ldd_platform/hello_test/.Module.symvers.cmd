@@ -1,0 +1,1 @@
+cmd_/home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/Module.symvers :=  sed 's/ko$$/o/'  /home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/modules.order | scripts/mod/modpost      -o /home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/Module.symvers -e -i Module.symvers -T - 

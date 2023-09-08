@@ -1,0 +1,1 @@
+cmd_drivers/usb/phy/phy-keystone.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/phy/phy-keystone.ko drivers/usb/phy/phy-keystone.o drivers/usb/phy/phy-keystone.mod.o;  true

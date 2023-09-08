@@ -1,0 +1,1 @@
+cmd_drivers/net/can/modules.order := {   cat drivers/net/can/dev/modules.order;   cat drivers/net/can/rcar/modules.order;   cat drivers/net/can/spi/modules.order;   cat drivers/net/can/usb/modules.order;   cat drivers/net/can/softing/modules.order;   echo drivers/net/can/at91_can.ko;   cat drivers/net/can/flexcan/modules.order; :; } > drivers/net/can/modules.order

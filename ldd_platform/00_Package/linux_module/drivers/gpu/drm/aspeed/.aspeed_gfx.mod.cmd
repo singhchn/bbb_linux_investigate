@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/aspeed/aspeed_gfx.mod := printf '%s\n'   aspeed_gfx_drv.o aspeed_gfx_crtc.o aspeed_gfx_out.o | awk '!x[$$0]++ { print("drivers/gpu/drm/aspeed/"$$0) }' > drivers/gpu/drm/aspeed/aspeed_gfx.mod

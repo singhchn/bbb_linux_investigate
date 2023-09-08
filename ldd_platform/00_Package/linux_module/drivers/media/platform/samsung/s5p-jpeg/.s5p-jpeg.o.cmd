@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/s5p-jpeg/s5p-jpeg.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/platform/samsung/s5p-jpeg/s5p-jpeg.o @drivers/media/platform/samsung/s5p-jpeg/s5p-jpeg.mod 

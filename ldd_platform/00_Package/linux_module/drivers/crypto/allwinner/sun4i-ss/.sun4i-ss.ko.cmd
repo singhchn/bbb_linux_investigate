@@ -1,0 +1,1 @@
+cmd_drivers/crypto/allwinner/sun4i-ss/sun4i-ss.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/allwinner/sun4i-ss/sun4i-ss.ko drivers/crypto/allwinner/sun4i-ss/sun4i-ss.o drivers/crypto/allwinner/sun4i-ss/sun4i-ss.mod.o;  true

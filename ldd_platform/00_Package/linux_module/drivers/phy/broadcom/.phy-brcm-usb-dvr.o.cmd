@@ -1,0 +1,1 @@
+cmd_drivers/phy/broadcom/phy-brcm-usb-dvr.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/phy/broadcom/phy-brcm-usb-dvr.o @drivers/phy/broadcom/phy-brcm-usb-dvr.mod 

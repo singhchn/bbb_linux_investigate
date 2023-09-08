@@ -1,0 +1,11 @@
+!<thin>
+//                                              78        `
+pinctrl-plgpio.o/
+pinctrl-spear.o/
+pinctrl-spear1310.o/
+pinctrl-spear1340.o/
+
+/0              0           0     0     644     11820     `
+/18             0           0     0     644     6588      `
+/35             0           0     0     644     41944     `
+/56             0           0     0     644     28104     `

@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-milbeaut/built-in.a := rm -f arch/arm/mach-milbeaut/built-in.a;  printf "arch/arm/mach-milbeaut/%s " platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-milbeaut/built-in.a

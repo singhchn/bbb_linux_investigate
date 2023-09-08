@@ -1,0 +1,1 @@
+cmd_drivers/iio/gyro/built-in.a := rm -f drivers/iio/gyro/built-in.a;  printf "drivers/iio/gyro/%s " mpu3050-core.o mpu3050-i2c.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/iio/gyro/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/misc/built-in.a := rm -f drivers/misc/built-in.a;  printf "drivers/misc/%s " ad525x_dpot.o ad525x_dpot-i2c.o ics932s401.o apds9802als.o isl29003.o eeprom/built-in.a cb710/built-in.a ti-st/built-in.a lis3lv02d/built-in.a sram.o sram-exec.o cardreader/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/misc/built-in.a

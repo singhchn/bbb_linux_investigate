@@ -1,0 +1,6 @@
+berlin2q-marvell-dmp.o: arch/arm/boot/dts/berlin2q-marvell-dmp.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/berlin2q.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/berlin2q.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

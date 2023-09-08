@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-pcm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/samsung/snd-soc-pcm.ko sound/soc/samsung/snd-soc-pcm.o sound/soc/samsung/snd-soc-pcm.mod.o;  true

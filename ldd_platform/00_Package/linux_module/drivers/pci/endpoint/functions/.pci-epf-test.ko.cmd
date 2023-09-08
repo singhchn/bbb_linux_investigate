@@ -1,0 +1,1 @@
+cmd_drivers/pci/endpoint/functions/pci-epf-test.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/pci/endpoint/functions/pci-epf-test.ko drivers/pci/endpoint/functions/pci-epf-test.o drivers/pci/endpoint/functions/pci-epf-test.mod.o;  true

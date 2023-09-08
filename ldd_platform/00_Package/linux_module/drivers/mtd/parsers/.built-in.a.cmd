@@ -1,0 +1,1 @@
+cmd_drivers/mtd/parsers/built-in.a := rm -f drivers/mtd/parsers/built-in.a;  printf "drivers/mtd/parsers/%s " cmdlinepart.o ofpart_core.o ofpart_bcm4908.o ofpart_linksys_ns.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/mtd/parsers/built-in.a

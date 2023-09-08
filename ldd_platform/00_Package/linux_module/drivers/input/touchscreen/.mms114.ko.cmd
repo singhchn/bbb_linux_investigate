@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/mms114.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/touchscreen/mms114.ko drivers/input/touchscreen/mms114.o drivers/input/touchscreen/mms114.mod.o;  true

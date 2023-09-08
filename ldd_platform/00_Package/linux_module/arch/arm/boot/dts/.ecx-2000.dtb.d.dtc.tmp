@@ -1,0 +1,1 @@
+arch/arm/boot/dts/ecx-2000.dtb: arch/arm/boot/dts/.ecx-2000.dtb.dts.tmp arch/arm/boot/dts/ecx-common.dtsi

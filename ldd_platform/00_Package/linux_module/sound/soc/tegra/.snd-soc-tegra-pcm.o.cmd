@@ -1,0 +1,1 @@
+cmd_sound/soc/tegra/snd-soc-tegra-pcm.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o sound/soc/tegra/snd-soc-tegra-pcm.o @sound/soc/tegra/snd-soc-tegra-pcm.mod 

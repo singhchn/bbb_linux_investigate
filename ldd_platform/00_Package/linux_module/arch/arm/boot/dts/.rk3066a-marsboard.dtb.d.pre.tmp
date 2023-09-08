@@ -1,0 +1,12 @@
+rk3066a-marsboard.o: arch/arm/boot/dts/rk3066a-marsboard.dts \
+ arch/arm/boot/dts/rk3066a.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3066a-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3188-cru-common.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/rk3066-power.h \
+ arch/arm/boot/dts/rk3xxx.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/rockchip,boot-mode.h \
+ arch/arm/boot/dts/tps65910.dtsi

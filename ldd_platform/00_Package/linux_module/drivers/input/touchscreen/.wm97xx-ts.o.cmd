@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/wm97xx-ts.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/input/touchscreen/wm97xx-ts.o @drivers/input/touchscreen/wm97xx-ts.mod 

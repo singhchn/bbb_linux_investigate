@@ -1,0 +1,14 @@
+rk3288-evb-rk808.o: arch/arm/boot/dts/rk3288-evb-rk808.dts \
+ arch/arm/boot/dts/rk3288-evb.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/pwm/pwm.h \
+ arch/arm/boot/dts/rk3288.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3288-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/rk3288-power.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ scripts/dtc/include-prefixes/dt-bindings/soc/rockchip,boot-mode.h

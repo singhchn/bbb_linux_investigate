@@ -1,0 +1,1 @@
+cmd_drivers/iio/dac/stm32-dac.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/dac/stm32-dac.ko drivers/iio/dac/stm32-dac.o drivers/iio/dac/stm32-dac.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/char/ipmi/kcs_bmc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/char/ipmi/kcs_bmc.ko drivers/char/ipmi/kcs_bmc.o drivers/char/ipmi/kcs_bmc.mod.o;  true

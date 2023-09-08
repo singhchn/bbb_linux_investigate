@@ -1,0 +1,10 @@
+uniphier-ld6b-ref.o: arch/arm/boot/dts/uniphier-ld6b-ref.dts \
+ arch/arm/boot/dts/uniphier-ld6b.dtsi \
+ arch/arm/boot/dts/uniphier-pxs2.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/uniphier-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ arch/arm/boot/dts/uniphier-pinctrl.dtsi \
+ arch/arm/boot/dts/uniphier-ref-daughter.dtsi \
+ arch/arm/boot/dts/uniphier-support-card.dtsi

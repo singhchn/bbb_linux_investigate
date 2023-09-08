@@ -1,0 +1,14 @@
+drivers/gpu/ipu-v3/ipu-common.o
+drivers/gpu/ipu-v3/ipu-cpmem.o
+drivers/gpu/ipu-v3/ipu-csi.o
+drivers/gpu/ipu-v3/ipu-dc.o
+drivers/gpu/ipu-v3/ipu-di.o
+drivers/gpu/ipu-v3/ipu-dp.o
+drivers/gpu/ipu-v3/ipu-dmfc.o
+drivers/gpu/ipu-v3/ipu-ic.o
+drivers/gpu/ipu-v3/ipu-ic-csc.o
+drivers/gpu/ipu-v3/ipu-image-convert.o
+drivers/gpu/ipu-v3/ipu-smfc.o
+drivers/gpu/ipu-v3/ipu-vdi.o
+drivers/gpu/ipu-v3/ipu-pre.o
+drivers/gpu/ipu-v3/ipu-prg.o

@@ -1,0 +1,9 @@
+sound/soc/tegra/snd-soc-tegra-pcm.ko
+sound/soc/tegra/snd-soc-tegra20-ac97.ko
+sound/soc/tegra/snd-soc-tegra20-das.ko
+sound/soc/tegra/snd-soc-tegra20-i2s.ko
+sound/soc/tegra/snd-soc-tegra20-spdif.ko
+sound/soc/tegra/snd-soc-tegra30-ahub.ko
+sound/soc/tegra/snd-soc-tegra30-i2s.ko
+sound/soc/tegra/snd-soc-tegra-wm8903.ko
+sound/soc/tegra/snd-soc-tegra-machine.ko

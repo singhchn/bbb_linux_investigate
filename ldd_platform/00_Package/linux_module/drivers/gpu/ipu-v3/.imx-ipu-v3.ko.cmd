@@ -1,0 +1,1 @@
+cmd_drivers/gpu/ipu-v3/imx-ipu-v3.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/ipu-v3/imx-ipu-v3.ko drivers/gpu/ipu-v3/imx-ipu-v3.o drivers/gpu/ipu-v3/imx-ipu-v3.mod.o;  true

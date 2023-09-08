@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/mvebu/built-in.a := rm -f drivers/pinctrl/mvebu/built-in.a;  printf "drivers/pinctrl/mvebu/%s " pinctrl-mvebu.o pinctrl-dove.o pinctrl-armada-370.o pinctrl-armada-375.o pinctrl-armada-38x.o pinctrl-armada-39x.o pinctrl-armada-xp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/mvebu/built-in.a

@@ -1,0 +1,1 @@
+cmd_sound/core/snd-ctl-led.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/core/snd-ctl-led.ko sound/core/snd-ctl-led.o sound/core/snd-ctl-led.mod.o;  true

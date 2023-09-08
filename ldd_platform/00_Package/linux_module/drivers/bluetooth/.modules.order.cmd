@@ -1,0 +1,1 @@
+cmd_drivers/bluetooth/modules.order := {   echo drivers/bluetooth/hci_uart.ko;   echo drivers/bluetooth/btmrvl.ko;   echo drivers/bluetooth/btmrvl_sdio.ko;   echo drivers/bluetooth/btqcomsmd.ko;   echo drivers/bluetooth/btbcm.ko;   echo drivers/bluetooth/btqca.ko; :; } > drivers/bluetooth/modules.order

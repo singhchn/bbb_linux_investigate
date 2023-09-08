@@ -1,0 +1,53 @@
+!<thin>
+//                                              606       `
+reset/as3722-poweroff.o/
+reset/at91-poweroff.o/
+reset/at91-reset.o/
+reset/at91-sama5d2_shdwc.o/
+reset/brcm-kona-reset.o/
+reset/brcmstb-reboot.o/
+reset/gpio-poweroff.o/
+reset/gpio-restart.o/
+reset/hisi-reboot.o/
+reset/msm-poweroff.o/
+reset/qcom-pon.o/
+reset/st-poweroff.o/
+reset/vexpress-poweroff.o/
+reset/keystone-reset.o/
+reset/syscon-reboot.o/
+reset/syscon-poweroff.o/
+reset/rmobile-reset.o/
+reset/reboot-mode.o/
+supply/power_supply_core.o/
+supply/power_supply_sysfs.o/
+supply/power_supply_leds.o/
+supply/power_supply_hwmon.o/
+supply/act8945a_charger.o/
+supply/sbs-battery.o/
+supply/tps65090-charger.o/
+
+/0              0           0     0     644     4480      `
+/25             0           0     0     644     7120      `
+/48             0           0     0     644     8748      `
+/68             0           0     0     644     9292      `
+/96             0           0     0     644     3260      `
+/121            0           0     0     644     5128      `
+/145            0           0     0     644     5996      `
+/168            0           0     0     644     6052      `
+/190            0           0     0     644     4568      `
+/211            0           0     0     644     3552      `
+/233            0           0     0     644     5264      `
+/251            0           0     0     644     4084      `
+/272            0           0     0     644     5628      `
+/299            0           0     0     644     5952      `
+/323            0           0     0     644     4080      `
+/346            0           0     0     644     4408      `
+/371            0           0     0     644     4640      `
+/394            0           0     0     644     5400      `
+/415            0           0     0     644     33404     `
+/443            0           0     0     644     14964     `
+/472            0           0     0     644     2976      `
+/500            0           0     0     644     5312      `
+/529            0           0     0     644     8712      `
+/556            0           0     0     644     16388     `
+/578            0           0     0     644     9072      `

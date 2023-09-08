@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/resistive-adc-touch.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/input/touchscreen/resistive-adc-touch.ko drivers/input/touchscreen/resistive-adc-touch.o drivers/input/touchscreen/resistive-adc-touch.mod.o;  true

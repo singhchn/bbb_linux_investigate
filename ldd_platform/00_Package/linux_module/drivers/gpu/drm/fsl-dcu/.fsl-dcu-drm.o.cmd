@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/fsl-dcu/fsl-dcu-drm.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/fsl-dcu/fsl-dcu-drm.o @drivers/gpu/drm/fsl-dcu/fsl-dcu-drm.mod 

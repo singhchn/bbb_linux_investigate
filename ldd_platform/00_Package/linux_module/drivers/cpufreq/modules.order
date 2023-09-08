@@ -1,0 +1,5 @@
+drivers/cpufreq/cpufreq_powersave.ko
+drivers/cpufreq/cpufreq_userspace.ko
+drivers/cpufreq/cpufreq_conservative.ko
+drivers/cpufreq/highbank-cpufreq.ko
+drivers/cpufreq/mediatek-cpufreq-hw.ko

@@ -1,0 +1,1 @@
+cmd_drivers/media/i2c/modules.order := {   echo drivers/media/i2c/adv7180.ko;   echo drivers/media/i2c/adv7604.ko;   echo drivers/media/i2c/ml86v7667.ko;   echo drivers/media/i2c/ov7670.ko; :; } > drivers/media/i2c/modules.order

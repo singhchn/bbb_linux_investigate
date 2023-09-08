@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/tda9887.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/tda9887.ko drivers/media/tuners/tda9887.o drivers/media/tuners/tda9887.mod.o;  true

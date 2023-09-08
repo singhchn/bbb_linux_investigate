@@ -1,0 +1,9 @@
+rk3228-evb.o: arch/arm/boot/dts/rk3228-evb.dts \
+ arch/arm/boot/dts/rk322x.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/rockchip.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/rk3228-cru.h \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/rk3228-power.h

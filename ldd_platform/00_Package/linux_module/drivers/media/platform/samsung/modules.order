@@ -1,0 +1,8 @@
+drivers/media/platform/samsung/exynos-gsc/exynos-gsc.ko
+drivers/media/platform/samsung/exynos4-is/s5p-csis.ko
+drivers/media/platform/samsung/exynos4-is/exynos-fimc-lite.ko
+drivers/media/platform/samsung/exynos4-is/exynos-fimc-is.ko
+drivers/media/platform/samsung/exynos4-is/s5p-fimc.ko
+drivers/media/platform/samsung/exynos4-is/exynos4-is-common.ko
+drivers/media/platform/samsung/s5p-jpeg/s5p-jpeg.ko
+drivers/media/platform/samsung/s5p-mfc/s5p-mfc.ko

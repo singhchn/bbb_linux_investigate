@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/exynos4-is/s5p-fimc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/platform/samsung/exynos4-is/s5p-fimc.ko drivers/media/platform/samsung/exynos4-is/s5p-fimc.o drivers/media/platform/samsung/exynos4-is/s5p-fimc.mod.o;  true

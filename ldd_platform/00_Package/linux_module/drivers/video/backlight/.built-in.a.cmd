@@ -1,0 +1,1 @@
+cmd_drivers/video/backlight/built-in.a := rm -f drivers/video/backlight/built-in.a;  printf "drivers/video/backlight/%s " as3711_bl.o backlight.o gpio_backlight.o pwm_bl.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/video/backlight/built-in.a

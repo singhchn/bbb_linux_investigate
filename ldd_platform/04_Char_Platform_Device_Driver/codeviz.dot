@@ -1,0 +1,14 @@
+digraph codeviz {
+    splines=true
+    sep="+15,15"
+    overlap=scalexy
+
+    node [shape=Mrecord, fontsize=12]
+
+    node [fillcolor="#ff9999", style=filled] "pcd_device_setup.c" [label = "pcd_device_setup.c"]
+    node [fillcolor="#ff9999", style=filled] "pcd_driver.c"       [label = "pcd_driver.c"]
+    node [fillcolor="#ccccff", style=filled] "platform.h"         [label = "platform.h"]
+
+    "pcd_device_setup.c" ->         "platform.h"
+    "pcd_driver.c"       ->         "platform.h"
+}

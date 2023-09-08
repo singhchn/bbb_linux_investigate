@@ -1,0 +1,1 @@
+cmd_drivers/clk/versatile/built-in.a := rm -f drivers/clk/versatile/built-in.a;  printf "drivers/clk/versatile/%s " icst.o clk-icst.o clk-versatile.o clk-sp810.o clk-vexpress-osc.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/versatile/built-in.a

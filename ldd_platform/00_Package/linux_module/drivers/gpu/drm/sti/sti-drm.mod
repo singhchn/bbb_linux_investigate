@@ -1,0 +1,16 @@
+drivers/gpu/drm/sti/sti_mixer.o
+drivers/gpu/drm/sti/sti_gdp.o
+drivers/gpu/drm/sti/sti_vid.o
+drivers/gpu/drm/sti/sti_cursor.o
+drivers/gpu/drm/sti/sti_compositor.o
+drivers/gpu/drm/sti/sti_crtc.o
+drivers/gpu/drm/sti/sti_plane.o
+drivers/gpu/drm/sti/sti_hdmi.o
+drivers/gpu/drm/sti/sti_hdmi_tx3g4c28phy.o
+drivers/gpu/drm/sti/sti_dvo.o
+drivers/gpu/drm/sti/sti_awg_utils.o
+drivers/gpu/drm/sti/sti_vtg.o
+drivers/gpu/drm/sti/sti_hda.o
+drivers/gpu/drm/sti/sti_tvout.o
+drivers/gpu/drm/sti/sti_hqvdp.o
+drivers/gpu/drm/sti/sti_drv.o

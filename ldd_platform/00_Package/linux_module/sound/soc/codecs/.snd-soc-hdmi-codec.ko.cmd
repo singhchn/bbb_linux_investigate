@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-hdmi-codec.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/codecs/snd-soc-hdmi-codec.ko sound/soc/codecs/snd-soc-hdmi-codec.o sound/soc/codecs/snd-soc-hdmi-codec.mod.o;  true

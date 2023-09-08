@@ -1,0 +1,1 @@
+cmd_drivers/media/common/videobuf2/videobuf2-common.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/common/videobuf2/videobuf2-common.o @drivers/media/common/videobuf2/videobuf2-common.mod 

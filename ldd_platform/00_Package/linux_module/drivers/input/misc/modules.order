@@ -1,0 +1,8 @@
+drivers/input/misc/adxl34x.ko
+drivers/input/misc/adxl34x-i2c.ko
+drivers/input/misc/adxl34x-spi.ko
+drivers/input/misc/cpcap-pwrbutton.ko
+drivers/input/misc/da9063_onkey.ko
+drivers/input/misc/max77693-haptic.ko
+drivers/input/misc/max8997_haptic.ko
+drivers/input/misc/axp20x-pek.ko

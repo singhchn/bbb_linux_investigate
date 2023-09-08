@@ -1,0 +1,1 @@
+cmd_drivers/soc/bcm/brcmstb/built-in.a := rm -f drivers/soc/bcm/brcmstb/built-in.a;  printf "drivers/soc/bcm/brcmstb/%s " common.o biuctrl.o pm/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/bcm/brcmstb/built-in.a

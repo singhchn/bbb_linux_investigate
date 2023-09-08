@@ -1,0 +1,1 @@
+cmd_drivers/clk/mvebu/built-in.a := rm -f drivers/clk/mvebu/built-in.a;  printf "drivers/clk/mvebu/%s " common.o clk-cpu.o clk-corediv.o armada-370.o armada-375.o armada-38x.o armada-39x.o armada-xp.o mv98dx3236.o dove.o dove-divider.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/mvebu/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/regulator/stm32-booster.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/regulator/stm32-booster.ko drivers/regulator/stm32-booster.o drivers/regulator/stm32-booster.mod.o;  true

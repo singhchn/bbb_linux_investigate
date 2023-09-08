@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/fsl-dcu/fsl-dcu-drm.mod := printf '%s\n'   fsl_dcu_drm_drv.o fsl_dcu_drm_kms.o fsl_dcu_drm_rgb.o fsl_dcu_drm_plane.o fsl_dcu_drm_crtc.o fsl_tcon.o | awk '!x[$$0]++ { print("drivers/gpu/drm/fsl-dcu/"$$0) }' > drivers/gpu/drm/fsl-dcu/fsl-dcu-drm.mod

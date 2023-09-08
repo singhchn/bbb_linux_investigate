@@ -1,0 +1,1 @@
+cmd_drivers/fsi/modules.order := {   echo drivers/fsi/fsi-core.ko;   echo drivers/fsi/fsi-master-hub.ko;   echo drivers/fsi/fsi-master-aspeed.ko;   echo drivers/fsi/fsi-master-gpio.ko;   echo drivers/fsi/fsi-scom.ko;   echo drivers/fsi/fsi-sbefifo.ko;   echo drivers/fsi/fsi-occ.ko; :; } > drivers/fsi/modules.order

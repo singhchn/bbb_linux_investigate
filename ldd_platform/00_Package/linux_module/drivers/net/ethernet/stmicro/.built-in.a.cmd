@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/stmicro/built-in.a := rm -f drivers/net/ethernet/stmicro/built-in.a;  printf "drivers/net/ethernet/stmicro/%s " stmmac/built-in.a | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/stmicro/built-in.a

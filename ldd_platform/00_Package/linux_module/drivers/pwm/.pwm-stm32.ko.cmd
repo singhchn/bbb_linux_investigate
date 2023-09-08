@@ -1,0 +1,1 @@
+cmd_drivers/pwm/pwm-stm32.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/pwm/pwm-stm32.ko drivers/pwm/pwm-stm32.o drivers/pwm/pwm-stm32.mod.o;  true

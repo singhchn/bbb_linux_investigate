@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-idma.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/samsung/snd-soc-idma.ko sound/soc/samsung/snd-soc-idma.o sound/soc/samsung/snd-soc-idma.mod.o;  true

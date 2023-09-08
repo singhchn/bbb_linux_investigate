@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-meson/built-in.a := rm -f arch/arm/mach-meson/built-in.a;  printf "arch/arm/mach-meson/%s " meson.o platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-meson/built-in.a

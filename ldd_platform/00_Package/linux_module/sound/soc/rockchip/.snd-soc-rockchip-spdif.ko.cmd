@@ -1,0 +1,1 @@
+cmd_sound/soc/rockchip/snd-soc-rockchip-spdif.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/rockchip/snd-soc-rockchip-spdif.ko sound/soc/rockchip/snd-soc-rockchip-spdif.o sound/soc/rockchip/snd-soc-rockchip-spdif.mod.o;  true

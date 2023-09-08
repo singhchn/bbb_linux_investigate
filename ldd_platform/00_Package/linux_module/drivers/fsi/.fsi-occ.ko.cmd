@@ -1,0 +1,1 @@
+cmd_drivers/fsi/fsi-occ.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/fsi/fsi-occ.ko drivers/fsi/fsi-occ.o drivers/fsi/fsi-occ.mod.o;  true

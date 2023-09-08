@@ -1,0 +1,1 @@
+cmd_drivers/mtd/devices/built-in.a := rm -f drivers/mtd/devices/built-in.a;  printf "drivers/mtd/devices/%s " spear_smi.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/mtd/devices/built-in.a

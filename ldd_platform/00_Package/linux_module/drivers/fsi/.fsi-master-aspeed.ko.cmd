@@ -1,0 +1,1 @@
+cmd_drivers/fsi/fsi-master-aspeed.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/fsi/fsi-master-aspeed.ko drivers/fsi/fsi-master-aspeed.o drivers/fsi/fsi-master-aspeed.mod.o;  true

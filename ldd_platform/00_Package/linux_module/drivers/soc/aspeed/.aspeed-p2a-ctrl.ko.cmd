@@ -1,0 +1,1 @@
+cmd_drivers/soc/aspeed/aspeed-p2a-ctrl.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/soc/aspeed/aspeed-p2a-ctrl.ko drivers/soc/aspeed/aspeed-p2a-ctrl.o drivers/soc/aspeed/aspeed-p2a-ctrl.mod.o;  true

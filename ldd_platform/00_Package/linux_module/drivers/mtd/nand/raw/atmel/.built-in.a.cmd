@@ -1,0 +1,1 @@
+cmd_drivers/mtd/nand/raw/atmel/built-in.a := rm -f drivers/mtd/nand/raw/atmel/built-in.a;  printf "drivers/mtd/nand/raw/atmel/%s " nand-controller.o pmecc.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/mtd/nand/raw/atmel/built-in.a

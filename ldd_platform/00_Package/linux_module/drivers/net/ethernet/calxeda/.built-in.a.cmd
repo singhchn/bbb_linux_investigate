@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/calxeda/built-in.a := rm -f drivers/net/ethernet/calxeda/built-in.a;  printf "drivers/net/ethernet/calxeda/%s " xgmac.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/net/ethernet/calxeda/built-in.a

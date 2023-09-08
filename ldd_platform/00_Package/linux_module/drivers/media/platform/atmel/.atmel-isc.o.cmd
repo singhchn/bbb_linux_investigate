@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/atmel/atmel-isc.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/platform/atmel/atmel-isc.o @drivers/media/platform/atmel/atmel-isc.mod 

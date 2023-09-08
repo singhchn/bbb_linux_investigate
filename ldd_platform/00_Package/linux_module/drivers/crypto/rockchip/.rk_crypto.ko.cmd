@@ -1,0 +1,1 @@
+cmd_drivers/crypto/rockchip/rk_crypto.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/rockchip/rk_crypto.ko drivers/crypto/rockchip/rk_crypto.o drivers/crypto/rockchip/rk_crypto.mod.o;  true

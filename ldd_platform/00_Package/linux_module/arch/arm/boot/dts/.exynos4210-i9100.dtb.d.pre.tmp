@@ -1,0 +1,14 @@
+exynos4210-i9100.o: arch/arm/boot/dts/exynos4210-i9100.dts \
+ arch/arm/boot/dts/exynos4210.dtsi arch/arm/boot/dts/exynos4.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos4.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos-audss-clk.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/exynos-syscon-restart.dtsi \
+ arch/arm/boot/dts/exynos4-cpu-thermal.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ arch/arm/boot/dts/exynos4210-pinctrl.dtsi \
+ arch/arm/boot/dts/exynos-pinctrl.h \
+ arch/arm/boot/dts/exynos4412-ppmu-common.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h

@@ -1,0 +1,22 @@
+!<thin>
+//                                              174       `
+exynos5422-asv.o/
+exynos-chipid.o/
+exynos-asv.o/
+exynos-pmu.o/
+exynos3250-pmu.o/
+exynos4-pmu.o/
+exynos5250-pmu.o/
+exynos5420-pmu.o/
+pm_domains.o/
+exynos-regulator-coupler.o/
+/0              0           0     0     644     11320     `
+/18             0           0     0     644     6520      `
+/35             0           0     0     644     3304      `
+/49             0           0     0     644     6488      `
+/63             0           0     0     644     2592      `
+/81             0           0     0     644     2560      `
+/96             0           0     0     644     2780      `
+/114            0           0     0     644     3428      `
+/132            0           0     0     644     5068      `
+/146            0           0     0     644     3476      `

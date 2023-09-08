@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/samsung/exynos4-is/exynos-fimc-lite.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/media/platform/samsung/exynos4-is/exynos-fimc-lite.o @drivers/media/platform/samsung/exynos4-is/exynos-fimc-lite.mod 

@@ -1,0 +1,10 @@
+owl-s500-labrador-base-m.o: \
+ arch/arm/boot/dts/owl-s500-labrador-base-m.dts \
+ arch/arm/boot/dts/owl-s500-labrador-v2.dtsi \
+ arch/arm/boot/dts/owl-s500.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/actions,s500-cmu.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/owl-s500-powergate.h \
+ scripts/dtc/include-prefixes/dt-bindings/reset/actions,s500-reset.h

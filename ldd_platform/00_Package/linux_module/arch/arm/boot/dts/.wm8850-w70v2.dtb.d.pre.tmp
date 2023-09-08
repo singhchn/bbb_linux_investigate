@@ -1,0 +1,2 @@
+wm8850-w70v2.o: arch/arm/boot/dts/wm8850-w70v2.dts \
+ scripts/dtc/include-prefixes/dt-bindings/pwm/pwm.h

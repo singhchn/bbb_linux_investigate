@@ -1,0 +1,4 @@
+armada-xp-gp.o: arch/arm/boot/dts/armada-xp-gp.dts \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/armada-xp-mv78460.dtsi \
+ arch/arm/boot/dts/armada-xp.dtsi arch/arm/boot/dts/armada-370-xp.dtsi

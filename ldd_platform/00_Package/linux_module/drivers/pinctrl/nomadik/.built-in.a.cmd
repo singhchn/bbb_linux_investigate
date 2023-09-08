@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/nomadik/built-in.a := rm -f drivers/pinctrl/nomadik/built-in.a;  printf "drivers/pinctrl/nomadik/%s " pinctrl-abx500.o pinctrl-ab8500.o pinctrl-ab8505.o pinctrl-nomadik.o pinctrl-nomadik-db8500.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/nomadik/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/clk/st/built-in.a := rm -f drivers/clk/st/built-in.a;  printf "drivers/clk/st/%s " clkgen-mux.o clkgen-pll.o clkgen-fsyn.o clk-flexgen.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/clk/st/built-in.a

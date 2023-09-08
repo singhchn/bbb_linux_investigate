@@ -1,0 +1,1 @@
+cmd_drivers/phy/st/built-in.a := rm -f drivers/phy/st/built-in.a;  printf "drivers/phy/st/%s " phy-miphy28lp.o phy-spear1310-miphy.o phy-spear1340-miphy.o phy-stih407-usb.o phy-stm32-usbphyc.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/st/built-in.a

@@ -1,0 +1,1 @@
+cmd_arch/arm/crypto/sha2-arm-ce.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o arch/arm/crypto/sha2-arm-ce.ko arch/arm/crypto/sha2-arm-ce.o arch/arm/crypto/sha2-arm-ce.mod.o;  true

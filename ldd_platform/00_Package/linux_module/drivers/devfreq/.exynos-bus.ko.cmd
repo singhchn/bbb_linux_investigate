@@ -1,0 +1,1 @@
+cmd_drivers/devfreq/exynos-bus.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/devfreq/exynos-bus.ko drivers/devfreq/exynos-bus.o drivers/devfreq/exynos-bus.mod.o;  true

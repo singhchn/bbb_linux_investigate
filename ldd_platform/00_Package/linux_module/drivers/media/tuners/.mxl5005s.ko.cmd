@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/mxl5005s.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/mxl5005s.ko drivers/media/tuners/mxl5005s.o drivers/media/tuners/mxl5005s.mod.o;  true

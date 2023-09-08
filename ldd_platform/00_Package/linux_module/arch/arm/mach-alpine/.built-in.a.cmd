@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-alpine/built-in.a := rm -f arch/arm/mach-alpine/built-in.a;  printf "arch/arm/mach-alpine/%s " alpine_machine.o platsmp.o alpine_cpu_pm.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-alpine/built-in.a

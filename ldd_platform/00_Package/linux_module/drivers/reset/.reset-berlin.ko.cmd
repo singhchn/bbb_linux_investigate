@@ -1,0 +1,1 @@
+cmd_drivers/reset/reset-berlin.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/reset/reset-berlin.ko drivers/reset/reset-berlin.o drivers/reset/reset-berlin.mod.o;  true

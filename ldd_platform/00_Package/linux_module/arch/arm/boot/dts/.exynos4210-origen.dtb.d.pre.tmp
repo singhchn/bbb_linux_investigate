@@ -1,0 +1,16 @@
+exynos4210-origen.o: arch/arm/boot/dts/exynos4210-origen.dts \
+ arch/arm/boot/dts/exynos4210.dtsi arch/arm/boot/dts/exynos4.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos4.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos-audss-clk.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ arch/arm/boot/dts/exynos-syscon-restart.dtsi \
+ arch/arm/boot/dts/exynos4-cpu-thermal.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/thermal/thermal.h \
+ arch/arm/boot/dts/exynos4210-pinctrl.dtsi \
+ arch/arm/boot/dts/exynos-pinctrl.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/leds/common.h \
+ arch/arm/boot/dts/exynos-mfc-reserved-memory.dtsi

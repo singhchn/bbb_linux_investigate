@@ -1,0 +1,1 @@
+cmd_drivers/iio/adc/stmpe-adc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/iio/adc/stmpe-adc.ko drivers/iio/adc/stmpe-adc.o drivers/iio/adc/stmpe-adc.mod.o;  true

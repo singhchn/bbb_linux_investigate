@@ -1,0 +1,2 @@
+drivers/dma/sh/usb-dmac.ko
+drivers/dma/st_fdma.ko

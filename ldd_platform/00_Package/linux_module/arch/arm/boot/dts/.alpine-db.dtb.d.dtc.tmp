@@ -1,0 +1,1 @@
+arch/arm/boot/dts/alpine-db.dtb: arch/arm/boot/dts/.alpine-db.dtb.dts.tmp

@@ -1,0 +1,3 @@
+hisi-x5hd2-dkb.o: arch/arm/boot/dts/hisi-x5hd2-dkb.dts \
+ arch/arm/boot/dts/hisi-x5hd2.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/hix5hd2-clock.h

@@ -1,0 +1,16 @@
+exynos5422-odroidhc1.o: arch/arm/boot/dts/exynos5422-odroidhc1.dts \
+ scripts/dtc/include-prefixes/dt-bindings/leds/common.h \
+ arch/arm/boot/dts/exynos5422-odroid-core.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/samsung,s2mps11.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ arch/arm/boot/dts/exynos5800.dtsi arch/arm/boot/dts/exynos5420.dtsi \
+ arch/arm/boot/dts/exynos54xx.dtsi arch/arm/boot/dts/exynos5.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos5420.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/exynos-audss-clk.h \
+ arch/arm/boot/dts/exynos5420-trip-points.dtsi \
+ arch/arm/boot/dts/exynos5420-pinctrl.dtsi \
+ arch/arm/boot/dts/exynos-pinctrl.h \
+ arch/arm/boot/dts/exynos-syscon-restart.dtsi \
+ arch/arm/boot/dts/exynos5422-cpus.dtsi

@@ -1,0 +1,11 @@
+!<thin>
+//                                              76        `
+ab8500-gpadc.o/
+bcm_iproc_adc.o/
+xilinx-xadc-core.o/
+xilinx-xadc-events.o/
+
+/0              0           0     0     644     12860     `
+/16             0           0     0     644     10868     `
+/33             0           0     0     644     22476     `
+/53             0           0     0     644     2832      `

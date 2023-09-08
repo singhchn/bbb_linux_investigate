@@ -1,0 +1,1 @@
+cmd_drivers/base/regmap/regmap-ac97.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/base/regmap/regmap-ac97.ko drivers/base/regmap/regmap-ac97.o drivers/base/regmap/regmap-ac97.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/usb/storage/uas.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/storage/uas.ko drivers/usb/storage/uas.o drivers/usb/storage/uas.mod.o;  true

@@ -1,0 +1,4 @@
+drivers/misc/atmel-ssc.ko
+drivers/misc/qcom-coincell.ko
+drivers/misc/fastrpc.ko
+drivers/misc/pci_endpoint_test.ko

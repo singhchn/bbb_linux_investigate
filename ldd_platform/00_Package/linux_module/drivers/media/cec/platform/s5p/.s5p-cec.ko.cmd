@@ -1,0 +1,1 @@
+cmd_drivers/media/cec/platform/s5p/s5p-cec.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/cec/platform/s5p/s5p-cec.ko drivers/media/cec/platform/s5p/s5p-cec.o drivers/media/cec/platform/s5p/s5p-cec.mod.o;  true

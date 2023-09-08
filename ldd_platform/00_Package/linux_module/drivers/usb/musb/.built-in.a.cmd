@@ -1,0 +1,1 @@
+cmd_drivers/usb/musb/built-in.a := rm -f drivers/usb/musb/built-in.a;  printf "drivers/usb/musb/%s " musb_core.o musb_trace.o musb_gadget_ep0.o musb_gadget.o musb_debugfs.o musbhsdma.o ux500_dma.o musb_cppi41.o musb_dsps.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/usb/musb/built-in.a

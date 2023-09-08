@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/etnaviv/etnaviv.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/gpu/drm/etnaviv/etnaviv.o @drivers/gpu/drm/etnaviv/etnaviv.mod 

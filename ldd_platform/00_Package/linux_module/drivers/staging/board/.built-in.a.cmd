@@ -1,0 +1,1 @@
+cmd_drivers/staging/board/built-in.a := rm -f drivers/staging/board/built-in.a;  printf "drivers/staging/board/%s " board.o kzm9d.o armadillo800eva.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/staging/board/built-in.a

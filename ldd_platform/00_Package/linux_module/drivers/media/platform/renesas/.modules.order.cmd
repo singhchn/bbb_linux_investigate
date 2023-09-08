@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/renesas/modules.order := {   cat drivers/media/platform/renesas/rcar-vin/modules.order;   cat drivers/media/platform/renesas/vsp1/modules.order;   echo drivers/media/platform/renesas/renesas-ceu.ko;   echo drivers/media/platform/renesas/rcar_fdp1.ko;   echo drivers/media/platform/renesas/rcar_jpu.ko; :; } > drivers/media/platform/renesas/modules.order

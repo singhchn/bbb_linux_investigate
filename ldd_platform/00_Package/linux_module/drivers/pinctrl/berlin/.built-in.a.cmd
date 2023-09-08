@@ -1,0 +1,1 @@
+cmd_drivers/pinctrl/berlin/built-in.a := rm -f drivers/pinctrl/berlin/built-in.a;  printf "drivers/pinctrl/berlin/%s " berlin.o berlin-bg2.o berlin-bg2cd.o berlin-bg2q.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/pinctrl/berlin/built-in.a

@@ -1,0 +1,1 @@
+cmd_drivers/fsi/fsi-sbefifo.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/fsi/fsi-sbefifo.ko drivers/fsi/fsi-sbefifo.o drivers/fsi/fsi-sbefifo.mod.o;  true

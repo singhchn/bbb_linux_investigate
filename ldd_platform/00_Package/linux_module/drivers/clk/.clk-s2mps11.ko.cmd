@@ -1,0 +1,1 @@
+cmd_drivers/clk/clk-s2mps11.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/clk/clk-s2mps11.ko drivers/clk/clk-s2mps11.o drivers/clk/clk-s2mps11.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/soc/actions/built-in.a := rm -f drivers/soc/actions/built-in.a;  printf "drivers/soc/actions/%s " owl-sps-helper.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/actions/built-in.a

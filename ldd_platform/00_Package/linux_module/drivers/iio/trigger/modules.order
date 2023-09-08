@@ -1,0 +1,2 @@
+drivers/iio/trigger/stm32-lptimer-trigger.ko
+drivers/iio/trigger/stm32-timer-trigger.ko

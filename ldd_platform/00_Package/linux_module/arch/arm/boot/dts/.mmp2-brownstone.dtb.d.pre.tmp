@@ -1,0 +1,5 @@
+mmp2-brownstone.o: arch/arm/boot/dts/mmp2-brownstone.dts \
+ arch/arm/boot/dts/mmp2.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/marvell,mmp2.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/marvell,mmp2.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/marvell,mmp2-audio.h

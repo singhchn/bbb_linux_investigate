@@ -1,0 +1,7 @@
+r8a7779-marzen.o: arch/arm/boot/dts/r8a7779-marzen.dts \
+ arch/arm/boot/dts/r8a7779.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/r8a7779-clock.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/power/r8a7779-sysc.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h

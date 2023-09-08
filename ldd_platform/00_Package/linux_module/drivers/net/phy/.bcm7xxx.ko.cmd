@@ -1,0 +1,1 @@
+cmd_drivers/net/phy/bcm7xxx.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/net/phy/bcm7xxx.ko drivers/net/phy/bcm7xxx.o drivers/net/phy/bcm7xxx.mod.o;  true

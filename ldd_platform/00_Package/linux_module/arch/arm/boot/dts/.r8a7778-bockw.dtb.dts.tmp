@@ -1,0 +1,887 @@
+# 1 "arch/arm/boot/dts/r8a7778-bockw.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/r8a7778-bockw.dts"
+# 14 "arch/arm/boot/dts/r8a7778-bockw.dts"
+/dts-v1/;
+# 1 "arch/arm/boot/dts/r8a7778.dtsi" 1
+# 14 "arch/arm/boot/dts/r8a7778.dtsi"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/r8a7778-clock.h" 1
+# 15 "arch/arm/boot/dts/r8a7778.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 16 "arch/arm/boot/dts/r8a7778.dtsi" 2
+
+
+/ {
+ compatible = "renesas,r8a7778";
+ interrupt-parent = <&gic>;
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a9";
+   reg = <0>;
+   clock-frequency = <800000000>;
+   clocks = <&z_clk>;
+  };
+ };
+
+ aliases {
+  spi0 = &hspi0;
+  spi1 = &hspi1;
+  spi2 = &hspi2;
+ };
+
+ bsc: bus@1c000000 {
+  compatible = "simple-bus";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges = <0 0 0x1c000000>;
+ };
+
+ ether: ethernet@fde00000 {
+  compatible = "renesas,ether-r8a7778",
+        "renesas,rcar-gen1-ether";
+  reg = <0xfde00000 0x400>;
+  interrupts = <0 105 4>;
+  clocks = <&mstp1_clks 14>;
+  power-domains = <&cpg_clocks>;
+  phy-mode = "rmii";
+  #address-cells = <1>;
+  #size-cells = <0>;
+  status = "disabled";
+ };
+
+ gic: interrupt-controller@fe438000 {
+  compatible = "arm,pl390";
+  #interrupt-cells = <3>;
+  interrupt-controller;
+  reg = <0xfe438000 0x1000>,
+        <0xfe430000 0x100>;
+ };
+
+
+ irqpin: interrupt-controller@fe78001c {
+  compatible = "renesas,intc-irqpin-r8a7778", "renesas,intc-irqpin";
+  #interrupt-cells = <2>;
+  interrupt-controller;
+  status = "disabled";
+  reg = <0xfe78001c 4>,
+   <0xfe780010 4>,
+   <0xfe780024 4>,
+   <0xfe780044 4>,
+   <0xfe780064 4>,
+   <0xfe780000 4>;
+  interrupts = <0 27 4>,
+        <0 28 4>,
+        <0 29 4>,
+        <0 30 4>;
+  sense-bitfield-width = <2>;
+ };
+
+ gpio0: gpio@ffc40000 {
+  compatible = "renesas,gpio-r8a7778", "renesas,rcar-gen1-gpio";
+  reg = <0xffc40000 0x2c>;
+  interrupts = <0 103 4>;
+  #gpio-cells = <2>;
+  gpio-controller;
+  gpio-ranges = <&pfc 0 0 32>;
+  #interrupt-cells = <2>;
+  interrupt-controller;
+ };
+
+ gpio1: gpio@ffc41000 {
+  compatible = "renesas,gpio-r8a7778", "renesas,rcar-gen1-gpio";
+  reg = <0xffc41000 0x2c>;
+  interrupts = <0 103 4>;
+  #gpio-cells = <2>;
+  gpio-controller;
+  gpio-ranges = <&pfc 0 32 32>;
+  #interrupt-cells = <2>;
+  interrupt-controller;
+ };
+
+ gpio2: gpio@ffc42000 {
+  compatible = "renesas,gpio-r8a7778", "renesas,rcar-gen1-gpio";
+  reg = <0xffc42000 0x2c>;
+  interrupts = <0 103 4>;
+  #gpio-cells = <2>;
+  gpio-controller;
+  gpio-ranges = <&pfc 0 64 32>;
+  #interrupt-cells = <2>;
+  interrupt-controller;
+ };
+
+ gpio3: gpio@ffc43000 {
+  compatible = "renesas,gpio-r8a7778", "renesas,rcar-gen1-gpio";
+  reg = <0xffc43000 0x2c>;
+  interrupts = <0 103 4>;
+  #gpio-cells = <2>;
+  gpio-controller;
+  gpio-ranges = <&pfc 0 96 32>;
+  #interrupt-cells = <2>;
+  interrupt-controller;
+ };
+
+ gpio4: gpio@ffc44000 {
+  compatible = "renesas,gpio-r8a7778", "renesas,rcar-gen1-gpio";
+  reg = <0xffc44000 0x2c>;
+  interrupts = <0 103 4>;
+  #gpio-cells = <2>;
+  gpio-controller;
+  gpio-ranges = <&pfc 0 128 27>;
+  #interrupt-cells = <2>;
+  interrupt-controller;
+ };
+
+ pfc: pinctrl@fffc0000 {
+  compatible = "renesas,pfc-r8a7778";
+  reg = <0xfffc0000 0x118>;
+ };
+
+ i2c0: i2c@ffc70000 {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  compatible = "renesas,i2c-r8a7778", "renesas,rcar-gen1-i2c";
+  reg = <0xffc70000 0x1000>;
+  interrupts = <0 67 4>;
+  clocks = <&mstp0_clks 30>;
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ i2c1: i2c@ffc71000 {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  compatible = "renesas,i2c-r8a7778", "renesas,rcar-gen1-i2c";
+  reg = <0xffc71000 0x1000>;
+  interrupts = <0 78 4>;
+  clocks = <&mstp0_clks 29>;
+  power-domains = <&cpg_clocks>;
+  i2c-scl-internal-delay-ns = <5>;
+  status = "disabled";
+ };
+
+ i2c2: i2c@ffc72000 {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  compatible = "renesas,i2c-r8a7778", "renesas,rcar-gen1-i2c";
+  reg = <0xffc72000 0x1000>;
+  interrupts = <0 76 4>;
+  clocks = <&mstp0_clks 28>;
+  power-domains = <&cpg_clocks>;
+  i2c-scl-internal-delay-ns = <5>;
+  status = "disabled";
+ };
+
+ i2c3: i2c@ffc73000 {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  compatible = "renesas,i2c-r8a7778", "renesas,rcar-gen1-i2c";
+  reg = <0xffc73000 0x1000>;
+  interrupts = <0 77 4>;
+  clocks = <&mstp0_clks 27>;
+  power-domains = <&cpg_clocks>;
+  i2c-scl-internal-delay-ns = <5>;
+  status = "disabled";
+ };
+
+ tmu0: timer@ffd80000 {
+  compatible = "renesas,tmu-r8a7778", "renesas,tmu";
+  reg = <0xffd80000 0x30>;
+  interrupts = <0 32 4>,
+        <0 33 4>,
+        <0 34 4>;
+  clocks = <&mstp0_clks 16>;
+  clock-names = "fck";
+  power-domains = <&cpg_clocks>;
+
+  #renesas,channels = <3>;
+
+  status = "disabled";
+ };
+
+ tmu1: timer@ffd81000 {
+  compatible = "renesas,tmu-r8a7778", "renesas,tmu";
+  reg = <0xffd81000 0x30>;
+  interrupts = <0 36 4>,
+        <0 37 4>,
+        <0 38 4>;
+  clocks = <&mstp0_clks 15>;
+  clock-names = "fck";
+  power-domains = <&cpg_clocks>;
+
+  #renesas,channels = <3>;
+
+  status = "disabled";
+ };
+
+ tmu2: timer@ffd82000 {
+  compatible = "renesas,tmu-r8a7778", "renesas,tmu";
+  reg = <0xffd82000 0x30>;
+  interrupts = <0 40 4>,
+        <0 41 4>,
+        <0 42 4>;
+  clocks = <&mstp0_clks 14>;
+  clock-names = "fck";
+  power-domains = <&cpg_clocks>;
+
+  #renesas,channels = <3>;
+
+  status = "disabled";
+ };
+
+ rcar_sound: sound@ffd90000 {
+
+
+
+
+
+
+  compatible = "renesas,rcar_sound-r8a7778", "renesas,rcar_sound-gen1";
+  reg = <0xffd90000 0x1000>,
+   <0xffd91000 0x240>,
+   <0xfffe0000 0x24>;
+  clocks = <&mstp3_clks 7>,
+   <&mstp3_clks 8>,
+   <&mstp3_clks 9>,
+   <&mstp3_clks 10>,
+   <&mstp3_clks 11>,
+   <&mstp0_clks 9>,
+   <&mstp0_clks 10>,
+   <&mstp0_clks 11>,
+   <&mstp0_clks 12>,
+   <&mstp5_clks 23>,
+   <&mstp5_clks 24>,
+   <&mstp5_clks 25>,
+   <&mstp5_clks 26>,
+   <&mstp5_clks 27>,
+   <&mstp5_clks 28>,
+   <&mstp5_clks 29>,
+   <&mstp5_clks 30>,
+   <&mstp5_clks 31>,
+   <&audio_clk_a>, <&audio_clk_b>, <&audio_clk_c>,
+   <&cpg_clocks 6>;
+  clock-names = "ssi.8", "ssi.7", "ssi.6", "ssi.5", "ssi.4",
+   "ssi.3", "ssi.2", "ssi.1", "ssi.0",
+   "src.8", "src.7", "src.6", "src.5", "src.4",
+   "src.3", "src.2", "src.1", "src.0",
+   "clk_a", "clk_b", "clk_c", "clk_i";
+
+  status = "disabled";
+
+  rcar_sound,src {
+   src3: src-3 { };
+   src4: src-4 { };
+   src5: src-5 { };
+   src6: src-6 { };
+   src7: src-7 { };
+   src8: src-8 { };
+   src9: src-9 { };
+  };
+
+  rcar_sound,ssi {
+   ssi3: ssi-3 { interrupts = <0 0x85 4>; };
+   ssi4: ssi-4 { interrupts = <0 0x85 4>; };
+   ssi5: ssi-5 { interrupts = <0 0x86 4>; };
+   ssi6: ssi-6 { interrupts = <0 0x86 4>; };
+   ssi7: ssi-7 { interrupts = <0 0x86 4>; };
+   ssi8: ssi-8 { interrupts = <0 0x86 4>; };
+   ssi9: ssi-9 { interrupts = <0 0x86 4>; };
+  };
+ };
+
+ scif0: serial@ffe40000 {
+  compatible = "renesas,scif-r8a7778", "renesas,rcar-gen1-scif",
+        "renesas,scif";
+  reg = <0xffe40000 0x100>;
+  interrupts = <0 70 4>;
+  clocks = <&mstp0_clks 26>,
+    <&cpg_clocks 6>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ scif1: serial@ffe41000 {
+  compatible = "renesas,scif-r8a7778", "renesas,rcar-gen1-scif",
+        "renesas,scif";
+  reg = <0xffe41000 0x100>;
+  interrupts = <0 71 4>;
+  clocks = <&mstp0_clks 25>,
+    <&cpg_clocks 6>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ scif2: serial@ffe42000 {
+  compatible = "renesas,scif-r8a7778", "renesas,rcar-gen1-scif",
+        "renesas,scif";
+  reg = <0xffe42000 0x100>;
+  interrupts = <0 72 4>;
+  clocks = <&mstp0_clks 24>,
+    <&cpg_clocks 6>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ scif3: serial@ffe43000 {
+  compatible = "renesas,scif-r8a7778", "renesas,rcar-gen1-scif",
+        "renesas,scif";
+  reg = <0xffe43000 0x100>;
+  interrupts = <0 73 4>;
+  clocks = <&mstp0_clks 23>,
+    <&cpg_clocks 6>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ scif4: serial@ffe44000 {
+  compatible = "renesas,scif-r8a7778", "renesas,rcar-gen1-scif",
+        "renesas,scif";
+  reg = <0xffe44000 0x100>;
+  interrupts = <0 74 4>;
+  clocks = <&mstp0_clks 22>,
+    <&cpg_clocks 6>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ scif5: serial@ffe45000 {
+  compatible = "renesas,scif-r8a7778", "renesas,rcar-gen1-scif",
+        "renesas,scif";
+  reg = <0xffe45000 0x100>;
+  interrupts = <0 75 4>;
+  clocks = <&mstp0_clks 21>,
+    <&cpg_clocks 6>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ hscif0: serial@ffe48000 {
+  compatible = "renesas,hscif-r8a7778",
+        "renesas,rcar-gen1-hscif", "renesas,hscif";
+  reg = <0xffe48000 96>;
+  interrupts = <0 118 4>;
+  clocks = <&mstp0_clks 19>,
+    <&cpg_clocks 5>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ hscif1: serial@ffe49000 {
+  compatible = "renesas,hscif-r8a7778",
+        "renesas,rcar-gen1-hscif", "renesas,hscif";
+  reg = <0xffe49000 96>;
+  interrupts = <0 119 4>;
+  clocks = <&mstp0_clks 18>,
+    <&cpg_clocks 5>, <&scif_clk>;
+  clock-names = "fck", "brg_int", "scif_clk";
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ mmcif: mmc@ffe4e000 {
+  compatible = "renesas,mmcif-r8a7778", "renesas,sh-mmcif";
+  reg = <0xffe4e000 0x100>;
+  interrupts = <0 61 4>;
+  clocks = <&mstp3_clks 31>;
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ sdhi0: mmc@ffe4c000 {
+  compatible = "renesas,sdhi-r8a7778",
+        "renesas,rcar-gen1-sdhi";
+  reg = <0xffe4c000 0x100>;
+  interrupts = <0 87 4>;
+  clocks = <&mstp3_clks 23>;
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ sdhi1: mmc@ffe4d000 {
+  compatible = "renesas,sdhi-r8a7778",
+        "renesas,rcar-gen1-sdhi";
+  reg = <0xffe4d000 0x100>;
+  interrupts = <0 88 4>;
+  clocks = <&mstp3_clks 22>;
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ sdhi2: mmc@ffe4f000 {
+  compatible = "renesas,sdhi-r8a7778",
+        "renesas,rcar-gen1-sdhi";
+  reg = <0xffe4f000 0x100>;
+  interrupts = <0 86 4>;
+  clocks = <&mstp3_clks 21>;
+  power-domains = <&cpg_clocks>;
+  status = "disabled";
+ };
+
+ hspi0: spi@fffc7000 {
+  compatible = "renesas,hspi-r8a7778", "renesas,hspi";
+  reg = <0xfffc7000 0x18>;
+  interrupts = <0 63 4>;
+  clocks = <&mstp0_clks 7>;
+  power-domains = <&cpg_clocks>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  status = "disabled";
+ };
+
+ hspi1: spi@fffc8000 {
+  compatible = "renesas,hspi-r8a7778", "renesas,hspi";
+  reg = <0xfffc8000 0x18>;
+  interrupts = <0 84 4>;
+  clocks = <&mstp0_clks 7>;
+  power-domains = <&cpg_clocks>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  status = "disabled";
+ };
+
+ hspi2: spi@fffc6000 {
+  compatible = "renesas,hspi-r8a7778", "renesas,hspi";
+  reg = <0xfffc6000 0x18>;
+  interrupts = <0 85 4>;
+  clocks = <&mstp0_clks 7>;
+  power-domains = <&cpg_clocks>;
+  #address-cells = <1>;
+  #size-cells = <0>;
+  status = "disabled";
+ };
+
+ clocks {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+
+  extal_clk: extal {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <0>;
+  };
+
+
+  scif_clk: scif {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+
+   clock-frequency = <0>;
+  };
+
+
+  cpg_clocks: cpg_clocks@ffc80000 {
+   compatible = "renesas,r8a7778-cpg-clocks";
+   reg = <0xffc80000 0x80>;
+   #clock-cells = <1>;
+   clocks = <&extal_clk>;
+   clock-output-names = "plla", "pllb", "b",
+          "out", "p", "s", "s1";
+   #power-domain-cells = <0>;
+  };
+
+
+  audio_clk_a: audio_clk_a {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <0>;
+  };
+  audio_clk_b: audio_clk_b {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <0>;
+  };
+  audio_clk_c: audio_clk_c {
+   compatible = "fixed-clock";
+   #clock-cells = <0>;
+   clock-frequency = <0>;
+  };
+
+
+  g_clk: g {
+   compatible = "fixed-factor-clock";
+   clocks = <&cpg_clocks 0>;
+   #clock-cells = <0>;
+   clock-div = <12>;
+   clock-mult = <1>;
+  };
+  i_clk: i {
+   compatible = "fixed-factor-clock";
+   clocks = <&cpg_clocks 0>;
+   #clock-cells = <0>;
+   clock-div = <1>;
+   clock-mult = <1>;
+  };
+  s3_clk: s3 {
+   compatible = "fixed-factor-clock";
+   clocks = <&cpg_clocks 0>;
+   #clock-cells = <0>;
+   clock-div = <4>;
+   clock-mult = <1>;
+  };
+  s4_clk: s4 {
+   compatible = "fixed-factor-clock";
+   clocks = <&cpg_clocks 0>;
+   #clock-cells = <0>;
+   clock-div = <8>;
+   clock-mult = <1>;
+  };
+  z_clk: z {
+   compatible = "fixed-factor-clock";
+   clocks = <&cpg_clocks 1>;
+   #clock-cells = <0>;
+   clock-div = <1>;
+   clock-mult = <1>;
+  };
+
+
+  mstp0_clks: mstp0_clks@ffc80030 {
+   compatible = "renesas,r8a7778-mstp-clocks", "renesas,cpg-mstp-clocks";
+   reg = <0xffc80030 4>;
+   clocks = <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 5>,
+     <&cpg_clocks 5>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 5>;
+   #clock-cells = <1>;
+   clock-indices = <
+    30 29
+    28 27
+    26 25
+    24 23
+    22 21
+    19 18
+    16 15
+    14 12
+    11 10
+    9 8
+    7
+   >;
+   clock-output-names =
+    "i2c0", "i2c1", "i2c2", "i2c3", "scif0",
+    "scif1", "scif2", "scif3", "scif4", "scif5",
+    "hscif0", "hscif1",
+    "tmu0", "tmu1", "tmu2", "ssi0", "ssi1",
+    "ssi2", "ssi3", "sru", "hspi";
+  };
+  mstp1_clks: mstp1_clks@ffc80034 {
+   compatible = "renesas,r8a7778-mstp-clocks", "renesas,cpg-mstp-clocks";
+   reg = <0xffc80034 4>, <0xffc80044 4>;
+   clocks = <&cpg_clocks 4>,
+     <&cpg_clocks 5>,
+     <&cpg_clocks 5>,
+     <&cpg_clocks 4>;
+   #clock-cells = <1>;
+   clock-indices = <
+    14 10
+    9 0
+   >;
+   clock-output-names =
+    "ether", "vin0", "vin1", "usb";
+  };
+  mstp3_clks: mstp3_clks@ffc8003c {
+   compatible = "renesas,r8a7778-mstp-clocks", "renesas,cpg-mstp-clocks";
+   reg = <0xffc8003c 4>;
+   clocks = <&s4_clk>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>;
+   #clock-cells = <1>;
+   clock-indices = <
+    31 23
+    22 21
+    11 10
+    9 8
+    7
+   >;
+   clock-output-names =
+    "mmc", "sdhi0", "sdhi1", "sdhi2", "ssi4",
+    "ssi5", "ssi6", "ssi7", "ssi8";
+  };
+  mstp5_clks: mstp5_clks@ffc80054 {
+   compatible = "renesas,r8a7778-mstp-clocks", "renesas,cpg-mstp-clocks";
+   reg = <0xffc80054 4>;
+   clocks = <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>,
+     <&cpg_clocks 4>;
+   #clock-cells = <1>;
+   clock-indices = <
+    31 30
+    29 28
+    27 26
+    25 24
+    23
+   >;
+   clock-output-names =
+    "sru-src0", "sru-src1", "sru-src2",
+    "sru-src3", "sru-src4", "sru-src5",
+    "sru-src6", "sru-src7", "sru-src8";
+  };
+ };
+
+ rst: reset-controller@ffcc0000 {
+  compatible = "renesas,r8a7778-reset-wdt";
+  reg = <0xffcc0000 0x40>;
+ };
+};
+# 16 "arch/arm/boot/dts/r8a7778-bockw.dts" 2
+
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 18 "arch/arm/boot/dts/r8a7778-bockw.dts" 2
+
+/ {
+ model = "bockw";
+ compatible = "renesas,bockw", "renesas,r8a7778";
+
+ aliases {
+  serial0 = &scif0;
+ };
+
+ chosen {
+  bootargs = "ignore_loglevel rw root=/dev/nfs ip=on";
+  stdout-path = "serial0:115200n8";
+ };
+
+ memory@60000000 {
+  device_type = "memory";
+  reg = <0x60000000 0x10000000>;
+ };
+
+ fixedregulator3v3: regulator-3v3 {
+  compatible = "regulator-fixed";
+  regulator-name = "fixed-3.3V";
+  regulator-min-microvolt = <3300000>;
+  regulator-max-microvolt = <3300000>;
+  regulator-boot-on;
+  regulator-always-on;
+ };
+
+ sound {
+  compatible = "simple-audio-card";
+
+  simple-audio-card,format = "left_j";
+  simple-audio-card,bitclock-master = <&sndcodec>;
+  simple-audio-card,frame-master = <&sndcodec>;
+
+  sndcpu: simple-audio-card,cpu {
+   sound-dai = <&rcar_sound>;
+  };
+
+  sndcodec: simple-audio-card,codec {
+   sound-dai = <&ak4643>;
+   system-clock-frequency = <11289600>;
+  };
+ };
+};
+
+&bsc {
+ ethernet@18300000 {
+  compatible = "smsc,lan89218", "smsc,lan9115";
+  reg = <0x18300000 0x1000>;
+
+  phy-mode = "mii";
+  interrupt-parent = <&irqpin>;
+  interrupts = <0 2>;
+  reg-io-width = <4>;
+  vddvario-supply = <&fixedregulator3v3>;
+  vdd33a-supply = <&fixedregulator3v3>;
+ };
+};
+
+&extal_clk {
+ clock-frequency = <33333333>;
+};
+
+&i2c0 {
+ status = "okay";
+
+ ak4643: codec@12 {
+  compatible = "asahi-kasei,ak4643";
+  #sound-dai-cells = <0>;
+  reg = <0x12>;
+ };
+
+ camera@41 {
+  compatible = "oki,ml86v7667";
+  reg = <0x41>;
+ };
+
+ camera@43 {
+  compatible = "oki,ml86v7667";
+  reg = <0x43>;
+ };
+
+ rx8581: rtc@51 {
+  compatible = "epson,rx8581";
+  reg = <0x51>;
+ };
+};
+
+&mmcif {
+ pinctrl-0 = <&mmc_pins>;
+ pinctrl-names = "default";
+
+ vmmc-supply = <&fixedregulator3v3>;
+ bus-width = <8>;
+ broken-cd;
+ status = "okay";
+};
+
+&irqpin {
+ status = "okay";
+};
+
+&tmu0 {
+ status = "okay";
+};
+
+&pfc {
+ pinctrl-0 = <&scif_clk_pins>;
+ pinctrl-names = "default";
+
+ scif0_pins: scif0 {
+  groups = "scif0_data_a", "scif0_ctrl";
+  function = "scif0";
+ };
+
+ scif_clk_pins: scif_clk {
+  groups = "scif_clk";
+  function = "scif_clk";
+ };
+
+ mmc_pins: mmc {
+  groups = "mmc_data8", "mmc_ctrl";
+  function = "mmc";
+ };
+
+ sdhi0_pins: sd0 {
+  groups = "sdhi0_data4", "sdhi0_ctrl";
+  function = "sdhi0";
+ };
+ sdhi0_pup_pins: sd0_pup {
+  groups = "sdhi0_cd", "sdhi0_wp";
+  function = "sdhi0";
+  bias-pull-up;
+ };
+
+ hspi0_pins: hspi0 {
+  groups = "hspi0_a";
+  function = "hspi0";
+ };
+
+ usb0_pins: usb0 {
+  groups = "usb0";
+  function = "usb0";
+ };
+
+ usb1_pins: usb1 {
+  groups = "usb1";
+  function = "usb1";
+ };
+
+ vin0_pins: vin0 {
+  groups = "vin0_data8", "vin0_clk";
+  function = "vin0";
+ };
+
+ vin1_pins: vin1 {
+  groups = "vin1_data8", "vin1_clk";
+  function = "vin1";
+ };
+};
+
+&rcar_sound {
+
+ #sound-dai-cells = <0>;
+};
+
+&sdhi0 {
+ pinctrl-0 = <&sdhi0_pins>, <&sdhi0_pup_pins>;
+ pinctrl-names = "default";
+
+ vmmc-supply = <&fixedregulator3v3>;
+ bus-width = <4>;
+ status = "okay";
+ wp-gpios = <&gpio3 18 0>;
+};
+
+&hspi0 {
+ pinctrl-0 = <&hspi0_pins>;
+ pinctrl-names = "default";
+ status = "okay";
+
+ flash: flash@0 {
+  compatible = "spansion,s25fl008k", "jedec,spi-nor";
+  reg = <0>;
+  spi-max-frequency = <104000000>;
+  m25p,fast-read;
+
+  partitions {
+   compatible = "fixed-partitions";
+   #address-cells = <1>;
+   #size-cells = <1>;
+
+   partition@0 {
+    label = "data(spi)";
+    reg = <0x00000000 0x00100000>;
+   };
+  };
+ };
+};
+
+&scif0 {
+ pinctrl-0 = <&scif0_pins>;
+ pinctrl-names = "default";
+
+ uart-has-rtscts;
+ status = "okay";
+};
+
+&scif_clk {
+ clock-frequency = <14745600>;
+};

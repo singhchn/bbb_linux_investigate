@@ -1,0 +1,1 @@
+cmd_drivers/soc/aspeed/modules.order := {   echo drivers/soc/aspeed/aspeed-lpc-ctrl.ko;   echo drivers/soc/aspeed/aspeed-lpc-snoop.ko;   echo drivers/soc/aspeed/aspeed-p2a-ctrl.ko; :; } > drivers/soc/aspeed/modules.order

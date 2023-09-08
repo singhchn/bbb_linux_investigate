@@ -1,0 +1,741 @@
+# 1 "arch/arm/boot/dts/r7s9210-rza2mevb.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/r7s9210-rza2mevb.dts"
+# 31 "arch/arm/boot/dts/r7s9210-rza2mevb.dts"
+/dts-v1/;
+# 1 "arch/arm/boot/dts/r7s9210.dtsi" 1
+# 9 "arch/arm/boot/dts/r7s9210.dtsi"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 1
+# 9 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h" 2
+# 10 "arch/arm/boot/dts/r7s9210.dtsi" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/r7s9210-cpg-mssr.h" 1
+# 10 "./scripts/dtc/include-prefixes/dt-bindings/clock/r7s9210-cpg-mssr.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/clock/renesas-cpg-mssr.h" 1
+# 11 "./scripts/dtc/include-prefixes/dt-bindings/clock/r7s9210-cpg-mssr.h" 2
+# 11 "arch/arm/boot/dts/r7s9210.dtsi" 2
+
+/ {
+ compatible = "renesas,r7s9210";
+ interrupt-parent = <&gic>;
+ #address-cells = <1>;
+ #size-cells = <1>;
+
+
+ extal_clk: extal {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+
+  clock-frequency = <0>;
+ };
+
+ rtc_x1_clk: rtc_x1 {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+
+  clock-frequency = <0>;
+ };
+
+ usb_x1_clk: usb_x1 {
+  #clock-cells = <0>;
+  compatible = "fixed-clock";
+
+  clock-frequency = <0>;
+ };
+
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+
+  cpu@0 {
+   device_type = "cpu";
+   compatible = "arm,cortex-a9";
+   reg = <0>;
+   clock-frequency = <528000000>;
+   next-level-cache = <&L2>;
+  };
+ };
+
+ soc {
+  compatible = "simple-bus";
+  interrupt-parent = <&gic>;
+
+  #address-cells = <1>;
+  #size-cells = <1>;
+  ranges;
+
+  L2: cache-controller@1f003000 {
+   compatible = "arm,pl310-cache";
+   reg = <0x1f003000 0x1000>;
+   interrupts = <0 12 4>;
+   arm,early-bresp-disable;
+   arm,full-line-zero-disable;
+   cache-unified;
+   cache-level = <2>;
+  };
+
+  scif0: serial@e8007000 {
+   compatible = "renesas,scif-r7s9210";
+   reg = <0xe8007000 0x18>;
+   interrupts = <0 265 4>,
+         <0 266 4>,
+         <0 267 4>,
+         <0 265 4>,
+         <0 268 4>,
+         <0 268 4>;
+   interrupt-names = "eri", "rxi", "txi",
+       "bri", "dri", "tei";
+   clocks = <&cpg 1 47>;
+   clock-names = "fck";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  scif1: serial@e8007800 {
+   compatible = "renesas,scif-r7s9210";
+   reg = <0xe8007800 0x18>;
+   interrupts = <0 271 4>,
+         <0 272 4>,
+         <0 273 4>,
+         <0 271 4>,
+         <0 274 4>,
+         <0 274 4>;
+   interrupt-names = "eri", "rxi", "txi",
+       "bri", "dri", "tei";
+   clocks = <&cpg 1 46>;
+   clock-names = "fck";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  scif2: serial@e8008000 {
+   compatible = "renesas,scif-r7s9210";
+   reg = <0xe8008000 0x18>;
+   interrupts = <0 277 4>,
+         <0 278 4>,
+         <0 279 4>,
+         <0 277 4>,
+         <0 280 4>,
+         <0 280 4>;
+   interrupt-names = "eri", "rxi", "txi",
+       "bri", "dri", "tei";
+   clocks = <&cpg 1 45>;
+   clock-names = "fck";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  scif3: serial@e8008800 {
+   compatible = "renesas,scif-r7s9210";
+   reg = <0xe8008800 0x18>;
+   interrupts = <0 283 4>,
+         <0 284 4>,
+         <0 285 4>,
+         <0 283 4>,
+         <0 286 4>,
+         <0 286 4>;
+   interrupt-names = "eri", "rxi", "txi",
+       "bri", "dri", "tei";
+   clocks = <&cpg 1 44>;
+   clock-names = "fck";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  scif4: serial@e8009000 {
+   compatible = "renesas,scif-r7s9210";
+   reg = <0xe8009000 0x18>;
+   interrupts = <0 289 4>,
+         <0 290 4>,
+         <0 291 4>,
+         <0 289 4>,
+         <0 292 4>,
+         <0 292 4>;
+   interrupt-names = "eri", "rxi", "txi",
+       "bri", "dri", "tei";
+   clocks = <&cpg 1 43>;
+   clock-names = "fck";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  spi0: spi@e800c800 {
+   compatible = "renesas,rspi-r7s9210", "renesas,rspi-rz";
+   reg = <0xe800c800 0x24>;
+   interrupts = <0 312 4>,
+         <0 313 4>,
+         <0 314 4>;
+   interrupt-names = "error", "rx", "tx";
+   clocks = <&cpg 1 97>;
+   power-domains = <&cpg>;
+   num-cs = <1>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  spi1: spi@e800d000 {
+   compatible = "renesas,rspi-r7s9210", "renesas,rspi-rz";
+   reg = <0xe800d000 0x24>;
+   interrupts = <0 315 4>,
+         <0 316 4>,
+         <0 317 4>;
+   interrupt-names = "error", "rx", "tx";
+   clocks = <&cpg 1 96>;
+   power-domains = <&cpg>;
+   num-cs = <1>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  spi2: spi@e800d800 {
+   compatible = "renesas,rspi-r7s9210", "renesas,rspi-rz";
+   reg = <0xe800d800 0x24>;
+   interrupts = <0 318 4>,
+         <0 319 4>,
+         <0 320 4>;
+   interrupt-names = "error", "rx", "tx";
+   clocks = <&cpg 1 95>;
+   power-domains = <&cpg>;
+   num-cs = <1>;
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  ether0: ethernet@e8204000 {
+   compatible = "renesas,ether-r7s9210";
+   reg = <0xe8204000 0x200>;
+   interrupts = <0 341 4>;
+   clocks = <&cpg 1 65>;
+   power-domains = <&cpg>;
+
+   phy-mode = "rmii";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  ether1: ethernet@e8204200 {
+   compatible = "renesas,ether-r7s9210";
+   reg = <0xe8204200 0x200>;
+   interrupts = <0 342 4>;
+   clocks = <&cpg 1 64>;
+   power-domains = <&cpg>;
+   phy-mode = "rmii";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   status = "disabled";
+  };
+
+  i2c0: i2c@e803a000 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "renesas,riic-r7s9210", "renesas,riic-rz";
+   reg = <0xe803a000 0x44>;
+   interrupts = <0 232 4>,
+         <0 233 1>,
+         <0 234 1>,
+         <0 235 4>,
+         <0 236 4>,
+         <0 237 4>,
+         <0 238 4>,
+         <0 239 4>;
+   interrupt-names = "tei", "ri", "ti", "spi", "sti",
+       "naki", "ali", "tmoi";
+   clocks = <&cpg 1 87>;
+   power-domains = <&cpg>;
+   clock-frequency = <100000>;
+   status = "disabled";
+  };
+
+  i2c1: i2c@e803a400 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "renesas,riic-r7s9210", "renesas,riic-rz";
+   reg = <0xe803a400 0x44>;
+   interrupts = <0 240 4>,
+         <0 241 1>,
+         <0 242 1>,
+         <0 243 4>,
+         <0 244 4>,
+         <0 245 4>,
+         <0 246 4>,
+         <0 247 4>;
+   interrupt-names = "tei", "ri", "ti", "spi", "sti",
+       "naki", "ali", "tmoi";
+   clocks = <&cpg 1 86>;
+   power-domains = <&cpg>;
+   clock-frequency = <100000>;
+   status = "disabled";
+  };
+
+  i2c2: i2c@e803a800 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "renesas,riic-r7s9210", "renesas,riic-rz";
+   reg = <0xe803a800 0x44>;
+   interrupts = <0 248 4>,
+         <0 249 1>,
+         <0 250 1>,
+         <0 251 4>,
+         <0 252 4>,
+         <0 253 4>,
+         <0 254 4>,
+         <0 255 4>;
+   interrupt-names = "tei", "ri", "ti", "spi", "sti",
+       "naki", "ali", "tmoi";
+   clocks = <&cpg 1 85>;
+   power-domains = <&cpg>;
+   clock-frequency = <100000>;
+   status = "disabled";
+  };
+
+  i2c3: i2c@e803ac00 {
+   #address-cells = <1>;
+   #size-cells = <0>;
+   compatible = "renesas,riic-r7s9210", "renesas,riic-rz";
+   reg = <0xe803ac00 0x44>;
+   interrupts = <0 256 4>,
+         <0 257 1>,
+         <0 258 1>,
+         <0 259 4>,
+         <0 260 4>,
+         <0 261 4>,
+         <0 262 4>,
+         <0 263 4>;
+   interrupt-names = "tei", "ri", "ti", "spi", "sti",
+       "naki", "ali", "tmoi";
+   clocks = <&cpg 1 84>;
+   power-domains = <&cpg>;
+   clock-frequency = <100000>;
+   status = "disabled";
+  };
+
+  ostm0: timer@e803b000 {
+   compatible = "renesas,r7s9210-ostm", "renesas,ostm";
+   reg = <0xe803b000 0x30>;
+   interrupts = <0 56 1>;
+   clocks = <&cpg 1 36>;
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  ostm1: timer@e803c000 {
+   compatible = "renesas,r7s9210-ostm", "renesas,ostm";
+   reg = <0xe803c000 0x30>;
+   interrupts = <0 57 1>;
+   clocks = <&cpg 1 35>;
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  ostm2: timer@e803d000 {
+   compatible = "renesas,r7s9210-ostm", "renesas,ostm";
+   reg = <0xe803d000 0x30>;
+   interrupts = <0 58 1>;
+   clocks = <&cpg 1 34>;
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  ohci0: usb@e8218000 {
+   compatible = "generic-ohci";
+   reg = <0xe8218000 0x100>;
+   interrupts = <0 31 4>;
+   clocks = <&cpg 1 61>;
+   phys = <&usb2_phy0>;
+   phy-names = "usb";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  ehci0: usb@e8218100 {
+   compatible = "generic-ehci";
+   reg = <0xe8218100 0x100>;
+   interrupts = <0 31 4>;
+   clocks = <&cpg 1 61>;
+   phys = <&usb2_phy0>;
+   phy-names = "usb";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  usb2_phy0: usb-phy@e8218200 {
+   compatible = "renesas,usb2-phy-r7s9210", "renesas,rcar-gen3-usb2-phy";
+   reg = <0xe8218200 0x700>;
+   interrupts = <0 31 4>;
+   clocks = <&cpg 1 61>, <&usb_x1_clk>;
+   clock-names = "fck", "usb_x1";
+   power-domains = <&cpg>;
+   #phy-cells = <0>;
+   status = "disabled";
+  };
+
+  usbhs0: usb@e8219000 {
+   compatible = "renesas,usbhs-r7s9210", "renesas,rza2-usbhs";
+   reg = <0xe8219000 0x724>;
+   interrupts = <0 32 4>;
+   clocks = <&cpg 1 61>;
+   renesas,buswait = <7>;
+   phys = <&usb2_phy0>;
+   phy-names = "usb";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  ohci1: usb@e821a000 {
+   compatible = "generic-ohci";
+   reg = <0xe821a000 0x100>;
+   interrupts = <0 36 4>;
+   clocks = <&cpg 1 60>;
+   phys = <&usb2_phy1>;
+   phy-names = "usb";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  ehci1: usb@e821a100 {
+   compatible = "generic-ehci";
+   reg = <0xe821a100 0x100>;
+   interrupts = <0 36 4>;
+   clocks = <&cpg 1 60>;
+   phys = <&usb2_phy1>;
+   phy-names = "usb";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  usb2_phy1: usb-phy@e821a200 {
+   compatible = "renesas,usb2-phy-r7s9210", "renesas,rcar-gen3-usb2-phy";
+   reg = <0xe821a200 0x700>;
+   interrupts = <0 36 4>;
+   clocks = <&cpg 1 60>, <&usb_x1_clk>;
+   clock-names = "fck", "usb_x1";
+   power-domains = <&cpg>;
+   #phy-cells = <0>;
+   status = "disabled";
+  };
+
+  usbhs1: usb@e821b000 {
+   compatible = "renesas,usbhs-r7s9210", "renesas,rza2-usbhs";
+   reg = <0xe821b000 0x724>;
+   interrupts = <0 37 4>;
+   clocks = <&cpg 1 60>;
+   renesas,buswait = <7>;
+   phys = <&usb2_phy1>;
+   phy-names = "usb";
+   power-domains = <&cpg>;
+   status = "disabled";
+  };
+
+  sdhi0: mmc@e8228000 {
+   compatible = "renesas,sdhi-r7s9210";
+   reg = <0xe8228000 0x8c0>;
+   interrupts = <0 322 4>;
+   clocks = <&cpg 1 103>, <&cpg 1 102>;
+   clock-names = "core", "cd";
+   power-domains = <&cpg>;
+   cap-sd-highspeed;
+   cap-sdio-irq;
+   status = "disabled";
+  };
+
+  sdhi1: mmc@e822a000 {
+   compatible = "renesas,sdhi-r7s9210";
+   reg = <0xe822a000 0x8c0>;
+   interrupts = <0 324 4>;
+   clocks = <&cpg 1 101>, <&cpg 1 100>;
+   clock-names = "core", "cd";
+   power-domains = <&cpg>;
+   cap-sd-highspeed;
+   cap-sdio-irq;
+   status = "disabled";
+  };
+
+  gic: interrupt-controller@e8221000 {
+   compatible = "arm,gic-400";
+   #interrupt-cells = <3>;
+   #address-cells = <0>;
+   interrupt-controller;
+   reg = <0xe8221000 0x1000>,
+         <0xe8222000 0x1000>;
+  };
+
+  cpg: clock-controller@fcfe0010 {
+   compatible = "renesas,r7s9210-cpg-mssr";
+   reg = <0xfcfe0010 0x455>;
+   clocks = <&extal_clk>;
+   clock-names = "extal";
+   #clock-cells = <2>;
+   #power-domain-cells = <0>;
+  };
+
+  wdt: watchdog@fcfe7000 {
+   compatible = "renesas,r7s9210-wdt", "renesas,rza-wdt";
+   reg = <0xfcfe7000 0x26>;
+   interrupts = <0 61 4>;
+   clocks = <&cpg 0 5>;
+  };
+
+  bsid: chipid@fcfe8004 {
+   compatible = "renesas,bsid";
+   reg = <0xfcfe8004 4>;
+  };
+
+  irqc: interrupt-controller@fcfef800 {
+   compatible = "renesas,r7s9210-irqc",
+         "renesas,rza1-irqc";
+   #interrupt-cells = <2>;
+   #address-cells = <0>;
+   interrupt-controller;
+   reg = <0xfcfef800 0x6>;
+   interrupt-map =
+    <0 0 &gic 0 4 4>,
+    <1 0 &gic 0 5 4>,
+    <2 0 &gic 0 6 4>,
+    <3 0 &gic 0 7 4>,
+    <4 0 &gic 0 8 4>,
+    <5 0 &gic 0 9 4>,
+    <6 0 &gic 0 10 4>,
+    <7 0 &gic 0 11 4>;
+   interrupt-map-mask = <7 0>;
+  };
+
+  pinctrl: pinctrl@fcffe000 {
+   compatible = "renesas,r7s9210-pinctrl";
+   reg = <0xfcffe000 0x1000>;
+
+   gpio-controller;
+   #gpio-cells = <2>;
+   gpio-ranges = <&pinctrl 0 0 176>;
+  };
+ };
+};
+# 33 "arch/arm/boot/dts/r7s9210-rza2mevb.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h" 1
+# 34 "arch/arm/boot/dts/r7s9210-rza2mevb.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 1
+# 13 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h"
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h" 1
+# 14 "./scripts/dtc/include-prefixes/dt-bindings/input/input.h" 2
+# 35 "arch/arm/boot/dts/r7s9210-rza2mevb.dts" 2
+# 1 "./scripts/dtc/include-prefixes/dt-bindings/pinctrl/r7s9210-pinctrl.h" 1
+# 36 "arch/arm/boot/dts/r7s9210-rza2mevb.dts" 2
+
+/ {
+ model = "RZA2MEVB";
+ compatible = "renesas,rza2mevb", "renesas,r7s9210";
+
+ aliases {
+  serial0 = &scif2;
+  ethernet0 = &ether1;
+ };
+
+ chosen {
+  bootargs = "ignore_loglevel";
+  stdout-path = "serial0:115200n8";
+ };
+
+ keyboard {
+  compatible = "gpio-keys";
+
+  pinctrl-names = "default";
+  pinctrl-0 = <&keyboard_pins>;
+
+  key-3 {
+   interrupt-parent = <&irqc>;
+   interrupts = <0 (2 | 1)>;
+   linux,code = <4>;
+   label = "SW3";
+   wakeup-source;
+  };
+ };
+
+ lbsc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+ };
+
+ leds {
+  compatible = "gpio-leds";
+
+  led-red {
+   gpios = <&pinctrl ((6) * 8 + (0)) 0>;
+  };
+  led-green {
+   gpios = <&pinctrl ((12) * 8 + (1)) 0>;
+  };
+ };
+
+ memory@c000000 {
+  device_type = "memory";
+  reg = <0x0c000000 0x04000000>;
+ };
+};
+
+&ehci0 {
+ status = "okay";
+};
+
+&ehci1 {
+ status = "okay";
+};
+
+&ether1 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&eth1_pins>;
+ status = "okay";
+ renesas,no-ether-link;
+ phy-handle = <&phy1>;
+ phy1: ethernet-phy@1 {
+  compatible = "ethernet-phy-id001c.c816",
+        "ethernet-phy-ieee802.3-c22";
+  reg = <0>;
+ };
+};
+
+
+&extal_clk {
+ clock-frequency = <24000000>;
+};
+
+&i2c3 {
+ status = "okay";
+ clock-frequency = <400000>;
+
+ pinctrl-names = "default";
+ pinctrl-0 = <&i2c3_pins>;
+
+ eeprom@50 {
+  compatible = "renesas,r1ex24128", "atmel,24c128";
+  reg = <0x50>;
+  pagesize = <64>;
+ };
+};
+
+
+&ostm0 {
+ status = "okay";
+};
+
+&ostm1 {
+ status = "okay";
+};
+
+&pinctrl {
+ eth0_pins: eth0 {
+  pinmux = <((14) * 8 + (0) | (7 << 16))>,
+    <((6) * 8 + (1) | (7 << 16))>,
+    <((6) * 8 + (2) | (7 << 16))>,
+    <((6) * 8 + (3) | (7 << 16))>,
+    <((14) * 8 + (4) | (7 << 16))>,
+    <((14) * 8 + (1) | (7 << 16))>,
+    <((14) * 8 + (2) | (7 << 16))>,
+    <((14) * 8 + (3) | (7 << 16))>,
+    <((14) * 8 + (5) | (1 << 16))>,
+    <((14) * 8 + (6) | (1 << 16))>,
+    <((20) * 8 + (0) | (5 << 16))>;
+ };
+
+ eth1_pins: eth1 {
+  pinmux = <((19) * 8 + (3) | (7 << 16))>,
+    <((19) * 8 + (0) | (7 << 16))>,
+    <((19) * 8 + (1) | (7 << 16))>,
+    <((19) * 8 + (2) | (7 << 16))>,
+    <((3) * 8 + (2) | (7 << 16))>,
+    <((19) * 8 + (4) | (7 << 16))>,
+    <((3) * 8 + (5) | (7 << 16))>,
+    <((3) * 8 + (1) | (7 << 16))>,
+    <((3) * 8 + (3) | (1 << 16))>,
+    <((3) * 8 + (4) | (1 << 16))>,
+    <((20) * 8 + (1) | (5 << 16))>;
+ };
+
+ i2c3_pins: i2c3 {
+  pinmux = <((13) * 8 + (6) | (1 << 16))>,
+    <((13) * 8 + (7) | (1 << 16))>;
+ };
+
+ keyboard_pins: keyboard {
+  pinmux = <((18) * 8 + (1) | (6 << 16))>;
+ };
+
+
+ scif2_pins: serial2 {
+  pinmux = <((14) * 8 + (2) | (3 << 16))>,
+    <((14) * 8 + (1) | (3 << 16))>;
+ };
+
+ sdhi0_pins: sdhi0 {
+  pinmux = <((5) * 8 + (0) | (3 << 16))>,
+    <((5) * 8 + (1) | (3 << 16))>;
+ };
+
+ sdhi1_pins: sdhi1 {
+  pinmux = <((5) * 8 + (4) | (3 << 16))>,
+    <((5) * 8 + (5) | (3 << 16))>;
+ };
+
+ usb0_pins: usb0 {
+  pinmux = <((5) * 8 + (2) | (3 << 16))>,
+    <((12) * 8 + (6) | (1 << 16))>,
+    <((12) * 8 + (7) | (1 << 16))>;
+ };
+
+ usb1_pins: usb1 {
+  pinmux = <((12) * 8 + (0) | (1 << 16))>,
+    <((12) * 8 + (5) | (1 << 16))>;
+ };
+};
+
+
+&rtc_x1_clk {
+ clock-frequency = <32768>;
+};
+
+
+&scif2 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&scif2_pins>;
+
+ status = "okay";
+};
+
+&sdhi0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&sdhi0_pins>;
+ bus-width = <4>;
+ status = "okay";
+};
+
+&sdhi1 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&sdhi1_pins>;
+ bus-width = <4>;
+ status = "okay";
+};
+
+
+&usb2_phy0 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&usb0_pins>;
+ dr_mode = "host";
+ status = "okay";
+};
+
+
+&usb2_phy1 {
+ pinctrl-names = "default";
+ pinctrl-0 = <&usb1_pins>;
+ dr_mode = "host";
+ status = "okay";
+};
+
+
+&usb_x1_clk {
+ clock-frequency = <48000000>;
+};

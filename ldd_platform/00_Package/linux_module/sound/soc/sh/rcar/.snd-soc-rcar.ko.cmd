@@ -1,0 +1,1 @@
+cmd_sound/soc/sh/rcar/snd-soc-rcar.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/sh/rcar/snd-soc-rcar.ko sound/soc/sh/rcar/snd-soc-rcar.o sound/soc/sh/rcar/snd-soc-rcar.mod.o;  true

@@ -1,0 +1,11 @@
+aspeed-bmc-bytedance-g220a.o: \
+ arch/arm/boot/dts/aspeed-bmc-bytedance-g220a.dts \
+ arch/arm/boot/dts/aspeed-g5.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/aspeed-clock.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/aspeed-scu-ic.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/aspeed-gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/i2c/i2c.h \
+ scripts/dtc/include-prefixes/dt-bindings/leds/leds-pca955x.h \
+ arch/arm/boot/dts/openbmc-flash-layout-64.dtsi \
+ arch/arm/boot/dts/openbmc-flash-layout-64-alt.dtsi

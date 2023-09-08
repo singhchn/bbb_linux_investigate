@@ -1,0 +1,1 @@
+cmd_sound/soc/atmel/snd-soc-atmel-pcm-pdc.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o sound/soc/atmel/snd-soc-atmel-pcm-pdc.ko sound/soc/atmel/snd-soc-atmel-pcm-pdc.o sound/soc/atmel/snd-soc-atmel-pcm-pdc.mod.o;  true

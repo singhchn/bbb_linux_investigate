@@ -1,0 +1,1 @@
+cmd_drivers/soc/qcom/mdt_loader.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/soc/qcom/mdt_loader.ko drivers/soc/qcom/mdt_loader.o drivers/soc/qcom/mdt_loader.mod.o;  true

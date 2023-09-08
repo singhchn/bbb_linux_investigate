@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/msm/msm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/gpu/drm/msm/msm.ko drivers/gpu/drm/msm/msm.o drivers/gpu/drm/msm/msm.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-actions/built-in.a := rm -f arch/arm/mach-actions/built-in.a;  printf "arch/arm/mach-actions/%s " platsmp.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-actions/built-in.a

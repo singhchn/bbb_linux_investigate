@@ -1,0 +1,1 @@
+cmd_drivers/soc/bcm/bcm63xx/built-in.a := rm -f drivers/soc/bcm/bcm63xx/built-in.a;  printf "drivers/soc/bcm/bcm63xx/%s " bcm-pmb.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/bcm/bcm63xx/built-in.a

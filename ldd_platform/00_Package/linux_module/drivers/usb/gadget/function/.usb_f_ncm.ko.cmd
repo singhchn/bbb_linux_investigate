@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/function/usb_f_ncm.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/gadget/function/usb_f_ncm.ko drivers/usb/gadget/function/usb_f_ncm.o drivers/usb/gadget/function/usb_f_ncm.mod.o;  true

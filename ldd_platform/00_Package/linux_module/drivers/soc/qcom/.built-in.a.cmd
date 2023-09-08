@@ -1,0 +1,1 @@
+cmd_drivers/soc/qcom/built-in.a := rm -f drivers/soc/qcom/built-in.a;  printf "drivers/soc/qcom/%s " cpr.o qcom_gsbi.o smd-rpm.o smem.o smem_state.o smp2p.o smsm.o spm.o rpmpd.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/soc/qcom/built-in.a

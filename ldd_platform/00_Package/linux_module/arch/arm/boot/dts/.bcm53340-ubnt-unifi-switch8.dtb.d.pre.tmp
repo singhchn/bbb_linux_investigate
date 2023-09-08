@@ -1,0 +1,5 @@
+bcm53340-ubnt-unifi-switch8.o: \
+ arch/arm/boot/dts/bcm53340-ubnt-unifi-switch8.dts \
+ arch/arm/boot/dts/bcm-hr2.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h

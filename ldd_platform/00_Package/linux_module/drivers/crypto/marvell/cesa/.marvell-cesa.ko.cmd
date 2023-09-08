@@ -1,0 +1,1 @@
+cmd_drivers/crypto/marvell/cesa/marvell-cesa.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/crypto/marvell/cesa/marvell-cesa.ko drivers/crypto/marvell/cesa/marvell-cesa.o drivers/crypto/marvell/cesa/marvell-cesa.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/soc/qcom/rmtfs_mem.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/soc/qcom/rmtfs_mem.ko drivers/soc/qcom/rmtfs_mem.o drivers/soc/qcom/rmtfs_mem.mod.o;  true

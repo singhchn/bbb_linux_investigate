@@ -1,0 +1,1 @@
+cmd_drivers/nvmem/nvmem_rockchip_efuse.o := arm-training-linux-uclibcgnueabihf-ld  -EL -z noexecstack --no-warn-rwx-segments    -r -o drivers/nvmem/nvmem_rockchip_efuse.o @drivers/nvmem/nvmem_rockchip_efuse.mod 

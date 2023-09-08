@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/r8a66597-hcd.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/usb/host/r8a66597-hcd.ko drivers/usb/host/r8a66597-hcd.o drivers/usb/host/r8a66597-hcd.mod.o;  true

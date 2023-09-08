@@ -1,0 +1,1 @@
+cmd_/home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/hello.mod := printf '%s\n'   hello.o | awk '!x[$$0]++ { print("/home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/"$$0) }' > /home/developer/development/linux/bbb_ldd/devel/BBB-linux-device-driver/hello_test/hello.mod

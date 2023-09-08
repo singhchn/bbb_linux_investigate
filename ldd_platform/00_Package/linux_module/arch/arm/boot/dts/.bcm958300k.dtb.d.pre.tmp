@@ -1,0 +1,6 @@
+bcm958300k.o: arch/arm/boot/dts/bcm958300k.dts \
+ arch/arm/boot/dts/bcm-cygnus.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/clock/bcm-cygnus.h \
+ arch/arm/boot/dts/bcm9hmidc.dtsi

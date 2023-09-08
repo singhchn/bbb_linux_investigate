@@ -1,0 +1,1 @@
+cmd_drivers/gpu/ipu-v3/imx-ipu-v3.mod := printf '%s\n'   ipu-common.o ipu-cpmem.o ipu-csi.o ipu-dc.o ipu-di.o ipu-dp.o ipu-dmfc.o ipu-ic.o ipu-ic-csc.o ipu-image-convert.o ipu-smfc.o ipu-vdi.o ipu-pre.o ipu-prg.o | awk '!x[$$0]++ { print("drivers/gpu/ipu-v3/"$$0) }' > drivers/gpu/ipu-v3/imx-ipu-v3.mod

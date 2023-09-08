@@ -1,0 +1,22 @@
+!<thin>
+//                                              150       `
+dev/skb.o/
+dev/calc_bittiming.o/
+dev/bittiming.o/
+dev/dev.o/
+dev/length.o/
+dev/netlink.o/
+dev/rx-offload.o/
+spi/mcp251x.o/
+sun4i_can.o/
+xilinx_can.o/
+/0              0           0     0     644     8780      `
+/11             0           0     0     644     2964      `
+/33             0           0     0     644     1876      `
+/50             0           0     0     644     14492     `
+/61             0           0     0     644     2736      `
+/75             0           0     0     644     7832      `
+/90             0           0     0     644     9268      `
+/108            0           0     0     644     20152     `
+/123            0           0     0     644     13592     `
+/136            0           0     0     644     19784     `

@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-tegra/built-in.a := rm -f arch/arm/mach-tegra/built-in.a;  printf "arch/arm/mach-tegra/%s " io.o irq.o pm.o reset.o reset-handler.o sleep.o tegra.o sleep-tegra20.o sleep-tegra30.o pm-tegra20.o pm-tegra30.o platsmp.o hotplug.o board-paz00.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST arch/arm/mach-tegra/built-in.a

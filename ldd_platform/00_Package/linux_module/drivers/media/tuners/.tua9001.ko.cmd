@@ -1,0 +1,1 @@
+cmd_drivers/media/tuners/tua9001.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/media/tuners/tua9001.ko drivers/media/tuners/tua9001.o drivers/media/tuners/tua9001.mod.o;  true

@@ -1,0 +1,1 @@
+cmd_drivers/phy/samsung/built-in.a := rm -f drivers/phy/samsung/built-in.a;  printf "drivers/phy/samsung/%s " phy-exynos-dp-video.o phy-exynos-mipi-video.o phy-exynos5-usbdrd.o | xargs arm-training-linux-uclibcgnueabihf-ar cDPrST drivers/phy/samsung/built-in.a

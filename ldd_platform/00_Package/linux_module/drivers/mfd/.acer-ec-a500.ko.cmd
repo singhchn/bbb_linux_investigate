@@ -1,0 +1,1 @@
+cmd_drivers/mfd/acer-ec-a500.ko := arm-training-linux-uclibcgnueabihf-ld -r  -EL -z noexecstack --no-warn-rwx-segments  --build-id=sha1  -T scripts/module.lds -o drivers/mfd/acer-ec-a500.ko drivers/mfd/acer-ec-a500.o drivers/mfd/acer-ec-a500.mod.o;  true

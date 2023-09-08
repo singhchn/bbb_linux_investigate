@@ -1,0 +1,9 @@
+r7s72100-rskrza1.o: arch/arm/boot/dts/r7s72100-rskrza1.dts \
+ arch/arm/boot/dts/r7s72100.dtsi \
+ scripts/dtc/include-prefixes/dt-bindings/clock/r7s72100-clock.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/arm-gic.h \
+ scripts/dtc/include-prefixes/dt-bindings/interrupt-controller/irq.h \
+ scripts/dtc/include-prefixes/dt-bindings/gpio/gpio.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/input.h \
+ scripts/dtc/include-prefixes/dt-bindings/input/linux-event-codes.h \
+ scripts/dtc/include-prefixes/dt-bindings/pinctrl/r7s72100-pinctrl.h
