@@ -1,7 +1,8 @@
 obj-m := gpio_sysfs.o
 ARCH=arm
 CROSS_COMPILE=arm-training-linux-uclibcgnueabihf-
-KERNEL_DIR=/home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/linux
+#KERNEL_DIR=/home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/linux
+KERNEL_DIR=${PWD}/../00_Package/linux_module/
 HOST_KERNEL_DIR=/lib/modules/$(shell uname -r)/build/
 
 all default: modules

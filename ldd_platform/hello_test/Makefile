@@ -1,7 +1,8 @@
 CC = $(CROSS_COMPILE)gcc
 
 obj-m := hello.o
-KDIR := /home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/linux
+#KDIR := /home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/linux
+KDIR=${PWD}/../00_Package/linux_module/
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD)

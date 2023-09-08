@@ -1,7 +1,7 @@
 obj-m := main.o
 #KERNEL_DIR=/home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/linux
 
-KERNEL_DIR=/home/developer/development/linux/bbb_ldd/devel/bbb_ldd_platform/bbb_linux_investigate/ldd_platform/00_Package/linux_module
+KERNEL_DIR=${PWD}/../00_Package/linux_module/
 
 all default: modules
 
