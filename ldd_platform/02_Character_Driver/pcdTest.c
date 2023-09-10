@@ -40,7 +40,9 @@ int main() {
         return errno;
     }
 
-    close(fd);
+    lseek(fd,0,SEEK_SET);
+    
+    //close(fd);
 
     //printf("Press ENTER to read back from the device...\n");
     //getchar();
