@@ -63,6 +63,9 @@ int main() {
     //for(int i = 0; i < total_read; i++)
     //    printf("%c",receive[i]);
 
+    printf("Press ENTER to close the device...\n");
+    getchar();
+
     close(fd);
 
     printf("End of the program\n");

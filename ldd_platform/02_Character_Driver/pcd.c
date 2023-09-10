@@ -1,3 +1,8 @@
+#define     ALREADY_DONE_CODE
+#undef      SELF_CHAR_DEVICE_DRIVER
+
+
+#ifdef ALREADY_DONE_CODE
 /*
  * @brief: Write a character driver to deal with a pseudo character device (pcd).
  *         The pseudo-device is a memory buffer of some size. The driver what you
@@ -240,6 +245,8 @@ static int __init char_device_driver_init(void) {
         goto cdev_del;
     }
 
+
+
     /**
      * device_create - creates a device and registers it with sysfs
      * @class: pointer to the struct class that this device should be registered to
@@ -271,7 +278,14 @@ static int __init char_device_driver_init(void) {
         goto class_del;
     }
 
+    
+#else
+    //int mknod(const char *pathname, mode_t mode, dev_t dev);
+    //ToDo : create either by call below or by hand through command
+    
+    mknod("/dev/pcd", )
 #endif 
+
 
 
     pr_info("Module init was successful\n");
@@ -314,3 +328,99 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Chandan Singh ");
 MODULE_DESCRIPTION("Simple character driver to deal with a pseudo character device");
 MODULE_INFO(board,"Beaglebone Black rev.c");
+#endif
+
+
+#ifdef SELF_CHAR_DEVICE_DRIVER
+
+//ToDo : need to be completed.
+
+#define DEVICE_NAME     "my_ram_char_device"
+
+
+/*      int register_chrdev_region(dev_t first, unsigned int count, char *name); 
+vs      
+        int alloc_chrdev_region(dev_t *dev, unsigned baseminor, unsigned count, const char *name)
+
+
+    register_chrdev_region is for Static Allocation of Major And Minor Numbers.
+But alloc_chrdev_region
+
+
+void unregister_chrdev_region(dev_t first, unsigned int count);
+
+void cdev_init(struct cdev *cdev, struct file_operations *fops);
+int cdev_add(struct cdev *dev, dev_t num, unsigned int count);
+void cdev_del(struct cdev *dev); */
+
+
+#include <linux/module.h>
+#include <linux/fs.h>
+#include <linux/cdev.h>
+#include <linux/device.h>
+#include <linux/kdev_t.h>
+#include <linux/uaccess.h>
+
+dev_t first;
+
+/*#undef pr_fmt
+#define pr_fmt(fmt) "[%s]: " fmt, __func__
+
+if (IS_ERR(device_pcd)) {
+    ret = PTR_ERR(device_pcd);
+    goto class_del;
+}
+
+pr_info("Device number <Major>:<Minor> = %d:%d\n", MAJOR(device_number), MINOR(device_number));
+
+
+
+
+
+*/
+
+
+static int __init ram_char_device_driver_init(void) {
+
+    int ret = 0;
+
+    // 1. allocate a dynamically allocated device major and minor number
+    // 2. register_char_device
+    // 3. mknod 
+    // 
+
+    ret = alloc_chrdev_region(&first,0,1,DEVICE_NAME);
+    pr_info("Device Number : major - %d,minor - %d \n", MAJOR(first), MINOR(first));
+
+    cdev_init()
+    cdev_add()
+
+
+    classs_create
+    device_create
+
+
+
+    
+
+}
+
+
+
+static void __exit ram_char_device_driver_exit(void) {
+
+
+
+}
+
+
+
+module_init(ram_char_device_driver_init)
+module_exit(ram_char_device_driver_exit)
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Chandan Singh");
+MODULE_DESCRIPTIOn("A Sample Char Driver to deal with RAM based Character Device")
+MODULE_INFO(board,"Beagle Bone Black Rev.C");
+#endif 
+
