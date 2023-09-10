@@ -40,15 +40,28 @@ int main() {
         return errno;
     }
 
-    printf("Press ENTER to read back from the device...\n");
-    getchar();
+    close(fd);
+
+    //printf("Press ENTER to read back from the device...\n");
+    //getchar();
+    
+    fd = open(DEV_PATH, O_RDWR);
+    if (fd < 0) {
+        printf("Failed to open the device\n");
+        return errno;
+    }
 
     ret = read(fd, receive, BUFF_SIZE);
     if (ret < 0) {
         printf("Failed to read the message from the device\n");
         return errno;
     }
-    printf("The received message is: %s\n\n", receive);
+    printf("The received message is: ret = %d,  %s\n\n", ret,receive);
+
+    //for(int i = 0; i < total_read; i++)
+    //    printf("%c",receive[i]);
+
+    close(fd);
 
     printf("End of the program\n");
     return 0;
