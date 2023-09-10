@@ -8,21 +8,18 @@ echo $1 $2
 cd $PWD/$1
  
 if [[ ( $2 == "driver" ) ]]; then
-echo "build driver "
-echo "make cleaning"
-make clean
-echo "make"
-make
-cp *.ko $NFS_ROOT
+	echo "build driver "
+	echo "make cleaning"
+	make clean
+	echo "make"
+	make
+	cp *.ko $NFS_ROOT
 
 elif [ $2 == "app" ];then
-echo "build app"
-
+	echo "build app"
+	arm-linux-gnueabi-gcc -o $3 $4
+	cp $3 $NFS_ROOT	
 else
-echo "build nothing"
+	echo "build nothing"
 fi
-
-
-
-
 
