@@ -570,6 +570,8 @@ static unsigned int esdhc_of_get_min_clock(struct sdhci_host *host)
 
 static void esdhc_clock_enable(struct sdhci_host *host, bool enable)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_esdhc *esdhc = sdhci_pltfm_priv(pltfm_host);
 	ktime_t timeout;
@@ -615,6 +617,8 @@ static void esdhc_clock_enable(struct sdhci_host *host, bool enable)
 
 static void esdhc_flush_async_fifo(struct sdhci_host *host)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	ktime_t timeout;
 	u32 val;
 
@@ -641,6 +645,8 @@ static void esdhc_flush_async_fifo(struct sdhci_host *host)
 
 static void esdhc_of_set_clock(struct sdhci_host *host, unsigned int clock)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_esdhc *esdhc = sdhci_pltfm_priv(pltfm_host);
 	unsigned int pre_div = 1, div = 1;
@@ -773,6 +779,8 @@ static void esdhc_of_set_clock(struct sdhci_host *host, unsigned int clock)
 
 static void esdhc_pltfm_set_bus_width(struct sdhci_host *host, int width)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	u32 ctrl;
 
 	ctrl = sdhci_readl(host, ESDHC_PROCTL);
@@ -795,6 +803,8 @@ static void esdhc_pltfm_set_bus_width(struct sdhci_host *host, int width)
 
 static void esdhc_reset(struct sdhci_host *host, u8 mask)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_esdhc *esdhc = sdhci_pltfm_priv(pltfm_host);
 	u32 val, bus_width = 0;
@@ -878,6 +888,8 @@ static const struct of_device_id scfg_device_ids[] = {
 static int esdhc_signal_voltage_switch(struct mmc_host *mmc,
 				       struct mmc_ios *ios)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_host *host = mmc_priv(mmc);
 	struct device_node *scfg_node;
 	void __iomem *scfg_base = NULL;
@@ -948,6 +960,8 @@ static struct soc_device_attribute soc_tuning_erratum_type2[] = {
 
 static void esdhc_tuning_block_enable(struct sdhci_host *host, bool enable)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	u32 val;
 
 	esdhc_clock_enable(host, false);
@@ -966,6 +980,8 @@ static void esdhc_tuning_block_enable(struct sdhci_host *host, bool enable)
 static void esdhc_tuning_window_ptr(struct sdhci_host *host, u8 *window_start,
 				    u8 *window_end)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	u32 val;
 
 	/* Write TBCTL[11:8]=4'h8 */
@@ -993,6 +1009,8 @@ static void esdhc_tuning_window_ptr(struct sdhci_host *host, u8 *window_start,
 static void esdhc_prepare_sw_tuning(struct sdhci_host *host, u8 *window_start,
 				    u8 *window_end)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_esdhc *esdhc = sdhci_pltfm_priv(pltfm_host);
 	u8 start_ptr, end_ptr;
@@ -1028,6 +1046,8 @@ static void esdhc_prepare_sw_tuning(struct sdhci_host *host, u8 *window_start,
 static int esdhc_execute_sw_tuning(struct mmc_host *mmc, u32 opcode,
 				   u8 window_start, u8 window_end)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_host *host = mmc_priv(mmc);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_esdhc *esdhc = sdhci_pltfm_priv(pltfm_host);
@@ -1054,6 +1074,8 @@ static int esdhc_execute_sw_tuning(struct mmc_host *mmc, u32 opcode,
 
 static int esdhc_execute_tuning(struct mmc_host *mmc, u32 opcode)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_host *host = mmc_priv(mmc);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_esdhc *esdhc = sdhci_pltfm_priv(pltfm_host);
@@ -1167,6 +1189,8 @@ static int esdhc_execute_tuning(struct mmc_host *mmc, u32 opcode)
 static void esdhc_set_uhs_signaling(struct sdhci_host *host,
 				   unsigned int timing)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	u32 val;
 
 	/*
@@ -1334,6 +1358,8 @@ static struct soc_device_attribute soc_unreliable_pulse_detection[] = {
 
 static void esdhc_init(struct platform_device *pdev, struct sdhci_host *host)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	const struct of_device_id *match;
 	struct sdhci_pltfm_host *pltfm_host;
 	struct sdhci_esdhc *esdhc;
@@ -1416,6 +1442,8 @@ static int esdhc_hs400_prepare_ddr(struct mmc_host *mmc)
 
 static int sdhci_esdhc_probe(struct platform_device *pdev)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct sdhci_host *host;
 	struct device_node *np, *tp;
 	struct sdhci_pltfm_host *pltfm_host;

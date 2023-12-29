@@ -41,6 +41,27 @@ func_clean_compile_linux()
 	echo "Current time : Compilaton Completed : $now"
 }
 
+
+func_clean_linux() 
+{
+
+	echo "Clean linux kernel image"
+	echo $PWD
+	cd linux
+	echo $PWD
+	
+	now=$(date +"%T")
+	echo "Current time : : Cleanup Start $now"
+	
+	
+	make clean 
+
+	now=$(date +"%T")
+	echo "Current time : : Cleanup Completed : $now"
+
+}
+
+
 func_compile_uboot()
 {		
 
@@ -60,6 +81,9 @@ then
 elif [ $1 == "uboot" ];
 then
    echo "uboot"
+elif [ $1 == "linux" ] && [ $2 == "clean" ];
+then
+   func_clean_linux
 else
    echo "Enter Correct Input Argument"
 fi

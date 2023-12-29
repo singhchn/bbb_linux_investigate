@@ -1993,6 +1993,8 @@ static int mmci_of_parse(struct device_node *np, struct mmc_host *mmc)
 static int mmci_probe(struct amba_device *dev,
 	const struct amba_id *id)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+
 	struct mmci_platform_data *plat = dev->dev.platform_data;
 	struct device_node *np = dev->dev.of_node;
 	struct variant_data *variant = id->data;
@@ -2273,6 +2275,8 @@ static int mmci_probe(struct amba_device *dev,
 
 static void mmci_remove(struct amba_device *dev)
 {
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	
 	struct mmc_host *mmc = amba_get_drvdata(dev);
 
 	if (mmc) {
