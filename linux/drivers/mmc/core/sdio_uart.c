@@ -1119,6 +1119,8 @@ static struct sdio_driver sdio_uart_driver = {
 
 static int __init sdio_uart_init(void)
 {
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	
 	int ret;
 	struct tty_driver *tty_drv;
 

@@ -1313,7 +1313,7 @@ static inline void mmc_spi_dma_free(struct mmc_spi_host *host) {}
 
 static int mmc_spi_probe(struct spi_device *spi)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	void			*ones;
 	struct mmc_host		*mmc;

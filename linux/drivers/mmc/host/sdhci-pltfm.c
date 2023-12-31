@@ -27,7 +27,7 @@
 
 unsigned int sdhci_pltfm_clk_get_max_clock(struct sdhci_host *host)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 
@@ -80,7 +80,7 @@ void sdhci_get_compatibility(struct platform_device *pdev) {}
 
 void sdhci_get_property(struct platform_device *pdev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct device *dev = &pdev->dev;
 	struct sdhci_host *host = platform_get_drvdata(pdev);
@@ -182,7 +182,7 @@ int sdhci_pltfm_register(struct platform_device *pdev,
 			const struct sdhci_pltfm_data *pdata,
 			size_t priv_size)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host;
 	int ret = 0;
@@ -203,7 +203,7 @@ EXPORT_SYMBOL_GPL(sdhci_pltfm_register);
 
 int sdhci_pltfm_unregister(struct platform_device *pdev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = platform_get_drvdata(pdev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -220,7 +220,7 @@ EXPORT_SYMBOL_GPL(sdhci_pltfm_unregister);
 #ifdef CONFIG_PM_SLEEP
 int sdhci_pltfm_suspend(struct device *dev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -241,7 +241,7 @@ EXPORT_SYMBOL_GPL(sdhci_pltfm_suspend);
 
 int sdhci_pltfm_resume(struct device *dev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -268,7 +268,7 @@ EXPORT_SYMBOL_GPL(sdhci_pltfm_pmops);
 static int __init sdhci_pltfm_drv_init(void)
 {
 	pr_info("sdhci-pltfm: SDHCI platform and OF driver helper\n");
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	return 0;
 }

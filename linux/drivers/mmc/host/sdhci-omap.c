@@ -1210,6 +1210,7 @@ static const struct soc_device_attribute sdhci_omap_soc_devices[] = {
 	}
 };
 
+//Query : Why it is called/invoked multiple times ? 
 static int sdhci_omap_probe(struct platform_device *pdev)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
@@ -1398,7 +1399,7 @@ err_pltfm_free:
 
 static int sdhci_omap_remove(struct platform_device *pdev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct device *dev = &pdev->dev;
 	struct sdhci_host *host = platform_get_drvdata(pdev);

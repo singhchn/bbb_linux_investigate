@@ -525,6 +525,7 @@ struct mmc_host *mmc_alloc_host(int extra, struct device *dev)
 	struct mmc_host *host;
 	int alias_id, min_idx, max_idx;
 
+	//ToDo : Understand Memory Allocation APIs, Schemes and Understanding in Linux Kernel
 	host = kzalloc(sizeof(struct mmc_host) + extra, GFP_KERNEL);
 	if (!host)
 		return NULL;
@@ -562,6 +563,7 @@ struct mmc_host *mmc_alloc_host(int extra, struct device *dev)
 		return NULL;
 	}
 
+	//ToDo : Understand Spin Lock in details + waitqueue
 	spin_lock_init(&host->lock);
 	init_waitqueue_head(&host->wq);
 	INIT_DELAYED_WORK(&host->detect, mmc_rescan);

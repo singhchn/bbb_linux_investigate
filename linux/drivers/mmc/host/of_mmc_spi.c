@@ -34,7 +34,7 @@ static struct of_mmc_spi *to_of_mmc_spi(struct device *dev)
 static int of_mmc_spi_init(struct device *dev,
 			   irqreturn_t (*irqhandler)(int, void *), void *mmc)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	struct of_mmc_spi *oms = to_of_mmc_spi(dev);
 
@@ -44,7 +44,7 @@ static int of_mmc_spi_init(struct device *dev,
 
 static void of_mmc_spi_exit(struct device *dev, void *mmc)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct of_mmc_spi *oms = to_of_mmc_spi(dev);
 
@@ -53,7 +53,7 @@ static void of_mmc_spi_exit(struct device *dev, void *mmc)
 
 struct mmc_spi_platform_data *mmc_spi_get_pdata(struct spi_device *spi)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_host *mmc = dev_get_drvdata(&spi->dev);
 	struct device *dev = &spi->dev;
@@ -91,7 +91,7 @@ EXPORT_SYMBOL(mmc_spi_get_pdata);
 
 void mmc_spi_put_pdata(struct spi_device *spi)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct device *dev = &spi->dev;
 	struct of_mmc_spi *oms = to_of_mmc_spi(dev);

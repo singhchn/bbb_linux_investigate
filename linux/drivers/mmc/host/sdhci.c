@@ -4126,7 +4126,8 @@ struct sdhci_host *sdhci_alloc_host(struct device *dev,
 	size_t priv_size)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
-
+	dump_stack();
+	
 	struct mmc_host *mmc;
 	struct sdhci_host *host;
 
@@ -4196,11 +4197,12 @@ static int sdhci_set_dma_mask(struct sdhci_host *host)
 	return ret;
 }
 
-//seems Called from only ./host/sdhci-cadence.c : 393
+//seems Called from only ./host/sdhci-cadence.c : 393. Not true. 
 void __sdhci_read_caps(struct sdhci_host *host, const u16 *ver,
 		       const u32 *caps, const u32 *caps1)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	dump_stack();
 
 	u16 v;
 	u64 dt_caps_mask = 0;
@@ -4334,6 +4336,7 @@ static inline bool sdhci_can_64bit_dma(struct sdhci_host *host)
 int sdhci_setup_host(struct sdhci_host *host)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	dump_stack();
 
 	struct mmc_host *mmc;
 	u32 max_current_caps;
@@ -4885,6 +4888,7 @@ EXPORT_SYMBOL_GPL(sdhci_setup_host);
 void sdhci_cleanup_host(struct sdhci_host *host)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	dump_stack();
 
 	struct mmc_host *mmc = host->mmc;
 
@@ -4907,6 +4911,7 @@ EXPORT_SYMBOL_GPL(sdhci_cleanup_host);
 int __sdhci_add_host(struct sdhci_host *host)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	dump_stack();
 
 	unsigned int flags = WQ_UNBOUND | WQ_MEM_RECLAIM | WQ_HIGHPRI;
 	struct mmc_host *mmc = host->mmc;
@@ -4997,6 +5002,7 @@ int sdhci_add_host(struct sdhci_host *host)
 		 
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
+	dump_stack();
 	int ret;
 
 	ret = sdhci_setup_host(host);
@@ -5019,6 +5025,7 @@ EXPORT_SYMBOL_GPL(sdhci_add_host);
 void sdhci_remove_host(struct sdhci_host *host, int dead)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	dump_stack();
 
 	struct mmc_host *mmc = host->mmc;
 	unsigned long flags;
@@ -5075,6 +5082,7 @@ EXPORT_SYMBOL_GPL(sdhci_remove_host);
 void sdhci_free_host(struct sdhci_host *host)
 {
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	dump_stack();
 	mmc_free_host(host->mmc);
 }
 
@@ -5091,7 +5099,9 @@ static int __init sdhci_drv_init(void)
 	pr_info(DRIVER_NAME
 		": Chandan : Secure Digital Host Controller Interface driver\n");
 	pr_info(DRIVER_NAME ": Copyright(c) Pierre Ossman\n");
-	dump_stack();
+	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	
+	//dump_stack();
 
 	return 0;
 }

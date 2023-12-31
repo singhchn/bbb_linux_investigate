@@ -281,7 +281,7 @@ static int mmc_hsq_wait_for_idle(struct mmc_host *mmc)
 
 static void mmc_hsq_disable(struct mmc_host *mmc)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	struct mmc_hsq *hsq = mmc->cqe_private;
 	u32 timeout = 500;
@@ -313,7 +313,7 @@ static void mmc_hsq_disable(struct mmc_host *mmc)
 
 static int mmc_hsq_enable(struct mmc_host *mmc, struct mmc_card *card)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	struct mmc_hsq *hsq = mmc->cqe_private;
 
@@ -343,7 +343,7 @@ static const struct mmc_cqe_ops mmc_hsq_ops = {
 
 int mmc_hsq_init(struct mmc_hsq *hsq, struct mmc_host *mmc)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	hsq->num_slots = HSQ_NUM_SLOTS;
 	hsq->next_tag = HSQ_INVALID_TAG;

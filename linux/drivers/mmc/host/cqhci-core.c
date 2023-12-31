@@ -1132,7 +1132,7 @@ static const struct mmc_cqe_ops cqhci_cqe_ops = {
 
 struct cqhci_host *cqhci_pltfm_init(struct platform_device *pdev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	struct cqhci_host *cq_host;
 	struct resource *cqhci_memres = NULL;
@@ -1176,7 +1176,7 @@ static unsigned int cqhci_ver_minor(struct cqhci_host *cq_host)
 int cqhci_init(struct cqhci_host *cq_host, struct mmc_host *mmc,
 	      bool dma64)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	int err;
 

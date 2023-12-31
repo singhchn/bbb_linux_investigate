@@ -394,7 +394,7 @@ static inline void esdhc_clrset_le(struct sdhci_host *host, u32 mask, u32 val, i
 	pr_err("%s: " DRIVER_NAME ": " f, mmc_hostname(host->mmc), ## x)
 static void esdhc_dump_debug_regs(struct sdhci_host *host)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	int i;
 	char *debug_status[7] = {
@@ -593,7 +593,7 @@ static void esdhc_writel_le(struct sdhci_host *host, u32 val, int reg)
 
 static u16 esdhc_readw_le(struct sdhci_host *host, int reg)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -655,7 +655,7 @@ static u16 esdhc_readw_le(struct sdhci_host *host, int reg)
 
 static void esdhc_writew_le(struct sdhci_host *host, u16 val, int reg)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -804,7 +804,7 @@ static u8 esdhc_readb_le(struct sdhci_host *host, int reg)
 
 static void esdhc_writeb_le(struct sdhci_host *host, u8 val, int reg)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -900,7 +900,7 @@ static unsigned int esdhc_pltfm_get_min_clock(struct sdhci_host *host)
 static inline void esdhc_pltfm_set_clock(struct sdhci_host *host,
 					 unsigned int clock)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -1025,7 +1025,7 @@ static void esdhc_pltfm_set_bus_width(struct sdhci_host *host, int width)
 
 static int usdhc_execute_tuning(struct mmc_host *mmc, u32 opcode)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = mmc_priv(mmc);
 
@@ -1041,7 +1041,7 @@ static int usdhc_execute_tuning(struct mmc_host *mmc, u32 opcode)
 
 static void esdhc_prepare_tuning(struct sdhci_host *host, u32 val)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	u32 reg;
 	u8 sw_rst;
@@ -1082,7 +1082,7 @@ static void esdhc_post_tuning(struct sdhci_host *host)
 
 static int esdhc_executing_tuning(struct sdhci_host *host, u32 opcode)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	int min, max, avg, ret;
 
@@ -1134,7 +1134,7 @@ static void esdhc_hs400_enhanced_strobe(struct mmc_host *mmc, struct mmc_ios *io
 static int esdhc_change_pinstate(struct sdhci_host *host,
 						unsigned int uhs)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -1176,7 +1176,7 @@ static int esdhc_change_pinstate(struct sdhci_host *host,
  */
 static void esdhc_set_strobe_dll(struct sdhci_host *host)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -1219,7 +1219,7 @@ static void esdhc_set_strobe_dll(struct sdhci_host *host)
 
 static void esdhc_reset_tuning(struct sdhci_host *host)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -1259,7 +1259,7 @@ static void esdhc_reset_tuning(struct sdhci_host *host)
 
 static void esdhc_set_uhs_signaling(struct sdhci_host *host, unsigned timing)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	u32 m;
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -1383,7 +1383,7 @@ static const struct sdhci_pltfm_data sdhci_esdhc_imx_pdata = {
 
 static void sdhci_esdhc_imx_hwinit(struct sdhci_host *host)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct pltfm_imx_data *imx_data = sdhci_pltfm_priv(pltfm_host);
@@ -1505,7 +1505,7 @@ static void sdhci_esdhc_imx_hwinit(struct sdhci_host *host)
 
 static void esdhc_cqe_enable(struct mmc_host *mmc)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	struct cqhci_host *cq_host = mmc->cqe_private;
@@ -1572,7 +1572,7 @@ sdhci_esdhc_imx_probe_dt(struct platform_device *pdev,
 			 struct sdhci_host *host,
 			 struct pltfm_imx_data *imx_data)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct device_node *np = pdev->dev.of_node;
 	struct esdhc_platform_data *boarddata = &imx_data->boarddata;
@@ -1627,7 +1627,7 @@ sdhci_esdhc_imx_probe_dt(struct platform_device *pdev,
 
 static int sdhci_esdhc_imx_probe(struct platform_device *pdev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_pltfm_host *pltfm_host;
 	struct sdhci_host *host;
@@ -1781,7 +1781,7 @@ free_sdhci:
 
 static int sdhci_esdhc_imx_remove(struct platform_device *pdev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = platform_get_drvdata(pdev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -1810,7 +1810,7 @@ static int sdhci_esdhc_imx_remove(struct platform_device *pdev)
 #ifdef CONFIG_PM_SLEEP
 static int sdhci_esdhc_suspend(struct device *dev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -1847,7 +1847,7 @@ static int sdhci_esdhc_suspend(struct device *dev)
 
 static int sdhci_esdhc_resume(struct device *dev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	int ret;
@@ -1876,7 +1876,7 @@ static int sdhci_esdhc_resume(struct device *dev)
 #ifdef CONFIG_PM
 static int sdhci_esdhc_runtime_suspend(struct device *dev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
@@ -1910,7 +1910,7 @@ static int sdhci_esdhc_runtime_suspend(struct device *dev)
 
 static int sdhci_esdhc_runtime_resume(struct device *dev)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
