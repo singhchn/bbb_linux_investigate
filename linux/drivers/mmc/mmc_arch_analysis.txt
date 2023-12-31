@@ -1,0 +1,264 @@
+/**********************************************************************/
+Config required for analysis 	:
+
+core :
+	block.c  
+	core.c     
+	host.c  
+	mmc_ops.c   
+	pwrseq_emmc.c  
+	pwrseq_simple.c  
+	regulator.c  
+	sdio_cis.c  
+	sdio_irq.c  
+	sdio_ops.c   
+	sd.c      
+	slot-gpio.c
+	bus.c    
+	debugfs.c  
+	mmc.c   
+	mmc_test.c  
+	pwrseq.c       
+	queue.c          
+	sdio_bus.c   
+	sdio_io.c   
+	sdio.c      
+	sdio_uart.c  
+	sd_ops.c
+
+host : 
+	sdhci-pltfm.c
+	sdhci-omap.c
+	sdhci.c
+
+
+/*****************************************************************/
+module_init :
+
+	./core/block.c:3194:module_init(mmc_blk_init);
+	./core/sdio_uart.c:1166:module_init(sdio_uart_init);
+	./core/mmc_test.c:3277:module_init(mmc_test_init);
+	
+	./host/sdhci-pltfm.c:275:module_init(sdhci_pltfm_drv_init);
+	./host/sdhci.c:5104:module_init(sdhci_drv_init);
+	
+	
+Init Flow :
+
+Chandan : Entering drivers/mmc/core/block.c:mmc_blk_init
+Chandan : Entering drivers/mmc/core/mmc_test.c:mmc_test_init
+Chandan : Entering drivers/mmc/core/sdio_uart.c:sdio_uart_init
+
+Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_drv_init
+Chandan : Entering drivers/mmc/host/sdhci-pltfm.c:sdhci_pltfm_drv_init
+Chandan : Entering drivers/mmc/host/sdhci-pltfm.c:sdhci_pltfm_init
+
+/*****************************************************************/
+HOST : 
+
+sdhci.c (platform controllers and platform dependent)
+	- sdhci_drv_init
+	- 1. Device allocation/registration
+		-  	
+			EXPORT_SYMBOL_GPL(sdhci_alloc_host);
+			EXPORT_SYMBOL_GPL(__sdhci_read_caps);
+			EXPORT_SYMBOL_GPL(sdhci_setup_host);
+			EXPORT_SYMBOL_GPL(sdhci_cleanup_host);
+			EXPORT_SYMBOL_GPL(__sdhci_add_host);
+			EXPORT_SYMBOL_GPL(sdhci_add_host);
+			EXPORT_SYMBOL_GPL(sdhci_remove_host);
+			EXPORT_SYMBOL_GPL(sdhci_free_host);
+
+	- 2. Command Queue Engine (CQE) helpers	
+			EXPORT_SYMBOL_GPL(sdhci_cqe_enable);
+			EXPORT_SYMBOL_GPL(sdhci_cqe_disable);
+			EXPORT_SYMBOL_GPL(sdhci_cqe_irq);
+
+	- 3. Suspend/resume 
+			EXPORT_SYMBOL_GPL(sdhci_suspend_host);
+			EXPORT_SYMBOL_GPL(sdhci_resume_host);
+			EXPORT_SYMBOL_GPL(sdhci_runtime_suspend_host);
+			EXPORT_SYMBOL_GPL(sdhci_runtime_resume_host);
+
+	- 4. Interrupt handling    
+		
+		
+		
+	- 5. Request done
+	
+	
+	
+	- 6. MMC callbacks
+			EXPORT_SYMBOL_GPL(sdhci_request);
+			EXPORT_SYMBOL_GPL(sdhci_request_atomic);
+			EXPORT_SYMBOL_GPL(sdhci_set_bus_width);
+			EXPORT_SYMBOL_GPL(sdhci_set_uhs_signaling);
+			EXPORT_SYMBOL_GPL(sdhci_set_ios);
+			EXPORT_SYMBOL_GPL(sdhci_get_cd_nogpio);
+			EXPORT_SYMBOL_GPL(sdhci_enable_sdio_irq);
+			EXPORT_SYMBOL_GPL(sdhci_start_signal_voltage_switch);
+			EXPORT_SYMBOL_GPL(sdhci_start_tuning);
+			EXPORT_SYMBOL_GPL(sdhci_end_tuning);
+			EXPORT_SYMBOL_GPL(sdhci_reset_tuning);
+			EXPORT_SYMBOL_GPL(sdhci_abort_tuning);
+			EXPORT_SYMBOL_GPL(sdhci_send_tuning);
+			EXPORT_SYMBOL_GPL(sdhci_execute_tuning);
+
+			
+	- 7. Core functions  
+			EXPORT_SYMBOL_GPL(sdhci_adma_write_desc);
+			EXPORT_SYMBOL_GPL(sdhci_set_data_timeout_irq);
+			EXPORT_SYMBOL_GPL(__sdhci_set_timeout);
+			EXPORT_SYMBOL_GPL(sdhci_switch_external_dma);
+			EXPORT_SYMBOL_GPL(sdhci_calc_clk);
+			EXPORT_SYMBOL_GPL(sdhci_enable_clk);
+			EXPORT_SYMBOL_GPL(sdhci_set_clock);
+			EXPORT_SYMBOL_GPL(sdhci_set_power_noreg);
+			EXPORT_SYMBOL_GPL(sdhci_set_power);
+			EXPORT_SYMBOL_GPL(sdhci_set_power_and_bus_voltage);
+	 				
+
+	- 8. Low level functions		
+			EXPORT_SYMBOL_GPL(sdhci_reset);
+			EXPORT_SYMBOL_GPL(sdhci_enable_v4_mode);
+		
+	- 9. 
+			EXPORT_SYMBOL_GPL(sdhci_dumpregs);	
+
+
+/*****************************************************************/
+
+
+Starting kernel ...
+
+[    1.707734] sdhci: Chandan : Secure Digital Host Controller Interface driver
+[    1.707744] sdhci: Copyright(c) Pierre Ossman
+[    1.707748] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_drv_init 
+[    1.707755] sdhci-pltfm: SDHCI platform and OF driver helper
+
+
+/*****************************************iteration 1**********************************************************/
+[    1.944657] Chandan : Entering drivers/mmc/host/sdhci-omap.c:sdhci_omap_probe
+[    1.944686] Chandan : Entering drivers/mmc/host/sdhci-pltfm.c:sdhci_pltfm_init 
+[    1.944826] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_alloc_host 
+[    1.945661] sdhci-omap 481d8000.mmc: supply pbias not found, using dummy regulator
+[    1.946054] sdhci-omap 481d8000.mmc: supply vqmmc not found, using dummy regulator
+[    1.946299] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_setup_host 
+[    1.946851] Chandan : Entering drivers/mmc/host/sdhci.c:__sdhci_read_caps 
+[    1.947284] Chandan : Entering drivers/mmc/host/sdhci-pltfm.c:sdhci_pltfm_free 
+[    1.947294] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_free_host 
+
+
+/*****************************************iteration 2**********************************************************/
+[    3.931082] Chandan : Entering drivers/mmc/host/sdhci-omap.c:sdhci_omap_probe 
+[    3.938474] Chandan : Entering drivers/mmc/host/sdhci-pltfm.c:sdhci_pltfm_init 
+[    3.945963] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_alloc_host 
+[    4.098526] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    4.107281] sdhci-omap 48060000.mmc: Got CD GPIO
+[    4.112162] sdhci-omap 48060000.mmc: supply pbias not found, using dummy regulator
+
+
+
+/*****************************************iteration 3**********************************************************/
+[    4.121798] Chandan : Entering drivers/mmc/host/sdhci-omap.c:sdhci_omap_probe 
+[    4.129187] Chandan : Entering drivers/mmc/host/sdhci-pltfm.c:sdhci_pltfm_init 
+[    4.136591] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_alloc_host 
+[    4.289538] sdhci-omap 48060000.mmc: supply vqmmc not found, using dummy regulator
+[    4.302457] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_setup_host 
+[    4.449254] sdhci-omap 481d8000.mmc: supply pbias not found, using dummy regulator
+[    4.457249] sdhci-omap 481d8000.mmc: supply vqmmc not found, using dummy regulator
+[    4.465315] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_setup_host
+[    4.612356] Chandan : Entering drivers/mmc/host/sdhci.c:__sdhci_read_caps
+[    4.765055] Chandan : Entering drivers/mmc/host/sdhci.c:__sdhci_add_host
+[    4.915130] Chandan : Entering drivers/mmc/host/sdhci.c:__sdhci_read_caps
+[    5.067986] Chandan : Entering drivers/mmc/host/sdhci.c:__sdhci_add_host
+[    5.241178] mmc1: SDHCI controller on 481d8000.mmc [481d8000.mmc] using External DMA
+
+
+
+
+
+
+[    5.249063] (efault): SDHCI controller debug : Chandan Start 
+[    5.254844] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_dumpregs 
+[    5.261521] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[    5.267997] mmc1: sdhci: Sys addr:  0x00000000 | Version:  0x00003101
+[    5.274496] mmc1: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+[    5.280995] mmc1: sdhci: Argument:  0x00000000 | Trn mode: 0x00000000
+[    5.287473] mmc1: sdhci: Present:   0x01f70000 | Host ctl: 0x00000000
+[    5.293991] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000000
+[    5.300496] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x00003c07
+[    5.306974] mmc1: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+[    5.313472] mmc1: sdhci: Int enab:  0x007f0003 | Sig enab: 0x007f0003
+[    5.319981] mmc1: sdhci: ACmd stat: 0x00000000 | Slot int: 0x00000000
+[    5.326460] mmc1: sdhci: Caps:      0x07e10080 | Caps_1:   0x00000000
+[    5.332959] mmc1: sdhci: Cmd:       0x00000000 | Max curr: 0x00000000
+[    5.339457] mmc1: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+[    5.345934] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+[    5.352432] mmc1: sdhci: Host ctl2: 0x00000000
+[    5.356902] mmc1: sdhci: ============================================
+[    5.363397] (null): SDHCI controller debug : Chandan End 
+[    5.369695] mmc0: SDHCI controller on 48060000.mmc [48060000.mmc] using External DMA
+[    5.377498] (efault): SDHCI controller debug : Chandan Start 
+[    5.383331] Chandan : Entering drivers/mmc/host/sdhci.c:sdhci_dumpregs 
+[    5.390011] mmc0: sdhci: ============ SDHCI REGISTER DUMP ===========
+[    5.396488] mmc0: sdhci: Sys addr:  0x00000000 | Version:  0x00003101
+[    5.402988] mmc0: sdhci: Blk size:  0x00000000 | Blk cnt:  0x00000000
+[    5.409489] mmc0: sdhci: Argument:  0x00000000 | Trn mode: 0x00000000
+[    5.415967] mmc0: sdhci: Present:   0x01f70000 | Host ctl: 0x00000000
+[    5.422487] mmc0: sdhci: Power:     0x0000000f | Blk gap:  0x00000000
+[    5.429002] mmc0: sdhci: Wake-up:   0x00000000 | Clock:    0x00003c07
+[    5.435481] mmc0: sdhci: Timeout:   0x00000000 | Int stat: 0x00000000
+[    5.441984] mmc0: sdhci: Int enab:  0x007f0003 | Sig enab: 0x007f0003
+[    5.448485] mmc0: sdhci: ACmd stat: 0x00000000 | Slot int: 0x00000000
+[    5.454964] mmc0: sdhci: Caps:      0x07e10080 | Caps_1:   0x00000000
+[    5.461463] mmc0: sdhci: Cmd:       0x00000000 | Max curr: 0x00000000
+[    5.467941] mmc0: sdhci: Resp[0]:   0x00000000 | Resp[1]:  0x00000000
+[    5.474439] mmc0: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000000
+[    5.480938] mmc0: sdhci: Host ctl2: 0x00000000
+[    5.485408] mmc0: sdhci: ============================================
+[    5.491903] (null): SDHCI controller debug : Chandan End 
+[    5.498329] cpsw-switch 4a100000.switch: starting ndev. mode: dual_mac
+[    5.558983] mmc1: new high speed MMC card at address 0001
+[    5.567290] mmcblk1: mmc1:0001 MK2704 3.53 GiB 
+[    5.577802]  mmcblk1: p1
+[    5.583478] mmcblk1boot0: mmc1:0001 MK2704 2.00 MiB 
+[    5.592244] mmcblk1boot1: mmc1:0001 MK2704 2.00 MiB 
+[    5.600074] mmcblk1rpmb: mmc1:0001 MK2704 512 KiB, chardev (244:0)
+[    5.606631] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver (mii_bus:phy_addr=4a101000.mdio:00, irq=)
+[    5.617625] mmc0: new high speed SDHC card at address aaaa
+[    5.631220] mmcblk0: mmc0:aaaa SE32G 29.7 GiB 
+[    5.640849]  mmcblk0: p1 p2
+[    8.809185] cpsw-switch 4a100000.switch eth0: Link is Up - 100Mbps/Full - flow control off
+[    8.817691] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    8.868280] IP-Config: Guessing netmask 255.255.255.0
+[    8.873392] IP-Config: Complete:
+[    8.876636]      device=eth0, hwaddr=3c:e0:64:88:54:79, ipaddr=192.168.7.2, mask=255.255.255.0, gw=255.255.255.5
+[    8.887094]      host=192.168.7.2, domain=, nis-domain=(none)
+[    8.892899]      bootserver=255.255.255.255, rootserver=192.168.7.1, rootpath=
+[    8.913670] VFS: Mounted root (nfs filesystem) on device 0:15.
+[    8.927618] devtmpfs: mounted
+[    8.932403] Freeing unused kernel image (initmem) memory: 1024K
+[    8.939120] Run /sbin/init as init process
+Starting syslogd: OK
+Starting klogd: OK
+Running sysctl: OK
+Initializing random number generator: OK
+Saving random seed: OK
+Starting network: ip: RTNETLINK answers: File exists
+FAIL
+Starting dropbear sshd: OK
+
+Welcome to Buildroot
+buildroot login: 
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7.1 | VT102 | Online 42:28 | ttyUSB0                             
+
+
+/*******************************************************************************************/
+Some generic Knowledge needed :
+
+1. module_platform_driver()
+
+2. 
+
+
