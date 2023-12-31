@@ -32,6 +32,21 @@
 #include <linux/mmc/sdio.h>
 #include <linux/mmc/slot-gpio.h>
 
+
+#define DBG_MMC_HOST
+
+#ifdef  DBG_MMC_HOST
+
+#define DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
+//#define DBG_MMC_HOST_CQE_helpers
+//#define DBG_MMC_HOST_DEVICE_SUSPEND_RESUME
+//#define DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
+//#define DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+//#define DBG_MMC_HOST_DEVICE_LOW_LEVEL_FUNCTIONS
+
+
+#endif
+
 #include "sdhci.h"
 
 #define DRIVER_NAME "sdhci"
@@ -147,7 +162,9 @@ static void sdhci_do_enable_v4_mode(struct sdhci_host *host)
  */
 void sdhci_enable_v4_mode(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_LOW_LEVEL_FUNCTIONS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	host->v4_mode = true;
 	sdhci_do_enable_v4_mode(host);
@@ -209,7 +226,9 @@ static void sdhci_runtime_pm_bus_off(struct sdhci_host *host)
 
 void sdhci_reset(struct sdhci_host *host, u8 mask)
 {
-	pr_info("Entering %s\n", __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_LOW_LEVEL_FUNCTIONS
+		pr_info("Entering %s\n", __func__);
+	#endif
 
 	ktime_t timeout;
 
@@ -736,7 +755,9 @@ static void sdhci_kunmap_atomic(void *buffer, unsigned long *flags)
 void sdhci_adma_write_desc(struct sdhci_host *host, void **desc,
 			   dma_addr_t addr, int len, unsigned int cmd)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_adma2_64_desc *dma_desc = *desc;
 
@@ -1048,7 +1069,7 @@ static u8 sdhci_calc_timeout(struct sdhci_host *host, struct mmc_command *cmd,
 
 static void sdhci_set_transfer_irqs(struct sdhci_host *host)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	//pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	u32 pio_irqs = SDHCI_INT_DATA_AVAIL | SDHCI_INT_SPACE_AVAIL;
 	u32 dma_irqs = SDHCI_INT_DMA_END | SDHCI_INT_ADMA_ERROR;
@@ -1069,7 +1090,9 @@ static void sdhci_set_transfer_irqs(struct sdhci_host *host)
 
 void sdhci_set_data_timeout_irq(struct sdhci_host *host, bool enable)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif 
 
 	if (enable)
 		host->ier |= SDHCI_INT_DATA_TIMEOUT;
@@ -1082,7 +1105,9 @@ EXPORT_SYMBOL_GPL(sdhci_set_data_timeout_irq);
 
 void __sdhci_set_timeout(struct sdhci_host *host, struct mmc_command *cmd)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	bool too_big = false;
 	u8 count = sdhci_calc_timeout(host, cmd, &too_big);
@@ -1919,7 +1944,10 @@ static u16 sdhci_get_preset_value(struct sdhci_host *host)
 u16 sdhci_calc_clk(struct sdhci_host *host, unsigned int clock,
 		   unsigned int *actual_clock)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
+
 
 	int div = 0; /* Initialized for compiler warning */
 	int real_div = div, clk_mul = 1;
@@ -2012,7 +2040,9 @@ EXPORT_SYMBOL_GPL(sdhci_calc_clk);
 
 void sdhci_enable_clk(struct sdhci_host *host, u16 clk)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	ktime_t timeout;
 
@@ -2068,7 +2098,9 @@ EXPORT_SYMBOL_GPL(sdhci_enable_clk);
 
 void sdhci_set_clock(struct sdhci_host *host, unsigned int clock)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	u16 clk;
 
@@ -2100,7 +2132,9 @@ static void sdhci_set_power_reg(struct sdhci_host *host, unsigned char mode,
 void sdhci_set_power_noreg(struct sdhci_host *host, unsigned char mode,
 			   unsigned short vdd)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif 
 
 	u8 pwr = 0;
 
@@ -2182,7 +2216,9 @@ EXPORT_SYMBOL_GPL(sdhci_set_power_noreg);
 void sdhci_set_power(struct sdhci_host *host, unsigned char mode,
 		     unsigned short vdd)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	if (IS_ERR(host->mmc->supply.vmmc))
 		sdhci_set_power_noreg(host, mode, vdd);
@@ -2201,7 +2237,9 @@ void sdhci_set_power_and_bus_voltage(struct sdhci_host *host,
 				     unsigned char mode,
 				     unsigned short vdd)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_CORE_FUNCTIONS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	if (!IS_ERR(host->mmc->supply.vmmc)) {
 		struct mmc_host *mmc = host->mmc;
@@ -2220,7 +2258,9 @@ EXPORT_SYMBOL_GPL(sdhci_set_power_and_bus_voltage);
 
 void sdhci_request(struct mmc_host *mmc, struct mmc_request *mrq)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	struct mmc_command *cmd;
@@ -2254,7 +2294,9 @@ EXPORT_SYMBOL_GPL(sdhci_request);
 
 int sdhci_request_atomic(struct mmc_host *mmc, struct mmc_request *mrq)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	struct mmc_command *cmd;
@@ -2290,7 +2332,10 @@ EXPORT_SYMBOL_GPL(sdhci_request_atomic);
 
 void sdhci_set_bus_width(struct sdhci_host *host, int width)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
+
 
 	u8 ctrl;
 
@@ -2312,7 +2357,10 @@ EXPORT_SYMBOL_GPL(sdhci_set_bus_width);
 
 void sdhci_set_uhs_signaling(struct sdhci_host *host, unsigned timing)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
+
 
 	u16 ctrl_2;
 
@@ -2371,8 +2419,9 @@ static bool sdhci_presetable_values_change(struct sdhci_host *host, struct mmc_i
 void sdhci_set_ios(struct mmc_host *mmc, struct mmc_ios *ios)
 {
 
+#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
-
+#endif
 	struct sdhci_host *host = mmc_priv(mmc);
 	bool reinit_uhs = host->reinit_uhs;
 	bool turning_on_clk = false;
@@ -2561,7 +2610,9 @@ static int sdhci_get_cd(struct mmc_host *mmc)
 
 int sdhci_get_cd_nogpio(struct mmc_host *mmc)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	unsigned long flags;
@@ -2648,7 +2699,9 @@ static void sdhci_enable_sdio_irq_nolock(struct sdhci_host *host, int enable)
 
 void sdhci_enable_sdio_irq(struct mmc_host *mmc, int enable)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	unsigned long flags;
@@ -2678,7 +2731,9 @@ static void sdhci_ack_sdio_irq(struct mmc_host *mmc)
 int sdhci_start_signal_voltage_switch(struct mmc_host *mmc,
 				      struct mmc_ios *ios)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	u16 ctrl;
@@ -2797,7 +2852,9 @@ static int sdhci_prepare_hs400_tuning(struct mmc_host *mmc, struct mmc_ios *ios)
 
 void sdhci_start_tuning(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	u16 ctrl;
 
@@ -2824,7 +2881,9 @@ EXPORT_SYMBOL_GPL(sdhci_start_tuning);
 
 void sdhci_end_tuning(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	sdhci_writel(host, host->ier, SDHCI_INT_ENABLE);
 	sdhci_writel(host, host->ier, SDHCI_SIGNAL_ENABLE);
@@ -2833,7 +2892,9 @@ EXPORT_SYMBOL_GPL(sdhci_end_tuning);
 
 void sdhci_reset_tuning(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	u16 ctrl;
 
@@ -2846,7 +2907,9 @@ EXPORT_SYMBOL_GPL(sdhci_reset_tuning);
 
 void sdhci_abort_tuning(struct sdhci_host *host, u32 opcode)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	sdhci_reset_tuning(host);
 
@@ -2867,7 +2930,9 @@ EXPORT_SYMBOL_GPL(sdhci_abort_tuning);
  */
 void sdhci_send_tuning(struct sdhci_host *host, u32 opcode)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif	
 
 	struct mmc_host *mmc = host->mmc;
 	struct mmc_command cmd = {};
@@ -2963,7 +3028,10 @@ static int __sdhci_execute_tuning(struct sdhci_host *host, u32 opcode)
 
 int sdhci_execute_tuning(struct mmc_host *mmc, u32 opcode)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_MMC_CALLBACKS
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif 
+
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	int err = 0;
@@ -3844,7 +3912,10 @@ static void sdhci_disable_irq_wakeups(struct sdhci_host *host)
 
 int sdhci_suspend_host(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_SUSPEND_RESUME
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif 
+
 
 	sdhci_disable_card_detection(host);
 
@@ -3865,7 +3936,9 @@ EXPORT_SYMBOL_GPL(sdhci_suspend_host);
 
 int sdhci_resume_host(struct sdhci_host *host)
 {
+#ifdef DBG_MMC_HOST_DEVICE_SUSPEND_RESUME
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+#endif
 
 	struct mmc_host *mmc = host->mmc;
 	int ret = 0;
@@ -3906,8 +3979,9 @@ EXPORT_SYMBOL_GPL(sdhci_resume_host);
 
 int sdhci_runtime_suspend_host(struct sdhci_host *host)
 {
-
+#ifdef DBG_MMC_HOST_DEVICE_SUSPEND_RESUME
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+#endif
 
 	unsigned long flags;
 
@@ -3932,8 +4006,9 @@ EXPORT_SYMBOL_GPL(sdhci_runtime_suspend_host);
 int sdhci_runtime_resume_host(struct sdhci_host *host, int soft_reset)
 {
 
+#ifdef DBG_MMC_HOST_DEVICE_SUSPEND_RESUME
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
-
+#endif
 
 	struct mmc_host *mmc = host->mmc;
 	unsigned long flags;
@@ -3994,7 +4069,9 @@ EXPORT_SYMBOL_GPL(sdhci_runtime_resume_host);
 
 void sdhci_cqe_enable(struct mmc_host *mmc)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_CQE_helpers
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	unsigned long flags;
@@ -4040,7 +4117,9 @@ EXPORT_SYMBOL_GPL(sdhci_cqe_enable);
 
 void sdhci_cqe_disable(struct mmc_host *mmc, bool recovery)
 {
+	#ifdef DBG_MMC_HOST_CQE_helpers
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif
 
 	struct sdhci_host *host = mmc_priv(mmc);
 	unsigned long flags;
@@ -4065,7 +4144,9 @@ EXPORT_SYMBOL_GPL(sdhci_cqe_disable);
 bool sdhci_cqe_irq(struct sdhci_host *host, u32 intmask, int *cmd_error,
 		   int *data_error)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#ifdef DBG_MMC_HOST_CQE_helpers
+		pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	#endif 
 
 	u32 mask;
 
@@ -4125,9 +4206,12 @@ EXPORT_SYMBOL_GPL(sdhci_cqe_irq);
 struct sdhci_host *sdhci_alloc_host(struct device *dev,
 	size_t priv_size)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
-	
+	#endif
+
+
 	struct mmc_host *mmc;
 	struct sdhci_host *host;
 
@@ -4201,8 +4285,10 @@ static int sdhci_set_dma_mask(struct sdhci_host *host)
 void __sdhci_read_caps(struct sdhci_host *host, const u16 *ver,
 		       const u32 *caps, const u32 *caps1)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
+	#endif
 
 	u16 v;
 	u64 dt_caps_mask = 0;
@@ -4335,8 +4421,11 @@ static inline bool sdhci_can_64bit_dma(struct sdhci_host *host)
 
 int sdhci_setup_host(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
+	#endif
+
 
 	struct mmc_host *mmc;
 	u32 max_current_caps;
@@ -4887,8 +4976,11 @@ EXPORT_SYMBOL_GPL(sdhci_setup_host);
 
 void sdhci_cleanup_host(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
+	#endif
+
 
 	struct mmc_host *mmc = host->mmc;
 
@@ -4910,8 +5002,10 @@ EXPORT_SYMBOL_GPL(sdhci_cleanup_host);
 
 int __sdhci_add_host(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
+	#endif
 
 	unsigned int flags = WQ_UNBOUND | WQ_MEM_RECLAIM | WQ_HIGHPRI;
 	struct mmc_host *mmc = host->mmc;
@@ -4996,13 +5090,17 @@ EXPORT_SYMBOL_GPL(__sdhci_add_host);
 
 int sdhci_add_host(struct sdhci_host *host)
 {
+
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	//pr_info("dump_stack myinit\n");
 	//dump_stack();
 	//pr_info("dump_stack after\n");
 		 
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
-
 	dump_stack();
+	#endif
+
+
 	int ret;
 
 	ret = sdhci_setup_host(host);
@@ -5024,8 +5122,10 @@ EXPORT_SYMBOL_GPL(sdhci_add_host);
 
 void sdhci_remove_host(struct sdhci_host *host, int dead)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
+	#endif
 
 	struct mmc_host *mmc = host->mmc;
 	unsigned long flags;
@@ -5081,8 +5181,11 @@ EXPORT_SYMBOL_GPL(sdhci_remove_host);
 
 void sdhci_free_host(struct sdhci_host *host)
 {
+	#ifdef DBG_MMC_HOST_DEVICE_ALLOCATION_REGISTRATION
 	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	dump_stack();
+	#endif 
+
 	mmc_free_host(host->mmc);
 }
 
