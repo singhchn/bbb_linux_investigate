@@ -2117,7 +2117,7 @@ static void mmc_blk_mq_dec_in_flight(struct mmc_queue *mq, struct request *req)
 static void mmc_blk_mq_post_req(struct mmc_queue *mq, struct request *req,
 				bool can_sleep)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	struct mmc_queue_req *mqrq = req_to_mmc_queue_req(req);
 	struct mmc_request *mrq = &mqrq->brq.mrq;
@@ -2143,7 +2143,7 @@ static void mmc_blk_mq_post_req(struct mmc_queue *mq, struct request *req,
 
 void mmc_blk_mq_recovery(struct mmc_queue *mq)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct request *req = mq->recovery_req;
 	struct mmc_host *host = mq->card->host;
@@ -2165,7 +2165,7 @@ void mmc_blk_mq_recovery(struct mmc_queue *mq)
 static void mmc_blk_mq_complete_prev_req(struct mmc_queue *mq,
 					 struct request **prev_req)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	if (mmc_host_done_complete(mq->card->host))
 		return;
@@ -2198,7 +2198,7 @@ void mmc_blk_mq_complete_work(struct work_struct *work)
 
 static void mmc_blk_mq_req_done(struct mmc_request *mrq)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_queue_req *mqrq = container_of(mrq, struct mmc_queue_req,
 						  brq.mrq);
@@ -2295,7 +2295,7 @@ static int mmc_blk_rw_wait(struct mmc_queue *mq, struct request **prev_req)
 static int mmc_blk_mq_issue_rw_rq(struct mmc_queue *mq,
 				  struct request *req)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_queue_req *mqrq = req_to_mmc_queue_req(req);
 	struct mmc_host *host = mq->card->host;
@@ -2343,7 +2343,7 @@ static int mmc_blk_wait_for_idle(struct mmc_queue *mq, struct mmc_host *host)
 
 enum mmc_issued mmc_blk_mq_issue_rq(struct mmc_queue *mq, struct request *req)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_blk_data *md = mq->blkdata;
 	struct mmc_card *card = md->queue.card;
@@ -2425,7 +2425,7 @@ static struct mmc_blk_data *mmc_blk_alloc_req(struct mmc_card *card,
 					      int area_type,
 					      unsigned int part_type)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_blk_data *md;
 	int devidx, ret;
@@ -2549,7 +2549,7 @@ static struct mmc_blk_data *mmc_blk_alloc_req(struct mmc_card *card,
 
 static struct mmc_blk_data *mmc_blk_alloc(struct mmc_card *card)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	sector_t size;
 
@@ -2580,7 +2580,7 @@ static int mmc_blk_alloc_part(struct mmc_card *card,
 			      const char *subname,
 			      int area_type)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_blk_data *part_md;
 
@@ -2605,7 +2605,7 @@ static int mmc_blk_alloc_part(struct mmc_card *card,
 static long mmc_rpmb_ioctl(struct file *filp, unsigned int cmd,
 			   unsigned long arg)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_rpmb_data *rpmb = filp->private_data;
 	int ret;
@@ -2685,7 +2685,7 @@ static int mmc_blk_alloc_rpmb_part(struct mmc_card *card,
 				   sector_t size,
 				   const char *subname)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	int devidx, ret;
 	char rpmb_name[DISK_NAME_LEN];
@@ -2756,7 +2756,7 @@ static void mmc_blk_remove_rpmb_part(struct mmc_rpmb_data *rpmb)
 
 static int mmc_blk_alloc_parts(struct mmc_card *card, struct mmc_blk_data *md)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	int idx, ret;
 
@@ -2806,7 +2806,7 @@ static void mmc_blk_remove_req(struct mmc_blk_data *md)
 static void mmc_blk_remove_parts(struct mmc_card *card,
 				 struct mmc_blk_data *md)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct list_head *pos, *q;
 	struct mmc_blk_data *part_md;
@@ -2830,7 +2830,7 @@ static void mmc_blk_remove_parts(struct mmc_card *card,
 
 static int mmc_dbg_card_status_get(void *data, u64 *val)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_card *card = data;
 	struct mmc_blk_data *md = dev_get_drvdata(&card->dev);
@@ -2862,7 +2862,7 @@ DEFINE_DEBUGFS_ATTRIBUTE(mmc_dbg_card_status_fops, mmc_dbg_card_status_get,
 
 static int mmc_ext_csd_open(struct inode *inode, struct file *filp)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_card *card = inode->i_private;
 	struct mmc_blk_data *md = dev_get_drvdata(&card->dev);
@@ -2916,7 +2916,7 @@ out_free:
 static ssize_t mmc_ext_csd_read(struct file *filp, char __user *ubuf,
 				size_t cnt, loff_t *ppos)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	char *buf = filp->private_data;
 
@@ -2939,7 +2939,7 @@ static const struct file_operations mmc_dbg_ext_csd_fops = {
 
 static int mmc_blk_add_debugfs(struct mmc_card *card, struct mmc_blk_data *md)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct dentry *root;
 
@@ -2971,7 +2971,7 @@ static int mmc_blk_add_debugfs(struct mmc_card *card, struct mmc_blk_data *md)
 static void mmc_blk_remove_debugfs(struct mmc_card *card,
 				   struct mmc_blk_data *md)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	if (!card->debugfs_root)
 		return;
@@ -3004,7 +3004,7 @@ static void mmc_blk_remove_debugfs(struct mmc_card *card,
 static int mmc_blk_probe(struct mmc_card *card)
 {
 	
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	struct mmc_blk_data *md;
 	int ret = 0;
@@ -3061,7 +3061,7 @@ out_free:
 
 static void mmc_blk_remove(struct mmc_card *card)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	struct mmc_blk_data *md = dev_get_drvdata(&card->dev);
 
@@ -3142,7 +3142,7 @@ static struct mmc_driver mmc_driver = {
 
 static int __init mmc_blk_init(void)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	
 	int res;
 
@@ -3183,7 +3183,7 @@ out_bus_unreg:
 
 static void __exit mmc_blk_exit(void)
 {
-	pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	mmc_unregister_driver(&mmc_driver);
 	unregister_blkdev(MMC_BLOCK_MAJOR, "mmc");

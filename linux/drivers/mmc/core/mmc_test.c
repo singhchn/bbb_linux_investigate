@@ -3262,6 +3262,7 @@ static struct mmc_driver mmc_driver = {
 
 static int __init mmc_test_init(void)
 {
+	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 	return mmc_register_driver(&mmc_driver);
 }
 
