@@ -229,29 +229,7 @@ Starting kernel ...
 [    5.617625] mmc0: new high speed SDHC card at address aaaa
 [    5.631220] mmcblk0: mmc0:aaaa SE32G 29.7 GiB 
 [    5.640849]  mmcblk0: p1 p2
-[    8.809185] cpsw-switch 4a100000.switch eth0: Link is Up - 100Mbps/Full - flow control off
-[    8.817691] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
-[    8.868280] IP-Config: Guessing netmask 255.255.255.0
-[    8.873392] IP-Config: Complete:
-[    8.876636]      device=eth0, hwaddr=3c:e0:64:88:54:79, ipaddr=192.168.7.2, mask=255.255.255.0, gw=255.255.255.5
-[    8.887094]      host=192.168.7.2, domain=, nis-domain=(none)
-[    8.892899]      bootserver=255.255.255.255, rootserver=192.168.7.1, rootpath=
-[    8.913670] VFS: Mounted root (nfs filesystem) on device 0:15.
-[    8.927618] devtmpfs: mounted
-[    8.932403] Freeing unused kernel image (initmem) memory: 1024K
-[    8.939120] Run /sbin/init as init process
-Starting syslogd: OK
-Starting klogd: OK
-Running sysctl: OK
-Initializing random number generator: OK
-Saving random seed: OK
-Starting network: ip: RTNETLINK answers: File exists
-FAIL
-Starting dropbear sshd: OK
 
-Welcome to Buildroot
-buildroot login: 
-CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7.1 | VT102 | Online 42:28 | ttyUSB0                             
 
 
 /*******************************************************************************************/

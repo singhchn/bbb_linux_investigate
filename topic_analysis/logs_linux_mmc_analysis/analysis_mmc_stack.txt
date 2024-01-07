@@ -1,0 +1,818 @@
+
+/***************************************************************************************/
+/***************************************************************************************/
+
+[    1.778981] sdhci: Chandan : Secure Digital Host Controller Interface driver
+[    2.118120] Chandan : Entering sdhci_alloc_host
+[    2.119199] Chandan : Entering sdhci_setup_host
+[    2.119349] Chandan : Entering __sdhci_read_caps
+[    2.144614] Chandan : Entering sdhci_free_host
+[    3.689803] Chandan : Entering sdhci_alloc_host
+[    3.720217] Chandan : Entering sdhci_alloc_host
+[    3.733970] Chandan : Entering sdhci_setup_host
+[    3.764981] Chandan : Entering sdhci_setup_host
+[    3.769788] Chandan : Entering __sdhci_read_caps
+[    3.799673] Chandan : Entering __sdhci_add_host
+[    3.804740] Chandan : Entering __sdhci_read_caps
+[    3.809450] Chandan : Entering __sdhci_add_host
+[    3.815122] Chandan : Entering sdhci_set_ios
+[    3.819448] Chandan : Entering sdhci_set_bus_width
+[    3.824815] Chandan : Entering sdhci_set_ios
+[    3.829122] Chandan : Entering sdhci_set_bus_width
+[    3.836923] Chandan : Entering sdhci_set_ios
+[    3.841227] Chandan : Entering sdhci_enable_clk
+[    3.845866] Chandan : Entering sdhci_set_ios
+[    3.850163] Chandan : Entering sdhci_enable_clk
+[    3.854762] Chandan : Entering sdhci_set_bus_width
+[    3.859591] Chandan : Entering sdhci_set_bus_width
+[    3.879378] (efault): SDHCI controller debug : Chandan Start 
+[    3.885168] (null): SDHCI controller debug : Chandan End 
+[    3.890778] Chandan : Entering sdhci_request
+[    3.903967] (efault): SDHCI controller debug : Chandan Start 
+[    3.909743] (null): SDHCI controller debug : Chandan End 
+[    3.915398] Chandan : Entering sdhci_request
+[    3.927737] Chandan : Entering sdhci_request
+[    3.932196] Chandan : Entering sdhci_request
+[    3.937900] Chandan : Entering sdhci_set_ios
+[    3.942305] Chandan : Entering sdhci_set_bus_width
+[    3.949891] Chandan : Entering sdhci_set_ios
+[    3.954256] Chandan : Entering sdhci_set_bus_width
+[    3.959168] Chandan : Entering sdhci_request
+[    3.963553] Chandan : Entering sdhci_request
+[    3.969226] Chandan : Entering sdhci_set_ios
+[    3.973571] Chandan : Entering sdhci_set_bus_width
+[    3.978407] Chandan : Entering sdhci_set_ios
+[    3.982727] Chandan : Entering sdhci_set_bus_width
+[    3.987653] Chandan : Entering sdhci_request
+[    3.992021] Chandan : Entering sdhci_request
+[    3.996429] Chandan : Entering sdhci_request
+[    4.000775] Chandan : Entering sdhci_request
+[    4.005225] Chandan : Entering sdhci_request
+[    4.009635] Chandan : Entering sdhci_request
+[    4.014124] Chandan : Entering sdhci_request
+[    4.018552] Chandan : Entering sdhci_request
+[    4.023007] Chandan : Entering sdhci_request
+[    4.027411] Chandan : Entering sdhci_request
+[    4.031872] Chandan : Entering sdhci_request
+[    4.036308] Chandan : Entering sdhci_request
+[    4.040741] Chandan : Entering sdhci_request
+[    4.045159] Chandan : Entering sdhci_request
+[    4.049623] Chandan : Entering sdhci_request
+[    4.054015] Chandan : Entering sdhci_set_ios
+[    4.058341] Chandan : Entering sdhci_set_bus_width
+[    4.063318] Chandan : Entering sdhci_request
+[    4.067706] Chandan : Entering sdhci_request
+[    4.082850] Chandan : Entering sdhci_set_ios
+[    4.087169] Chandan : Entering sdhci_set_bus_width
+[    4.092021] Chandan : Entering sdhci_request
+[    4.097763] Chandan : Entering sdhci_set_ios
+[    4.102126] Chandan : Entering sdhci_set_bus_width
+[    4.107082] Chandan : Entering sdhci_request
+[    4.115315] Chandan : Entering sdhci_set_ios
+[    4.119630] Chandan : Entering sdhci_set_bus_width
+[    4.124491] Chandan : Entering sdhci_set_ios
+[    4.128784] Chandan : Entering sdhci_set_bus_width
+[    4.133661] Chandan : Entering sdhci_request
+[    4.138013] Chandan : Entering sdhci_request
+[    4.142392] Chandan : Entering sdhci_request
+[    4.147036] Chandan : Entering sdhci_request
+[    4.151367] Chandan : Entering sdhci_set_ios
+[    4.155707] Chandan : Entering sdhci_set_bus_width
+[    4.161575] Chandan : Entering sdhci_request
+[    4.171585] Chandan : Entering sdhci_request
+[    4.176121] Chandan : Entering sdhci_request
+[    4.180476] Chandan : Entering sdhci_request
+[    4.184845] Chandan : Entering sdhci_request
+[    4.189727] Chandan : Entering sdhci_request
+[    4.194391] Chandan : Entering sdhci_set_ios
+[    4.198705] Chandan : Entering sdhci_set_bus_width
+[    4.203568] Chandan : Entering sdhci_request
+[    4.207895] Chandan : Entering sdhci_request
+[    4.212309] Chandan : Entering sdhci_request
+[    4.216661] Chandan : Entering sdhci_request
+[    4.221036] Chandan : Entering sdhci_request
+[    4.225381] Chandan : Entering __sdhci_set_timeout
+[    4.230227] Chandan : Entering sdhci_set_transfer_irqs
+[    4.235456] Chandan : Entering sdhci_request
+[    4.240316] Chandan : Entering sdhci_request
+[    4.244994] Chandan : Entering sdhci_request
+[    4.249415] Chandan : Entering sdhci_request
+[    4.253770] Chandan : Entering __sdhci_set_timeout
+[    4.258617] Chandan : Entering sdhci_request
+[    4.263257] Chandan : Entering sdhci_request
+[    4.267621] Chandan : Entering sdhci_request
+[    4.272008] Chandan : Entering sdhci_request
+[    4.276332] Chandan : Entering __sdhci_set_timeout
+[    4.281230] Chandan : Entering sdhci_request
+[    4.285576] Chandan : Entering __sdhci_set_timeout
+[    4.290408] Chandan : Entering sdhci_set_transfer_irqs
+[    4.295865] Chandan : Entering sdhci_request
+[    4.300275] Chandan : Entering sdhci_request
+[    4.304677] Chandan : Entering sdhci_request
+[    4.308992] Chandan : Entering __sdhci_set_timeout
+[    4.314024] Chandan : Entering sdhci_request
+[    4.318351] Chandan : Entering __sdhci_set_timeout
+[    4.323178] Chandan : Entering sdhci_set_transfer_irqs
+[    4.328584] Chandan : Entering sdhci_set_ios
+[    4.332945] Chandan : Entering sdhci_set_bus_width
+[    4.337769] Chandan : Entering sdhci_request
+[    4.342202] Chandan : Entering sdhci_request
+[    4.346527] Chandan : Entering __sdhci_set_timeout
+[    4.351351] Chandan : Entering sdhci_set_transfer_irqs
+[    4.356609] Chandan : Entering sdhci_set_ios
+[    4.360940] Chandan : Entering sdhci_enable_clk
+[    4.365531] Chandan : Entering sdhci_set_bus_width
+[    4.370352] Chandan : Entering sdhci_request
+[    4.374678] Chandan : Entering __sdhci_set_timeout
+[    4.379735] Chandan : Entering sdhci_request
+[    4.384092] Chandan : Entering __sdhci_set_timeout
+[    4.388918] Chandan : Entering sdhci_set_transfer_irqs
+[    4.394322] Chandan : Entering sdhci_request
+[    4.398754] Chandan : Entering sdhci_set_ios
+[    4.403095] Chandan : Entering sdhci_set_bus_width
+[    4.407919] Chandan : Entering sdhci_request
+[    4.412233] Chandan : Entering __sdhci_set_timeout
+[    4.417060] Chandan : Entering sdhci_set_transfer_irqs
+[    4.422329] Chandan : Entering sdhci_set_ios
+[    4.426658] Chandan : Entering sdhci_set_bus_width
+[    4.431475] Chandan : Entering sdhci_set_ios
+[    4.435792] Chandan : Entering sdhci_enable_clk
+[    4.440350] Chandan : Entering sdhci_set_bus_width
+[    4.445190] Chandan : Entering sdhci_request
+[    4.449696] Chandan : Entering sdhci_request
+[    4.454021] Chandan : Entering __sdhci_set_timeout
+[    4.458862] Chandan : Entering sdhci_request
+[    4.463230] Chandan : Entering sdhci_set_ios
+[    4.467537] Chandan : Entering sdhci_set_bus_width
+[    4.478247] Chandan : Entering sdhci_request
+[    4.482852] Chandan : Entering sdhci_request
+[    4.487156] Chandan : Entering __sdhci_set_timeout
+[    4.492385] Chandan : Entering sdhci_request
+[    4.508934] Chandan : Entering sdhci_request
+[    4.513379] Chandan : Entering __sdhci_set_timeout
+[    4.518214] Chandan : Entering sdhci_set_transfer_irqs
+[    4.533951] Chandan : Entering sdhci_request
+[    4.538297] Chandan : Entering __sdhci_set_timeout
+[    4.543125] Chandan : Entering sdhci_set_transfer_irqs
+[    8.264143] Chandan : Entering sdhci_runtime_resume_host
+[    8.299827] Chandan : Entering sdhci_set_ios
+[    8.304222] Chandan : Entering sdhci_enable_clk
+[    8.308824] Chandan : Entering sdhci_set_bus_width
+[    8.313743] Chandan : Entering sdhci_request
+[    8.318128] Chandan : Entering sdhci_set_ios
+[    8.322528] Chandan : Entering sdhci_set_bus_width
+[    8.328452] Chandan : Entering sdhci_runtime_resume_host
+[    8.333967] Chandan : Entering sdhci_set_ios
+[    8.338289] Chandan : Entering sdhci_enable_clk
+[    8.342948] Chandan : Entering sdhci_set_bus_width
+[    8.347819] Chandan : Entering sdhci_request
+[    8.352188] Chandan : Entering __sdhci_set_timeout
+[    8.357029] Chandan : Entering sdhci_set_data_timeout_irq
+[    8.367480] Chandan : Entering sdhci_request
+[    8.372085] Chandan : Entering sdhci_request
+[    8.376449] Chandan : Entering sdhci_request
+[    8.380759] Chandan : Entering __sdhci_set_timeout
+[    8.385576] Chandan : Entering sdhci_set_data_timeout_irq
+[    8.392135] Chandan : Entering sdhci_set_ios
+[    8.430170] Chandan : Entering sdhci_set_bus_width
+[    8.435233] Chandan : Entering sdhci_runtime_suspend_host
+[    8.501645] Chandan : Entering sdhci_runtime_suspend_host
+# 
+
+/**********************************************************************/
+/**********************************************************************/
+
+
+# dmesg 
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.1.43 (developer@developer-MS-7C88) (arm-training-linux-uclibcgnueabihf-gcc (crossto3
+[    0.000000] CPU: ARMv7 Processor [413fc082] revision 2 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: TI AM335x BeagleBone Black
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] efi: UEFI not found.
+[    0.000000] cma: Reserved 64 MiB at 0x9b800000
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000080000000-0x000000009fdfffff]
+[    0.000000]   Normal   empty
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000009fdfffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000009fdfffff]
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] AM335X ES2.1 (sgx neon)
+[    0.000000] percpu: Embedded 16 pages/cpu s34580 r8192 d22764 u65536
+[    0.000000] pcpu-alloc: s34580 r8192 d22764 u65536 alloc=16*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129540
+[    0.000000] Kernel command line: root=/dev/nfs rw ip=192.168.7.2 console=ttyO0,115200n8 nfsroot=192.168.7.1:/ho3
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] Memory: 425264K/522240K available (14336K kernel code, 2472K rwdata, 6212K rodata, 2048K init, 429K)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] trace event string verifier disabled
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU event tracing is enabled.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=1.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] IRQ: Found an INTC at 0x(ptrval) (revision 5.0) with 128 interrupts
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] TI gptimer clocksource: always-on /ocp/interconnect@44c00000/segment@200000/target-module@31000
+[    0.000003] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000026] clocksource: dmtimer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000963] TI gptimer clockevent: 24000000 Hz at /ocp/interconnect@48000000/segment@0/target-module@40000
+[    0.005494] Console: colour dummy device 80x30
+[    0.005538] WARNING: Your 'console=ttyO0' has been replaced by 'ttyS0'
+[    0.005545] This ensures that you still see kernel messages. Please
+[    0.005549] update your kernel commandline.
+[    0.005592] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.091063] pid_max: default: 32768 minimum: 301
+[    0.091272] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.091290] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.091981] CPU: Testing write buffer coherency: ok
+[    0.092047] CPU0: Spectre v2: using BPIALL workaround
+[    0.092441] CPU0: thread -1, cpu 0, socket -1, mpidr 0
+[    0.093339] Setting up static identity map for 0x80300000 - 0x803000ac
+[    0.095761] rcu: Hierarchical SRCU implementation.
+[    0.095774] rcu:     Max phase no-delay instances is 1000.
+[    0.100793] EFI services will not be available.
+[    0.101144] smp: Bringing up secondary CPUs ...
+[    0.101156] smp: Brought up 1 node, 1 CPU
+[    0.101166] SMP: Total of 1 processors activated (996.14 BogoMIPS).
+[    0.101177] CPU: All CPU(s) started in SVC mode.
+[    0.101847] devtmpfs: initialized
+[    0.114431] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 3
+[    0.114717] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.114748] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.119893] pinctrl core: initialized pinctrl subsystem
+[    0.124994] DMI not present or invalid.
+[    0.125856] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.128379] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.131764] thermal_sys: Registered thermal governor 'step_wise'
+[    0.131906] cpuidle: using governor menu
+[    0.153596] No ATAGs?
+[    0.153618] hw-breakpoint: debug architecture 0x4 unsupported.
+[    0.158776] Serial: AMBA PL011 UART driver
+[    1.555187] iommu: Default domain type: Translated 
+[    1.555209] iommu: DMA domain TLB invalidation policy: strict mode 
+[    1.555936] SCSI subsystem initialized
+[    1.556396] libata version 3.00 loaded.
+[    1.556741] usbcore: registered new interface driver usbfs
+[    1.556794] usbcore: registered new interface driver hub
+[    1.556844] usbcore: registered new device driver usb
+[    1.557811] pps_core: LinuxPPS API ver. 1 registered
+[    1.557822] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.557845] PTP clock support registered
+[    1.558007] EDAC MC: Ver: 3.0.0
+[    1.560829] vgaarb: loaded
+[    1.561587] clocksource: Switched to clocksource dmtimer
+[    1.621340] NET: Registered PF_INET protocol family
+[    1.621733] IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    1.622827] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)
+[    1.622867] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    1.622882] TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+[    1.622925] TCP bind hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    1.623024] TCP: Hash tables configured (established 4096 bind 4096)
+[    1.623135] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    1.623160] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    1.623321] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    1.624180] RPC: Registered named UNIX socket transport module.
+[    1.624195] RPC: Registered udp transport module.
+[    1.624199] RPC: Registered tcp transport module.
+[    1.624204] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.624219] PCI: CLS 0 bytes, default 64
+[    1.625619] Initialise system trusted keyrings
+[    1.626302] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    1.632923] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.633941] NFS: Registering the id_resolver key type
+[    1.634004] Key type id_resolver registered
+[    1.634011] Key type id_legacy registered
+[    1.634117] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.634128] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    1.634170] ntfs: driver 2.1.32 [Flags: R/O].
+[    1.634800] Key type asymmetric registered
+[    1.634816] Asymmetric key parser 'x509' registered
+[    1.635005] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    1.635019] io scheduler mq-deadline registered
+[    1.635026] io scheduler kyber registered
+[    1.714700] Serial: 8250/16550 driver, 5 ports, IRQ sharing enabled
+[    1.718769] SuperH (H)SCI(F) driver initialized
+[    1.719405] msm_serial: driver initialized
+[    1.719416] STMicroelectronics ASC driver initialized
+[    1.720786] STM32 USART driver initialized
+[    1.736228] brd: module loaded
+[    1.742778] loop: module loaded
+[    1.752843] CAN device driver interface
+[    1.753516] bgmac_bcma: Broadcom 47xx GBit MAC driver loaded
+[    1.754152] e1000e: Intel(R) PRO/1000 Network Driver
+[    1.754160] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    1.754254] igb: Intel(R) Gigabit Ethernet Network Driver
+[    1.754261] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    1.756924] pegasus: Pegasus/Pegasus II USB Ethernet driver
+[    1.756997] usbcore: registered new interface driver pegasus
+[    1.757065] usbcore: registered new interface driver asix
+[    1.757117] usbcore: registered new interface driver ax88179_178a
+[    1.757154] usbcore: registered new interface driver cdc_ether
+[    1.757199] usbcore: registered new interface driver smsc75xx
+[    1.757250] usbcore: registered new interface driver smsc95xx
+[    1.757287] usbcore: registered new interface driver net1080
+[    1.757325] usbcore: registered new interface driver cdc_subset
+[    1.757359] usbcore: registered new interface driver zaurus
+[    1.757436] usbcore: registered new interface driver cdc_ncm
+[    1.760747] usbcore: registered new interface driver usb-storage
+[    1.765001] i2c_dev: i2c /dev entries driver
+[    1.777056] cpuidle: enable-method property 'ti,am3352' found operations
+[    1.778981] sdhci: Chandan : Secure Digital Host Controller Interface driver
+[    1.778998] sdhci: Copyright(c) Pierre Ossman
+[    1.779008] CPU: 0 PID: 1 Comm: swapper/0 Not tainted 6.1.43 #21
+[    1.779020] Hardware name: Generic AM33XX (Flattened Device Tree)
+[    1.779041]  unwind_backtrace from show_stack+0x10/0x14
+[    1.779086]  show_stack from dump_stack_lvl+0x40/0x4c
+[    1.779107]  dump_stack_lvl from sdhci_drv_init+0x20/0x28
+[    1.779138]  sdhci_drv_init from do_one_initcall+0x58/0x200
+[    1.779163]  do_one_initcall from kernel_init_freeable+0x1a8/0x204
+[    1.779184]  kernel_init_freeable from kernel_init+0x18/0x12c
+[    1.779201]  kernel_init from ret_from_fork+0x14/0x2c
+[    1.779214] Exception stack(0xe0009fb0 to 0xe0009ff8)
+[    1.779226] 9fa0:                                     00000000 00000000 00000000 00000000
+[    1.779236] 9fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    1.779244] 9fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+[    1.779295] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.780504] ledtrig-cpu: registered to indicate activity on CPUs
+[    1.782760] usbcore: registered new interface driver usbhid
+[    1.782779] usbhid: USB HID core driver
+[    1.789300] NET: Registered PF_INET6 protocol family
+[    1.790894] Segment Routing with IPv6
+[    1.790958] In-situ OAM (IOAM) with IPv6
+[    1.791042] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.791978] NET: Registered PF_PACKET protocol family
+[    1.791994] can: controller area network core
+[    1.792082] NET: Registered PF_CAN protocol family
+[    1.792091] can: raw protocol
+[    1.792101] can: broadcast manager protocol
+[    1.792114] can: netlink gateway - max_hops=1
+[    1.792694] Key type dns_resolver registered
+[    1.792874] ThumbEE CPU extension supported.
+[    1.792896] Registering SWP/SWPB emulation handler
+[    1.793337] omap_voltage_late_init: Voltage driver support not added
+[    1.795345] Loading compiled-in X.509 certificates
+[    1.845336] pinctrl-single 44e10800.pinmux: 142 pins, size 568
+[    1.859600] ti-sysc: probe of 44e31000.target-module failed with error -16
+[    1.890666] ti-sysc: probe of 48040000.target-module failed with error -16
+[    1.922913] gpio gpiochip0: (gpio-0-31): not an immutable chip, please consider fixing it!
+[    1.924535] OMAP GPIO hardware version 0.1
+[    1.952104] at24 2-0054: supply vcc not found, using dummy regulator
+[    1.985862] at24 2-0055: supply vcc not found, using dummy regulator
+[    2.015332] at24 2-0056: supply vcc not found, using dummy regulator
+[    2.044729] at24 2-0057: supply vcc not found, using dummy regulator
+[    2.075339] omap_i2c 4819c000.i2c: bus 2 rev0.11 at 100 kHz
+[    2.083418] gpio gpiochip1: (gpio-32-63): not an immutable chip, please consider fixing it!
+[    2.086668] gpio gpiochip2: (gpio-64-95): not an immutable chip, please consider fixing it!
+[    2.107311] platform 4830e000.lcdc: Fixed dependency cycle(s) with /ocp/interconnect@44c00000/segment@200000/ta0
+[    2.118120] Chandan : Entering sdhci_alloc_host
+[    2.118556] sdhci-omap 481d8000.mmc: supply pbias not found, using dummy regulator
+[    2.118956] sdhci-omap 481d8000.mmc: supply vqmmc not found, using dummy regulator
+[    2.119199] Chandan : Entering sdhci_setup_host
+[    2.119349] Chandan : Entering __sdhci_read_caps
+[    2.144614] Chandan : Entering sdhci_free_host
+[    2.146111] omap_rng 48310000.rng: Random Number Generator ver. 20
+[    2.162715] random: crng init done
+[    2.221581] davinci_mdio 4a101000.mdio: davinci mdio revision 1.6, bus freq 1000000
+[    2.223729] davinci_mdio 4a101000.mdio: phy[0]: device 4a101000.mdio:00, driver SMSC LAN8710/LAN8720
+[    2.224019] cpsw-switch 4a100000.switch: initialized cpsw ale version 1.4
+[    2.224032] cpsw-switch 4a100000.switch: ALE Table size 1024
+[    2.224140] cpsw-switch 4a100000.switch: cpts: overflow check period 500 (jiffies)
+[    2.224155] cpsw-switch 4a100000.switch: CPTS: ref_clk_freq:250000000 calc_mult:2147483648 calc_shift:29 error:c
+[    2.224230] cpsw-switch 4a100000.switch: Detected MACID = 3c:e0:64:88:54:79
+[    2.225664] cpsw-switch 4a100000.switch: initialized (regs 0x4a100000, pool size 256) hw_ver:0019010C 1.12 (0)
+[    2.242554] debugfs: Directory '49000000.dma' with parent 'dmaengine' already present!
+[    2.242592] edma 49000000.dma: TI EDMA DMA engine driver
+[    2.254435] am335x-phy-driver 47401300.usb-phy: supply vcc not found, using dummy regulator
+[    2.254715] am335x-phy-driver 47401300.usb-phy: dummy supplies not allowed for exclusive requests
+[    2.262837] am335x-phy-driver 47401b00.usb-phy: supply vcc not found, using dummy regulator
+[    2.263135] am335x-phy-driver 47401b00.usb-phy: dummy supplies not allowed for exclusive requests
+[    2.300176] hw perfevents: enabled with armv7_cortex_a8 PMU driver, 5 counters available
+[    2.308170] gpio gpiochip3: (gpio-96-127): not an immutable chip, please consider fixing it!
+[    2.313380] l3-aon-clkctrl:0000:0: failed to disable
+[    2.317466] 44e09000.serial: ttyS0 at MMIO 0x44e09000 (irq = 37, base_baud = 3000000) is a 8250
+[    3.590528] printk: console [ttyS0] enabled
+[    3.622281] tps65217-pmic: Failed to locate of_node [id: -1]
+[    3.635411] tps65217-bl: Failed to locate of_node [id: -1]
+[    3.650942] tps65217 0-0024: TPS65217 ID 0xe version 1.2
+[    3.658043] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.665828] omap_i2c 44e0b000.i2c: bus 0 rev0.11 at 400 kHz
+[    3.689803] Chandan : Entering sdhci_alloc_host
+[    3.694805] omap_gpio 44e07000.gpio: Could not set line 6 debounce to 200000 microseconds (-22)
+[    3.703608] sdhci-omap 48060000.mmc: Got CD GPIO
+[    3.708449] sdhci-omap 48060000.mmc: supply pbias not found, using dummy regulator
+[    3.720217] Chandan : Entering sdhci_alloc_host
+[    3.725590] sdhci-omap 48060000.mmc: supply vqmmc not found, using dummy regulator
+[    3.733970] Chandan : Entering sdhci_setup_host
+[    3.744935] sdhci-omap 481d8000.mmc: supply pbias not found, using dummy regulator
+[    3.756669] sdhci-omap 481d8000.mmc: supply vqmmc not found, using dummy regulator
+[    3.764981] Chandan : Entering sdhci_setup_host
+[    3.769788] Chandan : Entering __sdhci_read_caps
+[    3.799673] Chandan : Entering __sdhci_add_host
+[    3.804740] Chandan : Entering __sdhci_read_caps
+[    3.809450] Chandan : Entering __sdhci_add_host
+[    3.815122] Chandan : Entering sdhci_set_ios
+[    3.819448] Chandan : Entering sdhci_set_bus_width
+[    3.824815] Chandan : Entering sdhci_set_ios
+[    3.829122] Chandan : Entering sdhci_set_bus_width
+[    3.836923] Chandan : Entering sdhci_set_ios
+[    3.841227] Chandan : Entering sdhci_enable_clk
+[    3.845866] Chandan : Entering sdhci_set_ios
+[    3.850163] Chandan : Entering sdhci_enable_clk
+[    3.854762] Chandan : Entering sdhci_set_bus_width
+[    3.859591] Chandan : Entering sdhci_set_bus_width
+[    3.871582] mmc1: SDHCI controller on 481d8000.mmc [481d8000.mmc] using External DMA
+[    3.879378] (efault): SDHCI controller debug : Chandan Start 
+[    3.885168] (null): SDHCI controller debug : Chandan End 
+[    3.890778] Chandan : Entering sdhci_request
+[    3.896115] mmc0: SDHCI controller on 48060000.mmc [48060000.mmc] using External DMA
+[    3.903967] (efault): SDHCI controller debug : Chandan Start 
+[    3.909743] (null): SDHCI controller debug : Chandan End 
+[    3.915398] Chandan : Entering sdhci_request
+[    3.920277] cpsw-switch 4a100000.switch: starting ndev. mode: dual_mac
+[    3.927737] Chandan : Entering sdhci_request
+[    3.932196] Chandan : Entering sdhci_request
+[    3.937900] Chandan : Entering sdhci_set_ios
+[    3.942305] Chandan : Entering sdhci_set_bus_width
+[    3.949891] Chandan : Entering sdhci_set_ios
+[    3.954256] Chandan : Entering sdhci_set_bus_width
+[    3.959168] Chandan : Entering sdhci_request
+[    3.963553] Chandan : Entering sdhci_request
+[    3.969226] Chandan : Entering sdhci_set_ios
+[    3.973571] Chandan : Entering sdhci_set_bus_width
+[    3.978407] Chandan : Entering sdhci_set_ios
+[    3.982727] Chandan : Entering sdhci_set_bus_width
+[    3.987653] Chandan : Entering sdhci_request
+[    3.992021] Chandan : Entering sdhci_request
+[    3.996429] Chandan : Entering sdhci_request
+[    4.000775] Chandan : Entering sdhci_request
+[    4.005225] Chandan : Entering sdhci_request
+[    4.009635] Chandan : Entering sdhci_request
+[    4.014124] Chandan : Entering sdhci_request
+[    4.018552] Chandan : Entering sdhci_request
+[    4.023007] Chandan : Entering sdhci_request
+[    4.027411] Chandan : Entering sdhci_request
+[    4.031872] Chandan : Entering sdhci_request
+[    4.036308] Chandan : Entering sdhci_request
+[    4.040741] Chandan : Entering sdhci_request
+[    4.045159] Chandan : Entering sdhci_request
+[    4.049623] Chandan : Entering sdhci_request
+[    4.054015] Chandan : Entering sdhci_set_ios
+[    4.058341] Chandan : Entering sdhci_set_bus_width
+[    4.063318] Chandan : Entering sdhci_request
+[    4.067706] Chandan : Entering sdhci_request
+[    4.072152] SMSC LAN8710/LAN8720 4a101000.mdio:00: attached PHY driver (mii_bus:phy_addr=4a101000.mdio:00, irq=)
+[    4.082850] Chandan : Entering sdhci_set_ios
+[    4.087169] Chandan : Entering sdhci_set_bus_width
+[    4.092021] Chandan : Entering sdhci_request
+[    4.097763] Chandan : Entering sdhci_set_ios
+[    4.102126] Chandan : Entering sdhci_set_bus_width
+[    4.107082] Chandan : Entering sdhci_request
+[    4.115315] Chandan : Entering sdhci_set_ios
+[    4.119630] Chandan : Entering sdhci_set_bus_width
+[    4.124491] Chandan : Entering sdhci_set_ios
+[    4.128784] Chandan : Entering sdhci_set_bus_width
+[    4.133661] Chandan : Entering sdhci_request
+[    4.138013] Chandan : Entering sdhci_request
+[    4.142392] Chandan : Entering sdhci_request
+[    4.147036] Chandan : Entering sdhci_request
+[    4.151367] Chandan : Entering sdhci_set_ios
+[    4.155707] Chandan : Entering sdhci_set_bus_width
+[    4.161575] Chandan : Entering sdhci_request
+[    4.171585] Chandan : Entering sdhci_request
+[    4.176121] Chandan : Entering sdhci_request
+[    4.180476] Chandan : Entering sdhci_request
+[    4.184845] Chandan : Entering sdhci_request
+[    4.189727] Chandan : Entering sdhci_request
+[    4.194391] Chandan : Entering sdhci_set_ios
+[    4.198705] Chandan : Entering sdhci_set_bus_width
+[    4.203568] Chandan : Entering sdhci_request
+[    4.207895] Chandan : Entering sdhci_request
+[    4.212309] Chandan : Entering sdhci_request
+[    4.216661] Chandan : Entering sdhci_request
+[    4.221036] Chandan : Entering sdhci_request
+[    4.225381] Chandan : Entering __sdhci_set_timeout
+[    4.230227] Chandan : Entering sdhci_set_transfer_irqs
+[    4.235456] Chandan : Entering sdhci_request
+[    4.240316] Chandan : Entering sdhci_request
+[    4.244994] Chandan : Entering sdhci_request
+[    4.249415] Chandan : Entering sdhci_request
+[    4.253770] Chandan : Entering __sdhci_set_timeout
+[    4.258617] Chandan : Entering sdhci_request
+[    4.263257] Chandan : Entering sdhci_request
+[    4.267621] Chandan : Entering sdhci_request
+[    4.272008] Chandan : Entering sdhci_request
+[    4.276332] Chandan : Entering __sdhci_set_timeout
+[    4.281230] Chandan : Entering sdhci_request
+[    4.285576] Chandan : Entering __sdhci_set_timeout
+[    4.290408] Chandan : Entering sdhci_set_transfer_irqs
+[    4.295865] Chandan : Entering sdhci_request
+[    4.300275] Chandan : Entering sdhci_request
+[    4.304677] Chandan : Entering sdhci_request
+[    4.308992] Chandan : Entering __sdhci_set_timeout
+[    4.314024] Chandan : Entering sdhci_request
+[    4.318351] Chandan : Entering __sdhci_set_timeout
+[    4.323178] Chandan : Entering sdhci_set_transfer_irqs
+[    4.328584] Chandan : Entering sdhci_set_ios
+[    4.332945] Chandan : Entering sdhci_set_bus_width
+[    4.337769] Chandan : Entering sdhci_request
+[    4.342202] Chandan : Entering sdhci_request
+[    4.346527] Chandan : Entering __sdhci_set_timeout
+[    4.351351] Chandan : Entering sdhci_set_transfer_irqs
+[    4.356609] Chandan : Entering sdhci_set_ios
+[    4.360940] Chandan : Entering sdhci_enable_clk
+[    4.365531] Chandan : Entering sdhci_set_bus_width
+[    4.370352] Chandan : Entering sdhci_request
+[    4.374678] Chandan : Entering __sdhci_set_timeout
+[    4.379735] Chandan : Entering sdhci_request
+[    4.384092] Chandan : Entering __sdhci_set_timeout
+[    4.388918] Chandan : Entering sdhci_set_transfer_irqs
+[    4.394322] Chandan : Entering sdhci_request
+[    4.398754] Chandan : Entering sdhci_set_ios
+[    4.403095] Chandan : Entering sdhci_set_bus_width
+[    4.407919] Chandan : Entering sdhci_request
+[    4.412233] Chandan : Entering __sdhci_set_timeout
+[    4.417060] Chandan : Entering sdhci_set_transfer_irqs
+[    4.422329] Chandan : Entering sdhci_set_ios
+[    4.426658] Chandan : Entering sdhci_set_bus_width
+[    4.431475] Chandan : Entering sdhci_set_ios
+[    4.435792] Chandan : Entering sdhci_enable_clk
+[    4.440350] Chandan : Entering sdhci_set_bus_width
+[    4.445190] Chandan : Entering sdhci_request
+[    4.449696] Chandan : Entering sdhci_request
+[    4.454021] Chandan : Entering __sdhci_set_timeout
+[    4.458862] Chandan : Entering sdhci_request
+[    4.463230] Chandan : Entering sdhci_set_ios
+[    4.467537] Chandan : Entering sdhci_set_bus_width
+[    4.472384] mmc0: new high speed SDHC card at address aaaa
+[    4.478247] Chandan : Entering sdhci_request
+[    4.482852] Chandan : Entering sdhci_request
+[    4.487156] Chandan : Entering __sdhci_set_timeout
+[    4.492385] Chandan : Entering sdhci_request
+[    4.496878] mmcblk0: mmc0:aaaa SE32G 29.7 GiB 
+[    4.502103] mmc1: new high speed MMC card at address 0001
+[    4.508934] Chandan : Entering sdhci_request
+[    4.513379] Chandan : Entering __sdhci_set_timeout
+[    4.518214] Chandan : Entering sdhci_set_transfer_irqs
+[    4.523952] mmcblk1: mmc1:0001 MK2704 3.53 GiB 
+[    4.529406]  mmcblk0: p1 p2
+[    4.533951] Chandan : Entering sdhci_request
+[    4.538297] Chandan : Entering __sdhci_set_timeout
+[    4.543125] Chandan : Entering sdhci_set_transfer_irqs
+[    4.550885]  mmcblk1: p1
+[    4.554357] mmcblk1boot0: mmc1:0001 MK2704 2.00 MiB 
+[    4.560993] mmcblk1boot1: mmc1:0001 MK2704 2.00 MiB 
+[    4.567473] mmcblk1rpmb: mmc1:0001 MK2704 512 KiB, chardev (236:0)
+[    6.242557] cpsw-switch 4a100000.switch eth0: Link is Up - 100Mbps/Full - flow control off
+[    6.251058] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    6.291620] IP-Config: Guessing netmask 255.255.255.0
+[    6.296721] IP-Config: Complete:
+[    6.299961]      device=eth0, hwaddr=3c:e0:64:88:54:79, ipaddr=192.168.7.2, mask=255.255.255.0, gw=255.255.255.5
+[    6.310392]      host=192.168.7.2, domain=, nis-domain=(none)
+[    6.316187]      bootserver=255.255.255.255, rootserver=192.168.7.1, rootpath=
+[    6.338667] VFS: Mounted root (nfs filesystem) on device 0:15.
+[    6.353238] devtmpfs: mounted
+[    6.361221] Freeing unused kernel image (initmem) memory: 2048K
+[    6.382568] Run /sbin/init as init process
+[    6.386713]   with arguments:
+[    6.386720]     /sbin/init
+[    6.386726]   with environment:
+[    6.386733]     HOME=/
+[    6.386739]     TERM=linux
+[    8.264143] Chandan : Entering sdhci_runtime_resume_host
+[    8.299827] Chandan : Entering sdhci_set_ios
+[    8.304222] Chandan : Entering sdhci_enable_clk
+[    8.308824] Chandan : Entering sdhci_set_bus_width
+[    8.313743] Chandan : Entering sdhci_request
+[    8.318128] Chandan : Entering sdhci_set_ios
+[    8.322528] Chandan : Entering sdhci_set_bus_width
+[    8.328452] Chandan : Entering sdhci_runtime_resume_host
+[    8.333967] Chandan : Entering sdhci_set_ios
+[    8.338289] Chandan : Entering sdhci_enable_clk
+[    8.342948] Chandan : Entering sdhci_set_bus_width
+[    8.347819] Chandan : Entering sdhci_request
+[    8.352188] Chandan : Entering __sdhci_set_timeout
+[    8.357029] Chandan : Entering sdhci_set_data_timeout_irq
+[    8.367480] Chandan : Entering sdhci_request
+[    8.372085] Chandan : Entering sdhci_request
+[    8.376449] Chandan : Entering sdhci_request
+[    8.380759] Chandan : Entering __sdhci_set_timeout
+[    8.385576] Chandan : Entering sdhci_set_data_timeout_irq
+[    8.392135] Chandan : Entering sdhci_set_ios
+[    8.430170] Chandan : Entering sdhci_set_bus_width
+[    8.435233] Chandan : Entering sdhci_runtime_suspend_host
+[    8.501645] Chandan : Entering sdhci_runtime_suspend_host
+# 
+CTRL-A Z for help | 115200 8N1 | NOR | Minicom 2.7.1 | VT102 | Online 48:41 | ttyUSB0                             
+
+
+/***************************************************************************************/
+/***************************************************************************************/
+Host : 
+	sdhci.c 
+	sdhci-pltfm.c
+	sdhci-omap.c :
+			platform_driver_register() --> 
+							sdhci_omap_driver	
+
+			- Why probe getting called.
+			
+			
+
+			platform_driver_unregister() --> 
+			
+				
+
+Core : 
+
+
+
+
+module_platform_driver vs module_init :
+
+analyze and understand : module_platform_driver 
+
+/***************************************************************************************/
+/***************************************************************************************/
+
+mmc card	: 
+sd  card	:
+eMMC 		:
+
+
+
+
+
+
+
+
+/***************************************************************************************/
+/***************************************************************************************/
+
+Not needed :
+		 
+		cqhci-core
+			
+
+
+
+-rw-rw-r-- 1 developer developer 26964 Nov 11 19:29 mmci.o
+-rw-rw-r-- 1 developer developer 15588 Nov 11 19:29 mmc_spi.o
+-rw-rw-r-- 1 developer developer  3140 Nov 11 19:29 of_mmc_spi.o
+-rw-rw-r-- 1 developer developer 25664 Nov 11 19:29 sdhci-esdhc-imx.o
+-rw-rw-r-- 1 developer developer 23120 Nov 11 19:29 sdhci-of-esdhc.o
+
+
+/***********************************************************************************/
+/***********************************************************************************/
+
+Host : 
+	sdhci.c
+		global functions :
+			124:EXPORT_SYMBOL_GPL(sdhci_dumpregs);
+			
+			Low level functions : 
+				155:EXPORT_SYMBOL_GPL(sdhci_enable_v4_mode);
+				244:EXPORT_SYMBOL_GPL(sdhci_reset);
+			
+			Core functions : 
+				753:EXPORT_SYMBOL_GPL(sdhci_adma_write_desc);
+				1081:EXPORT_SYMBOL_GPL(sdhci_set_data_timeout_irq);
+				1100:EXPORT_SYMBOL_GPL(__sdhci_set_timeout);
+				1422:EXPORT_SYMBOL_GPL(sdhci_switch_external_dma);
+				2011:EXPORT_SYMBOL_GPL(sdhci_calc_clk);
+				2067:EXPORT_SYMBOL_GPL(sdhci_enable_clk);
+				2085:EXPORT_SYMBOL_GPL(sdhci_set_clock);
+				2180:EXPORT_SYMBOL_GPL(sdhci_set_power_noreg);
+				2192:EXPORT_SYMBOL_GPL(sdhci_set_power);
+				2213:EXPORT_SYMBOL_GPL(sdhci_set_power_and_bus_voltage);
+			
+			
+			MMC callbacks : 
+				2253:EXPORT_SYMBOL_GPL(sdhci_request);
+				2289:EXPORT_SYMBOL_GPL(sdhci_request_atomic);
+				2311:EXPORT_SYMBOL_GPL(sdhci_set_bus_width);
+				2338:EXPORT_SYMBOL_GPL(sdhci_set_uhs_signaling);
+				2533:EXPORT_SYMBOL_GPL(sdhci_set_ios);
+				2581:EXPORT_SYMBOL_GPL(sdhci_get_cd_nogpio);
+				2666:EXPORT_SYMBOL_GPL(sdhci_enable_sdio_irq);
+				2773:EXPORT_SYMBOL_GPL(sdhci_start_signal_voltage_switch);
+				2823:EXPORT_SYMBOL_GPL(sdhci_start_tuning);
+				2832:EXPORT_SYMBOL_GPL(sdhci_end_tuning);
+				2845:EXPORT_SYMBOL_GPL(sdhci_reset_tuning);
+				2859:EXPORT_SYMBOL_GPL(sdhci_abort_tuning);
+				2923:EXPORT_SYMBOL_GPL(sdhci_send_tuning);
+				3033:EXPORT_SYMBOL_GPL(sdhci_execute_tuning);
+			
+			Request done :
+				
+				static bool sdhci_request_done(struct sdhci_host *host)
+				static void sdhci_complete_work(struct work_struct *work)
+				static void sdhci_timeout_timer(struct timer_list *t)
+				static void sdhci_timeout_data_timer(struct timer_list *t)
+				
+				
+			Interrupt handling :
+				static irqreturn_t sdhci_thread_irq(int irq, void *dev_id)	
+				static irqreturn_t sdhci_irq(int irq, void *dev_id)
+				
+			Suspend/resume : 
+					3864:EXPORT_SYMBOL_GPL(sdhci_suspend_host);
+					3905:EXPORT_SYMBOL_GPL(sdhci_resume_host);
+					3930:EXPORT_SYMBOL_GPL(sdhci_runtime_suspend_host);
+					3985:EXPORT_SYMBOL_GPL(sdhci_runtime_resume_host);
+			
+			
+			Command Queue Engine (CQE) helpers :
+					4039:EXPORT_SYMBOL_GPL(sdhci_cqe_enable);
+					4063:EXPORT_SYMBOL_GPL(sdhci_cqe_disable);
+					4117:EXPORT_SYMBOL_GPL(sdhci_cqe_irq);
+			
+			
+			Device allocation/registration : 
+					4167:EXPORT_SYMBOL_GPL(sdhci_alloc_host);
+					4254:EXPORT_SYMBOL_GPL(__sdhci_read_caps);
+					4882:EXPORT_SYMBOL_GPL(sdhci_setup_host);
+					4904:EXPORT_SYMBOL_GPL(sdhci_cleanup_host);
+					4989:EXPORT_SYMBOL_GPL(__sdhci_add_host);
+					5016:EXPORT_SYMBOL_GPL(sdhci_add_host);
+					5072:EXPORT_SYMBOL_GPL(sdhci_remove_host);
+					5080:EXPORT_SYMBOL_GPL(sdhci_free_host);
+
+	
+	sdhci.h :
+		- data structs 
+		- apis
+		- sdhci controller datasheet
+		- spec : sdhci 
+		- 
+		
+		
+		
+	sdhci-pltfm.c :
+			- unsigned int sdhci_pltfm_clk_get_max_clock(struct sdhci_host *host)
+			
+			- void sdhci_get_property(struct platform_device *pdev)
+			
+			- struct sdhci_host *sdhci_pltfm_init(struct platform_device *pdev,
+				    const struct sdhci_pltfm_data *pdata,
+				    size_t priv_size)
+				    
+			- void sdhci_pltfm_free(struct platform_device *pdev)
+			
+			- int sdhci_pltfm_register(struct platform_device *pdev,
+				const struct sdhci_pltfm_data *pdata,
+				size_t priv_size)
+			
+			- int sdhci_pltfm_unregister(struct platform_device *pdev)
+			
+			- int sdhci_pltfm_suspend(struct device *dev)
+			
+			- int sdhci_pltfm_resume(struct device *dev)
+			
+			- 
+		
+	sdhci-pltfm.h :
+					
+			
+		
+		
+-- Beagle Bone Black --> 	Sitara AM3358BZCZ100 --> ARM Cortex-A8 based processor
+
+-- 
+
+--
+
+--
+
+--
+
+--
+
+--
+
+	
+	
+Query : 	
+	1. EXPORT_SYMBOL_GPL 
+	2. module_param
+	3. MODULE_PARM_DESC
+	4. 
+
+
+
+
+/***********************************************************************************/
+/***********************************************************************************/
+
+
+
+

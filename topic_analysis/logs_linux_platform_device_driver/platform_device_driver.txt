@@ -1,0 +1,110 @@
+Step 1:
+
+	- Platform Driver Registration 
+
+Step 2:	
+	- Platform Device Registration 
+
+	
+When platform device and the related driver are registered,the driver's probe() function is called and the Device is Instantiated.
+
+
+
+Platform Devices : 
+			struct platform_device [linux/platform_device.h]
+
+
+Plaform Driver :
+			struct plaform_driver {
+			
+				int(*probe)(struct platform_device *);	//mandatory
+				int(*remove)(struct platform_device *);	//mandatory
+				int(*shutdown)(struct platform_device *);
+				int(*suspend)(struct platform_device *, pm_message_t state);
+				int(*resume)(struct platform_device *);
+				
+				struct device_driver driver;
+				const struct platform_device_id* id_table;
+				bool prevent_defferred_probe;				
+			};
+			
+Either This way :  			 
+struct platform_device_id {
+	char name[PLATFORM_NAME_SIZE];
+	kernel_ulong_t driver_data;
+};
+
+
+
+OR the below way : 
+#define SND_SOUNDGEN_DRIVER "snd_soundgen"
+
+static struct platform_driver snd_soundgen_driver = {
+	.probe = snd_soundgen_driver_probe,
+	.remove = snd_soundgen_driver_remove,
+	.driver = {
+		.name = SND_SOUNDGEN_DRIVER,
+	},
+};
+
+
+static int __init alsa_soundgen_init(void)
+{
+	int err;
+	
+	err =  platform_driver_register(&snd_soundgen_driver);
+	
+	if(err < 0)
+	{
+		pr_err("Failed to register platform_driver \n");
+		return err;
+	}
+}
+
+//Query : How Device Tree entry gets bind here ?
+
+struct platform_device {
+
+	const char* 	name;
+	int		id;
+	bool		id_auto;
+	struct device	dev;
+	u32		num_resources;
+	struct resource* resources;
+	
+	const struct platform_device_id* id_entry;
+	char* driver_override; /*Driver name to be force a match */ // <-- think on this.
+	
+	//MFD cell pointer
+	struct mfd_cell* mfd_cell;
+	
+	//arch specific additions
+	struct pdev_archdata	archdata;
+};
+
+
+
+
+//Good Links : 
+
+
+
+
+//Good Topics :
+	1 - InitCall 
+		- An introduction to Linux kernel initcalls
+			- Links :
+				- https://www.collabora.com/news-and-blog/blog/2020/07/14/introduction-to-linux-kernel-initcalls/
+				- https://stackoverflow.com/questions/18605653/module-init-vs-core-initcall-vs-early-initcall
+				- https://copyprogramming.com/howto/module-init-vs-core-initcall-vs-early-initcall
+				- https://elinux.org/images/e/e8/2020_ELCE_initcalls_myjosserand.pdf
+				- https://topic.alibabacloud.com/a/late_initcall-and-module_init_8_8_31808353.html
+				
+	2 -  	
+			
+			
+				 	
+
+
+
+
