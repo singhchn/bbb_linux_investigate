@@ -5,9 +5,16 @@ Step 1:
 Step 2:	
 	- Platform Device Registration 
 
-	
-When platform device and the related driver are registered,the driver's probe() function is called and the Device is Instantiated.
 
+When platform device and the related driver are registered,
+the driver's probe() function is called and the Device is Instantiated.
+
+/*************************************************************************/
+- Platform Devices
+- Platform Drivers 
+- Virtual Platform Bus 
+
+/*************************************************************************/
 
 
 Platform Devices : 
@@ -28,6 +35,26 @@ Plaform Driver :
 				bool prevent_defferred_probe;				
 			};
 			
+****************************************************************************************
+- Driver must provide a way for the "Bus Code" to bind the actual device to the driver.
+
+	-- 2 ways to do this.
+
+		- struct platform_device_id {
+			char name[PLATFORM_NAME_SIZE];
+			kernel_ulong_t driver_data;
+		};
+
+		OR
+
+		
+
+
+
+*****************************************************************************************
+
+
+
 Either This way :  			 
 struct platform_device_id {
 	char name[PLATFORM_NAME_SIZE];
