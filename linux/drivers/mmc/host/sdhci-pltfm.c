@@ -267,7 +267,7 @@ EXPORT_SYMBOL_GPL(sdhci_pltfm_pmops);
 
 static int __init sdhci_pltfm_drv_init(void)
 {
-	pr_info("sdhci-pltfm: SDHCI platform and OF driver helper\n");
+	pr_info("sdhci-pltfm: yes...Chandan SDHCI platform and OF driver helper\n");
 	// pr_info("Chandan : Entering %s:%s \n", __FILE__, __func__);
 
 	return 0;
