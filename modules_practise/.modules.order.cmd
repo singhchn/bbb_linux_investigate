@@ -1,0 +1,1 @@
+cmd_/home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/modules_practise/modules.order := {   echo /home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/modules_practise/hello.ko; :; } > /home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/modules_practise/modules.order

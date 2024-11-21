@@ -1,0 +1,1 @@
+cmd_/home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/modules_practise/Module.symvers :=  sed 's/ko$$/o/'  /home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/modules_practise/modules.order | scripts/mod/modpost      -o /home/developer/development/linux/bbb_ldd/devel/billvanleeuwen/wip/modules_practise/Module.symvers -e -i Module.symvers -T - 
